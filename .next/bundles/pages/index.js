@@ -1362,9 +1362,6 @@ var Certificate = function Certificate(_ref) {
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     href: "../../static/solpay_OIA_certificacion.pdf",
     className: "download",
-    onClick: function onClick(e) {
-      return e.preventDefault();
-    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
@@ -2022,7 +2019,7 @@ var Organic = function Organic(_ref) {
       lineNumber: 8
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
-    className: "organic-img",
+    className: "organic-image",
     src: __WEBPACK_IMPORTED_MODULE_1__static_solplay_leaf_jpg___default.a,
     alt: "",
     __source: {

@@ -6,11 +6,16 @@
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       margin: 0 auto;
       max-width: 1300px;
+      padding: 0 15px;
 
       .product {
          display: flex;
          height: 300px;
          position: relative;
+
+         @include tablet {
+            height: 250px;
+         }
 
          .product-image {
             height: 100%;

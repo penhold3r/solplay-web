@@ -12,7 +12,7 @@ const Certificate = ({ open, closeModal }) => {
             <div className="certificate-content">
                <h1 className="main-title">Certificacion</h1>
                <img src={oia} alt="Organización Internacional Agropecuaria" className="oia-logo" />
-               <a href="../../static/solpay_OIA_certificacion.pdf" className="download" onClick={e => e.preventDefault()}><img src={pdf} alt="Descargar PDF" /></a>
+               <a href="../../static/solpay_OIA_certificacion.pdf" className="download"><img src={pdf} alt="Descargar PDF" /></a>
             </div>
          </div>
       </section>

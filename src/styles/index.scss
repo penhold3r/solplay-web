@@ -2,6 +2,7 @@
 @import url('../../node_modules/sanitize.css/sanitize.css');
 // @import url('../../node_modules/animate.css/animate.css');
 @import './variables';
+@import './mixines';
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,700');
 @import url('../fonts/fonts.css');
@@ -54,6 +55,11 @@ body {
       margin: 1.25em 0 1em;
       text-transform: none;
       text-align: center;
+
+      @include tablet {
+         font-size: 1.75em;
+         margin: 0.75em 0;
+      }
    }
 
    .button {

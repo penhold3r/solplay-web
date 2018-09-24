@@ -12,17 +12,39 @@
          grid-template-columns: 300px 1fr;
          padding: 30px 15px;
 
+         @include tablet {
+            padding: 0 15px 30px;
+         }
+
          .organic-image {
             height: 300px;
             object-fit: contain;
             width: 300px;
+
+            @include tablet {
+               grid-column: 1 / -1;
+               height: 250px;
+               width: 100%;
+            }
          }
 
          .organic-content-txt {
             align-self: center;
 
+            @include tablet {
+               display: flex;
+               flex-direction: column;
+               grid-column: 1 / -1;
+            }
+
             h2 {
                color: $green;
+            }
+
+            .button {
+               @include tablet {
+                  margin: 0 auto;
+               }
             }
          }
 
