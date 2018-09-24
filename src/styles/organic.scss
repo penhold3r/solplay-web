@@ -1,0 +1,31 @@
+.organic {
+
+   .organic-content {
+      background: #DDD;
+      display: flex;
+
+      .organic-content-wrapper {
+         margin: auto;
+         max-width: 900px;
+         display: grid;
+         grid-gap: 15px;
+         grid-template-columns: 300px 1fr;
+         padding: 30px 15px;
+
+         .organic-image {
+            height: 300px;
+            object-fit: contain;
+            width: 300px;
+         }
+
+         .organic-content-txt {
+            align-self: center;
+
+            h2 {
+               color: $green;
+            }
+         }
+
+      }
+   }
+}

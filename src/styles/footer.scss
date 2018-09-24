@@ -1,0 +1,22 @@
+.footer {
+   background: $blue;
+   background: linear-gradient(90deg, $blue, $main-color);
+   padding: 30px 15px;
+
+   .inner-footer {
+      margin: 0 auto;
+      max-width: 1300px;
+
+      .footer-logo {
+         display: block;
+         margin: 0 auto 1em;
+         width: 150px;
+      }
+
+      p {
+         color: #FFF;
+         font-size: small;
+         text-align: center;
+      }
+   }
+}

@@ -1,0 +1,37 @@
+.products {
+
+   .products-list {
+      display: grid;
+      grid-gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      margin: 0 auto;
+      max-width: 1300px;
+
+      .product {
+         display: flex;
+         height: 300px;
+         position: relative;
+
+         .product-image {
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            width: 100%;
+            z-index: 0;
+         }
+
+         .product-title {
+            background: rgba(#FFF, 0.4);
+            text-shadow: 0 0 15px rgba(#000, 0.75);
+            color: #FFF;
+            font: 1.5em 'spinweradbold', Georgia, serif;
+            margin: auto;
+            padding: 30px 60px;
+            position: relative;
+            text-align: center;
+            text-transform: none;
+            z-index: 1;
+         }
+      }
+   }
+}

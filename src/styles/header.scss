@@ -1,0 +1,100 @@
+.main-header {
+   background: rgba(#FFF, 0.8);
+   height: 100px;
+   left: 0;
+   position: sticky;
+   top: 0;
+   z-index: 99;
+
+   .header-container {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: 350px 1fr;
+      height: inherit;
+      margin: 0 auto;
+      max-width: 1300px;
+      position: relative;
+
+      .header-social {
+         position: absolute;
+         right: 0;
+         top: 0;
+
+         ul {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 10px;
+
+            li {
+               a {
+                  color: $main-color;
+                  transition: all 0.3s;
+
+                  &:hover {
+                     color: $accent-color;
+                  }
+               }
+            }
+         }
+      }
+
+      .logo {
+         height: inherit;
+         margin: 0;
+         width: 350px;
+
+         a{
+            display: block;
+            height: 100%;
+            text-decoration: none;
+
+            img {
+               height: 100%;
+               object-fit: contain;
+               padding: 10px;
+               width: 100%;
+            }
+         }
+      }
+
+      .main-nav {
+         justify-self: end;
+
+         .menu {
+            align-items: flex-end;
+            display: flex;
+            height: 100%;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            .nav-link {
+               margin: 0;
+
+               a {
+                  border-bottom: 1px solid transparent;
+                  color: #999;
+                  display: block;
+                  font-size: 0.8em;
+                  letter-spacing: 0.1em;
+                  padding: 10px 10px 15px;
+                  text-decoration: none;
+                  text-transform: uppercase;
+                  transition: all 0.3s;
+
+                  &:hover {
+                     @extend .active;
+                  }
+
+                  &.active {
+                     border-bottom: 5px solid $main-color;
+                     color: $main-color;
+                     padding: 10px 10px 13px;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

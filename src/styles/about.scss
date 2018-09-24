@@ -1,0 +1,61 @@
+.about {
+   
+   .about-content {
+      padding: 15px;
+      position: relative;
+
+      .about-bg-img {
+         height: 100%;
+         left: 0;
+         object-fit: cover;
+         position: absolute;
+         top: 0;
+         width: 100%;
+         z-index: 0;
+      }
+
+      .about-content-txt {
+         background: rgba(#000, 0.5);
+         color: #FFF;
+         margin: 45px auto;
+         max-width: 900px;
+         padding: 30px;
+         position: relative;
+         text-align: center;
+         z-index: 1;
+
+         .countries {
+            font-family: 'spinweradbold', Georgia, serif;
+         }
+      }
+   }
+
+   .about-icons {
+      display: flex;
+
+      .about-icon {
+         padding: 15px;
+         background: $accent-color;
+         width: 100%;
+
+         &[data-lighten="5"] { background: lighten($accent-color, 5) }
+         &[data-lighten="10"] { background: lighten($accent-color, 10) }
+         &[data-lighten="15"] { background: lighten($accent-color, 15) }
+         &[data-lighten="20"] { background: lighten($accent-color, 20) }
+
+         img {
+            height: 100px;
+            object-fit: contain;
+            padding: 15px;
+            width: 100%;
+         }
+
+         h3 {
+            color: #FFF;
+            font-size: 1em;
+            font-weight: normal;
+            text-align: center;
+         }
+      }
+   }
+}
