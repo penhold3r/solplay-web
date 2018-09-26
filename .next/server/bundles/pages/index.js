@@ -709,7 +709,8 @@ function (_React$Component) {
       writable: true,
       value: {
         headerWhite: false,
-        activeLink: 0
+        activeLink: 0,
+        menuOpen: false
       }
     }), Object.defineProperty(_assertThisInitialized(_this), "handleScroll", {
       configurable: true,
@@ -718,6 +719,17 @@ function (_React$Component) {
       value: function value() {
         var dom = document.scrollingElement;
         var headerWhite = Boolean(dom.scrollTop > 250); //this.setState({ headerWhite });
+      }
+    }), Object.defineProperty(_assertThisInitialized(_this), "handleMenu", {
+      configurable: true,
+      enumerable: true,
+      writable: true,
+      value: function value() {
+        var menuOpen = !_this.state.menuOpen;
+
+        _this.setState({
+          menuOpen: menuOpen
+        });
       }
     }), Object.defineProperty(_assertThisInitialized(_this), "handleClick", {
       configurable: true,
@@ -731,15 +743,18 @@ function (_React$Component) {
         });
 
         _this.props.menuClick(section);
+
+        _this.handleMenu();
       }
     }), _temp));
   }
 
   _createClass(Header, [{
     key: "componentDidMount",
-    value: function componentDidMount() {
-      this.handleScroll();
-      window.addEventListener('scroll', this.handleScroll);
+    value: function componentDidMount() {// this.handleScroll();
+      // window.addEventListener('scroll', this.handleScroll);
+      // this.handleResize();
+      // window.addEventListener('resize', this.handleResize);
     }
   }, {
     key: "render",
@@ -748,60 +763,62 @@ function (_React$Component) {
 
       var menu = this.props.menu;
       var headerClass = this.state.headerWhite ? ' white' : '';
+      var moblieClass = this.state.menuOpen ? 'mobile-menu open' : 'mobile-menu';
+      var navClass = this.state.menuOpen ? 'main-nav nav-open' : 'main-nav';
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("header", {
         className: "main-header".concat(headerClass),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 45
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "header-container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 46
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__social__["a" /* default */], {
         className: "header-social",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 47
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
         className: "logo",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 48
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
         href: "/",
         prefetch: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 49
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 50
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
         src: __WEBPACK_IMPORTED_MODULE_4__static_solplay_header_logo_svg___default.a,
         alt: "Solplay",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 50
         }
       })))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("nav", {
-        className: "main-nav",
+        className: navClass,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 53
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul", {
         className: "menu",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 54
         }
       }, menu.map(function (item, key) {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li", {
@@ -809,7 +826,7 @@ function (_React$Component) {
           key: key,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 47
+            lineNumber: 57
           }
         }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
           className: _this2.state.activeLink == key ? 'active' : '',
@@ -823,10 +840,35 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 48
+            lineNumber: 58
           }
         }, item));
-      })))));
+      }))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        className: moblieClass,
+        onClick: this.handleMenu,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 70
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        className: "menu-bar",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 71
+        }
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        className: "menu-bar",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 72
+        }
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        className: "menu-bar",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 73
+        }
+      }))));
     }
   }]);
 
@@ -1400,9 +1442,7 @@ function (_React$Component) {
       enumerable: true,
       writable: true,
       value: function value(index) {
-        console.log(index);
-
-        _this.setState({
+        return _this.setState({
           currentSlide: index
         });
       }
@@ -1465,7 +1505,7 @@ function (_React$Component) {
           style: style,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 130
+            lineNumber: 127
           }
         }, slide);
       });
@@ -1475,7 +1515,7 @@ function (_React$Component) {
         ref: this.slider,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 134
+          lineNumber: 131
         }
       }, slides, pagination && this.createPagination(slides, this.state.currentSlide));
     }

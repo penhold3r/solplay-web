@@ -112,10 +112,7 @@ class Slider extends React.Component {
       return (<nav className="pagination" style={this.styles.pagination}>{tiles}</nav>);
    }
 
-   handlePagination = index => {
-      console.log(index);
-      this.setState({ currentSlide: index });
-   }
+   handlePagination = index => this.setState({ currentSlide: index });
 
    render() {
       const { images, pagination } = this.state;

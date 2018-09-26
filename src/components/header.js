@@ -6,12 +6,14 @@ import logo from '../../static/solplay-header-logo.svg';
 
 class Header extends React.Component {
 
-   state = { headerWhite: false, activeLink: 0 }
+   state = { headerWhite: false, activeLink: 0, menuOpen: false }
 
    componentDidMount() {
-      this.handleScroll();
-      window.addEventListener('scroll', this.handleScroll);
+      // this.handleScroll();
+      // window.addEventListener('scroll', this.handleScroll);
 
+      // this.handleResize();
+      // window.addEventListener('resize', this.handleResize);
    }
 
    handleScroll = () => {
@@ -20,16 +22,24 @@ class Header extends React.Component {
       //this.setState({ headerWhite });
    }
 
+   handleMenu = () => {
+      const menuOpen = !this.state.menuOpen;
+      this.setState({ menuOpen });
+   }
+
    handleClick = (e, key, section) => {
       e.preventDefault();
       this.setState({ activeLink: key });
       this.props.menuClick(section);
+      this.handleMenu();
    }
 
    render() {
 
       const { menu } = this.props;
       const headerClass = this.state.headerWhite ? ' white' : '';
+      const moblieClass = this.state.menuOpen ? 'mobile-menu open' : 'mobile-menu';
+      const navClass = this.state.menuOpen ? 'main-nav nav-open' : 'main-nav';
 
       return (
          <header className={`main-header${headerClass}`}>
@@ -40,7 +50,7 @@ class Header extends React.Component {
                      <a><img src={logo} alt="Solplay" /></a>
                   </Link>
                </h1>
-               <nav className="main-nav">
+               <nav className={navClass}>
                   <ul className="menu">
                      {
                         menu.map((item, key) =>
@@ -57,6 +67,11 @@ class Header extends React.Component {
                      }
                   </ul>
                </nav>
+               <div className={moblieClass} onClick={this.handleMenu}>
+                  <div className="menu-bar"></div>
+                  <div className="menu-bar"></div>
+                  <div className="menu-bar"></div>
+               </div>
             </div>
          </header>
       );

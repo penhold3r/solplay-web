@@ -83,7 +83,46 @@
          justify-self: end;
 
          @include tablet {
-            display: none;
+            background: #FFF;
+            position: absolute;
+            height: 1px;
+            transition: all 0.4s;
+            top: 100%;
+            overflow: hidden;
+            width: 100%;
+
+            .menu {
+               opacity: 0;
+               transition: all 0.5s;
+            }
+
+            &.nav-open {
+               height: 70vh;
+               box-shadow: 0 150px 250px rgba(#000, 0.7);
+
+               .menu {
+                  flex-direction: column;
+                  opacity: 1;
+                  padding: 30px 15px;
+
+                  .nav-link {
+                     width: 100%;
+
+                     a {
+                        border-bottom: 1px solid $main-color;
+                        padding: 15px;
+                        text-align: right;
+
+                        &.active {
+                           border-bottom: 1px solid $main-color;
+                           color: $main-color;
+                           font-weight: bold;
+                           padding: 15px;
+                        }
+                     }
+                  }
+               }
+            }
          }
 
          .menu {
@@ -116,6 +155,51 @@
                      border-bottom: 5px solid $main-color;
                      color: $main-color;
                      padding: 10px 10px 13px;
+                  }
+               }
+            }
+         }
+      }
+
+      @include tablet {
+         .mobile-menu {
+            justify-self: end;
+            align-self: center;
+            margin-right: 15px;
+            height: 27px;
+            width: 35px;
+            position: relative;
+
+            .menu-bar {
+               background: $main-color;
+               height: 3px;
+               width: 100%;
+               position: absolute;
+               transition: all 0.3s;
+
+               &:first-child {
+                  top: 0;
+               }
+               &:nth-child(2) {
+                  top: 12px;
+               }
+               &:last-child {
+                  bottom: 0;
+               }
+            }
+
+            &.open {
+               .menu-bar {
+                  &:first-child {
+                     top: 12px;
+                     transform: rotate(40deg);
+                  }
+                  &:nth-child(2) {
+                     opacity: 0;
+                  }
+                  &:last-child {
+                     bottom: 12px;
+                     transform: rotate(-40deg);
                   }
                }
             }
