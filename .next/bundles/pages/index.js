@@ -88,6 +88,129 @@ module.exports = defineProperties;
 
 /***/ }),
 
+/***/ "./node_modules/ev-emitter/ev-emitter.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
+ * EvEmitter v1.1.0
+ * Lil' event emitter
+ * MIT License
+ */
+
+/* jshint unused: true, undef: true, strict: true */
+
+( function( global, factory ) {
+  // universal module definition
+  /* jshint strict: false */ /* globals define, module, window */
+  if ( true ) {
+    // AMD - RequireJS
+    !(__WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) :
+				__WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if ( typeof module == 'object' && module.exports ) {
+    // CommonJS - Browserify, Webpack
+    module.exports = factory();
+  } else {
+    // Browser globals
+    global.EvEmitter = factory();
+  }
+
+}( typeof window != 'undefined' ? window : this, function() {
+
+"use strict";
+
+function EvEmitter() {}
+
+var proto = EvEmitter.prototype;
+
+proto.on = function( eventName, listener ) {
+  if ( !eventName || !listener ) {
+    return;
+  }
+  // set events hash
+  var events = this._events = this._events || {};
+  // set listeners array
+  var listeners = events[ eventName ] = events[ eventName ] || [];
+  // only add once
+  if ( listeners.indexOf( listener ) == -1 ) {
+    listeners.push( listener );
+  }
+
+  return this;
+};
+
+proto.once = function( eventName, listener ) {
+  if ( !eventName || !listener ) {
+    return;
+  }
+  // add event
+  this.on( eventName, listener );
+  // set once flag
+  // set onceEvents hash
+  var onceEvents = this._onceEvents = this._onceEvents || {};
+  // set onceListeners object
+  var onceListeners = onceEvents[ eventName ] = onceEvents[ eventName ] || {};
+  // set flag
+  onceListeners[ listener ] = true;
+
+  return this;
+};
+
+proto.off = function( eventName, listener ) {
+  var listeners = this._events && this._events[ eventName ];
+  if ( !listeners || !listeners.length ) {
+    return;
+  }
+  var index = listeners.indexOf( listener );
+  if ( index != -1 ) {
+    listeners.splice( index, 1 );
+  }
+
+  return this;
+};
+
+proto.emitEvent = function( eventName, args ) {
+  var listeners = this._events && this._events[ eventName ];
+  if ( !listeners || !listeners.length ) {
+    return;
+  }
+  // copy over to avoid interference if .off() in listener
+  listeners = listeners.slice(0);
+  args = args || [];
+  // once stuff
+  var onceListeners = this._onceEvents && this._onceEvents[ eventName ];
+
+  for ( var i=0; i < listeners.length; i++ ) {
+    var listener = listeners[i]
+    var isOnce = onceListeners && onceListeners[ listener ];
+    if ( isOnce ) {
+      // remove listener
+      // remove before trigger to prevent recursion
+      this.off( eventName, listener );
+      // unset once flag
+      delete onceListeners[ listener ];
+    }
+    // trigger listener
+    listener.apply( this, args );
+  }
+
+  return this;
+};
+
+proto.allOff = function() {
+  delete this._events;
+  delete this._onceEvents;
+};
+
+return EvEmitter;
+
+}));
+
+
+/***/ }),
+
 /***/ "./node_modules/function-bind/implementation.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -220,6 +343,391 @@ module.exports = function hasSymbols() {
 var bind = __webpack_require__("./node_modules/function-bind/index.js");
 
 module.exports = bind.call(Function.call, Object.prototype.hasOwnProperty);
+
+
+/***/ }),
+
+/***/ "./node_modules/imagesloaded/imagesloaded.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+ * imagesLoaded v4.1.4
+ * JavaScript is all like "You images are done yet or what?"
+ * MIT License
+ */
+
+( function( window, factory ) { 'use strict';
+  // universal module definition
+
+  /*global define: false, module: false, require: false */
+
+  if ( true ) {
+    // AMD
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+      __webpack_require__("./node_modules/ev-emitter/ev-emitter.js")
+    ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( EvEmitter ) {
+      return factory( window, EvEmitter );
+    }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if ( typeof module == 'object' && module.exports ) {
+    // CommonJS
+    module.exports = factory(
+      window,
+      require('ev-emitter')
+    );
+  } else {
+    // browser global
+    window.imagesLoaded = factory(
+      window,
+      window.EvEmitter
+    );
+  }
+
+})( typeof window !== 'undefined' ? window : this,
+
+// --------------------------  factory -------------------------- //
+
+function factory( window, EvEmitter ) {
+
+'use strict';
+
+var $ = window.jQuery;
+var console = window.console;
+
+// -------------------------- helpers -------------------------- //
+
+// extend objects
+function extend( a, b ) {
+  for ( var prop in b ) {
+    a[ prop ] = b[ prop ];
+  }
+  return a;
+}
+
+var arraySlice = Array.prototype.slice;
+
+// turn element or nodeList into an array
+function makeArray( obj ) {
+  if ( Array.isArray( obj ) ) {
+    // use object if already an array
+    return obj;
+  }
+
+  var isArrayLike = typeof obj == 'object' && typeof obj.length == 'number';
+  if ( isArrayLike ) {
+    // convert nodeList to array
+    return arraySlice.call( obj );
+  }
+
+  // array of single index
+  return [ obj ];
+}
+
+// -------------------------- imagesLoaded -------------------------- //
+
+/**
+ * @param {Array, Element, NodeList, String} elem
+ * @param {Object or Function} options - if function, use as callback
+ * @param {Function} onAlways - callback function
+ */
+function ImagesLoaded( elem, options, onAlways ) {
+  // coerce ImagesLoaded() without new, to be new ImagesLoaded()
+  if ( !( this instanceof ImagesLoaded ) ) {
+    return new ImagesLoaded( elem, options, onAlways );
+  }
+  // use elem as selector string
+  var queryElem = elem;
+  if ( typeof elem == 'string' ) {
+    queryElem = document.querySelectorAll( elem );
+  }
+  // bail if bad element
+  if ( !queryElem ) {
+    console.error( 'Bad element for imagesLoaded ' + ( queryElem || elem ) );
+    return;
+  }
+
+  this.elements = makeArray( queryElem );
+  this.options = extend( {}, this.options );
+  // shift arguments if no options set
+  if ( typeof options == 'function' ) {
+    onAlways = options;
+  } else {
+    extend( this.options, options );
+  }
+
+  if ( onAlways ) {
+    this.on( 'always', onAlways );
+  }
+
+  this.getImages();
+
+  if ( $ ) {
+    // add jQuery Deferred object
+    this.jqDeferred = new $.Deferred();
+  }
+
+  // HACK check async to allow time to bind listeners
+  setTimeout( this.check.bind( this ) );
+}
+
+ImagesLoaded.prototype = Object.create( EvEmitter.prototype );
+
+ImagesLoaded.prototype.options = {};
+
+ImagesLoaded.prototype.getImages = function() {
+  this.images = [];
+
+  // filter & find items if we have an item selector
+  this.elements.forEach( this.addElementImages, this );
+};
+
+/**
+ * @param {Node} element
+ */
+ImagesLoaded.prototype.addElementImages = function( elem ) {
+  // filter siblings
+  if ( elem.nodeName == 'IMG' ) {
+    this.addImage( elem );
+  }
+  // get background image on element
+  if ( this.options.background === true ) {
+    this.addElementBackgroundImages( elem );
+  }
+
+  // find children
+  // no non-element nodes, #143
+  var nodeType = elem.nodeType;
+  if ( !nodeType || !elementNodeTypes[ nodeType ] ) {
+    return;
+  }
+  var childImgs = elem.querySelectorAll('img');
+  // concat childElems to filterFound array
+  for ( var i=0; i < childImgs.length; i++ ) {
+    var img = childImgs[i];
+    this.addImage( img );
+  }
+
+  // get child background images
+  if ( typeof this.options.background == 'string' ) {
+    var children = elem.querySelectorAll( this.options.background );
+    for ( i=0; i < children.length; i++ ) {
+      var child = children[i];
+      this.addElementBackgroundImages( child );
+    }
+  }
+};
+
+var elementNodeTypes = {
+  1: true,
+  9: true,
+  11: true
+};
+
+ImagesLoaded.prototype.addElementBackgroundImages = function( elem ) {
+  var style = getComputedStyle( elem );
+  if ( !style ) {
+    // Firefox returns null if in a hidden iframe https://bugzil.la/548397
+    return;
+  }
+  // get url inside url("...")
+  var reURL = /url\((['"])?(.*?)\1\)/gi;
+  var matches = reURL.exec( style.backgroundImage );
+  while ( matches !== null ) {
+    var url = matches && matches[2];
+    if ( url ) {
+      this.addBackground( url, elem );
+    }
+    matches = reURL.exec( style.backgroundImage );
+  }
+};
+
+/**
+ * @param {Image} img
+ */
+ImagesLoaded.prototype.addImage = function( img ) {
+  var loadingImage = new LoadingImage( img );
+  this.images.push( loadingImage );
+};
+
+ImagesLoaded.prototype.addBackground = function( url, elem ) {
+  var background = new Background( url, elem );
+  this.images.push( background );
+};
+
+ImagesLoaded.prototype.check = function() {
+  var _this = this;
+  this.progressedCount = 0;
+  this.hasAnyBroken = false;
+  // complete if no images
+  if ( !this.images.length ) {
+    this.complete();
+    return;
+  }
+
+  function onProgress( image, elem, message ) {
+    // HACK - Chrome triggers event before object properties have changed. #83
+    setTimeout( function() {
+      _this.progress( image, elem, message );
+    });
+  }
+
+  this.images.forEach( function( loadingImage ) {
+    loadingImage.once( 'progress', onProgress );
+    loadingImage.check();
+  });
+};
+
+ImagesLoaded.prototype.progress = function( image, elem, message ) {
+  this.progressedCount++;
+  this.hasAnyBroken = this.hasAnyBroken || !image.isLoaded;
+  // progress event
+  this.emitEvent( 'progress', [ this, image, elem ] );
+  if ( this.jqDeferred && this.jqDeferred.notify ) {
+    this.jqDeferred.notify( this, image );
+  }
+  // check if completed
+  if ( this.progressedCount == this.images.length ) {
+    this.complete();
+  }
+
+  if ( this.options.debug && console ) {
+    console.log( 'progress: ' + message, image, elem );
+  }
+};
+
+ImagesLoaded.prototype.complete = function() {
+  var eventName = this.hasAnyBroken ? 'fail' : 'done';
+  this.isComplete = true;
+  this.emitEvent( eventName, [ this ] );
+  this.emitEvent( 'always', [ this ] );
+  if ( this.jqDeferred ) {
+    var jqMethod = this.hasAnyBroken ? 'reject' : 'resolve';
+    this.jqDeferred[ jqMethod ]( this );
+  }
+};
+
+// --------------------------  -------------------------- //
+
+function LoadingImage( img ) {
+  this.img = img;
+}
+
+LoadingImage.prototype = Object.create( EvEmitter.prototype );
+
+LoadingImage.prototype.check = function() {
+  // If complete is true and browser supports natural sizes,
+  // try to check for image status manually.
+  var isComplete = this.getIsImageComplete();
+  if ( isComplete ) {
+    // report based on naturalWidth
+    this.confirm( this.img.naturalWidth !== 0, 'naturalWidth' );
+    return;
+  }
+
+  // If none of the checks above matched, simulate loading on detached element.
+  this.proxyImage = new Image();
+  this.proxyImage.addEventListener( 'load', this );
+  this.proxyImage.addEventListener( 'error', this );
+  // bind to image as well for Firefox. #191
+  this.img.addEventListener( 'load', this );
+  this.img.addEventListener( 'error', this );
+  this.proxyImage.src = this.img.src;
+};
+
+LoadingImage.prototype.getIsImageComplete = function() {
+  // check for non-zero, non-undefined naturalWidth
+  // fixes Safari+InfiniteScroll+Masonry bug infinite-scroll#671
+  return this.img.complete && this.img.naturalWidth;
+};
+
+LoadingImage.prototype.confirm = function( isLoaded, message ) {
+  this.isLoaded = isLoaded;
+  this.emitEvent( 'progress', [ this, this.img, message ] );
+};
+
+// ----- events ----- //
+
+// trigger specified handler for event type
+LoadingImage.prototype.handleEvent = function( event ) {
+  var method = 'on' + event.type;
+  if ( this[ method ] ) {
+    this[ method ]( event );
+  }
+};
+
+LoadingImage.prototype.onload = function() {
+  this.confirm( true, 'onload' );
+  this.unbindEvents();
+};
+
+LoadingImage.prototype.onerror = function() {
+  this.confirm( false, 'onerror' );
+  this.unbindEvents();
+};
+
+LoadingImage.prototype.unbindEvents = function() {
+  this.proxyImage.removeEventListener( 'load', this );
+  this.proxyImage.removeEventListener( 'error', this );
+  this.img.removeEventListener( 'load', this );
+  this.img.removeEventListener( 'error', this );
+};
+
+// -------------------------- Background -------------------------- //
+
+function Background( url, element ) {
+  this.url = url;
+  this.element = element;
+  this.img = new Image();
+}
+
+// inherit LoadingImage prototype
+Background.prototype = Object.create( LoadingImage.prototype );
+
+Background.prototype.check = function() {
+  this.img.addEventListener( 'load', this );
+  this.img.addEventListener( 'error', this );
+  this.img.src = this.url;
+  // check if image is already complete
+  var isComplete = this.getIsImageComplete();
+  if ( isComplete ) {
+    this.confirm( this.img.naturalWidth !== 0, 'naturalWidth' );
+    this.unbindEvents();
+  }
+};
+
+Background.prototype.unbindEvents = function() {
+  this.img.removeEventListener( 'load', this );
+  this.img.removeEventListener( 'error', this );
+};
+
+Background.prototype.confirm = function( isLoaded, message ) {
+  this.isLoaded = isLoaded;
+  this.emitEvent( 'progress', [ this, this.element, message ] );
+};
+
+// -------------------------- jQuery -------------------------- //
+
+ImagesLoaded.makeJQueryPlugin = function( jQuery ) {
+  jQuery = jQuery || window.jQuery;
+  if ( !jQuery ) {
+    return;
+  }
+  // set local variable
+  $ = jQuery;
+  // $().imagesLoaded()
+  $.fn.imagesLoaded = function( options, callback ) {
+    var instance = new ImagesLoaded( this, options, callback );
+    return instance.jqDeferred.promise( $(this) );
+  };
+};
+// try making plugin
+ImagesLoaded.makeJQueryPlugin();
+
+// --------------------------  -------------------------- //
+
+return ImagesLoaded;
+
+});
 
 
 /***/ }),
@@ -986,15 +1494,17 @@ module.exports = exports['default'];
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_components_layout__ = __webpack_require__("./src/components/layout.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_components_hero__ = __webpack_require__("./src/components/hero.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__src_components_about__ = __webpack_require__("./src/components/about.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__src_components_products__ = __webpack_require__("./src/components/products.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__src_components_organic__ = __webpack_require__("./src/components/organic.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__src_components_certificate__ = __webpack_require__("./src/components/certificate.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__src_components_location__ = __webpack_require__("./src/components/location.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__src_components_contact__ = __webpack_require__("./src/components/contact.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__src_data_data__ = __webpack_require__("./src/data/data.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_imagesloaded__ = __webpack_require__("./node_modules/imagesloaded/imagesloaded.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_imagesloaded___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_imagesloaded__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_components_layout__ = __webpack_require__("./src/components/layout.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__src_components_hero__ = __webpack_require__("./src/components/hero.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__src_components_about__ = __webpack_require__("./src/components/about.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__src_components_products__ = __webpack_require__("./src/components/products.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__src_components_organic__ = __webpack_require__("./src/components/organic.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__src_components_certificate__ = __webpack_require__("./src/components/certificate.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__src_components_location__ = __webpack_require__("./src/components/location.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__src_components_contact__ = __webpack_require__("./src/components/contact.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__src_data_data__ = __webpack_require__("./src/data/data.js");
 var _jsxFileName = "/Users/ph/Documents/WEB/www/solplay-web/pages/index.js";
 
 
@@ -1011,6 +1521,7 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 
 
 
@@ -1068,6 +1579,37 @@ function (_React$Component) {
           modal: openModal
         });
       }
+    }), Object.defineProperty(_assertThisInitialized(_this), "waitForImages", {
+      configurable: true,
+      enumerable: true,
+      writable: true,
+      value: function value(imgs) {
+        var _iteratorNormalCompletion = true;
+        var _didIteratorError = false;
+        var _iteratorError = undefined;
+
+        try {
+          for (var _iterator = imgs[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            var _img = _step.value;
+            __WEBPACK_IMPORTED_MODULE_1_imagesloaded___default()(_img, function (obj) {
+              return obj.images[0].img.style.opacity = 1;
+            });
+          }
+        } catch (err) {
+          _didIteratorError = true;
+          _iteratorError = err;
+        } finally {
+          try {
+            if (!_iteratorNormalCompletion && _iterator.return != null) {
+              _iterator.return();
+            }
+          } finally {
+            if (_didIteratorError) {
+              throw _iteratorError;
+            }
+          }
+        }
+      }
     }), _temp));
   }
 
@@ -1078,6 +1620,8 @@ function (_React$Component) {
       this.setState({
         sections: sections
       });
+      var images = document.querySelectorAll('img');
+      this.waitForImages(images);
     }
   }, {
     key: "componentDidUpdate",
@@ -1095,63 +1639,63 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var menu = __WEBPACK_IMPORTED_MODULE_9__src_data_data__["a" /* default */].menu,
-          _data$main = __WEBPACK_IMPORTED_MODULE_9__src_data_data__["a" /* default */].main,
+      var menu = __WEBPACK_IMPORTED_MODULE_10__src_data_data__["a" /* default */].menu,
+          _data$main = __WEBPACK_IMPORTED_MODULE_10__src_data_data__["a" /* default */].main,
           home = _data$main.home,
           about = _data$main.about,
           products = _data$main.products,
           organic = _data$main.organic,
           location = _data$main.location;
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__src_components_layout__["a" /* default */], {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__src_components_layout__["a" /* default */], {
         menu: menu,
         sections: this.state.sections,
         menuClick: this.handleScroll,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 57
         }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__src_components_hero__["a" /* default */], {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__src_components_hero__["a" /* default */], {
         content: home,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 58
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__src_components_about__["a" /* default */], {
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__src_components_about__["a" /* default */], {
         content: about,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 59
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__src_components_products__["a" /* default */], {
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__src_components_products__["a" /* default */], {
         content: products,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 60
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__src_components_organic__["a" /* default */], {
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__src_components_organic__["a" /* default */], {
         content: organic,
         openModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 61
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__src_components_location__["a" /* default */], {
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__src_components_location__["a" /* default */], {
         content: location,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 62
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__src_components_contact__["a" /* default */], {
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__src_components_contact__["a" /* default */], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 63
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__src_components_certificate__["a" /* default */], {
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__src_components_certificate__["a" /* default */], {
         open: this.state.modal,
         closeModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 64
         }
       }));
     }
@@ -1734,7 +2278,16 @@ function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__slider__ = __webpack_require__("./src/components/slider.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_solplay_banner_001_jpg__ = __webpack_require__("./static/solplay_banner-001.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_solplay_banner_001_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__static_solplay_banner_001_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_solplay_banner_002_jpg__ = __webpack_require__("./static/solplay_banner-002.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_solplay_banner_002_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__static_solplay_banner_002_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_solplay_banner_003_jpg__ = __webpack_require__("./static/solplay_banner-003.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_solplay_banner_003_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__static_solplay_banner_003_jpg__);
 var _jsxFileName = "/Users/ph/Documents/WEB/www/solplay-web/src/components/hero.js";
+
+
+
 
 
 
@@ -1745,18 +2298,49 @@ var Hero = function Hero(_ref) {
     className: "hero scroll",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 8
     }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__slider__["a" /* default */], {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "slider-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 10
     }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__slider__["a" /* default */], {
+    pagination: true,
+    paginationStyle: {
+      background: '#FFF'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
+    src: __WEBPACK_IMPORTED_MODULE_2__static_solplay_banner_001_jpg___default.a,
+    alt: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
+    src: __WEBPACK_IMPORTED_MODULE_3__static_solplay_banner_002_jpg___default.a,
+    alt: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
+    src: __WEBPACK_IMPORTED_MODULE_4__static_solplay_banner_003_jpg___default.a,
+    alt: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    }
+  }))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "hero-content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 18
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "hero-text",
@@ -1765,14 +2349,14 @@ var Hero = function Hero(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 19
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     href: "#",
     className: "button",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 20
     }
   }, "descubrinos")));
 };
@@ -2125,28 +2709,214 @@ var Products = function Products(_ref) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_banner_001_jpg__ = __webpack_require__("./static/solplay_banner-001.jpg");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_banner_001_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__static_solplay_banner_001_jpg__);
 var _jsxFileName = "/Users/ph/Documents/WEB/www/solplay-web/src/components/slider.js";
 
 
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-var Slider = function Slider() {
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-    className: "slider",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
-    src: __WEBPACK_IMPORTED_MODULE_1__static_solplay_banner_001_jpg___default.a,
-    alt: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    }
-  }));
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+var styles = {
+  slider: {
+    height: '100%',
+    position: 'relative',
+    width: '100%'
+  },
+  slide: {
+    height: '100%',
+    left: 0,
+    opacity: 0,
+    position: 'absolute',
+    top: 0,
+    transition: 'all 0.3s',
+    width: '100%',
+    zIndex: 3
+  },
+  sliderImg: {
+    height: '100%',
+    objectFit: 'cover',
+    opacity: 1,
+    display: 'block',
+    width: '100%'
+  },
+  onTop: {
+    opacity: 1,
+    zIndex: 1
+  },
+  pagination: {
+    bottom: 0,
+    display: 'flex',
+    justifyContent: 'center',
+    left: 0,
+    margin: '0 auto',
+    position: 'absolute',
+    right: 0,
+    zIndex: 99
+  },
+  tile: {
+    background: '#CCC',
+    border: '1px solid #666',
+    borderRadius: '50%',
+    cursor: 'pointer',
+    height: '20px',
+    margin: '6px',
+    opacity: .5,
+    outline: 'none',
+    transition: 'all 0.3s',
+    webkitAppearance: 'none',
+    width: '20px'
+  },
+  activeTile: {
+    background: '#999',
+    opacity: 1
+  }
 };
+
+var Slider =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Slider, _React$Component);
+
+  function Slider(props) {
+    var _this;
+
+    _classCallCheck(this, Slider);
+
+    _this = _possibleConstructorReturn(this, (Slider.__proto__ || Object.getPrototypeOf(Slider)).call(this, props));
+    Object.defineProperty(_assertThisInitialized(_this), "createPagination", {
+      configurable: true,
+      enumerable: true,
+      writable: true,
+      value: function value(slides, activeTile) {
+        var tiles = slides && slides.map(function (slide, key) {
+          var currentIndex = slides.indexOf(slide);
+          var classes = currentIndex == activeTile ? 'tile' : 'tile active-tile';
+          var style = slides.indexOf(slide) == activeTile ? _objectSpread({}, _this.styles.tile, _this.styles.activeTile) : _this.styles.tile;
+          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button", {
+            key: key,
+            className: classes,
+            style: style,
+            onClick: function onClick() {
+              return _this.handlePagination(currentIndex);
+            },
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 103
+            }
+          });
+        });
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("nav", {
+          className: "pagination",
+          style: _this.styles.pagination,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 112
+          }
+        }, tiles);
+      }
+    });
+    Object.defineProperty(_assertThisInitialized(_this), "handlePagination", {
+      configurable: true,
+      enumerable: true,
+      writable: true,
+      value: function value(index) {
+        console.log(index);
+
+        _this.setState({
+          currentSlide: index
+        });
+      }
+    });
+    _this.state = {
+      images: [],
+      currentSlide: 0,
+      pagination: false
+    };
+    _this.slider = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createRef();
+    _this.styles = _objectSpread({}, styles, {
+      tile: _objectSpread({}, styles.tile, props.paginationStyle),
+      activeTile: _objectSpread({}, styles.activeTile, props.paginationStyle)
+    });
+    return _this;
+  }
+
+  _createClass(Slider, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      var _props = this.props,
+          children = _props.children,
+          pagination = _props.pagination,
+          _props$delay = _props.delay,
+          delay = _props$delay === void 0 ? 4500 : _props$delay;
+      var images = __WEBPACK_IMPORTED_MODULE_0_react___default.a.Children.map(children, function (child) {
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.cloneElement(child, {
+          style: _this2.styles.sliderImg
+        });
+      });
+      this.setState({
+        images: images,
+        pagination: pagination
+      });
+      images && setInterval(function () {
+        var onTop = _this2.state.currentSlide;
+        var currentSlide = onTop == 2 ? 0 : onTop + 1;
+
+        _this2.setState({
+          currentSlide: currentSlide
+        });
+      }, delay);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this3 = this;
+
+      var _state = this.state,
+          images = _state.images,
+          pagination = _state.pagination;
+      var slides = images.length > 1 && images.map(function (slide, key) {
+        var classes = images.indexOf(slide) == _this3.state.currentSlide ? 'slide on-top' : 'slide';
+        var style = images.indexOf(slide) == _this3.state.currentSlide ? _objectSpread({}, _this3.styles.slide, _this3.styles.onTop) : _this3.styles.slide;
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+          key: key,
+          className: classes,
+          style: style,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 130
+          }
+        }, slide);
+      });
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        className: "slider",
+        style: this.styles.slider,
+        ref: this.slider,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 134
+        }
+      }, slides, pagination && this.createPagination(slides, this.state.currentSlide));
+    }
+  }]);
+
+  return Slider;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["a"] = (Slider);
 
@@ -2360,6 +3130,20 @@ module.exports = "/_next/static/images/solplay_about-6089f28e7784fdfd0988d315927
 /***/ (function(module, exports) {
 
 module.exports = "/_next/static/images/solplay_banner-001-23b79420585e032c8fc443a7fac375b5.jpg";
+
+/***/ }),
+
+/***/ "./static/solplay_banner-002.jpg":
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/solplay_banner-002-520bac558aad58dedeec5ddf649d63a3.jpg";
+
+/***/ }),
+
+/***/ "./static/solplay_banner-003.jpg":
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/solplay_banner-003-4f8509ecf0561d12a7a611dcc82aff2b.jpg";
 
 /***/ }),
 

@@ -1,5 +1,6 @@
 .hero {
    height: 70vh;
+   padding: 0;
    position: relative;
 
    &:before {
@@ -26,7 +27,8 @@
       width: 100%;
    }
 
-   .slider {
+   .slider-container {
+      background: #333;
       height: 100%;
       left: 0;
       position: absolute;
@@ -34,10 +36,12 @@
       width: 100%;
       z-index: 0;
 
-      img {
-         height: 100%;
-         object-fit: cover;
-         width: 100%;
+      .slider {
+         opacity: 0.8;
+
+         .pagination {
+            bottom: 100px !important;
+         }
       }
    }
 
@@ -49,6 +53,7 @@
       left: 0;
       margin: 0 auto 100px;
       max-width: 900px;
+      pointer-events: none;
       position: absolute;
       right: 0;
       top: 0;
@@ -88,6 +93,7 @@
          border-color: #FFF;
          font-size: 1em;
          margin: auto;
+         pointer-events: initial;
       }
    }
 }

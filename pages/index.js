@@ -1,3 +1,5 @@
+import imagesLoaded from 'imagesloaded';
+
 import Layout from '../src/components/layout';
 import Hero from '../src/components/hero';
 import About from '../src/components/about';
@@ -20,6 +22,8 @@ class Index extends React.Component {
    componentDidMount() {
       const sections = Array.from(document.querySelectorAll('section.scroll'));
       this.setState({ sections });
+      const images = document.querySelectorAll('img');
+      this.waitForImages(images);
    }
 
    componentDidUpdate() {
@@ -36,6 +40,14 @@ class Index extends React.Component {
       e.preventDefault();
       this.setState({ modal: openModal });
    }
+
+   waitForImages = imgs => {
+      for (let img of imgs) {
+         imagesLoaded(img, obj =>
+            obj.images[0].img.style.opacity = 1
+         );
+      }
+   };
 
    render() {
 

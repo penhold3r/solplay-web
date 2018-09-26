@@ -548,6 +548,9 @@ body {
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 0.05em;
     text-transform: uppercase; }
+  body img {
+    opacity: 0;
+    transition: all 0.3s; }
   body .social-links ul {
     list-style: none;
     margin: 0;
@@ -675,6 +678,7 @@ body {
 
 .hero {
   height: 70vh;
+  padding: 0;
   position: relative; }
   .hero:before {
     border-left: 6px solid #FFF;
@@ -696,17 +700,18 @@ body {
     height: 100px;
     position: absolute;
     width: 100%; }
-  .hero .slider {
+  .hero .slider-container {
+    background: #333;
     height: 100%;
     left: 0;
     position: absolute;
     top: 0;
     width: 100%;
     z-index: 0; }
-    .hero .slider img {
-      height: 100%;
-      object-fit: cover;
-      width: 100%; }
+    .hero .slider-container .slider {
+      opacity: 0.8; }
+      .hero .slider-container .slider .pagination {
+        bottom: 100px !important; }
   .hero .hero-content {
     bottom: 0;
     display: flex;
@@ -715,6 +720,7 @@ body {
     left: 0;
     margin: 0 auto 100px;
     max-width: 900px;
+    pointer-events: none;
     position: absolute;
     right: 0;
     top: 0;
@@ -742,7 +748,8 @@ body {
       color: #FFF;
       border-color: #FFF;
       font-size: 1em;
-      margin: auto; }
+      margin: auto;
+      pointer-events: initial; }
 
 .about .about-content {
   padding: 15px;
