@@ -1505,7 +1505,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__src_components_location__ = __webpack_require__("./src/components/location.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__src_components_contact__ = __webpack_require__("./src/components/contact.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__src_data_data__ = __webpack_require__("./src/data/data.js");
-var _jsxFileName = "/Users/ph/Documents/WEB/www/solplay-web/pages/index.js";
+var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\pages\\index.js";
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -1556,7 +1556,7 @@ function (_React$Component) {
       value: {
         modal: false,
         sections: [],
-        sectionToScroll: ''
+        sectionToScroll: ""
       }
     }), Object.defineProperty(_assertThisInitialized(_this), "handleScroll", {
       configurable: true,
@@ -1616,11 +1616,11 @@ function (_React$Component) {
   _createClass(Index, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      var sections = Array.from(document.querySelectorAll('section.scroll'));
+      var sections = Array.from(document.querySelectorAll("section.scroll"));
       this.setState({
         sections: sections
       });
-      var images = document.querySelectorAll('img');
+      var images = document.querySelectorAll("img");
       this.waitForImages(images);
     }
   }, {
@@ -1631,8 +1631,8 @@ function (_React$Component) {
           sectionToScroll = _state.sectionToScroll;
       sections.map(function (section) {
         return section.id == sectionToScroll && section.scrollIntoView({
-          block: 'start',
-          behavior: 'smooth'
+          block: "start",
+          behavior: "smooth"
         });
       });
     }
@@ -1652,50 +1652,50 @@ function (_React$Component) {
         menuClick: this.handleScroll,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 58
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__src_components_hero__["a" /* default */], {
         content: home,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 63
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__src_components_about__["a" /* default */], {
         content: about,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59
+          lineNumber: 64
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__src_components_products__["a" /* default */], {
         content: products,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 65
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__src_components_organic__["a" /* default */], {
         content: organic,
         openModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 66
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__src_components_location__["a" /* default */], {
         content: location,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 67
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__src_components_contact__["a" /* default */], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 68
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__src_components_certificate__["a" /* default */], {
         open: this.state.modal,
         closeModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 69
         }
       }));
     }
@@ -1735,7 +1735,7 @@ function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_about_jpg__ = __webpack_require__("./static/solplay_about.jpg");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_about_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__static_solplay_about_jpg__);
-var _jsxFileName = "/Users/ph/Documents/WEB/www/solplay-web/src/components/about.js";
+var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\about.js";
 
 
 
@@ -1810,19 +1810,19 @@ var About = function About(_ref) {
       "data-lighten": "".concat(key * 5),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19
+        lineNumber: 18
       }
     }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
       src: icon.icon,
       alt: "",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20
+        lineNumber: 19
       }
     }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h3", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21
+        lineNumber: 20
       }
     }, icon.text));
   })));
@@ -1844,7 +1844,7 @@ var About = function About(_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_oia_logo_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__static_oia_logo_svg__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_download_pdf_icon_svg__ = __webpack_require__("./static/download-pdf-icon.svg");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_download_pdf_icon_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__static_download_pdf_icon_svg__);
-var _jsxFileName = "/Users/ph/Documents/WEB/www/solplay-web/src/components/certificate.js";
+var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\certificate.js";
 
 
 
@@ -1931,7 +1931,7 @@ var Certificate = function Certificate(_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__social__ = __webpack_require__("./src/components/social.js");
-var _jsxFileName = "/Users/ph/Documents/WEB/www/solplay-web/src/components/contact.js";
+var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\contact.js";
 
 
 
@@ -2049,7 +2049,7 @@ var Contact = function Contact() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_white_logo_svg__ = __webpack_require__("./static/solplay-white-logo.svg");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_white_logo_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__static_solplay_white_logo_svg__);
-var _jsxFileName = "/Users/ph/Documents/WEB/www/solplay-web/src/components/footer.js";
+var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\footer.js";
 
 
 
@@ -2099,7 +2099,7 @@ var Footer = function Footer() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__social__ = __webpack_require__("./src/components/social.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_solplay_header_logo_svg__ = __webpack_require__("./static/solplay-header-logo.svg");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_solplay_header_logo_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__static_solplay_header_logo_svg__);
-var _jsxFileName = "/Users/ph/Documents/WEB/www/solplay-web/src/components/header.js";
+var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\header.js";
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -2320,13 +2320,22 @@ function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__slider__ = __webpack_require__("./src/components/slider.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_solplay_banner_001_jpg__ = __webpack_require__("./static/solplay_banner-001.jpg");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_solplay_banner_001_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__static_solplay_banner_001_jpg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_solplay_banner_002_jpg__ = __webpack_require__("./static/solplay_banner-002.jpg");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_solplay_banner_002_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__static_solplay_banner_002_jpg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_solplay_banner_003_jpg__ = __webpack_require__("./static/solplay_banner-003.jpg");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_solplay_banner_003_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__static_solplay_banner_003_jpg__);
-var _jsxFileName = "/Users/ph/Documents/WEB/www/solplay-web/src/components/hero.js";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_banner_solplay_banner_01_jpg__ = __webpack_require__("./static/banner/solplay_banner-01.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_banner_solplay_banner_01_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__static_banner_solplay_banner_01_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_banner_solplay_banner_02_jpg__ = __webpack_require__("./static/banner/solplay_banner-02.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_banner_solplay_banner_02_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__static_banner_solplay_banner_02_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_banner_solplay_banner_03_jpg__ = __webpack_require__("./static/banner/solplay_banner-03.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_banner_solplay_banner_03_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__static_banner_solplay_banner_03_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__static_banner_solplay_banner_04_jpg__ = __webpack_require__("./static/banner/solplay_banner-04.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__static_banner_solplay_banner_04_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__static_banner_solplay_banner_04_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__static_banner_solplay_banner_05_jpg__ = __webpack_require__("./static/banner/solplay_banner-05.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__static_banner_solplay_banner_05_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__static_banner_solplay_banner_05_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__static_banner_solplay_banner_06_jpg__ = __webpack_require__("./static/banner/solplay_banner-06.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__static_banner_solplay_banner_06_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__static_banner_solplay_banner_06_jpg__);
+var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\hero.js";
+
+
+
 
 
 
@@ -2340,49 +2349,70 @@ var Hero = function Hero(_ref) {
     className: "hero scroll",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 10
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "slider-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 11
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__slider__["a" /* default */], {
     pagination: true,
     paginationStyle: {
-      background: '#FFF'
+      background: "#FFF"
     },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
-    src: __WEBPACK_IMPORTED_MODULE_2__static_solplay_banner_001_jpg___default.a,
-    alt: "",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
     }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
-    src: __WEBPACK_IMPORTED_MODULE_3__static_solplay_banner_002_jpg___default.a,
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
+    src: __WEBPACK_IMPORTED_MODULE_2__static_banner_solplay_banner_01_jpg___default.a,
     alt: "",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
-    src: __WEBPACK_IMPORTED_MODULE_4__static_solplay_banner_003_jpg___default.a,
+    src: __WEBPACK_IMPORTED_MODULE_3__static_banner_solplay_banner_02_jpg___default.a,
     alt: "",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
     }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
+    src: __WEBPACK_IMPORTED_MODULE_4__static_banner_solplay_banner_03_jpg___default.a,
+    alt: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
+    src: __WEBPACK_IMPORTED_MODULE_5__static_banner_solplay_banner_04_jpg___default.a,
+    alt: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
+    src: __WEBPACK_IMPORTED_MODULE_6__static_banner_solplay_banner_05_jpg___default.a,
+    alt: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
+    src: __WEBPACK_IMPORTED_MODULE_7__static_banner_solplay_banner_06_jpg___default.a,
+    alt: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    }
   }))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "hero-content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 22
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "hero-text",
@@ -2391,14 +2421,14 @@ var Hero = function Hero(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 23
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     href: "#",
     className: "button",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 27
     }
   }, "descubrinos")));
 };
@@ -2421,7 +2451,7 @@ var Hero = function Hero(_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__footer__ = __webpack_require__("./src/components/footer.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__styles_index_scss__ = __webpack_require__("./src/styles/index.scss");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__styles_index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__styles_index_scss__);
-var _jsxFileName = "/Users/ph/Documents/WEB/www/solplay-web/src/components/layout.js";
+var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\layout.js";
 
 
 
@@ -2544,7 +2574,7 @@ var Layout = function Layout(_ref) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _jsxFileName = "/Users/ph/Documents/WEB/www/solplay-web/src/components/location.js";
+var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\location.js";
 
 
 var LocationSection = function LocationSection(_ref) {
@@ -2611,7 +2641,7 @@ var LocationSection = function LocationSection(_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_leaf_jpg__ = __webpack_require__("./static/solplay_leaf.jpg");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_leaf_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__static_solplay_leaf_jpg__);
-var _jsxFileName = "/Users/ph/Documents/WEB/www/solplay-web/src/components/organic.js";
+var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\organic.js";
 
 
 
@@ -2689,7 +2719,7 @@ var Organic = function Organic(_ref) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _jsxFileName = "/Users/ph/Documents/WEB/www/solplay-web/src/components/products.js";
+var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\products.js";
 
 
 var Products = function Products(_ref) {
@@ -2751,7 +2781,7 @@ var Products = function Products(_ref) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _jsxFileName = "/Users/ph/Documents/WEB/www/solplay-web/src/components/slider.js";
+var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\slider.js";
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -2774,26 +2804,26 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 
 var styles = {
   slider: {
-    height: '100%',
-    position: 'relative',
-    width: '100%'
+    height: "100%",
+    position: "relative",
+    width: "100%"
   },
   slide: {
-    height: '100%',
+    height: "100%",
     left: 0,
     opacity: 0,
-    position: 'absolute',
+    position: "absolute",
     top: 0,
-    transition: 'all 0.3s',
-    width: '100%',
+    transition: "all 0.3s",
+    width: "100%",
     zIndex: 3
   },
   sliderImg: {
-    height: '100%',
-    objectFit: 'cover',
+    height: "100%",
+    objectFit: "cover",
     opacity: 1,
-    display: 'block',
-    width: '100%'
+    display: "block",
+    width: "100%"
   },
   onTop: {
     opacity: 1,
@@ -2801,29 +2831,29 @@ var styles = {
   },
   pagination: {
     bottom: 0,
-    display: 'flex',
-    justifyContent: 'center',
+    display: "flex",
+    justifyContent: "center",
     left: 0,
-    margin: '0 auto',
-    position: 'absolute',
+    margin: "0 auto",
+    position: "absolute",
     right: 0,
     zIndex: 99
   },
   tile: {
-    background: '#CCC',
-    border: '1px solid #666',
-    borderRadius: '50%',
-    cursor: 'pointer',
-    height: '20px',
-    margin: '6px',
-    opacity: .5,
-    outline: 'none',
-    transition: 'all 0.3s',
-    webkitAppearance: 'none',
-    width: '20px'
+    background: "#CCC",
+    border: "1px solid #666",
+    borderRadius: "50%",
+    cursor: "pointer",
+    height: "20px",
+    margin: "6px",
+    opacity: 0.5,
+    outline: "none",
+    transition: "all 0.3s",
+    webkitAppearance: "none",
+    width: "20px"
   },
   activeTile: {
-    background: '#999',
+    background: "#999",
     opacity: 1
   }
 };
@@ -2846,7 +2876,7 @@ function (_React$Component) {
       value: function value(slides, activeTile) {
         var tiles = slides && slides.map(function (slide, key) {
           var currentIndex = slides.indexOf(slide);
-          var classes = currentIndex == activeTile ? 'tile' : 'tile active-tile';
+          var classes = currentIndex == activeTile ? "tile" : "tile active-tile";
           var style = slides.indexOf(slide) == activeTile ? _objectSpread({}, _this.styles.tile, _this.styles.activeTile) : _this.styles.tile;
           return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button", {
             key: key,
@@ -2857,7 +2887,7 @@ function (_React$Component) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 103
+              lineNumber: 107
             }
           });
         });
@@ -2866,7 +2896,7 @@ function (_React$Component) {
           style: _this.styles.pagination,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 112
+            lineNumber: 117
           }
         }, tiles);
       }
@@ -2915,7 +2945,8 @@ function (_React$Component) {
       });
       images && setInterval(function () {
         var onTop = _this2.state.currentSlide;
-        var currentSlide = onTop == 2 ? 0 : onTop + 1;
+        var currentSlide = onTop == images.length - 1 ? 0 : onTop + 1;
+        console.log(currentSlide);
 
         _this2.setState({
           currentSlide: currentSlide
@@ -2931,7 +2962,7 @@ function (_React$Component) {
           images = _state.images,
           pagination = _state.pagination;
       var slides = images.length > 1 && images.map(function (slide, key) {
-        var classes = images.indexOf(slide) == _this3.state.currentSlide ? 'slide on-top' : 'slide';
+        var classes = images.indexOf(slide) == _this3.state.currentSlide ? "slide on-top" : "slide";
         var style = images.indexOf(slide) == _this3.state.currentSlide ? _objectSpread({}, _this3.styles.slide, _this3.styles.onTop) : _this3.styles.slide;
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
           key: key,
@@ -2939,7 +2970,7 @@ function (_React$Component) {
           style: style,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 127
+            lineNumber: 140
           }
         }, slide);
       });
@@ -2949,7 +2980,7 @@ function (_React$Component) {
         ref: this.slider,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 131
+          lineNumber: 147
         }
       }, slides, pagination && this.createPagination(slides, this.state.currentSlide));
     }
@@ -2968,7 +2999,7 @@ function (_React$Component) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _jsxFileName = "/Users/ph/Documents/WEB/www/solplay-web/src/components/social.js";
+var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\social.js";
 
 
 var Social = function Social(_ref) {
@@ -3039,10 +3070,19 @@ var Social = function Social(_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_solplay_seguimiento_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__static_solplay_seguimiento_svg__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_solplay_entrega_svg__ = __webpack_require__("./static/solplay-entrega.svg");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_solplay_entrega_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__static_solplay_entrega_svg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_solplay_productos_001_jpg__ = __webpack_require__("./static/solplay_productos-001.jpg");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_solplay_productos_001_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__static_solplay_productos_001_jpg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__static_solplay_productos_002_jpg__ = __webpack_require__("./static/solplay_productos-002.jpg");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__static_solplay_productos_002_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__static_solplay_productos_002_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_productos_ajos_jpg__ = __webpack_require__("./static/productos/ajos.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_productos_ajos_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__static_productos_ajos_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__static_productos_ciruelas_secas_jpg__ = __webpack_require__("./static/productos/ciruelas-secas.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__static_productos_ciruelas_secas_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__static_productos_ciruelas_secas_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__static_productos_nueces_chandler_jpg__ = __webpack_require__("./static/productos/nueces-chandler-.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__static_productos_nueces_chandler_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__static_productos_nueces_chandler_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__static_productos_zapallo_butternut_jpg__ = __webpack_require__("./static/productos/zapallo-butternut.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__static_productos_zapallo_butternut_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__static_productos_zapallo_butternut_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_muscat_jpg__ = __webpack_require__("./static/productos/zapallo-muscat.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_muscat_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_muscat_jpg__);
+
+
+
 
 
 
@@ -3050,52 +3090,61 @@ var Social = function Social(_ref) {
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-  menu: ['Inicio', 'Nosotros', 'Productos', 'Contacto'],
+  menu: ["Inicio", "Nosotros", "Productos", "Contacto"],
   main: {
     home: {
-      name: 'Inicio',
-      content: '<h2>Lo <strong>mejor</strong> de nosotros<br/> para <strong>todo el mundo</strong></h2><p>Motivados por la pasión de lo que nos gusta hacer, que es llegar con nuestros productos a nuestros clientes en el exterior.</p>'
+      name: "Inicio",
+      content: "<h2>Lo <strong>mejor</strong> de nosotros<br/> para <strong>todo el mundo</strong></h2><p>Motivados por la pasión de lo que nos gusta hacer, que es llegar con nuestros productos a nuestros clientes en el exterior.</p>"
     },
     about: {
-      title: 'Quienes Somos',
-      content: '<strong>Solplay SA</strong> es una empresa Argentina, dedicada a la exportación de productos agroalimentarios de calidad. Estamos en el mercado internacional hace más de 2 décadas, tenemos experiencia en los productos que procesamos y exportamos a nuestros clientes.',
+      title: "Quienes Somos",
+      content: "<strong>Solplay SA</strong> es una empresa Argentina, dedicada a la exportación de productos agroalimentarios de calidad. Estamos en el mercado internacional hace más de 2 décadas, tenemos experiencia en los productos que procesamos y exportamos a nuestros clientes.",
       countries: {
-        intro: 'Contamos con clientes en distintos Países tales como:',
-        list: 'EEUU, Unión Europea, Taiwán, Haití, Brasil, Chile, Bolivia'
+        intro: "Contamos con clientes en distintos Países tales como:",
+        list: "EEUU, Unión Europea, Taiwán, Haití, Brasil, Chile, Bolivia"
       },
       icons: [{
-        text: 'Control y embalaje',
+        text: "Control y embalaje",
         icon: __WEBPACK_IMPORTED_MODULE_0__static_solplay_control_y_embalaje_svg___default.a
       }, {
-        text: 'Eficiencia de Tiempos',
+        text: "Eficiencia de Tiempos",
         icon: __WEBPACK_IMPORTED_MODULE_1__static_solplay_eficiencia_svg___default.a
       }, {
-        text: 'Seguimiento de Envío',
+        text: "Seguimiento de Envío",
         icon: __WEBPACK_IMPORTED_MODULE_2__static_solplay_seguimiento_svg___default.a
       }, {
-        text: 'Entrega asegurada',
+        text: "Entrega asegurada",
         icon: __WEBPACK_IMPORTED_MODULE_3__static_solplay_entrega_svg___default.a
       }]
     },
     products: {
-      title: 'Productos',
+      title: "Productos",
       products: [{
-        name: 'Ajos',
-        image: __WEBPACK_IMPORTED_MODULE_4__static_solplay_productos_001_jpg___default.a
+        name: "Ajos",
+        image: __WEBPACK_IMPORTED_MODULE_4__static_productos_ajos_jpg___default.a
       }, {
-        name: 'Ciruelas',
-        image: __WEBPACK_IMPORTED_MODULE_5__static_solplay_productos_002_jpg___default.a
+        name: "Ciruelas",
+        image: __WEBPACK_IMPORTED_MODULE_5__static_productos_ciruelas_secas_jpg___default.a
+      }, {
+        name: "Nueces",
+        image: __WEBPACK_IMPORTED_MODULE_6__static_productos_nueces_chandler_jpg___default.a
+      }, {
+        name: "Zapallo",
+        image: __WEBPACK_IMPORTED_MODULE_7__static_productos_zapallo_butternut_jpg___default.a
+      }, {
+        name: "Zapallo",
+        image: __WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_muscat_jpg___default.a
       }]
     },
     organic: {
-      title: 'Orgánicos',
-      content: '<h2>Productos Orgánicos</h2><p>Trabajamos desde hace 1 año con productos orgánicos como ajo y ciruelas deshidratadas, pero pensamos seguir aumentando volúmenes y productos de esta naturaleza, apostando cada vez más al consumo de alimentos saludables.</p>'
+      title: "Orgánicos",
+      content: "<h2>Productos Orgánicos</h2><p>Trabajamos desde hace 1 año con productos orgánicos como ajo y ciruelas deshidratadas, pero pensamos seguir aumentando volúmenes y productos de esta naturaleza, apostando cada vez más al consumo de alimentos saludables.</p>"
     },
     location: {
-      title: 'Ubicación',
+      title: "Ubicación",
       content: {
-        intro: 'Estamos situados en la provincia de mendoza, república argentina, poseemos planta de empaque en la localidad de guaymallén y san rafael que son departamentos de dicha provincia.',
-        text: '<strong>San Rafael</strong> está situada en la parte sur de <strong>Mendoza</strong> cerca de nuestra <strong>Patagonia Argentina,</strong> esta zona es óptima para la producción de productos orgánicos y convencionales debidos a su clima y a la sanidad de su agua y suelos.<br/><strong>Guaymallén</strong> se encuentra al norte de la provincia con producciones de primicia de ajos y frutas.'
+        intro: "Estamos situados en la provincia de mendoza, república argentina, poseemos planta de empaque en la localidad de guaymallén y san rafael que son departamentos de dicha provincia.",
+        text: "<strong>San Rafael</strong> está situada en la parte sur de <strong>Mendoza</strong> cerca de nuestra <strong>Patagonia Argentina,</strong> esta zona es óptima para la producción de productos orgánicos y convencionales debidos a su clima y a la sanidad de su agua y suelos.<br/><strong>Guaymallén</strong> se encuentra al norte de la provincia con producciones de primicia de ajos y frutas."
       }
     }
   }
@@ -3103,59 +3152,136 @@ var Social = function Social(_ref) {
 
 /***/ }),
 
+/***/ "./static/banner/solplay_banner-01.jpg":
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/solplay_banner-01-1fe25394881d52f4bf4379a4a54cb25c.jpg";
+
+/***/ }),
+
+/***/ "./static/banner/solplay_banner-02.jpg":
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/solplay_banner-02-239cb1b1ac0f63d709e25e9c64f06ba2.jpg";
+
+/***/ }),
+
+/***/ "./static/banner/solplay_banner-03.jpg":
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/solplay_banner-03-581e85af34257368656e43b039e62b38.jpg";
+
+/***/ }),
+
+/***/ "./static/banner/solplay_banner-04.jpg":
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/solplay_banner-04-a9b0f887e909a0ebbc226d17a34a1b92.jpg";
+
+/***/ }),
+
+/***/ "./static/banner/solplay_banner-05.jpg":
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/solplay_banner-05-5630151956d8582abced496245cf1661.jpg";
+
+/***/ }),
+
+/***/ "./static/banner/solplay_banner-06.jpg":
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/solplay_banner-06-4ddddae601908e510f74dc6e4bc14385.jpg";
+
+/***/ }),
+
 /***/ "./static/download-pdf-icon.svg":
 /***/ (function(module, exports) {
 
-module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIyLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiCgkgdmlld0JveD0iMCAwIDUwIDUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MCA1MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNMzEsMi40SDEwLjljLTIuMSwwLTMuOCwxLjctMy44LDMuOFYxOXYyLjR2MjIuM2MwLDIuMSwxLjcsMy44LDMuOCwzLjhoMjguMmMyLjEsMCwzLjgtMS43LDMuOC0zLjgKCQlWMjEuNFYxOXYtNC42TDMxLDIuNHogTTQxLjUsNDMuOGMwLDEuMy0xLjEsMi40LTIuNCwyLjRIMTAuOWMtMS4zLDAtMi40LTEuMS0yLjQtMi40VjIxLjRoMzNWNDMuOHogTTguNSwxOVY2LjIKCQljMC0xLjMsMS4xLTIuNCwyLjQtMi40aDE5LjVsMC4zLDAuM3Y3LjVjMCwxLjcsMS40LDMuMSwzLjEsMy4xaDcuM2wwLjMsMC4zdjRIOC41eiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGRkZGRjsiIGQ9Ik0xNS42LDEwYy0wLjItMC4xLTAuNC0wLjItMC43LTAuMmMtMC4zLDAtMC42LTAuMS0xLTAuMWgtMS40djUuMWgwLjl2LTEuN2gwLjljMC4yLDAsMC40LDAsMC42LTAuMQoJCXMwLjQtMC4yLDAuNi0wLjNjMC4yLTAuMSwwLjMtMC4zLDAuNC0wLjZjMC4xLTAuMiwwLjItMC41LDAuMi0wLjljMC0wLjMsMC0wLjYtMC4xLTAuOFMxNS44LDEwLjEsMTUuNiwxMHogTTE1LDEyCgkJYy0wLjEsMC4xLTAuNCwwLjItMC43LDAuMmgtMC44di0xLjhoMC44YzAuMiwwLDAuMywwLDAuNSwwYzAuMSwwLDAuMiwwLjEsMC4zLDAuMWMwLjEsMC4xLDAuMSwwLjIsMC4yLDAuM2MwLDAuMSwwLDAuMiwwLDAuNAoJCUMxNS4yLDExLjcsMTUuMSwxMS45LDE1LDEyeiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGRkZGRjsiIGQ9Ik0yMC41LDEwLjRjLTAuMi0wLjItMC41LTAuNC0wLjgtMC41Yy0wLjMtMC4xLTAuNi0wLjItMS0wLjJoLTEuOXY1LjFoMS45YzAuNCwwLDAuNy0wLjEsMS0wLjIKCQljMC4zLTAuMSwwLjYtMC4zLDAuOC0wLjVzMC40LTAuNSwwLjUtMC44YzAuMS0wLjMsMC4yLTAuNywwLjItMS4xcy0wLjEtMC43LTAuMi0xLjFDMjAuOSwxMC45LDIwLjgsMTAuNiwyMC41LDEwLjR6IE0xOS44LDEzLjUKCQljLTAuMywwLjMtMC42LDAuNC0xLjEsMC40aC0xdi0zLjNoMWMwLjUsMCwwLjksMC4xLDEuMSwwLjRzMC40LDAuNywwLjQsMS4yUzIwLjEsMTMuMiwxOS44LDEzLjV6Ii8+Cgk8cG9seWdvbiBzdHlsZT0iZmlsbDojRkZGRkZGOyIgcG9pbnRzPSIyMi4xLDE0LjggMjMsMTQuOCAyMywxMi42IDI0LjcsMTIuNiAyNC43LDExLjcgMjMsMTEuNyAyMywxMC42IDI1LjIsMTAuNiAyNS4yLDkuNyAKCQkyMi4xLDkuNyAJIi8+Cgk8cmVjdCB4PSIxMi44IiB5PSIyNi43IiBzdHlsZT0iZmlsbDojRkZGRkZGOyIgd2lkdGg9IjEzIiBoZWlnaHQ9IjIiLz4KCTxyZWN0IHg9IjEyLjgiIHk9IjMwLjIiIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiB3aWR0aD0iMjMuNCIgaGVpZ2h0PSIyIi8+Cgk8cmVjdCB4PSIxMi44IiB5PSIzNC41IiBzdHlsZT0iZmlsbDojRkZGRkZGOyIgd2lkdGg9IjEzIiBoZWlnaHQ9IjIiLz4KCTxyZWN0IHg9IjEyLjgiIHk9IjM4IiBzdHlsZT0iZmlsbDojRkZGRkZGOyIgd2lkdGg9IjEzIiBoZWlnaHQ9IjIiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNMjksMzkuOEgzN3YtNS4xSDI5VjM5Ljh6IE0zMC4xLDM1LjhoNS44djIuOGgtNS44VjM1Ljh6Ii8+CjwvZz4KPC9zdmc+Cg=="
+module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDUwIDUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MCA1MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGRkZGRjsiIGQ9Ik0zMSwyLjRIMTAuOWMtMi4xLDAtMy44LDEuNy0zLjgsMy44VjE5djIuNHYyMi4zYzAsMi4xLDEuNywzLjgsMy44LDMuOGgyOC4yYzIuMSwwLDMuOC0xLjcsMy44LTMuOA0KCQlWMjEuNFYxOXYtNC42TDMxLDIuNHogTTQxLjUsNDMuOGMwLDEuMy0xLjEsMi40LTIuNCwyLjRIMTAuOWMtMS4zLDAtMi40LTEuMS0yLjQtMi40VjIxLjRoMzNWNDMuOHogTTguNSwxOVY2LjINCgkJYzAtMS4zLDEuMS0yLjQsMi40LTIuNGgxOS41bDAuMywwLjN2Ny41YzAsMS43LDEuNCwzLjEsMy4xLDMuMWg3LjNsMC4zLDAuM3Y0SDguNXoiLz4NCgk8cGF0aCBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTE1LjYsMTBjLTAuMi0wLjEtMC40LTAuMi0wLjctMC4yYy0wLjMsMC0wLjYtMC4xLTEtMC4xaC0xLjR2NS4xaDAuOXYtMS43aDAuOWMwLjIsMCwwLjQsMCwwLjYtMC4xDQoJCXMwLjQtMC4yLDAuNi0wLjNjMC4yLTAuMSwwLjMtMC4zLDAuNC0wLjZjMC4xLTAuMiwwLjItMC41LDAuMi0wLjljMC0wLjMsMC0wLjYtMC4xLTAuOFMxNS44LDEwLjEsMTUuNiwxMHogTTE1LDEyDQoJCWMtMC4xLDAuMS0wLjQsMC4yLTAuNywwLjJoLTAuOHYtMS44aDAuOGMwLjIsMCwwLjMsMCwwLjUsMGMwLjEsMCwwLjIsMC4xLDAuMywwLjFjMC4xLDAuMSwwLjEsMC4yLDAuMiwwLjNjMCwwLjEsMCwwLjIsMCwwLjQNCgkJQzE1LjIsMTEuNywxNS4xLDExLjksMTUsMTJ6Ii8+DQoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGRkZGRjsiIGQ9Ik0yMC41LDEwLjRjLTAuMi0wLjItMC41LTAuNC0wLjgtMC41Yy0wLjMtMC4xLTAuNi0wLjItMS0wLjJoLTEuOXY1LjFoMS45YzAuNCwwLDAuNy0wLjEsMS0wLjINCgkJYzAuMy0wLjEsMC42LTAuMywwLjgtMC41czAuNC0wLjUsMC41LTAuOGMwLjEtMC4zLDAuMi0wLjcsMC4yLTEuMXMtMC4xLTAuNy0wLjItMS4xQzIwLjksMTAuOSwyMC44LDEwLjYsMjAuNSwxMC40eiBNMTkuOCwxMy41DQoJCWMtMC4zLDAuMy0wLjYsMC40LTEuMSwwLjRoLTF2LTMuM2gxYzAuNSwwLDAuOSwwLjEsMS4xLDAuNHMwLjQsMC43LDAuNCwxLjJTMjAuMSwxMy4yLDE5LjgsMTMuNXoiLz4NCgk8cG9seWdvbiBzdHlsZT0iZmlsbDojRkZGRkZGOyIgcG9pbnRzPSIyMi4xLDE0LjggMjMsMTQuOCAyMywxMi42IDI0LjcsMTIuNiAyNC43LDExLjcgMjMsMTEuNyAyMywxMC42IDI1LjIsMTAuNiAyNS4yLDkuNyANCgkJMjIuMSw5LjcgCSIvPg0KCTxyZWN0IHg9IjEyLjgiIHk9IjI2LjciIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiB3aWR0aD0iMTMiIGhlaWdodD0iMiIvPg0KCTxyZWN0IHg9IjEyLjgiIHk9IjMwLjIiIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiB3aWR0aD0iMjMuNCIgaGVpZ2h0PSIyIi8+DQoJPHJlY3QgeD0iMTIuOCIgeT0iMzQuNSIgc3R5bGU9ImZpbGw6I0ZGRkZGRjsiIHdpZHRoPSIxMyIgaGVpZ2h0PSIyIi8+DQoJPHJlY3QgeD0iMTIuOCIgeT0iMzgiIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiB3aWR0aD0iMTMiIGhlaWdodD0iMiIvPg0KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNMjksMzkuOEgzN3YtNS4xSDI5VjM5Ljh6IE0zMC4xLDM1LjhoNS44djIuOGgtNS44VjM1Ljh6Ii8+DQo8L2c+DQo8L3N2Zz4NCg=="
 
 /***/ }),
 
 /***/ "./static/oia-logo.svg":
 /***/ (function(module, exports) {
 
-module.exports = "/_next/static/images/oia-logo-0f2619734a9d10055ba9576e142acf9f.svg";
+module.exports = "/_next/static/images/oia-logo-888bf7472ba11deb93c91cd86edd067a.svg";
+
+/***/ }),
+
+/***/ "./static/productos/ajos.jpg":
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/ajos-df0f56067844cb2e7a7aa0f3ac485302.jpg";
+
+/***/ }),
+
+/***/ "./static/productos/ciruelas-secas.jpg":
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/ciruelas-secas-d15a44596a3dc8abbcf0699d1c344583.jpg";
+
+/***/ }),
+
+/***/ "./static/productos/nueces-chandler-.jpg":
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/nueces-chandler--9ee41713d89f07ca006989460f8d65e0.jpg";
+
+/***/ }),
+
+/***/ "./static/productos/zapallo-butternut.jpg":
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/zapallo-butternut-240fe46cb0c47ec364319c7fa0965687.jpg";
+
+/***/ }),
+
+/***/ "./static/productos/zapallo-muscat.jpg":
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/zapallo-muscat-eeba4b9f4855b314c84e79151b6df1b6.jpg";
 
 /***/ }),
 
 /***/ "./static/solplay-control_y_embalaje.svg":
 /***/ (function(module, exports) {
 
-module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIyLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiCgkgdmlld0JveD0iMCAwIDUwIDUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MCA1MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cGF0aCBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTQ4LjMsM0gxLjd2MTBoMS44VjQ3aDQzVjEzaDEuOFYzeiBNNCw1LjNoNDJ2NS41SDRWNS4zeiBNMzYuOSwzOHY2LjZoLTMuNFYzOGgwLjdoMi4xSDM2Ljl6CgkgTTQ0LjIsNDQuN2gtMy4zVjM4aDIuN2wtNC43LTYuN2wtMy43LDUuMmwtMy43LTUuMkwyNi43LDM4aDIuN3Y2LjZINS44VjEzaDM4LjRWNDQuN3oiLz4KPC9zdmc+Cg=="
+module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDUwIDUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MCA1MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggc3R5bGU9ImZpbGw6I0ZGRkZGRjsiIGQ9Ik00OC4zLDNIMS43djEwaDEuOFY0N2g0M1YxM2gxLjhWM3ogTTQsNS4zaDQydjUuNUg0VjUuM3ogTTM2LjksMzh2Ni42aC0zLjRWMzhoMC43aDIuMUgzNi45eg0KCSBNNDQuMiw0NC43aC0zLjNWMzhoMi43bC00LjctNi43bC0zLjcsNS4ybC0zLjctNS4yTDI2LjcsMzhoMi43djYuNkg1LjhWMTNoMzguNFY0NC43eiIvPg0KPC9zdmc+DQo="
 
 /***/ }),
 
 /***/ "./static/solplay-eficiencia.svg":
 /***/ (function(module, exports) {
 
-module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIyLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiCgkgdmlld0JveD0iMCAwIDUwIDUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MCA1MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cGF0aCBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTQxLjIsMTQuNmwxLjItMS4ybDAuOC0wLjhsMCwwbDAsMGwtNC40LTQuNGwwLDBsMCwwbC0xLjIsMS4ybC0xLDFjLTIuNC0xLjYtNS0yLjctNy45LTMuMlY2CglDMjkuNSw1LjQsMzAsNC44LDMwLDRjMC0xLjctMi4xLTIuOS01LTIuOWMtMi45LDAtNSwxLjItNSwyLjljMCwwLjgsMC41LDEuNSwxLjMsMnYxLjNjLTIuOSwwLjUtNS42LDEuNi03LjksMy4ybDAsMGwwLDBMMTIsOS4xCglsLTAuOS0wLjhsMCwwbC00LjQsNC40bDAuOSwwLjlsMS4xLDEuMUM1LjgsMTguMiw0LDIyLjksNCwyNy45YzAsMTEuNiw5LjQsMjEsMjEsMjFjMTEuNiwwLDIxLTkuNCwyMS0yMQoJQzQ2LDIyLjksNDQuMiwxOC4yLDQxLjIsMTQuNnogTTQzLjksMjYuNmMtMC4zLTAuMi0wLjYtMC4zLTAuOS0wLjNoLTAuOGMtMC4zLTMuNC0xLjYtNi41LTMuNy05LjFsMS4yLTEuMgoJQzQyLjEsMTksNDMuNiwyMi42LDQzLjksMjYuNnogTTM5LjUsMjkuNWgwLjZjLTAuNyw3LjEtNi40LDEyLjgtMTMuNSwxMy41di0wLjZjMC0wLjktMC43LTEuNi0xLjYtMS42Yy0wLjksMC0xLjYsMC43LTEuNiwxLjZWNDMKCWMtNy4xLTAuNy0xMi44LTYuNC0xMy41LTEzLjVoMC42YzAuOSwwLDEuNi0wLjcsMS42LTEuNnMtMC43LTEuNi0xLjYtMS42SDkuOWMwLjctNy4xLDYuNC0xMi43LDEzLjUtMTMuNXYwLjYKCWMwLDAuNCwwLjIsMC44LDAuNSwxLjFoLTAuMXYxMS41Yy0wLjIsMC4yLTAuNCwwLjMtMC42LDAuNmgtOC43djIuNGg4LjZjMC40LDAuNiwxLjEsMS4xLDEuOSwxLjFjMS4yLDAsMi4yLTEsMi4yLTIuMgoJYzAtMC44LTAuNC0xLjUtMS0xLjlWMTQuNmgtMC4xYzAuMy0wLjMsMC41LTAuNywwLjUtMS4xdi0wLjZjNy4xLDAuNywxMi43LDYuNCwxMy41LDEzLjVoLTAuNmMtMC45LDAtMS42LDAuNy0xLjYsMS42CglTMzguNiwyOS41LDM5LjUsMjkuNXogTTIzLjQsOS4xYzAuMSwwLDAuMiwwLDAuMywwYy0wLjEsMC4xLTAuMSwwLjItMC4yLDAuNGgtMC4xVjkuMXogTTI2LjUsOS40YzAtMC4xLTAuMS0wLjMtMC4yLTAuNAoJYzAuMSwwLDAuMiwwLDAuMywwdjAuNEgyNi41eiBNMzUuMSwxMS45bC0wLjksMC45bDEuNCwxLjRjLTItMS41LTQuMy0yLjctNi45LTMuMlY5LjRDMzEsOS44LDMzLjIsMTAuNywzNS4xLDExLjl6IE0yMy40LDYuNwoJYzAuNSwwLjEsMSwwLjEsMS42LDAuMXMxLjEsMCwxLjYtMC4xVjdjLTAuNSwwLTEuMS0wLjEtMS42LTAuMWMtMC41LDAtMS4xLDAtMS42LDAuMVY2Ljd6IE0yMS4zLDkuNHYxLjdjLTIuNSwwLjYtNC45LDEuNy02LjksMy4yCglsMS40LTEuNGwtMC45LTAuOUMxNi44LDEwLjcsMTksOS44LDIxLjMsOS40eiBNMTEuNSwxNy4yYy0yLDIuNS0zLjMsNS43LTMuNyw5LjFINy4xYy0wLjMsMC0wLjcsMC4xLTAuOSwwLjMKCWMwLjMtNCwxLjgtNy43LDQuMi0xMC42TDExLjUsMTcuMnogTTYuMSwyOS4yYzAuMywwLjIsMC42LDAuMywwLjksMC4zaDAuOGMwLjcsOC4zLDcuMywxNC45LDE1LjYsMTUuNnYwLjdjMCwwLjQsMC4xLDAuNywwLjMsMC45CglDMTQuMyw0Ni4yLDYuOCwzOC42LDYuMSwyOS4yeiBNMjYuMyw0Ni44YzAuMi0wLjMsMC4zLTAuNiwwLjMtMC45di0wLjdjOC4zLTAuOCwxNC44LTcuMywxNS42LTE1LjZoMC44YzAuMywwLDAuNy0wLjEsMC45LTAuMwoJQzQzLjIsMzguNiwzNS43LDQ2LjIsMjYuMyw0Ni44eiIvPgo8L3N2Zz4K"
+module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDUwIDUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MCA1MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggc3R5bGU9ImZpbGw6I0ZGRkZGRjsiIGQ9Ik00MS4yLDE0LjZsMS4yLTEuMmwwLjgtMC44bDAsMGwwLDBsLTQuNC00LjRsMCwwbDAsMGwtMS4yLDEuMmwtMSwxYy0yLjQtMS42LTUtMi43LTcuOS0zLjJWNg0KCUMyOS41LDUuNCwzMCw0LjgsMzAsNGMwLTEuNy0yLjEtMi45LTUtMi45Yy0yLjksMC01LDEuMi01LDIuOWMwLDAuOCwwLjUsMS41LDEuMywydjEuM2MtMi45LDAuNS01LjYsMS42LTcuOSwzLjJsMCwwbDAsMEwxMiw5LjENCglsLTAuOS0wLjhsMCwwbC00LjQsNC40bDAuOSwwLjlsMS4xLDEuMUM1LjgsMTguMiw0LDIyLjksNCwyNy45YzAsMTEuNiw5LjQsMjEsMjEsMjFjMTEuNiwwLDIxLTkuNCwyMS0yMQ0KCUM0NiwyMi45LDQ0LjIsMTguMiw0MS4yLDE0LjZ6IE00My45LDI2LjZjLTAuMy0wLjItMC42LTAuMy0wLjktMC4zaC0wLjhjLTAuMy0zLjQtMS42LTYuNS0zLjctOS4xbDEuMi0xLjINCglDNDIuMSwxOSw0My42LDIyLjYsNDMuOSwyNi42eiBNMzkuNSwyOS41aDAuNmMtMC43LDcuMS02LjQsMTIuOC0xMy41LDEzLjV2LTAuNmMwLTAuOS0wLjctMS42LTEuNi0xLjZjLTAuOSwwLTEuNiwwLjctMS42LDEuNlY0Mw0KCWMtNy4xLTAuNy0xMi44LTYuNC0xMy41LTEzLjVoMC42YzAuOSwwLDEuNi0wLjcsMS42LTEuNnMtMC43LTEuNi0xLjYtMS42SDkuOWMwLjctNy4xLDYuNC0xMi43LDEzLjUtMTMuNXYwLjYNCgljMCwwLjQsMC4yLDAuOCwwLjUsMS4xaC0wLjF2MTEuNWMtMC4yLDAuMi0wLjQsMC4zLTAuNiwwLjZoLTguN3YyLjRoOC42YzAuNCwwLjYsMS4xLDEuMSwxLjksMS4xYzEuMiwwLDIuMi0xLDIuMi0yLjINCgljMC0wLjgtMC40LTEuNS0xLTEuOVYxNC42aC0wLjFjMC4zLTAuMywwLjUtMC43LDAuNS0xLjF2LTAuNmM3LjEsMC43LDEyLjcsNi40LDEzLjUsMTMuNWgtMC42Yy0wLjksMC0xLjYsMC43LTEuNiwxLjYNCglTMzguNiwyOS41LDM5LjUsMjkuNXogTTIzLjQsOS4xYzAuMSwwLDAuMiwwLDAuMywwYy0wLjEsMC4xLTAuMSwwLjItMC4yLDAuNGgtMC4xVjkuMXogTTI2LjUsOS40YzAtMC4xLTAuMS0wLjMtMC4yLTAuNA0KCWMwLjEsMCwwLjIsMCwwLjMsMHYwLjRIMjYuNXogTTM1LjEsMTEuOWwtMC45LDAuOWwxLjQsMS40Yy0yLTEuNS00LjMtMi43LTYuOS0zLjJWOS40QzMxLDkuOCwzMy4yLDEwLjcsMzUuMSwxMS45eiBNMjMuNCw2LjcNCgljMC41LDAuMSwxLDAuMSwxLjYsMC4xczEuMSwwLDEuNi0wLjFWN2MtMC41LDAtMS4xLTAuMS0xLjYtMC4xYy0wLjUsMC0xLjEsMC0xLjYsMC4xVjYuN3ogTTIxLjMsOS40djEuN2MtMi41LDAuNi00LjksMS43LTYuOSwzLjINCglsMS40LTEuNGwtMC45LTAuOUMxNi44LDEwLjcsMTksOS44LDIxLjMsOS40eiBNMTEuNSwxNy4yYy0yLDIuNS0zLjMsNS43LTMuNyw5LjFINy4xYy0wLjMsMC0wLjcsMC4xLTAuOSwwLjMNCgljMC4zLTQsMS44LTcuNyw0LjItMTAuNkwxMS41LDE3LjJ6IE02LjEsMjkuMmMwLjMsMC4yLDAuNiwwLjMsMC45LDAuM2gwLjhjMC43LDguMyw3LjMsMTQuOSwxNS42LDE1LjZ2MC43YzAsMC40LDAuMSwwLjcsMC4zLDAuOQ0KCUMxNC4zLDQ2LjIsNi44LDM4LjYsNi4xLDI5LjJ6IE0yNi4zLDQ2LjhjMC4yLTAuMywwLjMtMC42LDAuMy0wLjl2LTAuN2M4LjMtMC44LDE0LjgtNy4zLDE1LjYtMTUuNmgwLjhjMC4zLDAsMC43LTAuMSwwLjktMC4zDQoJQzQzLjIsMzguNiwzNS43LDQ2LjIsMjYuMyw0Ni44eiIvPg0KPC9zdmc+DQo="
 
 /***/ }),
 
 /***/ "./static/solplay-entrega.svg":
 /***/ (function(module, exports) {
 
-module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIyLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiCgkgdmlld0JveD0iMCAwIDUwIDUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MCA1MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBwb2ludHM9IjMwLjgsMjMgMzEuNywyMi44IDMxLjcsMjAuNiAzMi40LDIwLjQgMzEuMiwxOC45IDMwLjEsMjEuMSAzMC44LDIwLjkgCSIvPgoJPHBvbHlnb24gc3R5bGU9ImZpbGw6I0ZGRkZGRjsiIHBvaW50cz0iMzIuOCwyMC4zIDMzLjUsMjAuMSAzMy41LDIyLjIgMzQuNCwyMS45IDM0LjQsMTkuOCAzNSwxOS42IDMzLjksMTguMSAJIi8+Cgk8cG9seWdvbiBzdHlsZT0iZmlsbDojRkZGRkZGOyIgcG9pbnRzPSIzMC4yLDI0LjcgMzUsMjMuMiAzNSwyMi4zIDMwLjIsMjMuNyAJIi8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTM2LjUsNDIuMmM0LjItNC40LDEwLjktMTEuNiwxMS0xMy4yYzAuMS0xLjctMS42LTEwLTIuMS0xMS43Yy0wLjQtMS41LTEuOC0yLjItMi45LTIKCQljLTEsMC4yLTEuOCwxLjEtMS42LDIuN2MwLjMsMiwwLjgsNy44LDEsOS4zYy0xLjIsMS4zLTQsNC4yLTUsNC43Yy0wLjQsMC4yLTAuOSwwLjItMS4yLDAuMWwzLjItMy4xYzEtMSwxLjEtMi4zLDAuMy0zLjMKCQljLTAuNC0wLjUtMS0wLjktMS42LTEuMWMwLDAsMC0wLjEsMC0wLjF2LTEzbDMuMS0zLjljMC4yLTAuMiwwLjItMC41LDAuMi0wLjdjMC0wLjEtMC4xLTAuMS0wLjEtMC4yYzAuMi0wLjMsMC4yLTAuNiwwLTAuOQoJCWMtMC4yLTAuMy0wLjUtMC40LTAuOS0wLjNsLTEuMSwwLjNsLTkuNC0zLjZjLTAuMy0wLjEtMC43LDAtMSwwLjNsLTIuNywzLjRsLTIuNy0zLjRjLTAuMi0wLjMtMC42LTAuNC0xLTAuM2wtOS40LDMuNmwtMS4xLTAuMwoJCWMtMC4zLTAuMS0wLjcsMC4xLTAuOSwwLjNjLTAuMiwwLjMtMC4yLDAuNiwwLDAuOWMwLDAuMS0wLjEsMC4xLTAuMSwwLjJjLTAuMSwwLjMsMCwwLjUsMC4yLDAuN2wzLjIsNHYxM2MwLDAuMSwwLDAuMSwwLDAuMgoJCWMtMS0wLjQtMi4yLDAuMS0yLjksMWMtMC44LDEuMS0wLjcsMi40LDAuMywzLjNsMy4yLDMuMWMtMC40LDAuMS0wLjgsMC4xLTEuMi0wLjFjLTEtMC41LTMuNS0zLTUtNC43QzguMiwyNS44LDguNywyMCw5LDE4CgkJYzAuMi0xLjYtMC42LTIuNS0xLjYtMi43Yy0xLjEtMC4yLTIuNSwwLjUtMi44LDJDNC4xLDE5LDIuNCwyNy4zLDIuNSwyOWMwLjEsMS42LDYuOCw4LjgsMTEsMTMuMmwtMS4zLDQuN2MtMC4xLDAuMywwLDAuNSwwLjEsMC43CgkJYzAuMiwwLjIsMC40LDAuMywwLjcsMC4zaDEwLjhjMC4yLDAsMC41LTAuMSwwLjYtMC4zYzAuMi0wLjIsMC4yLTAuNCwwLjItMC42bC0wLjQtNi42YzAsMCwwLTAuMSwwLTAuMWwtMS44LTkKCQljMC0wLjItMC4yLTAuNC0wLjMtMC41Yy0wLjItMC4yLTQuOC0zLjctNy4xLTUuM2wxMC4xLDMuNGMwLjEsMC4xLDAuMywwLjEsMC41LDAuMWMwLDAsMCwwLDAsMGMwLDAsMCwwLDAsMGMwLjIsMCwwLjMtMC4xLDAuNS0wLjEKCQlsNy43LTIuNmMtMi40LDEuOC01LjgsNC4zLTYsNC41Yy0wLjIsMC4xLTAuMywwLjMtMC4zLDAuNWwtMS44LDljMCwwLDAsMC4xLDAsMC4xbC0wLjQsNi42YzAsMC4yLDAuMSwwLjUsMC4yLDAuNnMwLjQsMC4zLDAuNiwwLjMKCQlIMzdjMC4zLDAsMC41LTAuMSwwLjctMC4zYzAuMi0wLjIsMC4yLTAuNSwwLjEtMC43TDM2LjUsNDIuMnogTTIxLjcsOS41bDIuMSwzLjdsLTktM2MwLDAsMCwwLDAsMGwtMS43LTIuNkwyMS43LDkuNXogTTI5LjYsOS41CgkJbDguNi0ybC0xLjgsMi42bC05LDNMMjkuNiw5LjV6IE0yNi41LDE1LjNsOS4zLTIuOVYyNGwtOS4zLDMuMlYxNS4zeiBNMjkuMywzLjlsNi41LDIuNWwtNi43LDEuNWwtMi4yLTEuMUwyOS4zLDMuOXogTTI3LjgsOS4xCgkJbC0xLjQsMi40bDAtM0wyNy44LDkuMXogTTI0LjgsMTEuNWwtMS40LTIuNGwxLjQtMC43TDI0LjgsMTEuNXogTTIxLjksMy45bDIuNCwyLjlsLTIuMiwxLjFsLTYuNy0xLjVMMjEuOSwzLjl6IE0yMi42LDQwLjcKCQlsMC4zLDUuNmgtOC44bDEuMi00LjFjMC4xLTAuMywwLTAuNi0wLjItMC44QzEwLDM2LjEsNC41LDI5LjksNC4yLDI4LjljLTAuMS0xLjQsMS41LTkuMSwyLTExLjJjMC4yLTAuNiwwLjYtMC44LDAuOS0wLjgKCQljMC40LDAuMSwwLjMsMC42LDAuMywwLjhjLTAuMywyLjMtMSw5LjUtMSw5LjhjMCwwLjIsMC4xLDAuNSwwLjIsMC42YzAuNCwwLjUsNC4xLDQuNSw1LjcsNS40YzIsMS4xLDMuOS0wLjUsNC0wLjUKCQljMC4yLTAuMiwwLjMtMC40LDAuMy0wLjZjMC0wLjItMC4xLTAuNS0wLjMtMC42bC00LjEtMy45Yy0wLjItMC4yLTAuNS0wLjYtMC4xLTEuMWMwLjMtMC40LDAuOC0wLjUsMC45LTAuNQoJCWMwLjksMC41LDUuNyw0LjIsNy43LDUuN0wyMi42LDQwLjd6IE0xNS40LDEyLjVsOS40LDIuOXYxMS44TDE1LjQsMjRWMTIuNXogTTI3LDQ2LjNsMC4zLTUuNmwxLjgtOC42YzIuMS0xLjYsNi45LTUuMiw3LjctNS43CgkJYzAuMS0wLjEsMC42LDAuMSwwLjksMC41YzAuNCwwLjUsMC4xLDAuOS0wLjEsMS4xbC00LDMuOWMtMC4yLDAuMi0wLjMsMC40LTAuMywwLjZzMC4xLDAuNSwwLjMsMC42YzAuMSwwLjEsMiwxLjYsNCwwLjUKCQljMS42LTAuOSw1LjMtNC45LDUuNy01LjRjMC4yLTAuMiwwLjItMC40LDAuMi0wLjZjMC0wLjMtMC43LTcuNS0xLTkuOGMwLTAuMi0wLjEtMC44LDAuMy0wLjhjMC4zLTAuMSwwLjcsMC4xLDAuOSwwLjgKCQljMC41LDIuMSwyLjEsOS44LDIsMTEuMWMtMC4zLDEuMS01LjgsNy4yLTEwLjksMTIuNWMtMC4yLDAuMi0wLjMsMC41LTAuMiwwLjhsMS4yLDQuMUgyN3oiLz4KPC9nPgo8L3N2Zz4K"
+module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDUwIDUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MCA1MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6I0ZGRkZGRjsiIHBvaW50cz0iMzAuOCwyMyAzMS43LDIyLjggMzEuNywyMC42IDMyLjQsMjAuNCAzMS4yLDE4LjkgMzAuMSwyMS4xIDMwLjgsMjAuOSAJIi8+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6I0ZGRkZGRjsiIHBvaW50cz0iMzIuOCwyMC4zIDMzLjUsMjAuMSAzMy41LDIyLjIgMzQuNCwyMS45IDM0LjQsMTkuOCAzNSwxOS42IDMzLjksMTguMSAJIi8+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6I0ZGRkZGRjsiIHBvaW50cz0iMzAuMiwyNC43IDM1LDIzLjIgMzUsMjIuMyAzMC4yLDIzLjcgCSIvPg0KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNMzYuNSw0Mi4yYzQuMi00LjQsMTAuOS0xMS42LDExLTEzLjJjMC4xLTEuNy0xLjYtMTAtMi4xLTExLjdjLTAuNC0xLjUtMS44LTIuMi0yLjktMg0KCQljLTEsMC4yLTEuOCwxLjEtMS42LDIuN2MwLjMsMiwwLjgsNy44LDEsOS4zYy0xLjIsMS4zLTQsNC4yLTUsNC43Yy0wLjQsMC4yLTAuOSwwLjItMS4yLDAuMWwzLjItMy4xYzEtMSwxLjEtMi4zLDAuMy0zLjMNCgkJYy0wLjQtMC41LTEtMC45LTEuNi0xLjFjMCwwLDAtMC4xLDAtMC4xdi0xM2wzLjEtMy45YzAuMi0wLjIsMC4yLTAuNSwwLjItMC43YzAtMC4xLTAuMS0wLjEtMC4xLTAuMmMwLjItMC4zLDAuMi0wLjYsMC0wLjkNCgkJYy0wLjItMC4zLTAuNS0wLjQtMC45LTAuM2wtMS4xLDAuM2wtOS40LTMuNmMtMC4zLTAuMS0wLjcsMC0xLDAuM2wtMi43LDMuNGwtMi43LTMuNGMtMC4yLTAuMy0wLjYtMC40LTEtMC4zbC05LjQsMy42bC0xLjEtMC4zDQoJCWMtMC4zLTAuMS0wLjcsMC4xLTAuOSwwLjNjLTAuMiwwLjMtMC4yLDAuNiwwLDAuOWMwLDAuMS0wLjEsMC4xLTAuMSwwLjJjLTAuMSwwLjMsMCwwLjUsMC4yLDAuN2wzLjIsNHYxM2MwLDAuMSwwLDAuMSwwLDAuMg0KCQljLTEtMC40LTIuMiwwLjEtMi45LDFjLTAuOCwxLjEtMC43LDIuNCwwLjMsMy4zbDMuMiwzLjFjLTAuNCwwLjEtMC44LDAuMS0xLjItMC4xYy0xLTAuNS0zLjUtMy01LTQuN0M4LjIsMjUuOCw4LjcsMjAsOSwxOA0KCQljMC4yLTEuNi0wLjYtMi41LTEuNi0yLjdjLTEuMS0wLjItMi41LDAuNS0yLjgsMkM0LjEsMTksMi40LDI3LjMsMi41LDI5YzAuMSwxLjYsNi44LDguOCwxMSwxMy4ybC0xLjMsNC43Yy0wLjEsMC4zLDAsMC41LDAuMSwwLjcNCgkJYzAuMiwwLjIsMC40LDAuMywwLjcsMC4zaDEwLjhjMC4yLDAsMC41LTAuMSwwLjYtMC4zYzAuMi0wLjIsMC4yLTAuNCwwLjItMC42bC0wLjQtNi42YzAsMCwwLTAuMSwwLTAuMWwtMS44LTkNCgkJYzAtMC4yLTAuMi0wLjQtMC4zLTAuNWMtMC4yLTAuMi00LjgtMy43LTcuMS01LjNsMTAuMSwzLjRjMC4xLDAuMSwwLjMsMC4xLDAuNSwwLjFjMCwwLDAsMCwwLDBjMCwwLDAsMCwwLDBjMC4yLDAsMC4zLTAuMSwwLjUtMC4xDQoJCWw3LjctMi42Yy0yLjQsMS44LTUuOCw0LjMtNiw0LjVjLTAuMiwwLjEtMC4zLDAuMy0wLjMsMC41bC0xLjgsOWMwLDAsMCwwLjEsMCwwLjFsLTAuNCw2LjZjMCwwLjIsMC4xLDAuNSwwLjIsMC42czAuNCwwLjMsMC42LDAuMw0KCQlIMzdjMC4zLDAsMC41LTAuMSwwLjctMC4zYzAuMi0wLjIsMC4yLTAuNSwwLjEtMC43TDM2LjUsNDIuMnogTTIxLjcsOS41bDIuMSwzLjdsLTktM2MwLDAsMCwwLDAsMGwtMS43LTIuNkwyMS43LDkuNXogTTI5LjYsOS41DQoJCWw4LjYtMmwtMS44LDIuNmwtOSwzTDI5LjYsOS41eiBNMjYuNSwxNS4zbDkuMy0yLjlWMjRsLTkuMywzLjJWMTUuM3ogTTI5LjMsMy45bDYuNSwyLjVsLTYuNywxLjVsLTIuMi0xLjFMMjkuMywzLjl6IE0yNy44LDkuMQ0KCQlsLTEuNCwyLjRsMC0zTDI3LjgsOS4xeiBNMjQuOCwxMS41bC0xLjQtMi40bDEuNC0wLjdMMjQuOCwxMS41eiBNMjEuOSwzLjlsMi40LDIuOWwtMi4yLDEuMWwtNi43LTEuNUwyMS45LDMuOXogTTIyLjYsNDAuNw0KCQlsMC4zLDUuNmgtOC44bDEuMi00LjFjMC4xLTAuMywwLTAuNi0wLjItMC44QzEwLDM2LjEsNC41LDI5LjksNC4yLDI4LjljLTAuMS0xLjQsMS41LTkuMSwyLTExLjJjMC4yLTAuNiwwLjYtMC44LDAuOS0wLjgNCgkJYzAuNCwwLjEsMC4zLDAuNiwwLjMsMC44Yy0wLjMsMi4zLTEsOS41LTEsOS44YzAsMC4yLDAuMSwwLjUsMC4yLDAuNmMwLjQsMC41LDQuMSw0LjUsNS43LDUuNGMyLDEuMSwzLjktMC41LDQtMC41DQoJCWMwLjItMC4yLDAuMy0wLjQsMC4zLTAuNmMwLTAuMi0wLjEtMC41LTAuMy0wLjZsLTQuMS0zLjljLTAuMi0wLjItMC41LTAuNi0wLjEtMS4xYzAuMy0wLjQsMC44LTAuNSwwLjktMC41DQoJCWMwLjksMC41LDUuNyw0LjIsNy43LDUuN0wyMi42LDQwLjd6IE0xNS40LDEyLjVsOS40LDIuOXYxMS44TDE1LjQsMjRWMTIuNXogTTI3LDQ2LjNsMC4zLTUuNmwxLjgtOC42YzIuMS0xLjYsNi45LTUuMiw3LjctNS43DQoJCWMwLjEtMC4xLDAuNiwwLjEsMC45LDAuNWMwLjQsMC41LDAuMSwwLjktMC4xLDEuMWwtNCwzLjljLTAuMiwwLjItMC4zLDAuNC0wLjMsMC42czAuMSwwLjUsMC4zLDAuNmMwLjEsMC4xLDIsMS42LDQsMC41DQoJCWMxLjYtMC45LDUuMy00LjksNS43LTUuNGMwLjItMC4yLDAuMi0wLjQsMC4yLTAuNmMwLTAuMy0wLjctNy41LTEtOS44YzAtMC4yLTAuMS0wLjgsMC4zLTAuOGMwLjMtMC4xLDAuNywwLjEsMC45LDAuOA0KCQljMC41LDIuMSwyLjEsOS44LDIsMTEuMWMtMC4zLDEuMS01LjgsNy4yLTEwLjksMTIuNWMtMC4yLDAuMi0wLjMsMC41LTAuMiwwLjhsMS4yLDQuMUgyN3oiLz4NCjwvZz4NCjwvc3ZnPg0K"
 
 /***/ }),
 
 /***/ "./static/solplay-header-logo.svg":
 /***/ (function(module, exports) {
 
-module.exports = "/_next/static/images/solplay-header-logo-efce7611382cf3fc793ea745829d55af.svg";
+module.exports = "/_next/static/images/solplay-header-logo-e420b72f193261332e67a00eef87ced8.svg";
 
 /***/ }),
 
 /***/ "./static/solplay-seguimiento.svg":
 /***/ (function(module, exports) {
 
-module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIyLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiCgkgdmlld0JveD0iMCAwIDUwIDUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MCA1MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cGF0aCBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTQ5LDMwLjN2LTcuMWwtMy45LTEuMXYtMWMwLTEtMC44LTEuOC0xLjgtMS44cy0xLjgsMC44LTEuOCwxLjh2MGwtMTIuNS0zLjRWOS41YzAtMi43LTEuOC01LTQuMS01CgljLTIuMiwwLTQuMSwyLjItNC4xLDV2OC4yTDguNCwyMS4xdjBjMC0xLTAuOC0xLjgtMS44LTEuOGMtMSwwLTEuOCwwLjgtMS44LDEuOHYxbC0zLjksMXY3LjFsMTkuOS0yLjZ2OC4ybC01LjQsMy40djYuM2w5LjQtMi42CglsOS40LDIuNnYtNi4zbC01LjQtMy40di04LjJMNDksMzAuM3ogTTQ3LjQsMjQuNHY0bC0yLjUtMC4zYzAuMi0wLjMsMC4zLTAuNiwwLjMtMXYtMy4zTDQ3LjQsMjQuNHogTTI5LjEsMTkuNGwxMi41LDMuNHY0LjMKCWMwLDAuMiwwLDAuNCwwLjEsMC42TDI5LjEsMjZWMTkuNHogTTIuNiwyNC40bDIuMi0wLjZ2My4zYzAsMC40LDAuMSwwLjcsMC4zLDFsLTIuNSwwLjNWMjQuNHogTTguMywyNy42YzAuMS0wLjIsMC4xLTAuNCwwLjEtMC42Cgl2LTQuM2wxMi41LTMuNFYyNkw4LjMsMjcuNnogTTMyLjgsNDAuMXYzLjJMMjUsNDEuMWwtNy44LDIuMnYtMy4ybDUuNC0zLjR2LTkuM2wwLDBWMTcuM2wwLDBWOS41YzAtMS44LDEuMS0zLjMsMi40LTMuMwoJYzEuMywwLDIuNCwxLjUsMi40LDMuM3Y3Ljh2MTAuMXY5LjNMMzIuOCw0MC4xeiIvPgo8L3N2Zz4K"
+module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDUwIDUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MCA1MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggc3R5bGU9ImZpbGw6I0ZGRkZGRjsiIGQ9Ik00OSwzMC4zdi03LjFsLTMuOS0xLjF2LTFjMC0xLTAuOC0xLjgtMS44LTEuOHMtMS44LDAuOC0xLjgsMS44djBsLTEyLjUtMy40VjkuNWMwLTIuNy0xLjgtNS00LjEtNQ0KCWMtMi4yLDAtNC4xLDIuMi00LjEsNXY4LjJMOC40LDIxLjF2MGMwLTEtMC44LTEuOC0xLjgtMS44Yy0xLDAtMS44LDAuOC0xLjgsMS44djFsLTMuOSwxdjcuMWwxOS45LTIuNnY4LjJsLTUuNCwzLjR2Ni4zbDkuNC0yLjYNCglsOS40LDIuNnYtNi4zbC01LjQtMy40di04LjJMNDksMzAuM3ogTTQ3LjQsMjQuNHY0bC0yLjUtMC4zYzAuMi0wLjMsMC4zLTAuNiwwLjMtMXYtMy4zTDQ3LjQsMjQuNHogTTI5LjEsMTkuNGwxMi41LDMuNHY0LjMNCgljMCwwLjIsMCwwLjQsMC4xLDAuNkwyOS4xLDI2VjE5LjR6IE0yLjYsMjQuNGwyLjItMC42djMuM2MwLDAuNCwwLjEsMC43LDAuMywxbC0yLjUsMC4zVjI0LjR6IE04LjMsMjcuNmMwLjEtMC4yLDAuMS0wLjQsMC4xLTAuNg0KCXYtNC4zbDEyLjUtMy40VjI2TDguMywyNy42eiBNMzIuOCw0MC4xdjMuMkwyNSw0MS4xbC03LjgsMi4ydi0zLjJsNS40LTMuNHYtOS4zbDAsMFYxNy4zbDAsMFY5LjVjMC0xLjgsMS4xLTMuMywyLjQtMy4zDQoJYzEuMywwLDIuNCwxLjUsMi40LDMuM3Y3Ljh2MTAuMXY5LjNMMzIuOCw0MC4xeiIvPg0KPC9zdmc+DQo="
 
 /***/ }),
 
 /***/ "./static/solplay-white-logo.svg":
 /***/ (function(module, exports) {
 
-module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIyLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiCgkgdmlld0JveD0iMCAwIDE1MC41IDQxIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxNTAuNSA0MTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNNTMuNywxMi4zYzAuOSwwLDEuNywwLjEsMi40LDAuNGMwLjcsMC4yLDEuMywwLjQsMS45LDAuNGMwLjYsMCwwLjktMC4yLDAuOS0wLjZoMC4zbDAuMyw0LjVoLTAuMwoJCWMwLTAuMy0wLjEtMC43LTAuMi0xLjFjLTAuMi0wLjQtMC40LTAuOS0wLjgtMS40Yy0wLjQtMC41LTAuOS0wLjktMS43LTEuM3MtMS43LTAuNS0yLjgtMC41Yy0yLDAtMywwLjctMywyLjEKCQljMCwxLjMsMC42LDIuNCwxLjcsMy40bDUuNiw0LjdjMiwxLjQsMi45LDMsMi45LDQuOGMwLDEuNS0wLjksMi44LTIuNiwzLjdjLTEuNSwwLjgtMy4zLDEuMi01LjYsMS4yYy0xLjUsMC0yLjctMC4zLTMuNy0xCgkJYy0wLjMtMC4yLTAuNi0wLjMtMC44LTAuM2MtMC40LDAtMC43LDAuMi0wLjksMC43Yy0wLjEsMC4xLTAuMSwwLjMtMC4xLDAuNWgtMC4zbDAuMS00LjVoMC4zYzAsMC4yLDAsMC41LDAuMSwwLjgKCQljMC4yLDAuOCwwLjgsMS42LDEuNSwyLjNjMC40LDAuNCwwLjksMC43LDEuNiwwLjljMC43LDAuMiwxLjQsMC40LDIuMiwwLjRjMS4xLDAsMS45LTAuMywyLjYtMC44YzAuNy0wLjYsMS0xLjIsMS0yCgkJYzAtMS4zLTAuNC0yLjItMS4yLTIuOWwtNS42LTQuN2MtMS43LTEuNC0yLjYtMy4xLTIuNi00LjhjMC0xLjQsMC43LTIuNSwyLjEtMy40QzUwLjMsMTIuNyw1MS45LDEyLjMsNTMuNywxMi4zeiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGRkZGRjsiIGQ9Ik02OS43LDMyLjRjLTIuNiwwLTQuNi0wLjctNi0yYy0xLjQtMS4zLTIuMS0zLjItMi4xLTUuN2MwLTIuNCwwLjctNC4zLDIuMS01LjdjMS40LTEuMywzLjQtMiw2LTIKCQljMi42LDAsNC42LDAuNyw2LDJjMS40LDEuNCwyLjEsMy4zLDIuMSw1LjdjMCwyLjUtMC43LDQuNC0yLjEsNS43Qzc0LjMsMzEuNyw3Mi4zLDMyLjQsNjkuNywzMi40eiBNNjkuNywzMi4xCgkJYzEuNSwwLDIuNC0wLjUsMi44LTEuNWMwLjQtMSwwLjYtMywwLjYtNS45YzAtMi45LTAuMi00LjgtMC42LTUuOWMtMC40LTEtMS40LTEuNS0yLjgtMS41Yy0xLjcsMC0yLjcsMC42LTMuMSwxLjkKCQljLTAuMywxLTAuNCwyLjktMC40LDUuNXMwLjEsNC41LDAuNCw1LjVDNjcsMzEuNCw2OCwzMi4xLDY5LjcsMzIuMXoiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNODQuOCwxMi41djE3LjRjMCwxLjQsMC44LDIsMi4zLDJ2MC4zaC05LjN2LTAuM2MxLjUsMCwyLjMtMC43LDIuMy0yVjEyLjVjMC0xLjQtMC44LTItMi4zLTJ2LTAuMwoJCWg1LjhDODQuNCwxMC4xLDg0LjgsMTAuOSw4NC44LDEyLjV6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTk0LjEsMzUuN2MwLDEuNCwwLjgsMiwyLjMsMlYzOGgtOS4zdi0wLjNjMS42LDAsMi4zLTAuNywyLjMtMlYxOS40YzAtMS40LTAuOC0yLTIuMy0ydi0wLjNIOTMKCQljMC4yLDAsMC40LDAuMiwwLjYsMC41QzkzLjgsMTcuOSw5NCwxOCw5NCwxOGMxLTAuNywyLjEtMSwzLTFjMi4zLDAsNC4xLDAuNyw1LjUsMmMxLjQsMS40LDIuMSwzLjMsMi4xLDUuN3MtMC43LDQuMy0yLDUuNgoJCWMtMS40LDEuNC0zLjIsMi01LjUsMmMtMSwwLTEuOS0wLjMtMi45LTFWMzUuN3ogTTk5LjksMjQuN2MwLTMuMy0wLjEtNS4yLTAuMy01LjhjLTAuNS0xLjEtMS4zLTEuNy0yLjYtMS43Yy0xLDAtMiwwLjQtMywxLjEKCQljMCwwLjMsMC4xLDAuNywwLjEsMS4xVjMxYzAuOSwwLjcsMS45LDEsMi45LDFjMS4zLDAsMi4xLTAuNiwyLjYtMS43Qzk5LjgsMjkuOCw5OS45LDI3LjksOTkuOSwyNC43eiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGRkZGRjsiIGQ9Ik0xMTEuNiwxMi41djE3LjRjMCwxLjQsMC44LDIsMi4zLDJ2MC4zaC05LjN2LTAuM2MxLjUsMCwyLjMtMC43LDIuMy0yVjEyLjVjMC0xLjQtMC44LTItMi4zLTJ2LTAuMwoJCWg1LjhDMTExLjIsMTAuMSwxMTEuNiwxMC45LDExMS42LDEyLjV6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTEzMi44LDMyLjJIMTI3Yy0wLjIsMC0wLjQtMC4yLTAuNi0wLjVjLTAuMi0wLjMtMC40LTAuNS0wLjQtMC41Yy0xLDAuNy0yLjIsMS4xLTMuNiwxLjEKCQljLTIuNSwwLTQuNC0wLjYtNS45LTEuN2MtMS41LTEuMS0yLjItMi4zLTIuMi0zLjdjMC0xLjQsMC43LTIuNiwyLjItMy42YzEuNS0xLjEsMy40LTEuNiw1LjktMS42YzEuMiwwLDIuNCwwLjIsMy41LDAuN3YtMC43CgkJYzAtMy0xLjMtNC41LTMuOC00LjVjLTEuNiwwLTMuMSwwLjQtNC42LDEuMmwtMC4yLTAuM2MxLjUtMC45LDMuMS0xLjMsNC44LTEuM2M1LjYsMCw4LjQsMi42LDguNCw3Ljd2NS4yYzAsMS40LDAuOCwyLDIuMywyVjMyLjJ6CgkJIE0xMjUuOCwyMi44Yy0xLjEtMC41LTIuMy0wLjgtMy41LTAuOGMtMS40LDAtMi40LDAuNS0zLDEuNmMtMC4zLDAuNS0wLjUsMS42LTAuNSwzLjNjMCwyLjEsMC4zLDMuNCwwLjgsNAoJCWMwLjYsMC43LDEuNSwxLjEsMi43LDEuMWMxLjUsMCwyLjctMC40LDMuNS0xLjFjMC0xLjItMC4xLTIuNC0wLjEtMy41VjIyLjh6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTEzOC42LDE5LjNsMy40LDguM2wzLjMtOC4zYzAuMS0wLjMsMC4yLTAuNiwwLjItMC45YzAtMC42LTAuNi0wLjktMS43LTAuOXYtMC4zaDMuOHYwLjMKCQljLTAuOCwwLTEuNSwwLjctMiwybC0zLjUsOC42bC0xLjYsNC4xbC0xLjcsNC4xYy0wLjcsMS40LTEuNSwyLjEtMi41LDIuMWMtMC42LDAtMS4yLTAuMi0xLjYtMC43cy0wLjctMS0wLjctMS42CgkJYzAtMC42LDAuMi0xLjIsMC43LTEuNmMwLjQtMC41LDEtMC43LDEuNi0wLjdjMC42LDAsMS4xLDAuMiwxLjYsMC42YzAuNCwwLjMsMC43LDAuNSwwLjksMC41YzAuMSwwLDAuMi0wLjEsMC4zLTAuMmwwLjktMi40aC0wLjYKCQljLTAuNCwwLTAuNy0wLjEtMC44LTAuM2MwLDAtMC4zLTAuNi0wLjctMS44bC00LjMtMTAuN2MtMC40LTAuOS0wLjctMS41LTEtMS43Yy0wLjMtMC4yLTAuNy0wLjMtMS40LTAuM3YtMC4zaDUuNQoJCUMxMzcuNSwxNy4xLDEzOC4xLDE3LjgsMTM4LjYsMTkuM3oiLz4KPC9nPgo8Zz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNMTYuMywzNy42YzAsMCwxMS43LTMsOS41LTEwLjFjLTAuOC0yLjYtMi42LTQtNC43LTVjLTIuNS0xLjItOS45LTIuOC0xMi42LTUuOAoJCWMtMC41LTAuNi0xLjktMS44LTEuMi0zLjljMS4yLTMuNSw3LjQtNy4xLDEzLjQtOC4yYzAsMC01LjgsMy4yLTAuNiw2LjVjNS4yLDMuMiwxNi4xLDkuNCwxMS44LDE3LjkKCQlDMjcuNywzNy4zLDE2LjMsMzcuNiwxNi4zLDM3LjZ6Ii8+Cgk8bGluZWFyR3JhZGllbnQgaWQ9IlNWR0lEXzFfIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjIuMjcxOSIgeTE9IjI2LjgzODYiIHgyPSIyMi4yOTU0IiB5Mj0iMjYuODM4NiI+CgkJPHN0b3AgIG9mZnNldD0iMCIgc3R5bGU9InN0b3AtY29sb3I6I0ZFQ0IwOSIvPgoJCTxzdG9wICBvZmZzZXQ9IjEiIHN0eWxlPSJzdG9wLWNvbG9yOiNFRDZGMjYiLz4KCTwvbGluZWFyR3JhZGllbnQ+Cgk8cGF0aCBzdHlsZT0iZmlsbDp1cmwoI1NWR0lEXzFfKTsiIGQ9Ik0yMi4zLDMwLjFjMC4yLDEuNS0wLjUsMy4xLTEuNSw0LjJjLTEuMSwxLjEtMi42LDEuNy00LjEsMmMtNC41LDAuOS05LjQtMC45LTEyLjEtNC42CgkJQzEuOSwyOCwwLjcsMjAuOSw2LDE3LjJjLTEuOCwyLjMtMi45LDUuNC0xLjUsOC40YzEsMi4xLDMuMiwzLjcsNS41LDMuN2MzLjEtMC4xLDUuNy0zLjEsOC43LTIuN0MyMC41LDI2LjgsMjIsMjguMywyMi4zLDMwLjF6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojNDE5NjM0OyIgZD0iTTIxLDkuOGMtMC43LTAuOS0wLjktMi4zLTAuMy0zLjNjMC4xLTAuMSwwLjEtMC4yLDAuMi0wLjNjMS4zLTEuNiw1LjgtMS4yLDUuOC01LjkKCQljMCwwLDIuNSw3LjctMi40LDkuOUMyMi43LDExLjEsMjEuNywxMC42LDIxLDkuOHoiLz4KCTxsaW5lYXJHcmFkaWVudCBpZD0iU1ZHSURfMl8iIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMi44NTkxIiB5MT0iMjguNTUyNCIgeDI9IjEzLjE4OTMiIHkyPSIyOC41NTI0Ij4KCQk8c3RvcCAgb2Zmc2V0PSIwIiBzdHlsZT0ic3RvcC1jb2xvcjojRkZENDAxIi8+CgkJPHN0b3AgIG9mZnNldD0iMSIgc3R5bGU9InN0b3AtY29sb3I6I0ZGRDQwMTtzdG9wLW9wYWNpdHk6MCIvPgoJPC9saW5lYXJHcmFkaWVudD4KCTxwYXRoIHN0eWxlPSJmaWxsOnVybCgjU1ZHSURfMl8pOyIgZD0iTTMuMSwyMS45YzAsMC0wLjgsOC44LDgsMTAuOGM0LjcsMS4xLTAuMSwyLjYtMC4xLDIuNlMxLjIsMzIuNywzLjEsMjEuOXoiLz4KCQoJCTxsaW5lYXJHcmFkaWVudCBpZD0iU1ZHSURfM18iIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMTM3OC4xMTYiIHkxPSItNzc5LjM2NzEiIHgyPSIxMzc0Ljk5OTQiIHkyPSItNzgyLjU1OTkiIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoLTAuMzM3MyAxLjM3NTYgMS4wODIyIDAuNzU0NCAxMzM0LjMzMTEgLTEyOTguMzEyKSI+CgkJPHN0b3AgIG9mZnNldD0iMC4yNzI0IiBzdHlsZT0ic3RvcC1jb2xvcjojNDE5NjM0Ii8+CgkJPHN0b3AgIG9mZnNldD0iMSIgc3R5bGU9InN0b3AtY29sb3I6I0ZGRkZGRjtzdG9wLW9wYWNpdHk6MCIvPgoJPC9saW5lYXJHcmFkaWVudD4KCTxwYXRoIHN0eWxlPSJmaWxsOnVybCgjU1ZHSURfM18pOyIgZD0iTTIyLjYsNy42Yy0wLjQtMC41LTAuNC0xLjEsMC0xLjZjMCwwLDAuMS0wLjEsMC4xLTAuMWMwLjktMC44LDMuNi0wLjcsMy45LTIuOQoJCWMwLDAsMSwzLjgtMi4xLDQuOUMyMy41LDguMywyMi45LDgsMjIuNiw3LjZ6Ii8+CjwvZz4KPC9zdmc+Cg=="
+module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDE1MC41IDQxIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxNTAuNSA0MTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGRkZGRjsiIGQ9Ik01My43LDEyLjNjMC45LDAsMS43LDAuMSwyLjQsMC40YzAuNywwLjIsMS4zLDAuNCwxLjksMC40YzAuNiwwLDAuOS0wLjIsMC45LTAuNmgwLjNsMC4zLDQuNWgtMC4zDQoJCWMwLTAuMy0wLjEtMC43LTAuMi0xLjFjLTAuMi0wLjQtMC40LTAuOS0wLjgtMS40Yy0wLjQtMC41LTAuOS0wLjktMS43LTEuM3MtMS43LTAuNS0yLjgtMC41Yy0yLDAtMywwLjctMywyLjENCgkJYzAsMS4zLDAuNiwyLjQsMS43LDMuNGw1LjYsNC43YzIsMS40LDIuOSwzLDIuOSw0LjhjMCwxLjUtMC45LDIuOC0yLjYsMy43Yy0xLjUsMC44LTMuMywxLjItNS42LDEuMmMtMS41LDAtMi43LTAuMy0zLjctMQ0KCQljLTAuMy0wLjItMC42LTAuMy0wLjgtMC4zYy0wLjQsMC0wLjcsMC4yLTAuOSwwLjdjLTAuMSwwLjEtMC4xLDAuMy0wLjEsMC41aC0wLjNsMC4xLTQuNWgwLjNjMCwwLjIsMCwwLjUsMC4xLDAuOA0KCQljMC4yLDAuOCwwLjgsMS42LDEuNSwyLjNjMC40LDAuNCwwLjksMC43LDEuNiwwLjljMC43LDAuMiwxLjQsMC40LDIuMiwwLjRjMS4xLDAsMS45LTAuMywyLjYtMC44YzAuNy0wLjYsMS0xLjIsMS0yDQoJCWMwLTEuMy0wLjQtMi4yLTEuMi0yLjlsLTUuNi00LjdjLTEuNy0xLjQtMi42LTMuMS0yLjYtNC44YzAtMS40LDAuNy0yLjUsMi4xLTMuNEM1MC4zLDEyLjcsNTEuOSwxMi4zLDUzLjcsMTIuM3oiLz4NCgk8cGF0aCBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTY5LjcsMzIuNGMtMi42LDAtNC42LTAuNy02LTJjLTEuNC0xLjMtMi4xLTMuMi0yLjEtNS43YzAtMi40LDAuNy00LjMsMi4xLTUuN2MxLjQtMS4zLDMuNC0yLDYtMg0KCQljMi42LDAsNC42LDAuNyw2LDJjMS40LDEuNCwyLjEsMy4zLDIuMSw1LjdjMCwyLjUtMC43LDQuNC0yLjEsNS43Qzc0LjMsMzEuNyw3Mi4zLDMyLjQsNjkuNywzMi40eiBNNjkuNywzMi4xDQoJCWMxLjUsMCwyLjQtMC41LDIuOC0xLjVjMC40LTEsMC42LTMsMC42LTUuOWMwLTIuOS0wLjItNC44LTAuNi01LjljLTAuNC0xLTEuNC0xLjUtMi44LTEuNWMtMS43LDAtMi43LDAuNi0zLjEsMS45DQoJCWMtMC4zLDEtMC40LDIuOS0wLjQsNS41czAuMSw0LjUsMC40LDUuNUM2NywzMS40LDY4LDMyLjEsNjkuNywzMi4xeiIvPg0KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNODQuOCwxMi41djE3LjRjMCwxLjQsMC44LDIsMi4zLDJ2MC4zaC05LjN2LTAuM2MxLjUsMCwyLjMtMC43LDIuMy0yVjEyLjVjMC0xLjQtMC44LTItMi4zLTJ2LTAuMw0KCQloNS44Qzg0LjQsMTAuMSw4NC44LDEwLjksODQuOCwxMi41eiIvPg0KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNOTQuMSwzNS43YzAsMS40LDAuOCwyLDIuMywyVjM4aC05LjN2LTAuM2MxLjYsMCwyLjMtMC43LDIuMy0yVjE5LjRjMC0xLjQtMC44LTItMi4zLTJ2LTAuM0g5Mw0KCQljMC4yLDAsMC40LDAuMiwwLjYsMC41QzkzLjgsMTcuOSw5NCwxOCw5NCwxOGMxLTAuNywyLjEtMSwzLTFjMi4zLDAsNC4xLDAuNyw1LjUsMmMxLjQsMS40LDIuMSwzLjMsMi4xLDUuN3MtMC43LDQuMy0yLDUuNg0KCQljLTEuNCwxLjQtMy4yLDItNS41LDJjLTEsMC0xLjktMC4zLTIuOS0xVjM1Ljd6IE05OS45LDI0LjdjMC0zLjMtMC4xLTUuMi0wLjMtNS44Yy0wLjUtMS4xLTEuMy0xLjctMi42LTEuN2MtMSwwLTIsMC40LTMsMS4xDQoJCWMwLDAuMywwLjEsMC43LDAuMSwxLjFWMzFjMC45LDAuNywxLjksMSwyLjksMWMxLjMsMCwyLjEtMC42LDIuNi0xLjdDOTkuOCwyOS44LDk5LjksMjcuOSw5OS45LDI0Ljd6Ii8+DQoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGRkZGRjsiIGQ9Ik0xMTEuNiwxMi41djE3LjRjMCwxLjQsMC44LDIsMi4zLDJ2MC4zaC05LjN2LTAuM2MxLjUsMCwyLjMtMC43LDIuMy0yVjEyLjVjMC0xLjQtMC44LTItMi4zLTJ2LTAuMw0KCQloNS44QzExMS4yLDEwLjEsMTExLjYsMTAuOSwxMTEuNiwxMi41eiIvPg0KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNMTMyLjgsMzIuMkgxMjdjLTAuMiwwLTAuNC0wLjItMC42LTAuNWMtMC4yLTAuMy0wLjQtMC41LTAuNC0wLjVjLTEsMC43LTIuMiwxLjEtMy42LDEuMQ0KCQljLTIuNSwwLTQuNC0wLjYtNS45LTEuN2MtMS41LTEuMS0yLjItMi4zLTIuMi0zLjdjMC0xLjQsMC43LTIuNiwyLjItMy42YzEuNS0xLjEsMy40LTEuNiw1LjktMS42YzEuMiwwLDIuNCwwLjIsMy41LDAuN3YtMC43DQoJCWMwLTMtMS4zLTQuNS0zLjgtNC41Yy0xLjYsMC0zLjEsMC40LTQuNiwxLjJsLTAuMi0wLjNjMS41LTAuOSwzLjEtMS4zLDQuOC0xLjNjNS42LDAsOC40LDIuNiw4LjQsNy43djUuMmMwLDEuNCwwLjgsMiwyLjMsMlYzMi4yeg0KCQkgTTEyNS44LDIyLjhjLTEuMS0wLjUtMi4zLTAuOC0zLjUtMC44Yy0xLjQsMC0yLjQsMC41LTMsMS42Yy0wLjMsMC41LTAuNSwxLjYtMC41LDMuM2MwLDIuMSwwLjMsMy40LDAuOCw0DQoJCWMwLjYsMC43LDEuNSwxLjEsMi43LDEuMWMxLjUsMCwyLjctMC40LDMuNS0xLjFjMC0xLjItMC4xLTIuNC0wLjEtMy41VjIyLjh6Ii8+DQoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGRkZGRjsiIGQ9Ik0xMzguNiwxOS4zbDMuNCw4LjNsMy4zLTguM2MwLjEtMC4zLDAuMi0wLjYsMC4yLTAuOWMwLTAuNi0wLjYtMC45LTEuNy0wLjl2LTAuM2gzLjh2MC4zDQoJCWMtMC44LDAtMS41LDAuNy0yLDJsLTMuNSw4LjZsLTEuNiw0LjFsLTEuNyw0LjFjLTAuNywxLjQtMS41LDIuMS0yLjUsMi4xYy0wLjYsMC0xLjItMC4yLTEuNi0wLjdzLTAuNy0xLTAuNy0xLjYNCgkJYzAtMC42LDAuMi0xLjIsMC43LTEuNmMwLjQtMC41LDEtMC43LDEuNi0wLjdjMC42LDAsMS4xLDAuMiwxLjYsMC42YzAuNCwwLjMsMC43LDAuNSwwLjksMC41YzAuMSwwLDAuMi0wLjEsMC4zLTAuMmwwLjktMi40aC0wLjYNCgkJYy0wLjQsMC0wLjctMC4xLTAuOC0wLjNjMCwwLTAuMy0wLjYtMC43LTEuOGwtNC4zLTEwLjdjLTAuNC0wLjktMC43LTEuNS0xLTEuN2MtMC4zLTAuMi0wLjctMC4zLTEuNC0wLjN2LTAuM2g1LjUNCgkJQzEzNy41LDE3LjEsMTM4LjEsMTcuOCwxMzguNiwxOS4zeiIvPg0KPC9nPg0KPGc+DQoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGRkZGRjsiIGQ9Ik0xNi4zLDM3LjZjMCwwLDExLjctMyw5LjUtMTAuMWMtMC44LTIuNi0yLjYtNC00LjctNWMtMi41LTEuMi05LjktMi44LTEyLjYtNS44DQoJCWMtMC41LTAuNi0xLjktMS44LTEuMi0zLjljMS4yLTMuNSw3LjQtNy4xLDEzLjQtOC4yYzAsMC01LjgsMy4yLTAuNiw2LjVjNS4yLDMuMiwxNi4xLDkuNCwxMS44LDE3LjkNCgkJQzI3LjcsMzcuMywxNi4zLDM3LjYsMTYuMywzNy42eiIvPg0KCTxsaW5lYXJHcmFkaWVudCBpZD0iU1ZHSURfMV8iIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMi4yNzE5IiB5MT0iMjYuODM4NiIgeDI9IjIyLjI5NTQiIHkyPSIyNi44Mzg2Ij4NCgkJPHN0b3AgIG9mZnNldD0iMCIgc3R5bGU9InN0b3AtY29sb3I6I0ZFQ0IwOSIvPg0KCQk8c3RvcCAgb2Zmc2V0PSIxIiBzdHlsZT0ic3RvcC1jb2xvcjojRUQ2RjI2Ii8+DQoJPC9saW5lYXJHcmFkaWVudD4NCgk8cGF0aCBzdHlsZT0iZmlsbDp1cmwoI1NWR0lEXzFfKTsiIGQ9Ik0yMi4zLDMwLjFjMC4yLDEuNS0wLjUsMy4xLTEuNSw0LjJjLTEuMSwxLjEtMi42LDEuNy00LjEsMmMtNC41LDAuOS05LjQtMC45LTEyLjEtNC42DQoJCUMxLjksMjgsMC43LDIwLjksNiwxNy4yYy0xLjgsMi4zLTIuOSw1LjQtMS41LDguNGMxLDIuMSwzLjIsMy43LDUuNSwzLjdjMy4xLTAuMSw1LjctMy4xLDguNy0yLjdDMjAuNSwyNi44LDIyLDI4LjMsMjIuMywzMC4xeiIvPg0KCTxwYXRoIHN0eWxlPSJmaWxsOiM0MTk2MzQ7IiBkPSJNMjEsOS44Yy0wLjctMC45LTAuOS0yLjMtMC4zLTMuM2MwLjEtMC4xLDAuMS0wLjIsMC4yLTAuM2MxLjMtMS42LDUuOC0xLjIsNS44LTUuOQ0KCQljMCwwLDIuNSw3LjctMi40LDkuOUMyMi43LDExLjEsMjEuNywxMC42LDIxLDkuOHoiLz4NCgk8bGluZWFyR3JhZGllbnQgaWQ9IlNWR0lEXzJfIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjIuODU5MSIgeTE9IjI4LjU1MjQiIHgyPSIxMy4xODkzIiB5Mj0iMjguNTUyNCI+DQoJCTxzdG9wICBvZmZzZXQ9IjAiIHN0eWxlPSJzdG9wLWNvbG9yOiNGRkQ0MDEiLz4NCgkJPHN0b3AgIG9mZnNldD0iMSIgc3R5bGU9InN0b3AtY29sb3I6I0ZGRDQwMTtzdG9wLW9wYWNpdHk6MCIvPg0KCTwvbGluZWFyR3JhZGllbnQ+DQoJPHBhdGggc3R5bGU9ImZpbGw6dXJsKCNTVkdJRF8yXyk7IiBkPSJNMy4xLDIxLjljMCwwLTAuOCw4LjgsOCwxMC44YzQuNywxLjEtMC4xLDIuNi0wLjEsMi42UzEuMiwzMi43LDMuMSwyMS45eiIvPg0KCQ0KCQk8bGluZWFyR3JhZGllbnQgaWQ9IlNWR0lEXzNfIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjEzNzguMTE2IiB5MT0iLTc3OS4zNjcxIiB4Mj0iMTM3NC45OTk0IiB5Mj0iLTc4Mi41NTk5IiBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KC0wLjMzNzMgMS4zNzU2IDEuMDgyMiAwLjc1NDQgMTMzNC4zMzExIC0xMjk4LjMxMikiPg0KCQk8c3RvcCAgb2Zmc2V0PSIwLjI3MjQiIHN0eWxlPSJzdG9wLWNvbG9yOiM0MTk2MzQiLz4NCgkJPHN0b3AgIG9mZnNldD0iMSIgc3R5bGU9InN0b3AtY29sb3I6I0ZGRkZGRjtzdG9wLW9wYWNpdHk6MCIvPg0KCTwvbGluZWFyR3JhZGllbnQ+DQoJPHBhdGggc3R5bGU9ImZpbGw6dXJsKCNTVkdJRF8zXyk7IiBkPSJNMjIuNiw3LjZjLTAuNC0wLjUtMC40LTEuMSwwLTEuNmMwLDAsMC4xLTAuMSwwLjEtMC4xYzAuOS0wLjgsMy42LTAuNywzLjktMi45DQoJCWMwLDAsMSwzLjgtMi4xLDQuOUMyMy41LDguMywyMi45LDgsMjIuNiw3LjZ6Ii8+DQo8L2c+DQo8L3N2Zz4NCg=="
 
 /***/ }),
 
@@ -3163,27 +3289,6 @@ module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGlu
 /***/ (function(module, exports) {
 
 module.exports = "/_next/static/images/solplay_about-6089f28e7784fdfd0988d315927384bd.jpg";
-
-/***/ }),
-
-/***/ "./static/solplay_banner-001.jpg":
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/solplay_banner-001-23b79420585e032c8fc443a7fac375b5.jpg";
-
-/***/ }),
-
-/***/ "./static/solplay_banner-002.jpg":
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/solplay_banner-002-520bac558aad58dedeec5ddf649d63a3.jpg";
-
-/***/ }),
-
-/***/ "./static/solplay_banner-003.jpg":
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/solplay_banner-003-4f8509ecf0561d12a7a611dcc82aff2b.jpg";
 
 /***/ }),
 
@@ -3198,20 +3303,6 @@ module.exports = "/_next/static/images/solplay_certification-a7e679dcec34bee8e58
 /***/ (function(module, exports) {
 
 module.exports = "/_next/static/images/solplay_leaf-7db6c739e61c686dfeedf2405ccda460.jpg";
-
-/***/ }),
-
-/***/ "./static/solplay_productos-001.jpg":
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/solplay_productos-001-43808da8f07f1e6a6a1d8ef158846337.jpg";
-
-/***/ }),
-
-/***/ "./static/solplay_productos-002.jpg":
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/solplay_productos-002-86c9b681d22a931d44ce050bd1b66a17.jpg";
 
 /***/ }),
 
