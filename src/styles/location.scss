@@ -1,26 +1,36 @@
 .location {
+   .location-image {
+      max-width: 900px;
+      height: 300px;
+      margin: 0 auto 30px;
+      display: block;
+      object-fit: cover;
+   }
 
    .location-content {
       display: flex;
       flex-direction: column;
       margin: 0 auto;
-      max-width: 900px;
+      max-width: 1300px;
       padding: 0 15px;
 
       .location-intro {
-         border: 1px solid #DDD;
+         border: 1px solid #ddd;
          color: $green;
-         padding: 15px;
+         margin: 30px 0;
+         padding: 30px;
          text-align: center;
          text-transform: uppercase;
       }
 
       .location-txt {
+         margin: 0 auto;
+         max-width: 900px;
          text-align: center;
       }
 
       .button {
-         margin: 15px auto;
+         margin: 45px auto;
       }
    }
 }

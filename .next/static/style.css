@@ -533,18 +533,24 @@ textarea,
 
 .icon-instagram:before {
   content: "f"; }
-html, body {
+html,
+body {
   width: 100%; }
 
 body {
-  background: #EEE;
+  background: #eee;
   color: #666;
   font-size: 18px;
   font-family: 'Montserrat', sans-serif;
   margin: 0 auto; }
   body p {
-    margin: 0 0 1em; }
-  body h1, body h2, body h3, body h4, body h5 {
+    margin: 0 0 1em;
+    line-height: 1.5; }
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body h5 {
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 0.05em;
     text-transform: uppercase; }
@@ -587,7 +593,7 @@ body {
     transition: all 0.3s; }
     body .button:hover {
       background: #E89D0B;
-      color: #FFF; }
+      color: #fff; }
 
 .main-header {
   background: rgba(255, 255, 255, 0.8);
@@ -819,7 +825,7 @@ body {
     z-index: 0; }
   .about .about-content .about-content-txt {
     background: rgba(0, 0, 0, 0.5);
-    color: #FFF;
+    color: #fff;
     margin: 45px auto;
     max-width: 900px;
     padding: 30px;
@@ -829,34 +835,42 @@ body {
     .about .about-content .about-content-txt .countries {
       font-family: 'spinweradbold', Georgia, serif; }
 
-.about .about-icons {
+.services .services-content {
+  position: relative; }
+  .services .services-content .services-bg-img {
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+    z-index: 0; }
+
+.services .services-icons {
   display: flex; }
   @media screen and (max-width: 850px) {
-    .about .about-icons {
+    .services .services-icons {
       flex-wrap: wrap; } }
-  .about .about-icons .about-icon {
-    padding: 15px;
+  .services .services-icons .services-icon {
+    padding: 30px;
     background: #E89D0B;
     width: 100%; }
     @media screen and (max-width: 850px) {
-      .about .about-icons .about-icon {
+      .services .services-icons .services-icon {
         width: 50%; } }
-    .about .about-icons .about-icon[data-lighten="5"] {
+    .services .services-icons .services-icon[data-lighten='5'] {
       background: #f4aa18; }
-    .about .about-icons .about-icon[data-lighten="10"] {
+    .services .services-icons .services-icon[data-lighten='10'] {
       background: #f5b331; }
-    .about .about-icons .about-icon[data-lighten="15"] {
+    .services .services-icons .services-icon[data-lighten='15'] {
       background: #f6bc49; }
-    .about .about-icons .about-icon[data-lighten="20"] {
+    .services .services-icons .services-icon[data-lighten='20'] {
       background: #f8c561; }
-    .about .about-icons .about-icon img {
+    .services .services-icons .services-icon img {
       height: 100px;
       object-fit: contain;
-      padding: 15px;
+      padding: 18px;
       width: 100%; }
-    .about .about-icons .about-icon h3 {
-      color: #FFF;
-      font-size: 1em;
+    .services .services-icons .services-icon h3 {
+      color: #fff;
+      font-size: 0.8em;
       font-weight: normal;
       text-align: center; }
 
@@ -927,22 +941,32 @@ body {
         .organic .organic-content .organic-content-wrapper .organic-content-txt .button {
           margin: 0 auto; } }
 
+.location .location-image {
+  max-width: 900px;
+  height: 300px;
+  margin: 0 auto 30px;
+  display: block;
+  object-fit: cover; }
+
 .location .location-content {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 1300px;
   padding: 0 15px; }
   .location .location-content .location-intro {
-    border: 1px solid #DDD;
+    border: 1px solid #ddd;
     color: #419634;
-    padding: 15px;
+    margin: 30px 0;
+    padding: 30px;
     text-align: center;
     text-transform: uppercase; }
   .location .location-content .location-txt {
+    margin: 0 auto;
+    max-width: 900px;
     text-align: center; }
   .location .location-content .button {
-    margin: 15px auto; }
+    margin: 45px auto; }
 
 .contact {
   padding-bottom: 90px; }

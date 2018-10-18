@@ -1,0 +1,56 @@
+.services {
+   .services-content {
+      position: relative;
+
+      .services-bg-img {
+         height: 300px;
+         object-fit: cover;
+         width: 100%;
+         z-index: 0;
+      }
+   }
+   .services-icons {
+      display: flex;
+
+      @include tablet {
+         flex-wrap: wrap;
+      }
+
+      .services-icon {
+         padding: 30px;
+         background: $accent-color;
+         width: 100%;
+
+         @include tablet {
+            width: 50%;
+         }
+
+         &[data-lighten='5'] {
+            background: lighten($accent-color, 5);
+         }
+         &[data-lighten='10'] {
+            background: lighten($accent-color, 10);
+         }
+         &[data-lighten='15'] {
+            background: lighten($accent-color, 15);
+         }
+         &[data-lighten='20'] {
+            background: lighten($accent-color, 20);
+         }
+
+         img {
+            height: 100px;
+            object-fit: contain;
+            padding: 18px;
+            width: 100%;
+         }
+
+         h3 {
+            color: #fff;
+            font-size: 0.8em;
+            font-weight: normal;
+            text-align: center;
+         }
+      }
+   }
+}

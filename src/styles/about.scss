@@ -1,5 +1,4 @@
 .about {
-   
    .about-content {
       padding: 15px;
       position: relative;
@@ -16,7 +15,7 @@
 
       .about-content-txt {
          background: rgba(#000, 0.5);
-         color: #FFF;
+         color: #fff;
          margin: 45px auto;
          max-width: 900px;
          padding: 30px;
@@ -26,43 +25,6 @@
 
          .countries {
             font-family: 'spinweradbold', Georgia, serif;
-         }
-      }
-   }
-
-   .about-icons {
-      display: flex;
-
-      @include tablet {
-         flex-wrap: wrap;
-      }
-
-      .about-icon {
-         padding: 15px;
-         background: $accent-color;
-         width: 100%;
-
-         @include tablet {
-            width: 50%;
-         }
-
-         &[data-lighten="5"] { background: lighten($accent-color, 5) }
-         &[data-lighten="10"] { background: lighten($accent-color, 10) }
-         &[data-lighten="15"] { background: lighten($accent-color, 15) }
-         &[data-lighten="20"] { background: lighten($accent-color, 20) }
-
-         img {
-            height: 100px;
-            object-fit: contain;
-            padding: 15px;
-            width: 100%;
-         }
-
-         h3 {
-            color: #FFF;
-            font-size: 1em;
-            font-weight: normal;
-            text-align: center;
          }
       }
    }

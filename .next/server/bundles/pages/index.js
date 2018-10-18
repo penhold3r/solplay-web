@@ -84,12 +84,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_components_layout__ = __webpack_require__("./src/components/layout.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__src_components_hero__ = __webpack_require__("./src/components/hero.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__src_components_about__ = __webpack_require__("./src/components/about.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__src_components_products__ = __webpack_require__("./src/components/products.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__src_components_organic__ = __webpack_require__("./src/components/organic.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__src_components_certificate__ = __webpack_require__("./src/components/certificate.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__src_components_location__ = __webpack_require__("./src/components/location.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__src_components_contact__ = __webpack_require__("./src/components/contact.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__src_data_data__ = __webpack_require__("./src/data/data.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__src_components_services__ = __webpack_require__("./src/components/services.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__src_components_products__ = __webpack_require__("./src/components/products.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__src_components_organic__ = __webpack_require__("./src/components/organic.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__src_components_certificate__ = __webpack_require__("./src/components/certificate.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__src_components_location__ = __webpack_require__("./src/components/location.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__src_components_contact__ = __webpack_require__("./src/components/contact.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__src_data_data__ = __webpack_require__("./src/data/data.js");
 var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\pages\\index.js";
 
 
@@ -106,6 +107,7 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 
 
 
@@ -141,7 +143,7 @@ function (_React$Component) {
       value: {
         modal: false,
         sections: [],
-        sectionToScroll: ""
+        sectionToScroll: ''
       }
     }), Object.defineProperty(_assertThisInitialized(_this), "handleScroll", {
       configurable: true,
@@ -201,11 +203,11 @@ function (_React$Component) {
   _createClass(Index, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      var sections = Array.from(document.querySelectorAll("section.scroll"));
+      var sections = Array.from(document.querySelectorAll('section.scroll'));
       this.setState({
         sections: sections
       });
-      var images = document.querySelectorAll("img");
+      var images = document.querySelectorAll('img');
       this.waitForImages(images);
     }
   }, {
@@ -216,18 +218,19 @@ function (_React$Component) {
           sectionToScroll = _state.sectionToScroll;
       sections.map(function (section) {
         return section.id == sectionToScroll && section.scrollIntoView({
-          block: "start",
-          behavior: "smooth"
+          block: 'start',
+          behavior: 'smooth'
         });
       });
     }
   }, {
     key: "render",
     value: function render() {
-      var menu = __WEBPACK_IMPORTED_MODULE_10__src_data_data__["a" /* default */].menu,
-          _data$main = __WEBPACK_IMPORTED_MODULE_10__src_data_data__["a" /* default */].main,
+      var menu = __WEBPACK_IMPORTED_MODULE_11__src_data_data__["a" /* default */].menu,
+          _data$main = __WEBPACK_IMPORTED_MODULE_11__src_data_data__["a" /* default */].main,
           home = _data$main.home,
           about = _data$main.about,
+          services = _data$main.services,
           products = _data$main.products,
           organic = _data$main.organic,
           location = _data$main.location;
@@ -237,50 +240,56 @@ function (_React$Component) {
         menuClick: this.handleScroll,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 59
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__src_components_hero__["a" /* default */], {
         content: home,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 64
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__src_components_about__["a" /* default */], {
         content: about,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
-        }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__src_components_products__["a" /* default */], {
-        content: products,
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 65
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__src_components_organic__["a" /* default */], {
-        content: organic,
-        openModal: this.handleModal,
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__src_components_services__["a" /* default */], {
+        content: services,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 66
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__src_components_location__["a" /* default */], {
-        content: location,
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__src_components_products__["a" /* default */], {
+        content: products,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 67
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__src_components_contact__["a" /* default */], {
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__src_components_organic__["a" /* default */], {
+        content: organic,
+        openModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 68
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__src_components_certificate__["a" /* default */], {
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__src_components_location__["a" /* default */], {
+        content: location,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 69
+        }
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__src_components_contact__["a" /* default */], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 70
+        }
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__src_components_certificate__["a" /* default */], {
         open: this.state.modal,
         closeModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 71
         }
       }));
     }
@@ -309,26 +318,25 @@ var About = function About(_ref) {
   var _ref$content = _ref.content,
       title = _ref$content.title,
       content = _ref$content.content,
-      countries = _ref$content.countries,
-      icons = _ref$content.icons;
+      countries = _ref$content.countries;
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("section", {
     id: "nosotros",
     className: "about scroll",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 4
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
     className: "main-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 5
     }
   }, title), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "about-content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 6
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     className: "about-bg-img",
@@ -336,13 +344,13 @@ var About = function About(_ref) {
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 7
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "about-content-txt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 8
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
     dangerouslySetInnerHTML: {
@@ -350,48 +358,20 @@ var About = function About(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 9
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "countries",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 10
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 11
     }
-  }, "".concat(countries.intro, " ").concat(countries.list))))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-    className: "about-icons",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    }
-  }, icons.map(function (icon, key) {
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-      key: key,
-      className: "about-icon",
-      "data-lighten": "".concat(key * 5),
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 18
-      }
-    }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
-      src: icon.icon,
-      alt: "",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 19
-      }
-    }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h3", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 20
-      }
-    }, icon.text));
-  })));
+  }, "".concat(countries.intro, " ").concat(countries.list))))));
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (About);
@@ -926,7 +906,9 @@ var Hero = function Hero(_ref) {
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__slider__["a" /* default */], {
     pagination: true,
     paginationStyle: {
-      background: "#FFF"
+      background: '#FFF',
+      height: '15px',
+      width: '15px'
     },
     __source: {
       fileName: _jsxFileName,
@@ -937,48 +919,48 @@ var Hero = function Hero(_ref) {
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 20
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     src: __WEBPACK_IMPORTED_MODULE_3__static_banner_solplay_banner_02_jpg___default.a,
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 21
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     src: __WEBPACK_IMPORTED_MODULE_4__static_banner_solplay_banner_03_jpg___default.a,
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 22
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     src: __WEBPACK_IMPORTED_MODULE_5__static_banner_solplay_banner_04_jpg___default.a,
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 23
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     src: __WEBPACK_IMPORTED_MODULE_6__static_banner_solplay_banner_05_jpg___default.a,
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 24
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     src: __WEBPACK_IMPORTED_MODULE_7__static_banner_solplay_banner_06_jpg___default.a,
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 25
     }
   }))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "hero-content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 29
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "hero-text",
@@ -987,14 +969,14 @@ var Hero = function Hero(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 30
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     href: "#",
     className: "button",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 34
     }
   }, "descubrinos")));
 };
@@ -1140,7 +1122,10 @@ var Layout = function Layout(_ref) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_ubicacion_jpg__ = __webpack_require__("./static/solplay_ubicacion.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_ubicacion_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__static_solplay_ubicacion_jpg__);
 var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\location.js";
+
 
 
 var LocationSection = function LocationSection(_ref) {
@@ -1153,19 +1138,27 @@ var LocationSection = function LocationSection(_ref) {
     className: "location",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 10
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
     className: "main-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 11
     }
-  }, title), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+  }, title), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
+    src: __WEBPACK_IMPORTED_MODULE_1__static_solplay_ubicacion_jpg___default.a,
+    alt: "",
+    className: "location-image",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "location-content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 13
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
     className: "location-intro",
@@ -1174,7 +1167,7 @@ var LocationSection = function LocationSection(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 14
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
     className: "location-txt",
@@ -1183,14 +1176,14 @@ var LocationSection = function LocationSection(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 18
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     href: "#",
     className: "button",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 22
     }
   }, "Ver en mapa")));
 };
@@ -1341,6 +1334,85 @@ var Products = function Products(_ref) {
 
 /***/ }),
 
+/***/ "./src/components/services.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_servicios_jpg__ = __webpack_require__("./static/solplay_servicios.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_servicios_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__static_solplay_servicios_jpg__);
+var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\services.js";
+
+
+
+var Services = function Services(_ref) {
+  var _ref$content = _ref.content,
+      title = _ref$content.title,
+      content = _ref$content.content,
+      icons = _ref$content.icons;
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("section", {
+    id: "servicios",
+    className: "services",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
+    className: "main-title",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    }
+  }, title), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "services-content",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
+    className: "services-bg-img",
+    src: __WEBPACK_IMPORTED_MODULE_1__static_solplay_servicios_jpg___default.a,
+    alt: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    }
+  })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "services-icons",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    }
+  }, icons.map(function (icon, key) {
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+      key: key,
+      className: "services-icon",
+      "data-lighten": "".concat(key * 5),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
+      }
+    }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
+      src: icon.icon,
+      alt: "",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22
+      }
+    }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h3", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23
+      }
+    }, icon.text));
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (Services);
+
+/***/ }),
+
 /***/ "./src/components/slider.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1370,26 +1442,26 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 
 var styles = {
   slider: {
-    height: "100%",
-    position: "relative",
-    width: "100%"
+    height: '100%',
+    position: 'relative',
+    width: '100%'
   },
   slide: {
-    height: "100%",
+    height: '100%',
     left: 0,
     opacity: 0,
-    position: "absolute",
+    position: 'absolute',
     top: 0,
-    transition: "all 0.3s",
-    width: "100%",
+    transition: 'all 0.3s',
+    width: '100%',
     zIndex: 3
   },
   sliderImg: {
-    height: "100%",
-    objectFit: "cover",
+    height: '100%',
+    objectFit: 'cover',
     opacity: 1,
-    display: "block",
-    width: "100%"
+    display: 'block',
+    width: '100%'
   },
   onTop: {
     opacity: 1,
@@ -1397,29 +1469,30 @@ var styles = {
   },
   pagination: {
     bottom: 0,
-    display: "flex",
-    justifyContent: "center",
+    display: 'flex',
+    justifyContent: 'center',
     left: 0,
-    margin: "0 auto",
-    position: "absolute",
+    margin: '0 auto',
+    position: 'absolute',
     right: 0,
     zIndex: 99
   },
   tile: {
-    background: "#CCC",
-    border: "1px solid #666",
-    borderRadius: "50%",
-    cursor: "pointer",
-    height: "20px",
-    margin: "6px",
+    background: '#CCC',
+    border: '1px solid #666',
+    borderRadius: '50%',
+    cursor: 'pointer',
+    height: '20px',
+    margin: '6px',
     opacity: 0.5,
-    outline: "none",
-    transition: "all 0.3s",
-    webkitAppearance: "none",
-    width: "20px"
+    outline: 'none',
+    padding: 0,
+    transition: 'all 0.3s',
+    webkitAppearance: 'none',
+    width: '20px'
   },
   activeTile: {
-    background: "#999",
+    background: '#999',
     opacity: 1
   }
 };
@@ -1442,7 +1515,7 @@ function (_React$Component) {
       value: function value(slides, activeTile) {
         var tiles = slides && slides.map(function (slide, key) {
           var currentIndex = slides.indexOf(slide);
-          var classes = currentIndex == activeTile ? "tile" : "tile active-tile";
+          var classes = currentIndex == activeTile ? 'tile' : 'tile active-tile';
           var style = slides.indexOf(slide) == activeTile ? _objectSpread({}, _this.styles.tile, _this.styles.activeTile) : _this.styles.tile;
           return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button", {
             key: key,
@@ -1453,7 +1526,7 @@ function (_React$Component) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 107
+              lineNumber: 106
             }
           });
         });
@@ -1462,7 +1535,7 @@ function (_React$Component) {
           style: _this.styles.pagination,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 117
+            lineNumber: 116
           }
         }, tiles);
       }
@@ -1512,7 +1585,6 @@ function (_React$Component) {
       images && setInterval(function () {
         var onTop = _this2.state.currentSlide;
         var currentSlide = onTop == images.length - 1 ? 0 : onTop + 1;
-        console.log(currentSlide);
 
         _this2.setState({
           currentSlide: currentSlide
@@ -1528,7 +1600,7 @@ function (_React$Component) {
           images = _state.images,
           pagination = _state.pagination;
       var slides = images.length > 1 && images.map(function (slide, key) {
-        var classes = images.indexOf(slide) == _this3.state.currentSlide ? "slide on-top" : "slide";
+        var classes = images.indexOf(slide) == _this3.state.currentSlide ? 'slide on-top' : 'slide';
         var style = images.indexOf(slide) == _this3.state.currentSlide ? _objectSpread({}, _this3.styles.slide, _this3.styles.onTop) : _this3.styles.slide;
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
           key: key,
@@ -1536,7 +1608,7 @@ function (_React$Component) {
           style: style,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 140
+            lineNumber: 139
           }
         }, slide);
       });
@@ -1546,7 +1618,7 @@ function (_React$Component) {
         ref: this.slider,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 147
+          lineNumber: 146
         }
       }, slides, pagination && this.createPagination(slides, this.state.currentSlide));
     }
@@ -1656,61 +1728,64 @@ var Social = function Social(_ref) {
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-  menu: ["Inicio", "Nosotros", "Productos", "Contacto"],
+  menu: ['Inicio', 'Nosotros', 'Productos', 'Contacto'],
   main: {
     home: {
-      name: "Inicio",
-      content: "<h2>Lo <strong>mejor</strong> de nosotros<br/> para <strong>todo el mundo</strong></h2><p>Motivados por la pasión de lo que nos gusta hacer, que es llegar con nuestros productos a nuestros clientes en el exterior.</p>"
+      name: 'Inicio',
+      content: '<h2>Lo <strong>mejor</strong> de nosotros<br/> para <strong>todo el mundo</strong></h2><p>Motivados por la pasión de lo que nos gusta hacer, que es llegar con nuestros productos a nuestros clientes en el exterior.</p>'
     },
     about: {
-      title: "Quienes Somos",
-      content: "<strong>Solplay SA</strong> es una empresa Argentina, dedicada a la exportación de productos agroalimentarios de calidad. Estamos en el mercado internacional hace más de 2 décadas, tenemos experiencia en los productos que procesamos y exportamos a nuestros clientes.",
+      title: 'Quienes Somos',
+      content: '<strong>Solplay SA</strong> es una empresa Argentina, dedicada a la exportación de productos agroalimentarios de calidad. Estamos en el mercado internacional hace más de 2 décadas, tenemos experiencia en los productos que procesamos y exportamos a nuestros clientes.',
       countries: {
-        intro: "Contamos con clientes en distintos Países tales como:",
-        list: "EEUU, Unión Europea, Taiwán, Haití, Brasil, Chile, Bolivia"
-      },
+        intro: 'Contamos con clientes en distintos Países tales como:',
+        list: 'EEUU, Unión Europea, Taiwán, Haití, Brasil, Chile, Bolivia'
+      }
+    },
+    services: {
+      title: 'Servicios',
       icons: [{
-        text: "Control y embalaje",
+        text: 'Control y embalaje',
         icon: __WEBPACK_IMPORTED_MODULE_0__static_solplay_control_y_embalaje_svg___default.a
       }, {
-        text: "Eficiencia de Tiempos",
+        text: 'Eficiencia de Tiempos',
         icon: __WEBPACK_IMPORTED_MODULE_1__static_solplay_eficiencia_svg___default.a
       }, {
-        text: "Seguimiento de Envío",
+        text: 'Seguimiento de Envío',
         icon: __WEBPACK_IMPORTED_MODULE_2__static_solplay_seguimiento_svg___default.a
       }, {
-        text: "Entrega asegurada",
+        text: 'Entrega asegurada',
         icon: __WEBPACK_IMPORTED_MODULE_3__static_solplay_entrega_svg___default.a
       }]
     },
     products: {
-      title: "Productos",
+      title: 'Productos',
       products: [{
-        name: "Ajos",
+        name: 'Ajos',
         image: __WEBPACK_IMPORTED_MODULE_4__static_productos_ajos_jpg___default.a
       }, {
-        name: "Ciruelas",
+        name: 'Ciruelas',
         image: __WEBPACK_IMPORTED_MODULE_5__static_productos_ciruelas_secas_jpg___default.a
       }, {
-        name: "Nueces",
+        name: 'Nueces',
         image: __WEBPACK_IMPORTED_MODULE_6__static_productos_nueces_chandler_jpg___default.a
       }, {
-        name: "Zapallo",
+        name: 'Zapallo',
         image: __WEBPACK_IMPORTED_MODULE_7__static_productos_zapallo_butternut_jpg___default.a
       }, {
-        name: "Zapallo",
+        name: 'Zapallo',
         image: __WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_muscat_jpg___default.a
       }]
     },
     organic: {
-      title: "Orgánicos",
-      content: "<h2>Productos Orgánicos</h2><p>Trabajamos desde hace 1 año con productos orgánicos como ajo y ciruelas deshidratadas, pero pensamos seguir aumentando volúmenes y productos de esta naturaleza, apostando cada vez más al consumo de alimentos saludables.</p>"
+      title: 'Orgánicos',
+      content: '<h2>Productos Orgánicos</h2><p>Trabajamos desde hace 1 año con productos orgánicos como ajo y ciruelas deshidratadas, pero pensamos seguir aumentando volúmenes y productos de esta naturaleza, apostando cada vez más al consumo de alimentos saludables.</p>'
     },
     location: {
-      title: "Ubicación",
+      title: 'Ubicación',
       content: {
-        intro: "Estamos situados en la provincia de mendoza, república argentina, poseemos planta de empaque en la localidad de guaymallén y san rafael que son departamentos de dicha provincia.",
-        text: "<strong>San Rafael</strong> está situada en la parte sur de <strong>Mendoza</strong> cerca de nuestra <strong>Patagonia Argentina,</strong> esta zona es óptima para la producción de productos orgánicos y convencionales debidos a su clima y a la sanidad de su agua y suelos.<br/><strong>Guaymallén</strong> se encuentra al norte de la provincia con producciones de primicia de ajos y frutas."
+        intro: 'Estamos situados en la provincia de mendoza, república argentina, poseemos planta de empaque en la localidad de guaymallén y san rafael que son departamentos de dicha provincia.',
+        text: '<strong>San Rafael</strong> está situada en la parte sur de <strong>Mendoza</strong> cerca de nuestra <strong>Patagonia Argentina,</strong> esta zona es óptima para la producción de productos orgánicos y convencionales debidos a su clima y a la sanidad de su agua y suelos.<br/><strong>Guaymallén</strong> se encuentra al norte de la provincia con producciones de primicia de ajos y frutas.'
       }
     }
   }
@@ -1876,6 +1951,20 @@ module.exports = "/_next/static/images/solplay_certification-a7e679dcec34bee8e58
 /***/ (function(module, exports) {
 
 module.exports = "/_next/static/images/solplay_leaf-7db6c739e61c686dfeedf2405ccda460.jpg";
+
+/***/ }),
+
+/***/ "./static/solplay_servicios.jpg":
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/solplay_servicios-b626c23d7d6463a7ab87017af2d29468.jpg";
+
+/***/ }),
+
+/***/ "./static/solplay_ubicacion.jpg":
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/solplay_ubicacion-f89c8cd58109d536c06196a301ca8450.jpg";
 
 /***/ }),
 
