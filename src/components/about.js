@@ -1,4 +1,4 @@
-import aboutImg from '../../static/solplay_about.jpg'
+import aboutImg from '../../static/solplay_empaque.jpg'
 
 const About = ({ content: { title, content, countries } }) => (
    <section id="nosotros" className="about scroll">

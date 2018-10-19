@@ -34,9 +34,31 @@ const Contact = () => {
                />
                <label htmlFor="msg">Mensaje</label>
             </div>
-            <input type="button" className="button" value="Enviar" />
+            <input type="submit" className="button" value="Enviar" />
          </form>
          <Social className="contact-social" />
+         <div className="contact-details">
+            <div className="contact-link">
+               <a
+                  href="https://goo.gl/maps/WrcgbGnL3V92"
+                  target="_blank"
+                  rel="noopener"
+                  className="icon-map-pin-streamline"
+               >
+                  Ruta Provincial, 24, km, 16, 5535. - Mendoza Argentina.
+               </a>
+            </div>
+            <div className="contact-link">
+               <a href="mailto:agrovit@hotmail.com" className="icon-envelope-o">
+                  agrovit@hotmail.com
+               </a>
+            </div>
+            <div className="contact-link">
+               <a href="tel:+5492614549231" className="icon-phone">
+                  54 9 261 454 9231
+               </a>
+            </div>
+         </div>
       </section>
    )
 }

@@ -19,7 +19,12 @@ const LocationSection = ({
                className="location-txt"
                dangerouslySetInnerHTML={{ __html: text }}
             />
-            <a href="#" className="button">
+            <a
+               href="https://goo.gl/maps/WrcgbGnL3V92"
+               target="_blank"
+               rel="noopener"
+               className="button"
+            >
                Ver en mapa
             </a>
          </div>

@@ -1742,8 +1742,8 @@ function (_React$Component) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_about_jpg__ = __webpack_require__("./static/solplay_about.jpg");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_about_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__static_solplay_about_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_empaque_jpg__ = __webpack_require__("./static/solplay_empaque.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_empaque_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__static_solplay_empaque_jpg__);
 var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\about.js";
 
 
@@ -1774,7 +1774,7 @@ var About = function About(_ref) {
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     className: "about-bg-img",
-    src: __WEBPACK_IMPORTED_MODULE_1__static_solplay_about_jpg___default.a,
+    src: __WEBPACK_IMPORTED_MODULE_1__static_solplay_empaque_jpg___default.a,
     alt: "",
     __source: {
       fileName: _jsxFileName,
@@ -2001,7 +2001,7 @@ var Contact = function Contact() {
       lineNumber: 35
     }
   }, "Mensaje")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
-    type: "button",
+    type: "submit",
     className: "button",
     value: "Enviar",
     __source: {
@@ -2014,7 +2014,54 @@ var Contact = function Contact() {
       fileName: _jsxFileName,
       lineNumber: 39
     }
-  }));
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "contact-details",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "contact-link",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
+    href: "https://goo.gl/maps/WrcgbGnL3V92",
+    target: "_blank",
+    rel: "noopener",
+    className: "icon-map-pin-streamline",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
+    }
+  }, "Ruta Provincial, 24, km, 16, 5535. - Mendoza Argentina.")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "contact-link",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
+    href: "mailto:agrovit@hotmail.com",
+    className: "icon-envelope-o",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    }
+  }, "agrovit@hotmail.com")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "contact-link",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
+    href: "tel:+5492614549231",
+    className: "icon-phone",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57
+    }
+  }, "54 9 261 454 9231"))));
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (Contact);
@@ -2448,66 +2495,66 @@ var Layout = function Layout(_ref) {
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Fragment, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 11
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_next_head___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 12
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 13
     }
   }, "Solplay"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
     property: "developer",
     content: "penHolder Designerd",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 14
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
     type: "theme-color",
     content: "#00A7E1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 15
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
     name: "viewport",
     content: "width=device-width, initial-scale=1.0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 16
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
     "http-equiv": "X-UA-Compatible",
     content: "ie=edge",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 20
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
     property: "og:image",
     content: "../../static/bookmark-image.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 21
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
     name: "referrer",
     content: "origin",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 25
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
     rel: "profile",
-    href: "http://gmpg.org/xfn/11",
+    href: "https://gmpg.org/xfn/11",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 26
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
     rel: "shortcut icon",
@@ -2515,7 +2562,7 @@ var Layout = function Layout(_ref) {
     href: "../../static/favicon.ico",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 27
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
     rel: "icon",
@@ -2524,24 +2571,24 @@ var Layout = function Layout(_ref) {
     sizes: "32x32 192x192",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 32
     }
   })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__header__["a" /* default */], {
     menu: menu,
     menuClick: menuClick,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 39
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("main", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 40
     }
   }, children), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__footer__["a" /* default */], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 41
     }
   }));
 };
@@ -2613,7 +2660,9 @@ var LocationSection = function LocationSection(_ref) {
       lineNumber: 18
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
-    href: "#",
+    href: "https://goo.gl/maps/WrcgbGnL3V92",
+    target: "_blank",
+    rel: "noopener",
     className: "button",
     __source: {
       fileName: _jsxFileName,
@@ -3095,33 +3144,36 @@ var Social = function Social(_ref) {
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     href: "#",
     className: "icon-facebook",
+    title: "Facebook",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 5
     }
   })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 7
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     href: "#",
     className: "icon-twitter",
+    title: "Twitter",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 8
     }
   })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 10
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     href: "#",
     className: "icon-instagram",
+    title: "Instagram",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 11
     }
   }))));
 };
@@ -3360,17 +3412,17 @@ module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGlu
 
 /***/ }),
 
-/***/ "./static/solplay_about.jpg":
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/solplay_about-6089f28e7784fdfd0988d315927384bd.jpg";
-
-/***/ }),
-
 /***/ "./static/solplay_certification.jpg":
 /***/ (function(module, exports) {
 
 module.exports = "/_next/static/images/solplay_certification-a7e679dcec34bee8e58d3d7f9fd5e981.jpg";
+
+/***/ }),
+
+/***/ "./static/solplay_empaque.jpg":
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/solplay_empaque-7b690352943601f789a3696b267e36e7.jpg";
 
 /***/ }),
 

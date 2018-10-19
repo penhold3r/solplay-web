@@ -1,6 +1,4 @@
 .contact {
-   padding-bottom: 90px;
-
    .contact-form {
       display: grid;
       grid-gap: 15px;
@@ -14,7 +12,7 @@
          overflow: hidden;
 
          .field {
-            background: rgba(#FFF, 0.5);
+            background: rgba(#fff, 0.5);
             border: none;
             left: 0;
             padding: 6px 9px;
@@ -28,11 +26,12 @@
                resize: none;
             }
 
-            &:focus, &:not(:placeholder-shown) {
-               background: #FFF;
+            &:focus,
+            &:not(:placeholder-shown) {
+               background: #fff;
                outline: none;
                -webkit-appearance: none;
-               
+
                + label {
                   color: transparent;
                   top: -100%;
@@ -54,13 +53,13 @@
       .button {
          background: $main-color;
          border-color: $main-color;
-         color: #FFF;
+         color: #fff;
          margin: 0 30px;
          padding: 9px;
          transition: all 0.3s;
 
          &:hover {
-            background: #FFF;
+            background: #fff;
             color: $main-color;
          }
       }
@@ -73,7 +72,7 @@
 
       ul {
          margin: auto;
-         
+
          li {
             padding: 6px;
 
@@ -85,6 +84,55 @@
                &:hover {
                   color: $accent-color;
                }
+            }
+         }
+      }
+   }
+
+   .contact-details {
+      background: #333;
+      display: grid;
+      grid-gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      margin-top: 90px;
+      padding: 30px;
+
+      @include tablet {
+         padding: 30px 15px;
+      }
+
+      .contact-link {
+         align-self: center;
+         justify-self: center;
+
+         @include tablet {
+            grid-column: 1 / -1;
+            justify-self: start;
+         }
+
+         a {
+            color: #fff;
+            display: flex;
+            text-decoration: none;
+            transition: all 0.3s;
+
+            @include tablet {
+               padding: 6px 0;
+            }
+
+            &:before {
+               color: $accent-color;
+               margin: auto;
+               padding: 0 30px;
+               width: 2em;
+
+               @include tablet {
+                  padding: 0;
+               }
+            }
+
+            &:hover {
+               color: $accent-color;
             }
          }
       }
