@@ -1969,7 +1969,7 @@ function (_React$Component) {
       value: function value(e) {
         e.preventDefault();
         var submitSettings = {
-          dest: 'https://cors-anywhere.herokuapp.com/https://solplayargentina.com/contact.php',
+          dest: 'https://cors-anywhere.herokuapp.com/https://solplayargentina.com/contacto.php',
           fields: '.field',
           successMsg: 'Mensaje enviado!',
           errorMsg: 'Hubo un error, intente más tarde. :(',

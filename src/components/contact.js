@@ -8,7 +8,7 @@ class Contact extends React.Component {
       e.preventDefault()
       const submitSettings = {
          dest:
-            'https://cors-anywhere.herokuapp.com/https://solplayargentina.com/contact.php',
+            'https://cors-anywhere.herokuapp.com/https://solplayargentina.com/contacto.php',
          fields: '.field',
          successMsg: 'Mensaje enviado!',
          errorMsg: 'Hubo un error, intente más tarde. :(',
