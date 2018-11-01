@@ -1,10 +1,11 @@
 .location {
    .location-image {
-      max-width: 900px;
+      display: block;
       height: 300px;
       margin: 0 auto 30px;
-      display: block;
+      max-width: 900px;
       object-fit: cover;
+      width: 100%;
    }
 
    .location-content {

@@ -1,12 +1,12 @@
 .certificate {
-   background: rgba(#000, 0.5);
+   background: rgba(#fff, 0.5);
    display: flex;
-   height: 100vh;
+   height: calc(100vh - 100px);
    left: 0;
    opacity: 0;
    padding: 30px;
    position: fixed;
-   top: 0;
+   top: 100px;
    transition: all 0.4s;
    visibility: hidden;
    width: 100vw;
@@ -28,7 +28,7 @@
       width: 100%;
 
       .close-modal {
-         background: #FFF;
+         background: #fff;
          border-radius: 50%;
          color: $main-color;
          cursor: pointer;
@@ -44,7 +44,7 @@
 
          &:hover {
             background: $accent-color;
-            color: #FFF;
+            color: #fff;
             transform: rotate(90deg);
          }
       }
@@ -71,7 +71,7 @@
 
          .main-title {
             align-self: center;
-            color: #FFF;
+            color: #fff;
             margin: 30px;
          }
 

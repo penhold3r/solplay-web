@@ -5,6 +5,7 @@ import Hero from '../src/components/hero'
 import About from '../src/components/about'
 import Services from '../src/components/services'
 import Products from '../src/components/products'
+import ProductModal from '../src/components/product-modal'
 import Organic from '../src/components/organic'
 import Certificate from '../src/components/certificate'
 import LocationSection from '../src/components/location'
@@ -14,7 +15,9 @@ import data from '../src/data/data'
 
 class Index extends React.Component {
    state = {
-      modal: false,
+      productModal: false,
+      product: null,
+      certificateModal: false,
       sections: [],
       sectionToScroll: ''
    }
@@ -22,8 +25,8 @@ class Index extends React.Component {
    componentDidMount() {
       const sections = Array.from(document.querySelectorAll('section.scroll'))
       this.setState({ sections })
-      const images = document.querySelectorAll('img')
-      this.waitForImages(images)
+
+      this.waitForImages()
    }
 
    componentDidUpdate() {
@@ -37,13 +40,18 @@ class Index extends React.Component {
 
    handleScroll = section => this.setState({ sectionToScroll: section })
 
-   handleModal = e => {
-      const openModal = !this.state.modal
+   handleModal = (e, product = null) => {
+      const modalTarget = e.currentTarget.classList.contains('product')
+         ? 'productModal'
+         : 'certificateModal'
+      const openModal = !this.state[modalTarget]
+
       e.preventDefault()
-      this.setState({ modal: openModal })
+      this.setState({ [modalTarget]: openModal, product })
    }
 
-   waitForImages = imgs => {
+   waitForImages = () => {
+      const imgs = document.querySelectorAll('img')
       for (let img of imgs) {
          imagesLoaded(img, obj => (obj.images[0].img.style.opacity = 1))
       }
@@ -54,6 +62,11 @@ class Index extends React.Component {
          menu,
          main: { home, about, services, products, organic, location }
       } = data
+      const body = document.querySelector('body')
+
+      this.state.productModal || this.state.certificateModal
+         ? body.classList.add('no-scroll')
+         : body.classList.remove('no-scroll')
 
       return (
          <Layout
@@ -61,15 +74,20 @@ class Index extends React.Component {
             sections={this.state.sections}
             menuClick={this.handleScroll}
          >
+            <ProductModal
+               open={this.state.productModal}
+               content={this.state.product}
+               closeModal={this.handleModal}
+            />
             <Hero content={home} />
             <About content={about} />
             <Services content={services} />
-            <Products content={products} />
+            <Products content={products} openModal={this.handleModal} />
             <Organic content={organic} openModal={this.handleModal} />
             <LocationSection content={location} />
             <Contact />
             <Certificate
-               open={this.state.modal}
+               open={this.state.certificateModal}
                closeModal={this.handleModal}
             />
          </Layout>

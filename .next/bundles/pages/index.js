@@ -1501,15 +1501,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__src_components_about__ = __webpack_require__("./src/components/about.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__src_components_services__ = __webpack_require__("./src/components/services.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__src_components_products__ = __webpack_require__("./src/components/products.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__src_components_organic__ = __webpack_require__("./src/components/organic.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__src_components_certificate__ = __webpack_require__("./src/components/certificate.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__src_components_location__ = __webpack_require__("./src/components/location.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__src_components_contact__ = __webpack_require__("./src/components/contact.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__src_data_data__ = __webpack_require__("./src/data/data.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__src_components_product_modal__ = __webpack_require__("./src/components/product-modal.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__src_components_organic__ = __webpack_require__("./src/components/organic.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__src_components_certificate__ = __webpack_require__("./src/components/certificate.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__src_components_location__ = __webpack_require__("./src/components/location.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__src_components_contact__ = __webpack_require__("./src/components/contact.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__src_data_data__ = __webpack_require__("./src/data/data.js");
 var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\pages\\index.js";
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -1522,6 +1525,7 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 
 
 
@@ -1556,7 +1560,9 @@ function (_React$Component) {
       enumerable: true,
       writable: true,
       value: {
-        modal: false,
+        productModal: false,
+        product: null,
+        certificateModal: false,
         sections: [],
         sectionToScroll: ''
       }
@@ -1574,18 +1580,21 @@ function (_React$Component) {
       enumerable: true,
       writable: true,
       value: function value(e) {
-        var openModal = !_this.state.modal;
+        var _this$setState;
+
+        var product = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+        var modalTarget = e.currentTarget.classList.contains('product') ? 'productModal' : 'certificateModal';
+        var openModal = !_this.state[modalTarget];
         e.preventDefault();
 
-        _this.setState({
-          modal: openModal
-        });
+        _this.setState((_this$setState = {}, _defineProperty(_this$setState, modalTarget, openModal), _defineProperty(_this$setState, "product", product), _this$setState));
       }
     }), Object.defineProperty(_assertThisInitialized(_this), "waitForImages", {
       configurable: true,
       enumerable: true,
       writable: true,
-      value: function value(imgs) {
+      value: function value() {
+        var imgs = document.querySelectorAll('img');
         var _iteratorNormalCompletion = true;
         var _didIteratorError = false;
         var _iteratorError = undefined;
@@ -1622,8 +1631,7 @@ function (_React$Component) {
       this.setState({
         sections: sections
       });
-      var images = document.querySelectorAll('img');
-      this.waitForImages(images);
+      this.waitForImages();
     }
   }, {
     key: "componentDidUpdate",
@@ -1641,70 +1649,81 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var menu = __WEBPACK_IMPORTED_MODULE_11__src_data_data__["a" /* default */].menu,
-          _data$main = __WEBPACK_IMPORTED_MODULE_11__src_data_data__["a" /* default */].main,
+      var menu = __WEBPACK_IMPORTED_MODULE_12__src_data_data__["a" /* default */].menu,
+          _data$main = __WEBPACK_IMPORTED_MODULE_12__src_data_data__["a" /* default */].main,
           home = _data$main.home,
           about = _data$main.about,
           services = _data$main.services,
           products = _data$main.products,
           organic = _data$main.organic,
           location = _data$main.location;
+      var body = document.querySelector('body');
+      this.state.productModal || this.state.certificateModal ? body.classList.add('no-scroll') : body.classList.remove('no-scroll');
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__src_components_layout__["a" /* default */], {
         menu: menu,
         sections: this.state.sections,
         menuClick: this.handleScroll,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59
+          lineNumber: 72
         }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__src_components_hero__["a" /* default */], {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__src_components_product_modal__["a" /* default */], {
+        open: this.state.productModal,
+        content: this.state.product,
+        closeModal: this.handleModal,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 77
+        }
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__src_components_hero__["a" /* default */], {
         content: home,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 82
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__src_components_about__["a" /* default */], {
         content: about,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 83
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__src_components_services__["a" /* default */], {
         content: services,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 84
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__src_components_products__["a" /* default */], {
         content: products,
+        openModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 85
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__src_components_organic__["a" /* default */], {
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__src_components_organic__["a" /* default */], {
         content: organic,
         openModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 86
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__src_components_location__["a" /* default */], {
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__src_components_location__["a" /* default */], {
         content: location,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 87
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__src_components_contact__["a" /* default */], {
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_11__src_components_contact__["a" /* default */], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 88
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__src_components_certificate__["a" /* default */], {
-        open: this.state.modal,
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__src_components_certificate__["a" /* default */], {
+        open: this.state.certificateModal,
         closeModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 89
         }
       }));
     }
@@ -1848,9 +1867,7 @@ var Certificate = function Certificate(_ref) {
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "close-modal",
-    onClick: function onClick(e) {
-      return closeModal(e);
-    },
+    onClick: closeModal,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
@@ -1861,19 +1878,19 @@ var Certificate = function Certificate(_ref) {
     className: "certificate-background",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 13
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "certificate-content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 14
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
     className: "main-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 15
     }
   }, "Certificacion"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     src: __WEBPACK_IMPORTED_MODULE_2__static_oia_logo_svg___default.a,
@@ -1881,21 +1898,21 @@ var Certificate = function Certificate(_ref) {
     className: "oia-logo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 16
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     href: "../../static/solpay_OIA_certificacion.pdf",
     className: "download",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 21
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     src: __WEBPACK_IMPORTED_MODULE_3__static_download_pdf_icon_svg___default.a,
     alt: "Descargar PDF",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 25
     }
   })))));
 };
@@ -2093,10 +2110,16 @@ function (_React$Component) {
           lineNumber: 61
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        className: "contact-link",
+        className: "contact-details-inner",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 62
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        className: "contact-link",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 63
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
         href: "https://goo.gl/maps/WrcgbGnL3V92",
@@ -2105,35 +2128,35 @@ function (_React$Component) {
         className: "icon-map-pin-streamline",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 64
         }
       }, "Ruta Provincial, 24, km, 16, 5535. - Mendoza Argentina.")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "contact-link",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 73
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
         href: "mailto:agrovit@hotmail.com",
         className: "icon-envelope-o",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 74
         }
       }, "agrovit@hotmail.com")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "contact-link",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 81
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
         href: "tel:+5492614549231",
         className: "icon-phone",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 82
         }
-      }, "54 9 261 454 9231"))));
+      }, "54 9 261 454 9231")))));
     }
   }]);
 
@@ -2807,27 +2830,130 @@ var Organic = function Organic(_ref) {
       lineNumber: 10
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-    dangerouslySetInnerHTML: {
-      __html: content
-    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
     }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
-    href: "certificaciones",
-    className: "button",
-    onClick: function onClick(e) {
-      return openModal(e);
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
+    dangerouslySetInnerHTML: {
+      __html: content.title
     },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
     }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
+    dangerouslySetInnerHTML: {
+      __html: content.text
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    }
+  })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
+    href: "certificaciones",
+    className: "button",
+    onClick: openModal,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    }
   }, "Certificaciones")))));
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (Organic);
+
+/***/ }),
+
+/***/ "./src/components/product-modal.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\product-modal.js";
+
+
+var ProductModal = function ProductModal(_ref) {
+  var open = _ref.open,
+      content = _ref.content,
+      closeModal = _ref.closeModal;
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: open ? 'product-modal open' : 'product-modal',
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 3
+    }
+  }, content && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "modal-container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "close-modal product",
+    onClick: closeModal,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    }
+  }, "\u02DF"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
+    className: "modal-title",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    }
+  }, content.name), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "modal-content",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "product-details",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    }
+  }, content.specs && Object.entries(content.specs).map(function (spec, key) {
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+      key: key,
+      className: "spec",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      }
+    }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h4", {
+      className: "spec-title",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      }
+    }, spec[0]), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+      className: "spec-content",
+      dangerouslySetInnerHTML: {
+        __html: spec[1]
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 16
+      }
+    }));
+  })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
+    src: content.image,
+    alt: "[imagen: ".concat(content.name, "]"),
+    className: "product-image",
+    style: {
+      opacity: 1
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    }
+  }))));
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (ProductModal);
 
 /***/ }),
 
@@ -2843,33 +2969,37 @@ var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\compon
 var Products = function Products(_ref) {
   var _ref$content = _ref.content,
       title = _ref$content.title,
-      products = _ref$content.products;
+      products = _ref$content.products,
+      openModal = _ref.openModal;
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("section", {
     id: "productos",
     className: "products scroll",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 3
+      lineNumber: 2
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
     className: "main-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 3
     }
   }, title), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "products-list",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 4
     }
   }, products.map(function (product, key) {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
       key: key,
       className: "product",
+      onClick: function onClick(e) {
+        return openModal(e, product);
+      },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 8
+        lineNumber: 6
       }
     }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
       className: "product-image",
@@ -2877,13 +3007,13 @@ var Products = function Products(_ref) {
       alt: "",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 9
+        lineNumber: 11
       }
     }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h3", {
       className: "product-title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 10
+        lineNumber: 12
       }
     }, product.name));
   })));
@@ -3270,16 +3400,19 @@ var Social = function Social(_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_solplay_seguimiento_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__static_solplay_seguimiento_svg__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_solplay_entrega_svg__ = __webpack_require__("./static/solplay-entrega.svg");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_solplay_entrega_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__static_solplay_entrega_svg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_productos_ajos_jpg__ = __webpack_require__("./static/productos/ajos.jpg");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_productos_ajos_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__static_productos_ajos_jpg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__static_productos_ciruelas_secas_jpg__ = __webpack_require__("./static/productos/ciruelas-secas.jpg");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__static_productos_ciruelas_secas_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__static_productos_ciruelas_secas_jpg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__static_productos_nueces_chandler_jpg__ = __webpack_require__("./static/productos/nueces-chandler-.jpg");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__static_productos_nueces_chandler_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__static_productos_nueces_chandler_jpg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__static_productos_zapallo_butternut_jpg__ = __webpack_require__("./static/productos/zapallo-butternut.jpg");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__static_productos_zapallo_butternut_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__static_productos_zapallo_butternut_jpg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_muscat_jpg__ = __webpack_require__("./static/productos/zapallo-muscat.jpg");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_muscat_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_muscat_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_productos_ajo_colorado_jpg__ = __webpack_require__("./static/productos/ajo-colorado.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_productos_ajo_colorado_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__static_productos_ajo_colorado_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__static_productos_ajo_blanco_jpg__ = __webpack_require__("./static/productos/ajo-blanco.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__static_productos_ajo_blanco_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__static_productos_ajo_blanco_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__static_productos_ciruelas_secas_jpg__ = __webpack_require__("./static/productos/ciruelas-secas.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__static_productos_ciruelas_secas_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__static_productos_ciruelas_secas_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__static_productos_nueces_chandler_jpg__ = __webpack_require__("./static/productos/nueces-chandler-.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__static_productos_nueces_chandler_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__static_productos_nueces_chandler_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_butternut_jpg__ = __webpack_require__("./static/productos/zapallo-butternut.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_butternut_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_butternut_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__static_productos_zapallo_muscat_jpg__ = __webpack_require__("./static/productos/zapallo-muscat.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__static_productos_zapallo_muscat_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__static_productos_zapallo_muscat_jpg__);
+
 
 
 
@@ -3323,30 +3456,72 @@ var Social = function Social(_ref) {
     products: {
       title: 'Productos',
       products: [{
-        name: 'Ajos',
-        image: __WEBPACK_IMPORTED_MODULE_4__static_productos_ajos_jpg___default.a
+        name: 'Ajo Colorado',
+        image: __WEBPACK_IMPORTED_MODULE_4__static_productos_ajo_colorado_jpg___default.a,
+        specs: {
+          Variedad: 'Morado y Colorado',
+          Region: 'Valle de Uco, zona norte y este de la provincia de Mendoza.',
+          Cosecha: 'Ocubre, Noviembre y Diciembre',
+          Formato: 'En cajas de 10 kilos, 30 libres, bolsas de polipropileno de 20 kilos y de 10 kilos, puede ser palletizado o a granel.<br/>Se comercializa en los calibres, 3 (30/35mm) 4 (36/45mm) 5 (46/55mm) 6 (56/65mm) 7 (66/75mm).'
+        }
       }, {
-        name: 'Ciruelas',
-        image: __WEBPACK_IMPORTED_MODULE_5__static_productos_ciruelas_secas_jpg___default.a
+        name: 'Ajo Blanco',
+        image: __WEBPACK_IMPORTED_MODULE_5__static_productos_ajo_blanco_jpg___default.a,
+        specs: {
+          Variedad: 'Blanco',
+          Region: 'Valle de Uco, zona norte y este de la provincia de Mendoza.',
+          Cosecha: 'Ocubre, Noviembre y Diciembre',
+          Formato: 'En cajas de 10 kilos, 30 libres, bolsas de polipropileno de 20 kilos y de 10 kilos, puede ser palletizado o a granel.<br/>Se comercializa en los calibres, 3 (30/35mm) 4 (36/45mm) 5 (46/55mm) 6 (56/65mm) 7 (66/75mm).'
+        }
       }, {
-        name: 'Nueces',
-        image: __WEBPACK_IMPORTED_MODULE_6__static_productos_nueces_chandler_jpg___default.a
+        name: 'Ciruela',
+        image: __WEBPACK_IMPORTED_MODULE_6__static_productos_ciruelas_secas_jpg___default.a,
+        specs: {
+          Variedad: 'D’agen',
+          Region: 'Este y Sur de la provincia de Mendoza.',
+          Cosecha: 'Febrero y Marzo',
+          Formato: 'En cajas de carton de 10 kilos, bolsas de polipropileno blancas en 25 kilos tipo secado Americano natural, calibres 30/40, 40/50, 50/60, 60/70, 70/80, 80/90, 90/100, 100/110, 110/120.'
+        }
       }, {
-        name: 'Zapallo',
-        image: __WEBPACK_IMPORTED_MODULE_7__static_productos_zapallo_butternut_jpg___default.a
+        name: 'Nuez',
+        image: __WEBPACK_IMPORTED_MODULE_7__static_productos_nueces_chandler_jpg___default.a,
+        specs: {
+          Variedad: 'Chandler, Ser, Hartley, Howard y Vina',
+          Region: 'Valle de Uco, Tupungato.',
+          Cosecha: 'Marzo y Abril',
+          Formato: 'Enteras tipo natural en bolsas de polipropileno blanca de 25 kilos, calibres 3/32, 32/34, 34/36 y 36+.<br/>Peladas en cajas de carton de 10 kilos envasadas al vacio en 2 unidades de 5 kilos cada una, calidad extra light, light, dorada.'
+        }
       }, {
-        name: 'Zapallo',
-        image: __WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_muscat_jpg___default.a
+        name: 'Zapallo Butternut',
+        image: __WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_butternut_jpg___default.a,
+        specs: {
+          Variedad: 'Butternut',
+          Region: 'Zona norte de la provincia de Mendoza.',
+          Cosecha: 'Enero, Febrero y Marzo',
+          Formato: 'En cajas de carton y en bines de madera, en calibres S, M, L y XL.'
+        }
+      }, {
+        name: 'Zapallo Muscat di Provenza',
+        image: __WEBPACK_IMPORTED_MODULE_9__static_productos_zapallo_muscat_jpg___default.a,
+        specs: {
+          Variedad: 'Muscat di Provenza',
+          Region: 'Zona norte de la provincia de Mendoza.',
+          Cosecha: 'Enero, Febrero y Marzo',
+          Formato: 'En bines de madera con rangos de kilos que van desde los 5 kilos por unidad hasta los 15 kilos por unidad.'
+        }
       }]
     },
     organic: {
       title: 'Orgánicos',
-      content: '<h2>Productos Orgánicos</h2><p>Trabajamos desde hace 1 año con productos orgánicos como ajo y ciruelas deshidratadas, pero pensamos seguir aumentando volúmenes y productos de esta naturaleza, apostando cada vez más al consumo de alimentos saludables.</p>'
+      content: {
+        title: 'Productos',
+        text: 'Buscamos ofrecer una alimentación natural y saludablepor lo que trabajamos con productos orgánicos como ajos y ciruelas deshidratadas entre otros.'
+      }
     },
     location: {
       title: 'Ubicación',
       content: {
-        intro: 'Estamos situados en la provincia de mendoza, república argentina, poseemos planta de empaque en la localidad de guaymallén y san rafael que son departamentos de dicha provincia.',
+        intro: 'Estamos situados en la provincia de Mendoza, República Argentina.',
         text: '<strong>San Rafael</strong> está situada en la parte sur de <strong>Mendoza</strong> cerca de nuestra <strong>Patagonia Argentina,</strong> esta zona es óptima para la producción de productos orgánicos y convencionales debidos a su clima y a la sanidad de su agua y suelos.<br/><strong>Guaymallén</strong> se encuentra al norte de la provincia con producciones de primicia de ajos y frutas.'
       }
     }
@@ -3570,10 +3745,17 @@ module.exports = "/_next/static/images/oia-logo-888bf7472ba11deb93c91cd86edd067a
 
 /***/ }),
 
-/***/ "./static/productos/ajos.jpg":
+/***/ "./static/productos/ajo-blanco.jpg":
 /***/ (function(module, exports) {
 
-module.exports = "/_next/static/images/ajos-df0f56067844cb2e7a7aa0f3ac485302.jpg";
+module.exports = "/_next/static/images/ajo-blanco-b17935adff03b596c61e6c86b749d650.jpg";
+
+/***/ }),
+
+/***/ "./static/productos/ajo-colorado.jpg":
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/ajo-colorado-df0f56067844cb2e7a7aa0f3ac485302.jpg";
 
 /***/ }),
 

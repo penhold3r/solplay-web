@@ -1,5 +1,4 @@
 .products {
-
    .products-list {
       display: grid;
       grid-gap: 15px;
@@ -11,6 +10,7 @@
       .product {
          display: flex;
          height: 300px;
+         padding: 30px;
          position: relative;
 
          @include tablet {
@@ -19,16 +19,18 @@
 
          .product-image {
             height: 100%;
+            left: 0;
             object-fit: cover;
             position: absolute;
+            top: 0;
             width: 100%;
             z-index: 0;
          }
 
          .product-title {
-            background: rgba(#FFF, 0.4);
+            background: rgba(#fff, 0.4);
             text-shadow: 0 0 15px rgba(#000, 0.75);
-            color: #FFF;
+            color: #fff;
             font: 1.5em 'spinweradbold', Georgia, serif;
             margin: auto;
             padding: 30px 60px;
