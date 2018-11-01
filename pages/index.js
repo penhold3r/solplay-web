@@ -15,6 +15,7 @@ import data from '../src/data/data'
 
 class Index extends React.Component {
    state = {
+      body: null,
       productModal: false,
       product: null,
       certificateModal: false,
@@ -30,7 +31,10 @@ class Index extends React.Component {
    }
 
    componentDidUpdate() {
+      const body = document.querySelector('body')
       const { sections, sectionToScroll } = this.state
+
+      this.setState({ body })
       sections.map(
          section =>
             section.id == sectionToScroll &&
@@ -62,11 +66,11 @@ class Index extends React.Component {
          menu,
          main: { home, about, services, products, organic, location }
       } = data
-      const body = document.querySelector('body')
+      const { body } = this.state
 
       this.state.productModal || this.state.certificateModal
-         ? body.classList.add('no-scroll')
-         : body.classList.remove('no-scroll')
+         ? body && body.classList.add('no-scroll')
+         : body && body.classList.remove('no-scroll')
 
       return (
          <Layout
