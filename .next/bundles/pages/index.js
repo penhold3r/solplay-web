@@ -1657,15 +1657,13 @@ function (_React$Component) {
           products = _data$main.products,
           organic = _data$main.organic,
           location = _data$main.location;
-      var body = document.querySelector('body');
-      this.state.productModal || this.state.certificateModal ? body.classList.add('no-scroll') : body.classList.remove('no-scroll');
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__src_components_layout__["a" /* default */], {
         menu: menu,
         sections: this.state.sections,
         menuClick: this.handleScroll,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 68
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__src_components_product_modal__["a" /* default */], {
         open: this.state.productModal,
@@ -1673,57 +1671,57 @@ function (_React$Component) {
         closeModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77
+          lineNumber: 73
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__src_components_hero__["a" /* default */], {
         content: home,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82
+          lineNumber: 78
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__src_components_about__["a" /* default */], {
         content: about,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83
+          lineNumber: 79
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__src_components_services__["a" /* default */], {
         content: services,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 84
+          lineNumber: 80
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__src_components_products__["a" /* default */], {
         content: products,
         openModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 81
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__src_components_organic__["a" /* default */], {
         content: organic,
         openModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
+          lineNumber: 82
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__src_components_location__["a" /* default */], {
         content: location,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 83
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_11__src_components_contact__["a" /* default */], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 84
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__src_components_certificate__["a" /* default */], {
         open: this.state.certificateModal,
         closeModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 85
         }
       }));
     }

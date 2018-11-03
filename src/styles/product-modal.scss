@@ -1,5 +1,5 @@
 .product-modal {
-   background: #fff;
+   background: rgba(#fff, 0.75);
    display: flex;
    height: calc(100vh - 100px);
    left: 0;
@@ -22,6 +22,7 @@
    }
 
    .modal-container {
+      background: #fff;
       box-shadow: 0 3px 5px rgba(#000, 0.5);
       display: flex;
       flex-direction: column;
