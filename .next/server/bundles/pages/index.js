@@ -325,8 +325,8 @@ function (_React$Component) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_empaque_jpg__ = __webpack_require__("./static/solplay_empaque.jpg");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_empaque_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__static_solplay_empaque_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_about_jpg__ = __webpack_require__("./static/solplay_about.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_about_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__static_solplay_about_jpg__);
 var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\about.js";
 
 
@@ -349,21 +349,21 @@ var About = function About(_ref) {
       fileName: _jsxFileName,
       lineNumber: 5
     }
-  }, title), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-    className: "about-content",
+  }, title), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
+    className: "about-bg-img",
+    src: __WEBPACK_IMPORTED_MODULE_1__static_solplay_about_jpg___default.a,
+    alt: "",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
     }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
-    className: "about-bg-img",
-    src: __WEBPACK_IMPORTED_MODULE_1__static_solplay_empaque_jpg___default.a,
-    alt: "",
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "about-content",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
     }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "about-content-txt",
     __source: {
       fileName: _jsxFileName,
@@ -1282,13 +1282,13 @@ var LocationSection = function LocationSection(_ref) {
     className: "location",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 9
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
     className: "main-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 10
     }
   }, title), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     src: __WEBPACK_IMPORTED_MODULE_1__static_solplay_ubicacion_jpg___default.a,
@@ -1296,13 +1296,13 @@ var LocationSection = function LocationSection(_ref) {
     className: "location-image",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 11
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "location-content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 12
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
     className: "location-intro",
@@ -1311,7 +1311,7 @@ var LocationSection = function LocationSection(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 13
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
     className: "location-txt",
@@ -1320,7 +1320,7 @@ var LocationSection = function LocationSection(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 17
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     href: "https://goo.gl/maps/WrcgbGnL3V92",
@@ -1329,7 +1329,7 @@ var LocationSection = function LocationSection(_ref) {
     className: "button",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 21
     }
   }, "Ver en mapa")));
 };
@@ -2400,17 +2400,17 @@ module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGlu
 
 /***/ }),
 
+/***/ "./static/solplay_about.jpg":
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/solplay_about-3ab451f54466c6cba17a7d60beb90532.jpg";
+
+/***/ }),
+
 /***/ "./static/solplay_certification.jpg":
 /***/ (function(module, exports) {
 
 module.exports = "/_next/static/images/solplay_certification-a7e679dcec34bee8e58d3d7f9fd5e981.jpg";
-
-/***/ }),
-
-/***/ "./static/solplay_empaque.jpg":
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/solplay_empaque-7b690352943601f789a3696b267e36e7.jpg";
 
 /***/ }),
 
@@ -2431,7 +2431,7 @@ module.exports = "/_next/static/images/solplay_servicios-b626c23d7d6463a7ab87017
 /***/ "./static/solplay_ubicacion.jpg":
 /***/ (function(module, exports) {
 
-module.exports = "/_next/static/images/solplay_ubicacion-f89c8cd58109d536c06196a301ca8450.jpg";
+module.exports = "/_next/static/images/solplay_ubicacion-152c0eeb677f79b4134c27aa3f3bcc81.jpg";
 
 /***/ }),
 
