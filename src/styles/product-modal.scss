@@ -26,7 +26,7 @@
       box-shadow: 0 3px 5px rgba(#000, 0.5);
       display: flex;
       flex-direction: column;
-      height: calc(100vh - 120px);
+      height: calc(100vh - 160px);
       margin: auto;
       max-width: 1300px;
       overflow-y: auto;
@@ -52,22 +52,25 @@
       .modal-title {
          color: $main-color;
          font: 1.5em 'spinweradbold', Georgia, serif;
+         margin: 0;
          padding: 0 30px;
+         pointer-events: none;
          position: relative;
+         text-transform: initial;
          top: -2rem;
       }
 
       .modal-content {
          display: grid;
          grid-gap: 30px;
-         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+         grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
          padding: 0 30px 30px;
 
          .product-details {
-            border-top: 1px solid #999;
+            border-top: 1px solid #ddd;
 
             .spec {
-               border-bottom: 1px solid #999;
+               border-bottom: 1px solid #ddd;
 
                .spec-title {
                   color: $accent-color;
@@ -78,6 +81,8 @@
 
                .spec-content {
                   color: #333;
+                  font-size: 0.85em;
+                  line-height: 1.5;
                   margin: 0 0 15px;
                }
             }

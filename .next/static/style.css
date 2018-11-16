@@ -812,18 +812,20 @@ body {
       margin: auto;
       pointer-events: initial; }
 
-.about .about-bg-img {
-  height: 300px;
-  object-fit: cover;
-  width: 100%;
-  z-index: 0; }
-
 .about .about-content {
   padding: 15px;
   position: relative; }
+  .about .about-content .about-bg-img {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0; }
   .about .about-content .about-content-txt {
-    background: rgba(255, 255, 255, 0.5);
-    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.8);
+    margin: 75px auto;
     max-width: 900px;
     padding: 30px;
     position: relative;
@@ -930,7 +932,7 @@ body {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 160px);
     margin: auto;
     max-width: 1300px;
     overflow-y: auto;
@@ -951,18 +953,21 @@ body {
     .product-modal .modal-container .modal-title {
       color: #00A7E1;
       font: 1.5em 'spinweradbold', Georgia, serif;
+      margin: 0;
       padding: 0 30px;
+      pointer-events: none;
       position: relative;
+      text-transform: initial;
       top: -2rem; }
     .product-modal .modal-container .modal-content {
       display: grid;
       grid-gap: 30px;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
       padding: 0 30px 30px; }
       .product-modal .modal-container .modal-content .product-details {
-        border-top: 1px solid #999; }
+        border-top: 1px solid #ddd; }
         .product-modal .modal-container .modal-content .product-details .spec {
-          border-bottom: 1px solid #999; }
+          border-bottom: 1px solid #ddd; }
           .product-modal .modal-container .modal-content .product-details .spec .spec-title {
             color: #E89D0B;
             font-size: 1em;
@@ -970,6 +975,8 @@ body {
             text-transform: uppercase; }
           .product-modal .modal-container .modal-content .product-details .spec .spec-content {
             color: #333;
+            font-size: 0.85em;
+            line-height: 1.5;
             margin: 0 0 15px; }
       .product-modal .modal-container .modal-content .product-image {
         height: 100%;
@@ -1128,6 +1135,7 @@ body {
       .contact .contact-details .contact-details-inner .contact-link a {
         color: #fff;
         display: flex;
+        font-size: 0.85em;
         text-decoration: none;
         transition: all 0.3s; }
         @media screen and (max-width: 850px) {
@@ -1135,6 +1143,7 @@ body {
             padding: 6px 0; } }
         .contact .contact-details .contact-details-inner .contact-link a:before {
           color: #E89D0B;
+          font-size: 1.25em;
           margin: auto;
           padding: 0 30px;
           width: 2em; }

@@ -117,6 +117,7 @@
             a {
                color: #fff;
                display: flex;
+               font-size: 0.85em;
                text-decoration: none;
                transition: all 0.3s;
 
@@ -126,6 +127,7 @@
 
                &:before {
                   color: $accent-color;
+                  font-size: 1.25em;
                   margin: auto;
                   padding: 0 30px;
                   width: 2em;

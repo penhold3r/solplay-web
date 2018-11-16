@@ -15,7 +15,6 @@ class Contact extends React.Component {
          urlencoded: true
       }
       submitForm(e.target, submitSettings)
-      console.log(e.target)
    }
 
    render() {
@@ -72,10 +71,10 @@ class Contact extends React.Component {
                   </div>
                   <div className="contact-link">
                      <a
-                        href="mailto:agrovit@hotmail.com"
+                        href="mailto:info@solplayargentina.com"
                         className="icon-envelope-o"
                      >
-                        agrovit@hotmail.com
+                        info@solplayargentina.com
                      </a>
                   </div>
                   <div className="contact-link">

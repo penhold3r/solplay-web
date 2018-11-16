@@ -16,7 +16,7 @@ export default {
       home: {
          name: 'Inicio',
          content:
-            '<h2>Lo <strong>mejor</strong> de nosotros<br/> para <strong>todo el mundo</strong></h2><p>Motivados por la pasión de lo que nos gusta hacer, que es llegar con nuestros productos a nuestros clientes en el exterior.</p>'
+            '<h2>Lo <strong>mejor</strong> de nosotros<br/> para <strong>todo el mundo</strong></h2><p>Motivados por la pasión de lo que nos gusta hacer, llegar con nuestros productos a clientes alrededor del mundo.</p>'
       },
       about: {
          title: 'Quienes Somos',
@@ -48,7 +48,7 @@ export default {
                      'Valle de Uco, zona norte y este de la provincia de Mendoza.',
                   Cosecha: 'Ocubre, Noviembre y Diciembre',
                   Formato:
-                     'En cajas de 10 kilos, 30 libres, bolsas de polipropileno de 20 kilos y de 10 kilos, puede ser palletizado o a granel.<br/>Se comercializa en los calibres, 3 (30/35mm) 4 (36/45mm) 5 (46/55mm) 6 (56/65mm) 7 (66/75mm).'
+                     'En cajas de 10 kilos, 30 libras, bolsas de polipropileno de 20 kilos y de 10 kilos, puede ser palletizado o a granel.<br/>Se comercializa en los calibres, 3 (30/35mm) 4 (36/45mm) 5 (46/55mm) 6 (56/65mm) 7 (66/75mm).'
                }
             },
             {
@@ -60,7 +60,7 @@ export default {
                      'Valle de Uco, zona norte y este de la provincia de Mendoza.',
                   Cosecha: 'Ocubre, Noviembre y Diciembre',
                   Formato:
-                     'En cajas de 10 kilos, 30 libres, bolsas de polipropileno de 20 kilos y de 10 kilos, puede ser palletizado o a granel.<br/>Se comercializa en los calibres, 3 (30/35mm) 4 (36/45mm) 5 (46/55mm) 6 (56/65mm) 7 (66/75mm).'
+                     'En cajas de 10 kilos, 30 libras, bolsas de polipropileno de 20 kilos y de 10 kilos, puede ser palletizado o a granel.<br/>Se comercializa en los calibres, 3 (30/35mm) 4 (36/45mm) 5 (46/55mm) 6 (56/65mm) 7 (66/75mm).'
                }
             },
             {

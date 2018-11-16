@@ -1,18 +1,21 @@
 .about {
-   .about-bg-img {
-      height: 300px;
-      object-fit: cover;
-      width: 100%;
-      z-index: 0;
-   }
-
    .about-content {
       padding: 15px;
       position: relative;
 
+      .about-bg-img {
+         height: 100%;
+         left: 0;
+         object-fit: cover;
+         position: absolute;
+         top: 0;
+         width: 100%;
+         z-index: 0;
+      }
+
       .about-content-txt {
-         background: rgba(#fff, 0.5);
-         margin: 0 auto;
+         background: rgba(#fff, 0.8);
+         margin: 75px auto;
          max-width: 900px;
          padding: 30px;
          position: relative;

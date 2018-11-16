@@ -349,21 +349,21 @@ var About = function About(_ref) {
       fileName: _jsxFileName,
       lineNumber: 5
     }
-  }, title), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
+  }, title), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "about-content",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     className: "about-bg-img",
     src: __WEBPACK_IMPORTED_MODULE_1__static_solplay_about_jpg___default.a,
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
-    }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-    className: "about-content",
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 7
     }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "about-content-txt",
     __source: {
       fileName: _jsxFileName,
@@ -557,7 +557,6 @@ function (_React$Component) {
           urlencoded: true
         };
         Object(__WEBPACK_IMPORTED_MODULE_2__data_submit_form__["a" /* default */])(e.target, submitSettings);
-        console.log(e.target);
       }
     }), _temp));
   }
@@ -570,26 +569,26 @@ function (_React$Component) {
         className: "contact scroll",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 22
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
         className: "main-title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 23
         }
       }, "Contacto"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form", {
         className: "contact-form",
         onSubmit: this.handleSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 24
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "form-field",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 25
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
         type: "text",
@@ -600,19 +599,19 @@ function (_React$Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 26
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label", {
         htmlFor: "name",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 34
         }
       }, "Nombre")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "form-field",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 36
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
         type: "email",
@@ -623,19 +622,19 @@ function (_React$Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 37
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label", {
         htmlFor: "email",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 45
         }
       }, "E-mail")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "form-field",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 47
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("textarea", {
         name: "msg",
@@ -645,13 +644,13 @@ function (_React$Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 48
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label", {
         htmlFor: "msg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 55
         }
       }, "Mensaje")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
         type: "submit",
@@ -659,31 +658,31 @@ function (_React$Component) {
         value: "Enviar",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 57
         }
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__social__["a" /* default */], {
         className: "contact-social",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 59
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "contact-details",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 60
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "contact-details-inner",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 61
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "contact-link",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 62
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
         href: "https://goo.gl/maps/WrcgbGnL3V92",
@@ -692,33 +691,33 @@ function (_React$Component) {
         className: "icon-map-pin-streamline",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 63
         }
       }, "Ruta Provincial, 24, km, 16, 5535. - Mendoza Argentina.")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "contact-link",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 72
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
-        href: "mailto:agrovit@hotmail.com",
+        href: "mailto:info@solplayargentina.com",
         className: "icon-envelope-o",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 73
         }
-      }, "agrovit@hotmail.com")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+      }, "info@solplayargentina.com")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "contact-link",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 80
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
         href: "tel:+5492614549231",
         className: "icon-phone",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82
+          lineNumber: 81
         }
       }, "54 9 261 454 9231")))));
     }
@@ -1991,7 +1990,7 @@ var Social = function Social(_ref) {
   main: {
     home: {
       name: 'Inicio',
-      content: '<h2>Lo <strong>mejor</strong> de nosotros<br/> para <strong>todo el mundo</strong></h2><p>Motivados por la pasión de lo que nos gusta hacer, que es llegar con nuestros productos a nuestros clientes en el exterior.</p>'
+      content: '<h2>Lo <strong>mejor</strong> de nosotros<br/> para <strong>todo el mundo</strong></h2><p>Motivados por la pasión de lo que nos gusta hacer, llegar con nuestros productos a clientes alrededor del mundo.</p>'
     },
     about: {
       title: 'Quienes Somos',
@@ -2026,7 +2025,7 @@ var Social = function Social(_ref) {
           Variedad: 'Morado y Colorado',
           Region: 'Valle de Uco, zona norte y este de la provincia de Mendoza.',
           Cosecha: 'Ocubre, Noviembre y Diciembre',
-          Formato: 'En cajas de 10 kilos, 30 libres, bolsas de polipropileno de 20 kilos y de 10 kilos, puede ser palletizado o a granel.<br/>Se comercializa en los calibres, 3 (30/35mm) 4 (36/45mm) 5 (46/55mm) 6 (56/65mm) 7 (66/75mm).'
+          Formato: 'En cajas de 10 kilos, 30 libras, bolsas de polipropileno de 20 kilos y de 10 kilos, puede ser palletizado o a granel.<br/>Se comercializa en los calibres, 3 (30/35mm) 4 (36/45mm) 5 (46/55mm) 6 (56/65mm) 7 (66/75mm).'
         }
       }, {
         name: 'Ajo Blanco',
@@ -2035,7 +2034,7 @@ var Social = function Social(_ref) {
           Variedad: 'Blanco',
           Region: 'Valle de Uco, zona norte y este de la provincia de Mendoza.',
           Cosecha: 'Ocubre, Noviembre y Diciembre',
-          Formato: 'En cajas de 10 kilos, 30 libres, bolsas de polipropileno de 20 kilos y de 10 kilos, puede ser palletizado o a granel.<br/>Se comercializa en los calibres, 3 (30/35mm) 4 (36/45mm) 5 (46/55mm) 6 (56/65mm) 7 (66/75mm).'
+          Formato: 'En cajas de 10 kilos, 30 libras, bolsas de polipropileno de 20 kilos y de 10 kilos, puede ser palletizado o a granel.<br/>Se comercializa en los calibres, 3 (30/35mm) 4 (36/45mm) 5 (46/55mm) 6 (56/65mm) 7 (66/75mm).'
         }
       }, {
         name: 'Ciruela',
