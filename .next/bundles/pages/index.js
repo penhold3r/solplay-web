@@ -1447,7 +1447,7 @@ module.exports = exports['default'];
   }
 }('slugify', this, function () {
   /* eslint-disable */
-  var charMap = JSON.parse('{"$":"dollar","&":"and","<":"less",">":"greater","|":"or","¢":"cent","£":"pound","¤":"currency","¥":"yen","©":"(c)","ª":"a","®":"(r)","º":"o","À":"A","Á":"A","Â":"A","Ã":"A","Ä":"A","Å":"A","Æ":"AE","Ç":"C","È":"E","É":"E","Ê":"E","Ë":"E","Ì":"I","Í":"I","Î":"I","Ï":"I","Ð":"D","Ñ":"N","Ò":"O","Ó":"O","Ô":"O","Õ":"O","Ö":"O","Ø":"O","Ù":"U","Ú":"U","Û":"U","Ü":"U","Ý":"Y","Þ":"TH","ß":"ss","à":"a","á":"a","â":"a","ã":"a","ä":"a","å":"a","æ":"ae","ç":"c","è":"e","é":"e","ê":"e","ë":"e","ì":"i","í":"i","î":"i","ï":"i","ð":"d","ñ":"n","ò":"o","ó":"o","ô":"o","õ":"o","ö":"o","ø":"o","ù":"u","ú":"u","û":"u","ü":"u","ý":"y","þ":"th","ÿ":"y","Ā":"A","ā":"a","Ă":"A","ă":"a","Ą":"A","ą":"a","Ć":"C","ć":"c","Č":"C","č":"c","Ď":"D","ď":"d","Đ":"DJ","đ":"dj","Ē":"E","ē":"e","Ė":"E","ė":"e","Ę":"e","ę":"e","Ě":"E","ě":"e","Ğ":"G","ğ":"g","Ģ":"G","ģ":"g","Ĩ":"I","ĩ":"i","Ī":"i","ī":"i","Į":"I","į":"i","İ":"I","ı":"i","Ķ":"k","ķ":"k","Ļ":"L","ļ":"l","Ł":"L","ł":"l","Ń":"N","ń":"n","Ņ":"N","ņ":"n","Ň":"N","ň":"n","Ő":"O","ő":"o","Œ":"OE","œ":"oe","Ř":"R","ř":"r","Ś":"S","ś":"s","Ş":"S","ş":"s","Š":"S","š":"s","Ţ":"T","ţ":"t","Ť":"T","ť":"t","Ũ":"U","ũ":"u","Ū":"u","ū":"u","Ů":"U","ů":"u","Ű":"U","ű":"u","Ų":"U","ų":"u","Ź":"Z","ź":"z","Ż":"Z","ż":"z","Ž":"Z","ž":"z","ƒ":"f","Ơ":"O","ơ":"o","Ư":"U","ư":"u","ǈ":"LJ","ǉ":"lj","ǋ":"NJ","ǌ":"nj","Ș":"S","ș":"s","Ț":"T","ț":"t","˚":"o","Ά":"A","Έ":"E","Ή":"H","Ί":"I","Ό":"O","Ύ":"Y","Ώ":"W","ΐ":"i","Α":"A","Β":"B","Γ":"G","Δ":"D","Ε":"E","Ζ":"Z","Η":"H","Θ":"8","Ι":"I","Κ":"K","Λ":"L","Μ":"M","Ν":"N","Ξ":"3","Ο":"O","Π":"P","Ρ":"R","Σ":"S","Τ":"T","Υ":"Y","Φ":"F","Χ":"X","Ψ":"PS","Ω":"W","Ϊ":"I","Ϋ":"Y","ά":"a","έ":"e","ή":"h","ί":"i","ΰ":"y","α":"a","β":"b","γ":"g","δ":"d","ε":"e","ζ":"z","η":"h","θ":"8","ι":"i","κ":"k","λ":"l","μ":"m","ν":"n","ξ":"3","ο":"o","π":"p","ρ":"r","ς":"s","σ":"s","τ":"t","υ":"y","φ":"f","χ":"x","ψ":"ps","ω":"w","ϊ":"i","ϋ":"y","ό":"o","ύ":"y","ώ":"w","Ё":"Yo","Ђ":"DJ","Є":"Ye","І":"I","Ї":"Yi","Ј":"J","Љ":"LJ","Њ":"NJ","Ћ":"C","Џ":"DZ","А":"A","Б":"B","В":"V","Г":"G","Д":"D","Е":"E","Ж":"Zh","З":"Z","И":"I","Й":"J","К":"K","Л":"L","М":"M","Н":"N","О":"O","П":"P","Р":"R","С":"S","Т":"T","У":"U","Ф":"F","Х":"H","Ц":"C","Ч":"Ch","Ш":"Sh","Щ":"Sh","Ъ":"U","Ы":"Y","Ь":"","Э":"E","Ю":"Yu","Я":"Ya","а":"a","б":"b","в":"v","г":"g","д":"d","е":"e","ж":"zh","з":"z","и":"i","й":"j","к":"k","л":"l","м":"m","н":"n","о":"o","п":"p","р":"r","с":"s","т":"t","у":"u","ф":"f","х":"h","ц":"c","ч":"ch","ш":"sh","щ":"sh","ъ":"u","ы":"y","ь":"","э":"e","ю":"yu","я":"ya","ё":"yo","ђ":"dj","є":"ye","і":"i","ї":"yi","ј":"j","љ":"lj","њ":"nj","ћ":"c","џ":"dz","Ґ":"G","ґ":"g","฿":"baht","ა":"a","ბ":"b","გ":"g","დ":"d","ე":"e","ვ":"v","ზ":"z","თ":"t","ი":"i","კ":"k","ლ":"l","მ":"m","ნ":"n","ო":"o","პ":"p","ჟ":"zh","რ":"r","ს":"s","ტ":"t","უ":"u","ფ":"f","ქ":"k","ღ":"gh","ყ":"q","შ":"sh","ჩ":"ch","ც":"ts","ძ":"dz","წ":"ts","ჭ":"ch","ხ":"kh","ჯ":"j","ჰ":"h","ẞ":"SS","Ạ":"A","ạ":"a","Ả":"A","ả":"a","Ấ":"A","ấ":"a","Ầ":"A","ầ":"a","Ẩ":"A","ẩ":"a","Ẫ":"A","ẫ":"a","Ậ":"A","ậ":"a","Ắ":"A","ắ":"a","Ằ":"A","ằ":"a","Ẳ":"A","ẳ":"a","Ẵ":"A","ẵ":"a","Ặ":"A","ặ":"a","Ẹ":"E","ẹ":"e","Ẻ":"E","ẻ":"e","Ẽ":"E","ẽ":"e","Ế":"E","ế":"e","Ề":"E","ề":"e","Ể":"E","ể":"e","Ễ":"E","ễ":"e","Ệ":"E","ệ":"e","Ỉ":"I","ỉ":"i","Ị":"I","ị":"i","Ọ":"O","ọ":"o","Ỏ":"O","ỏ":"o","Ố":"O","ố":"o","Ồ":"O","ồ":"o","Ổ":"O","ổ":"o","Ỗ":"O","ỗ":"o","Ộ":"O","ộ":"o","Ớ":"O","ớ":"o","Ờ":"O","ờ":"o","Ở":"O","ở":"o","Ỡ":"O","ỡ":"o","Ợ":"O","ợ":"o","Ụ":"U","ụ":"u","Ủ":"U","ủ":"u","Ứ":"U","ứ":"u","Ừ":"U","ừ":"u","Ử":"U","ử":"u","Ữ":"U","ữ":"u","Ự":"U","ự":"u","Ỳ":"Y","ỳ":"y","Ỵ":"Y","ỵ":"y","Ỷ":"Y","ỷ":"y","Ỹ":"Y","ỹ":"y","‘":"\'","’":"\'","“":"\\\"","”":"\\\"","†":"+","•":"*","…":"...","₠":"ecu","₢":"cruzeiro","₣":"french franc","₤":"lira","₥":"mill","₦":"naira","₧":"peseta","₨":"rupee","₩":"won","₪":"new shequel","₫":"dong","€":"euro","₭":"kip","₮":"tugrik","₯":"drachma","₰":"penny","₱":"peso","₲":"guarani","₳":"austral","₴":"hryvnia","₵":"cedi","₹":"indian rupee","₽":"russian ruble","℠":"sm","™":"tm","∂":"d","∆":"delta","∑":"sum","∞":"infinity","♥":"love","元":"yuan","円":"yen","﷼":"rial"}')
+  var charMap = JSON.parse('{"$":"dollar","&":"and","<":"less",">":"greater","|":"or","¢":"cent","£":"pound","¤":"currency","¥":"yen","©":"(c)","ª":"a","®":"(r)","º":"o","À":"A","Á":"A","Â":"A","Ã":"A","Ä":"A","Å":"A","Æ":"AE","Ç":"C","È":"E","É":"E","Ê":"E","Ë":"E","Ì":"I","Í":"I","Î":"I","Ï":"I","Ð":"D","Ñ":"N","Ò":"O","Ó":"O","Ô":"O","Õ":"O","Ö":"O","Ø":"O","Ù":"U","Ú":"U","Û":"U","Ü":"U","Ý":"Y","Þ":"TH","ß":"ss","à":"a","á":"a","â":"a","ã":"a","ä":"a","å":"a","æ":"ae","ç":"c","è":"e","é":"e","ê":"e","ë":"e","ì":"i","í":"i","î":"i","ï":"i","ð":"d","ñ":"n","ò":"o","ó":"o","ô":"o","õ":"o","ö":"o","ø":"o","ù":"u","ú":"u","û":"u","ü":"u","ý":"y","þ":"th","ÿ":"y","Ā":"A","ā":"a","Ă":"A","ă":"a","Ą":"A","ą":"a","Ć":"C","ć":"c","Č":"C","č":"c","Ď":"D","ď":"d","Đ":"DJ","đ":"dj","Ē":"E","ē":"e","Ė":"E","ė":"e","Ę":"e","ę":"e","Ě":"E","ě":"e","Ğ":"G","ğ":"g","Ģ":"G","ģ":"g","Ĩ":"I","ĩ":"i","Ī":"i","ī":"i","Į":"I","į":"i","İ":"I","ı":"i","Ķ":"k","ķ":"k","Ļ":"L","ļ":"l","Ľ":"L","ľ":"l","Ł":"L","ł":"l","Ń":"N","ń":"n","Ņ":"N","ņ":"n","Ň":"N","ň":"n","Ő":"O","ő":"o","Œ":"OE","œ":"oe","Ŕ":"R","ŕ":"r","Ř":"R","ř":"r","Ś":"S","ś":"s","Ş":"S","ş":"s","Š":"S","š":"s","Ţ":"T","ţ":"t","Ť":"T","ť":"t","Ũ":"U","ũ":"u","Ū":"u","ū":"u","Ů":"U","ů":"u","Ű":"U","ű":"u","Ų":"U","ų":"u","Ź":"Z","ź":"z","Ż":"Z","ż":"z","Ž":"Z","ž":"z","ƒ":"f","Ơ":"O","ơ":"o","Ư":"U","ư":"u","ǈ":"LJ","ǉ":"lj","ǋ":"NJ","ǌ":"nj","Ș":"S","ș":"s","Ț":"T","ț":"t","˚":"o","Ά":"A","Έ":"E","Ή":"H","Ί":"I","Ό":"O","Ύ":"Y","Ώ":"W","ΐ":"i","Α":"A","Β":"B","Γ":"G","Δ":"D","Ε":"E","Ζ":"Z","Η":"H","Θ":"8","Ι":"I","Κ":"K","Λ":"L","Μ":"M","Ν":"N","Ξ":"3","Ο":"O","Π":"P","Ρ":"R","Σ":"S","Τ":"T","Υ":"Y","Φ":"F","Χ":"X","Ψ":"PS","Ω":"W","Ϊ":"I","Ϋ":"Y","ά":"a","έ":"e","ή":"h","ί":"i","ΰ":"y","α":"a","β":"b","γ":"g","δ":"d","ε":"e","ζ":"z","η":"h","θ":"8","ι":"i","κ":"k","λ":"l","μ":"m","ν":"n","ξ":"3","ο":"o","π":"p","ρ":"r","ς":"s","σ":"s","τ":"t","υ":"y","φ":"f","χ":"x","ψ":"ps","ω":"w","ϊ":"i","ϋ":"y","ό":"o","ύ":"y","ώ":"w","Ё":"Yo","Ђ":"DJ","Є":"Ye","І":"I","Ї":"Yi","Ј":"J","Љ":"LJ","Њ":"NJ","Ћ":"C","Џ":"DZ","А":"A","Б":"B","В":"V","Г":"G","Д":"D","Е":"E","Ж":"Zh","З":"Z","И":"I","Й":"J","К":"K","Л":"L","М":"M","Н":"N","О":"O","П":"P","Р":"R","С":"S","Т":"T","У":"U","Ф":"F","Х":"H","Ц":"C","Ч":"Ch","Ш":"Sh","Щ":"Sh","Ъ":"U","Ы":"Y","Ь":"","Э":"E","Ю":"Yu","Я":"Ya","а":"a","б":"b","в":"v","г":"g","д":"d","е":"e","ж":"zh","з":"z","и":"i","й":"j","к":"k","л":"l","м":"m","н":"n","о":"o","п":"p","р":"r","с":"s","т":"t","у":"u","ф":"f","х":"h","ц":"c","ч":"ch","ш":"sh","щ":"sh","ъ":"u","ы":"y","ь":"","э":"e","ю":"yu","я":"ya","ё":"yo","ђ":"dj","є":"ye","і":"i","ї":"yi","ј":"j","љ":"lj","њ":"nj","ћ":"c","џ":"dz","Ґ":"G","ґ":"g","฿":"baht","ა":"a","ბ":"b","გ":"g","დ":"d","ე":"e","ვ":"v","ზ":"z","თ":"t","ი":"i","კ":"k","ლ":"l","მ":"m","ნ":"n","ო":"o","პ":"p","ჟ":"zh","რ":"r","ს":"s","ტ":"t","უ":"u","ფ":"f","ქ":"k","ღ":"gh","ყ":"q","შ":"sh","ჩ":"ch","ც":"ts","ძ":"dz","წ":"ts","ჭ":"ch","ხ":"kh","ჯ":"j","ჰ":"h","ẞ":"SS","Ạ":"A","ạ":"a","Ả":"A","ả":"a","Ấ":"A","ấ":"a","Ầ":"A","ầ":"a","Ẩ":"A","ẩ":"a","Ẫ":"A","ẫ":"a","Ậ":"A","ậ":"a","Ắ":"A","ắ":"a","Ằ":"A","ằ":"a","Ẳ":"A","ẳ":"a","Ẵ":"A","ẵ":"a","Ặ":"A","ặ":"a","Ẹ":"E","ẹ":"e","Ẻ":"E","ẻ":"e","Ẽ":"E","ẽ":"e","Ế":"E","ế":"e","Ề":"E","ề":"e","Ể":"E","ể":"e","Ễ":"E","ễ":"e","Ệ":"E","ệ":"e","Ỉ":"I","ỉ":"i","Ị":"I","ị":"i","Ọ":"O","ọ":"o","Ỏ":"O","ỏ":"o","Ố":"O","ố":"o","Ồ":"O","ồ":"o","Ổ":"O","ổ":"o","Ỗ":"O","ỗ":"o","Ộ":"O","ộ":"o","Ớ":"O","ớ":"o","Ờ":"O","ờ":"o","Ở":"O","ở":"o","Ỡ":"O","ỡ":"o","Ợ":"O","ợ":"o","Ụ":"U","ụ":"u","Ủ":"U","ủ":"u","Ứ":"U","ứ":"u","Ừ":"U","ừ":"u","Ử":"U","ử":"u","Ữ":"U","ữ":"u","Ự":"U","ự":"u","Ỳ":"Y","ỳ":"y","Ỵ":"Y","ỵ":"y","Ỷ":"Y","ỷ":"y","Ỹ":"Y","ỹ":"y","‘":"\'","’":"\'","“":"\\\"","”":"\\\"","†":"+","•":"*","…":"...","₠":"ecu","₢":"cruzeiro","₣":"french franc","₤":"lira","₥":"mill","₦":"naira","₧":"peseta","₨":"rupee","₩":"won","₪":"new shequel","₫":"dong","€":"euro","₭":"kip","₮":"tugrik","₯":"drachma","₰":"penny","₱":"peso","₲":"guarani","₳":"austral","₴":"hryvnia","₵":"cedi","₹":"indian rupee","₽":"russian ruble","₿":"bitcoin","℠":"sm","™":"tm","∂":"d","∆":"delta","∑":"sum","∞":"infinity","♥":"love","元":"yuan","円":"yen","﷼":"rial"}')
   /* eslint-enable */
 
   function replace (string, options) {
@@ -1469,8 +1469,6 @@ module.exports = exports['default'];
       .trim()
       // convert spaces
       .replace(/[-\s]+/g, options.replacement || '-')
-      // remove trailing separator
-      .replace('#{replacement}$', '')
 
     return options.lower ? slug.toLowerCase() : slug
   }
@@ -1494,19 +1492,22 @@ module.exports = exports['default'];
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_imagesloaded__ = __webpack_require__("./node_modules/imagesloaded/imagesloaded.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_imagesloaded___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_imagesloaded__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_components_layout__ = __webpack_require__("./src/components/layout.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__src_components_hero__ = __webpack_require__("./src/components/hero.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__src_components_about__ = __webpack_require__("./src/components/about.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__src_components_services__ = __webpack_require__("./src/components/services.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__src_components_products__ = __webpack_require__("./src/components/products.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__src_components_product_modal__ = __webpack_require__("./src/components/product-modal.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__src_components_organic__ = __webpack_require__("./src/components/organic.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__src_components_certificate__ = __webpack_require__("./src/components/certificate.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__src_components_location__ = __webpack_require__("./src/components/location.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__src_components_contact__ = __webpack_require__("./src/components/contact.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__src_data_data__ = __webpack_require__("./src/data/data.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_router__ = __webpack_require__("./node_modules/next/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_router__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_imagesloaded__ = __webpack_require__("./node_modules/imagesloaded/imagesloaded.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_imagesloaded___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_imagesloaded__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__src_components_layout__ = __webpack_require__("./src/components/layout.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__src_components_hero__ = __webpack_require__("./src/components/hero.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__src_components_about__ = __webpack_require__("./src/components/about.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__src_components_services__ = __webpack_require__("./src/components/services.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__src_components_products__ = __webpack_require__("./src/components/products.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__src_components_product_modal__ = __webpack_require__("./src/components/product-modal.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__src_components_organic__ = __webpack_require__("./src/components/organic.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__src_components_certificate__ = __webpack_require__("./src/components/certificate.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__src_components_location__ = __webpack_require__("./src/components/location.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__src_components_contact__ = __webpack_require__("./src/components/contact.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__src_data_data_es__ = __webpack_require__("./src/data/data-es.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__src_data_data_en__ = __webpack_require__("./src/data/data-en.js");
 var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\pages\\index.js";
 
 
@@ -1525,6 +1526,8 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+
 
 
 
@@ -1560,6 +1563,11 @@ function (_React$Component) {
       enumerable: true,
       writable: true,
       value: {
+        lang: 'es',
+        data: {
+          es: __WEBPACK_IMPORTED_MODULE_13__src_data_data_es__["a" /* default */],
+          en: __WEBPACK_IMPORTED_MODULE_14__src_data_data_en__["a" /* default */]
+        },
         productModal: false,
         product: null,
         certificateModal: false,
@@ -1602,7 +1610,7 @@ function (_React$Component) {
         try {
           for (var _iterator = imgs[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
             var _img = _step.value;
-            __WEBPACK_IMPORTED_MODULE_1_imagesloaded___default()(_img, function (obj) {
+            __WEBPACK_IMPORTED_MODULE_2_imagesloaded___default()(_img, function (obj) {
               return obj.images[0].img.style.opacity = 1;
             });
           }
@@ -1627,11 +1635,13 @@ function (_React$Component) {
   _createClass(Index, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      var lang = this.props.router.query.lang;
       var sections = Array.from(document.querySelectorAll('section.scroll'));
-      this.setState({
-        sections: sections
-      });
       this.waitForImages();
+      lang && this.setState({
+        sections: sections,
+        lang: lang
+      });
     }
   }, {
     key: "componentDidUpdate",
@@ -1649,79 +1659,85 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var menu = __WEBPACK_IMPORTED_MODULE_12__src_data_data__["a" /* default */].menu,
-          _data$main = __WEBPACK_IMPORTED_MODULE_12__src_data_data__["a" /* default */].main,
-          home = _data$main.home,
-          about = _data$main.about,
-          services = _data$main.services,
-          products = _data$main.products,
-          organic = _data$main.organic,
-          location = _data$main.location;
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__src_components_layout__["a" /* default */], {
+      var _state2 = this.state,
+          lang = _state2.lang,
+          data = _state2.data;
+      var _data$lang = data[lang],
+          menu = _data$lang.menu,
+          _data$lang$main = _data$lang.main,
+          home = _data$lang$main.home,
+          about = _data$lang$main.about,
+          services = _data$lang$main.services,
+          products = _data$lang$main.products,
+          organic = _data$lang$main.organic,
+          location = _data$lang$main.location;
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__src_components_layout__["a" /* default */], {
         menu: menu,
+        langs: Object.keys(data),
         sections: this.state.sections,
         menuClick: this.handleScroll,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 77
         }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__src_components_product_modal__["a" /* default */], {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__src_components_product_modal__["a" /* default */], {
         open: this.state.productModal,
         content: this.state.product,
         closeModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 83
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__src_components_hero__["a" /* default */], {
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__src_components_hero__["a" /* default */], {
         content: home,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
+          lineNumber: 88
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__src_components_about__["a" /* default */], {
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__src_components_about__["a" /* default */], {
         content: about,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 89
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__src_components_services__["a" /* default */], {
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__src_components_services__["a" /* default */], {
         content: services,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 90
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__src_components_products__["a" /* default */], {
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__src_components_products__["a" /* default */], {
         content: products,
         openModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 91
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__src_components_organic__["a" /* default */], {
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__src_components_organic__["a" /* default */], {
         content: organic,
         openModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82
+          lineNumber: 92
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__src_components_location__["a" /* default */], {
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_11__src_components_location__["a" /* default */], {
         content: location,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83
+          lineNumber: 93
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_11__src_components_contact__["a" /* default */], {
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_12__src_components_contact__["a" /* default */], {
+        lang: lang,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 84
+          lineNumber: 94
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__src_components_certificate__["a" /* default */], {
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__src_components_certificate__["a" /* default */], {
         open: this.state.certificateModal,
         closeModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 95
         }
       }));
     }
@@ -1730,7 +1746,7 @@ function (_React$Component) {
   return Index;
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (Index);
+/* harmony default export */ __webpack_exports__["default"] = (Object(__WEBPACK_IMPORTED_MODULE_1_next_router__["withRouter"])(Index));
     (function (Component, route) {
       if(!Component) return
       if (false) return
@@ -1759,9 +1775,12 @@ function (_React$Component) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_about_jpg__ = __webpack_require__("./static/solplay_about.jpg");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_about_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__static_solplay_about_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_slugify__ = __webpack_require__("./node_modules/slugify/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_slugify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_slugify__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_solplay_about_jpg__ = __webpack_require__("./static/solplay_about.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_solplay_about_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__static_solplay_about_jpg__);
 var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\about.js";
+
 
 
 
@@ -1771,37 +1790,39 @@ var About = function About(_ref) {
       content = _ref$content.content,
       countries = _ref$content.countries;
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("section", {
-    id: "nosotros",
+    id: __WEBPACK_IMPORTED_MODULE_1_slugify___default()(title, {
+      lower: true
+    }),
     className: "about scroll",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 5
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
     className: "main-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 6
     }
   }, title), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "about-content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 7
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     className: "about-bg-img",
-    src: __WEBPACK_IMPORTED_MODULE_1__static_solplay_about_jpg___default.a,
+    src: __WEBPACK_IMPORTED_MODULE_2__static_solplay_about_jpg___default.a,
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 8
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "about-content-txt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 9
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
     dangerouslySetInnerHTML: {
@@ -1809,18 +1830,18 @@ var About = function About(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 10
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "countries",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 11
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 12
     }
   }, "".concat(countries.intro, " ").concat(countries.list))))));
 };
@@ -1998,31 +2019,33 @@ function (_React$Component) {
   _createClass(Contact, [{
     key: "render",
     value: function render() {
+      var lang = this.props.lang;
+      console.log(lang);
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("section", {
-        id: "contacto",
+        id: lang == 'es' ? 'contacto' : 'contact',
         className: "contact scroll",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 24
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
         className: "main-title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 28
         }
-      }, "Contacto"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form", {
+      }, lang == 'es' ? 'Contacto' : 'Contact'), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form", {
         className: "contact-form",
         onSubmit: this.handleSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 31
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "form-field",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 32
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
         type: "text",
@@ -2033,19 +2056,19 @@ function (_React$Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 33
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label", {
         htmlFor: "name",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 41
         }
       }, "Nombre")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "form-field",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 43
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
         type: "email",
@@ -2056,19 +2079,19 @@ function (_React$Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 44
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label", {
         htmlFor: "email",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 52
         }
       }, "E-mail")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "form-field",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 54
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("textarea", {
         name: "msg",
@@ -2078,13 +2101,13 @@ function (_React$Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 55
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label", {
         htmlFor: "msg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 62
         }
       }, "Mensaje")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
         type: "submit",
@@ -2092,31 +2115,31 @@ function (_React$Component) {
         value: "Enviar",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 64
         }
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__social__["a" /* default */], {
         className: "contact-social",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59
+          lineNumber: 66
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "contact-details",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 67
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "contact-details-inner",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 68
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "contact-link",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 69
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
         href: "https://goo.gl/maps/WrcgbGnL3V92",
@@ -2125,33 +2148,33 @@ function (_React$Component) {
         className: "icon-map-pin-streamline",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 70
         }
       }, "Ruta Provincial, 24, km, 16, 5535. - Mendoza Argentina.")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "contact-link",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 79
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
         href: "mailto:info@solplayargentina.com",
         className: "icon-envelope-o",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 80
         }
       }, "info@solplayargentina.com")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "contact-link",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 87
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
         href: "tel:+5492614549231",
         className: "icon-phone",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 88
         }
       }, "54 9 261 454 9231")))));
     }
@@ -2222,6 +2245,7 @@ var Footer = function Footer() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__social__ = __webpack_require__("./src/components/social.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_solplay_header_logo_svg__ = __webpack_require__("./static/solplay-header-logo.svg");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_solplay_header_logo_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__static_solplay_header_logo_svg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__about__ = __webpack_require__("./src/components/about.js");
 var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\header.js";
 
 
@@ -2238,6 +2262,7 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 
 
 
@@ -2318,64 +2343,95 @@ function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      var menu = this.props.menu;
+      var _props = this.props,
+          menu = _props.menu,
+          langs = _props.langs;
       var headerClass = this.state.headerWhite ? ' white' : '';
       var moblieClass = this.state.menuOpen ? 'mobile-menu open' : 'mobile-menu';
       var navClass = this.state.menuOpen ? 'main-nav nav-open' : 'main-nav';
+      console.log(langs);
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("header", {
         className: "main-header".concat(headerClass),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 47
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "header-container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 48
         }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__social__["a" /* default */], {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        className: "extra-nav",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        className: "lang-links",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 50
+        }
+      }, langs.map(function (lang, key) {
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
+          key: key,
+          as: "/".concat(lang),
+          href: "/lang=".concat(lang),
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 52
+          }
+        }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
+          className: "lang-link",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 53
+          }
+        }, lang));
+      })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__social__["a" /* default */], {
         className: "header-social",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 57
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
+      })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
         className: "logo",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 59
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
         href: "/",
         prefetch: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 60
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 61
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
         src: __WEBPACK_IMPORTED_MODULE_4__static_solplay_header_logo_svg___default.a,
         alt: "Solplay",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 62
         }
       })))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("nav", {
         className: navClass,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 66
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul", {
         className: "menu",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 67
         }
       }, menu.map(function (item, key) {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li", {
@@ -2383,7 +2439,7 @@ function (_React$Component) {
           key: key,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 57
+            lineNumber: 69
           }
         }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
           className: _this2.state.activeLink == key ? 'active' : '',
@@ -2397,7 +2453,7 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 58
+            lineNumber: 70
           }
         }, item));
       }))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
@@ -2405,25 +2461,25 @@ function (_React$Component) {
         onClick: this.handleMenu,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 89
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "menu-bar",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 90
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "menu-bar",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 91
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "menu-bar",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 92
         }
       }))));
     }
@@ -2586,6 +2642,7 @@ var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\compon
 
 var Layout = function Layout(_ref) {
   var menu = _ref.menu,
+      langs = _ref.langs,
       children = _ref.children,
       menuClick = _ref.menuClick;
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Fragment, {
@@ -2671,6 +2728,7 @@ var Layout = function Layout(_ref) {
     }
   })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__header__["a" /* default */], {
     menu: menu,
+    langs: langs,
     menuClick: menuClick,
     __source: {
       fileName: _jsxFileName,
@@ -2960,7 +3018,10 @@ var ProductModal = function ProductModal(_ref) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_slugify__ = __webpack_require__("./node_modules/slugify/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_slugify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_slugify__);
 var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\products.js";
+
 
 
 var Products = function Products(_ref) {
@@ -2969,23 +3030,25 @@ var Products = function Products(_ref) {
       products = _ref$content.products,
       openModal = _ref.openModal;
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("section", {
-    id: "productos",
+    id: __WEBPACK_IMPORTED_MODULE_1_slugify___default()(title, {
+      lower: true
+    }),
     className: "products scroll",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 2
+      lineNumber: 4
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
     className: "main-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 3
+      lineNumber: 5
     }
   }, title), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "products-list",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 6
     }
   }, products.map(function (product, key) {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
@@ -2996,7 +3059,7 @@ var Products = function Products(_ref) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 6
+        lineNumber: 8
       }
     }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
       className: "product-image",
@@ -3004,13 +3067,13 @@ var Products = function Products(_ref) {
       alt: "",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 13
       }
     }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h3", {
       className: "product-title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 12
+        lineNumber: 14
       }
     }, product.name));
   })));
@@ -3385,7 +3448,7 @@ var Social = function Social(_ref) {
 
 /***/ }),
 
-/***/ "./src/data/data.js":
+/***/ "./src/data/data-en.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3420,7 +3483,151 @@ var Social = function Social(_ref) {
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-  menu: ['Inicio', 'Nosotros', 'Productos', 'Contacto'],
+  lang: 'en',
+  menu: ['Home', 'About Us', 'Products', 'Contact'],
+  main: {
+    home: {
+      name: 'Home',
+      content: '<h2>The <strong>best</strong> of us<br/> for <strong>everyone</strong></h2><p>We are motivated by the passion of what we like to do, get our products to customers from abroad.</p>'
+    },
+    about: {
+      title: 'About Us',
+      content: '<strong>Solplay SA</strong> is an Argentinian company, dedicated to the export of quality agri-food products. We are in the international market for more than 2 decades, with vast experience in the products that we process and export to our clients.',
+      countries: {
+        intro: 'We reached different countries such as:',
+        list: 'United States, European Union´s countries, Taiwan, Haiti, Brazil, Chile and Bolivia.'
+      }
+    },
+    services: {
+      title: 'Services',
+      icons: [{
+        text: 'Control and packaging',
+        icon: __WEBPACK_IMPORTED_MODULE_0__static_solplay_control_y_embalaje_svg___default.a
+      }, {
+        text: 'Time efficiency',
+        icon: __WEBPACK_IMPORTED_MODULE_1__static_solplay_eficiencia_svg___default.a
+      }, {
+        text: 'Shipment follow up',
+        icon: __WEBPACK_IMPORTED_MODULE_2__static_solplay_seguimiento_svg___default.a
+      }, {
+        text: 'Guaranteed delivery',
+        icon: __WEBPACK_IMPORTED_MODULE_3__static_solplay_entrega_svg___default.a
+      }]
+    },
+    products: {
+      title: 'Products',
+      products: [{
+        name: 'Red Garlic',
+        image: __WEBPACK_IMPORTED_MODULE_4__static_productos_ajo_colorado_jpg___default.a,
+        specs: {
+          Variedad: 'Morado y Colorado',
+          Region: 'Valle de Uco, zona norte y este de la provincia de Mendoza.',
+          Cosecha: 'Ocubre, Noviembre y Diciembre',
+          Formato: 'En cajas de 10 kilos, 30 libras, bolsas de polipropileno de 20 kilos y de 10 kilos, puede ser palletizado o a granel.<br/>Se comercializa en los calibres, 3 (30/35mm) 4 (36/45mm) 5 (46/55mm) 6 (56/65mm) 7 (66/75mm).'
+        }
+      }, {
+        name: 'Ajo Blanco',
+        image: __WEBPACK_IMPORTED_MODULE_5__static_productos_ajo_blanco_jpg___default.a,
+        specs: {
+          Variedad: 'Blanco',
+          Region: 'Valle de Uco, zona norte y este de la provincia de Mendoza.',
+          Cosecha: 'Ocubre, Noviembre y Diciembre',
+          Formato: 'En cajas de 10 kilos, 30 libras, bolsas de polipropileno de 20 kilos y de 10 kilos, puede ser palletizado o a granel.<br/>Se comercializa en los calibres, 3 (30/35mm) 4 (36/45mm) 5 (46/55mm) 6 (56/65mm) 7 (66/75mm).'
+        }
+      }, {
+        name: 'Ciruela',
+        image: __WEBPACK_IMPORTED_MODULE_6__static_productos_ciruelas_secas_jpg___default.a,
+        specs: {
+          Variedad: 'D’agen',
+          Region: 'Este y Sur de la provincia de Mendoza.',
+          Cosecha: 'Febrero y Marzo',
+          Formato: 'En cajas de carton de 10 kilos, bolsas de polipropileno blancas en 25 kilos tipo secado Americano natural, calibres 30/40, 40/50, 50/60, 60/70, 70/80, 80/90, 90/100, 100/110, 110/120.'
+        }
+      }, {
+        name: 'Nuez',
+        image: __WEBPACK_IMPORTED_MODULE_7__static_productos_nueces_chandler_jpg___default.a,
+        specs: {
+          Variedad: 'Chandler, Ser, Hartley, Howard y Vina',
+          Region: 'Valle de Uco, Tupungato.',
+          Cosecha: 'Marzo y Abril',
+          Formato: 'Enteras tipo natural en bolsas de polipropileno blanca de 25 kilos, calibres 3/32, 32/34, 34/36 y 36+.<br/>Peladas en cajas de carton de 10 kilos envasadas al vacio en 2 unidades de 5 kilos cada una, calidad extra light, light, dorada.'
+        }
+      }, {
+        name: 'Zapallo Butternut',
+        image: __WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_butternut_jpg___default.a,
+        specs: {
+          Variedad: 'Butternut',
+          Region: 'Zona norte de la provincia de Mendoza.',
+          Cosecha: 'Enero, Febrero y Marzo',
+          Formato: 'En cajas de carton y en bines de madera, en calibres S, M, L y XL.'
+        }
+      }, {
+        name: 'Zapallo Muscat di Provenza',
+        image: __WEBPACK_IMPORTED_MODULE_9__static_productos_zapallo_muscat_jpg___default.a,
+        specs: {
+          Variedad: 'Muscat di Provenza',
+          Region: 'Zona norte de la provincia de Mendoza.',
+          Cosecha: 'Enero, Febrero y Marzo',
+          Formato: 'En bines de madera con rangos de kilos que van desde los 5 kilos por unidad hasta los 15 kilos por unidad.'
+        }
+      }]
+    },
+    organic: {
+      title: 'Orgánic',
+      content: {
+        title: 'Products',
+        text: 'We seek to offer a natural and healthy alimentation so we work with organic products such as garlic and dried plums among others.'
+      }
+    },
+    location: {
+      title: 'Location',
+      content: {
+        intro: 'We are located in the province of Mendoza, Argentine Republic.',
+        text: '<strong>San Rafael</strong> is in the southern part of <strong>Mendoza</strong> near our Argentine Patagonia, this area is optimal to produce organic and conventional products due to its climate and the health of its water and soil.</br><strong>Guaymallén</strong> is located to the north of the province with productions of garlic´s scoop and fruits.'
+      }
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./src/data/data-es.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__static_solplay_control_y_embalaje_svg__ = __webpack_require__("./static/solplay-control_y_embalaje.svg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__static_solplay_control_y_embalaje_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__static_solplay_control_y_embalaje_svg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_eficiencia_svg__ = __webpack_require__("./static/solplay-eficiencia.svg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_eficiencia_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__static_solplay_eficiencia_svg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_solplay_seguimiento_svg__ = __webpack_require__("./static/solplay-seguimiento.svg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_solplay_seguimiento_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__static_solplay_seguimiento_svg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_solplay_entrega_svg__ = __webpack_require__("./static/solplay-entrega.svg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_solplay_entrega_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__static_solplay_entrega_svg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_productos_ajo_colorado_jpg__ = __webpack_require__("./static/productos/ajo-colorado.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_productos_ajo_colorado_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__static_productos_ajo_colorado_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__static_productos_ajo_blanco_jpg__ = __webpack_require__("./static/productos/ajo-blanco.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__static_productos_ajo_blanco_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__static_productos_ajo_blanco_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__static_productos_ciruelas_secas_jpg__ = __webpack_require__("./static/productos/ciruelas-secas.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__static_productos_ciruelas_secas_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__static_productos_ciruelas_secas_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__static_productos_nueces_chandler_jpg__ = __webpack_require__("./static/productos/nueces-chandler-.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__static_productos_nueces_chandler_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__static_productos_nueces_chandler_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_butternut_jpg__ = __webpack_require__("./static/productos/zapallo-butternut.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_butternut_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_butternut_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__static_productos_zapallo_muscat_jpg__ = __webpack_require__("./static/productos/zapallo-muscat.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__static_productos_zapallo_muscat_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__static_productos_zapallo_muscat_jpg__);
+
+
+
+
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["a"] = ({
+  lang: 'es',
+  menu: ['Inicio', 'Quienes Somos', 'Productos', 'Contacto'],
   main: {
     home: {
       name: 'Inicio',

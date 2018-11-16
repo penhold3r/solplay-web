@@ -1,81 +1,100 @@
-import Link from 'next/link';
-import slugify from 'slugify';
+import Link from 'next/link'
+import slugify from 'slugify'
 
-import Social from './social';
-import logo from '../../static/solplay-header-logo.svg';
+import Social from './social'
+import logo from '../../static/solplay-header-logo.svg'
+import About from './about'
 
 class Header extends React.Component {
-
    state = { headerWhite: false, activeLink: 0, menuOpen: false }
 
    componentDidMount() {
       // this.handleScroll();
       // window.addEventListener('scroll', this.handleScroll);
-
       // this.handleResize();
       // window.addEventListener('resize', this.handleResize);
    }
 
    handleScroll = () => {
-      const dom = document.scrollingElement;
-      const headerWhite = Boolean(dom.scrollTop > 250);
+      const dom = document.scrollingElement
+      const headerWhite = Boolean(dom.scrollTop > 250)
       //this.setState({ headerWhite });
    }
 
    handleMenu = () => {
-      const menuOpen = !this.state.menuOpen;
-      this.setState({ menuOpen });
+      const menuOpen = !this.state.menuOpen
+      this.setState({ menuOpen })
    }
 
    handleClick = (e, key, section) => {
-      e.preventDefault();
-      this.setState({ activeLink: key });
-      this.props.menuClick(section);
-      this.handleMenu();
+      e.preventDefault()
+      this.setState({ activeLink: key })
+      this.props.menuClick(section)
+      this.handleMenu()
    }
 
    render() {
+      const { menu, langs } = this.props
+      const headerClass = this.state.headerWhite ? ' white' : ''
+      const moblieClass = this.state.menuOpen
+         ? 'mobile-menu open'
+         : 'mobile-menu'
+      const navClass = this.state.menuOpen ? 'main-nav nav-open' : 'main-nav'
 
-      const { menu } = this.props;
-      const headerClass = this.state.headerWhite ? ' white' : '';
-      const moblieClass = this.state.menuOpen ? 'mobile-menu open' : 'mobile-menu';
-      const navClass = this.state.menuOpen ? 'main-nav nav-open' : 'main-nav';
+      console.log(langs)
 
       return (
          <header className={`main-header${headerClass}`}>
             <div className="header-container">
-               <Social className="header-social" />
+               <div className="extra-nav">
+                  <div className="lang-links">
+                     {langs.map((lang, key) => (
+                        <Link key={key} as={`/${lang}`} href={`/lang=${lang}`}>
+                           <a className="lang-link">{lang}</a>
+                        </Link>
+                     ))}
+                  </div>
+                  <Social className="header-social" />
+               </div>
                <h1 className="logo">
                   <Link href="/" prefetch>
-                     <a><img src={logo} alt="Solplay" /></a>
+                     <a>
+                        <img src={logo} alt="Solplay" />
+                     </a>
                   </Link>
                </h1>
                <nav className={navClass}>
                   <ul className="menu">
-                     {
-                        menu.map((item, key) =>
-                           <li className="nav-link" key={key}>
-                              <a
-                                 className={this.state.activeLink == key ? 'active' : ''}
-                                 href={slugify(item, { lower: true })}
-                                 onClick={e => this.handleClick(e, key, slugify(item, { lower: true }))}
-                              >
-                                 {item}
-                              </a>
-                           </li>
-                        )
-                     }
+                     {menu.map((item, key) => (
+                        <li className="nav-link" key={key}>
+                           <a
+                              className={
+                                 this.state.activeLink == key ? 'active' : ''
+                              }
+                              href={slugify(item, { lower: true })}
+                              onClick={e =>
+                                 this.handleClick(
+                                    e,
+                                    key,
+                                    slugify(item, { lower: true })
+                                 )
+                              }
+                           >
+                              {item}
+                           </a>
+                        </li>
+                     ))}
                   </ul>
                </nav>
                <div className={moblieClass} onClick={this.handleMenu}>
-                  <div className="menu-bar"></div>
-                  <div className="menu-bar"></div>
-                  <div className="menu-bar"></div>
+                  <div className="menu-bar" />
+                  <div className="menu-bar" />
+                  <div className="menu-bar" />
                </div>
             </div>
          </header>
-      );
+      )
    }
 }
 
-export default Header;
+export default Header

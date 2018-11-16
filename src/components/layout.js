@@ -6,7 +6,7 @@ import Footer from './footer'
 
 import '../styles/index.scss'
 
-const Layout = ({ menu, children, menuClick }) => {
+const Layout = ({ menu, langs, children, menuClick }) => {
    return (
       <React.Fragment>
          <Head>
@@ -36,7 +36,7 @@ const Layout = ({ menu, children, menuClick }) => {
                sizes="32x32 192x192"
             />
          </Head>
-         <Header menu={menu} menuClick={menuClick} />
+         <Header menu={menu} langs={langs} menuClick={menuClick} />
          <main>{children}</main>
          <Footer />
       </React.Fragment>

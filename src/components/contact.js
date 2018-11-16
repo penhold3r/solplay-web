@@ -18,9 +18,16 @@ class Contact extends React.Component {
    }
 
    render() {
+      const { lang } = this.props
+      console.log(lang)
       return (
-         <section id="contacto" className="contact scroll">
-            <h1 className="main-title">Contacto</h1>
+         <section
+            id={lang == 'es' ? 'contacto' : 'contact'}
+            className="contact scroll"
+         >
+            <h1 className="main-title">
+               {lang == 'es' ? 'Contacto' : 'Contact'}
+            </h1>
             <form className="contact-form" onSubmit={this.handleSubmit}>
                <div className="form-field">
                   <input

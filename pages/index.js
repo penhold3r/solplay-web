@@ -1,3 +1,4 @@
+import { withRouter } from 'next/router'
 import imagesLoaded from 'imagesloaded'
 
 import Layout from '../src/components/layout'
@@ -11,10 +12,16 @@ import Certificate from '../src/components/certificate'
 import LocationSection from '../src/components/location'
 import Contact from '../src/components/contact'
 
-import data from '../src/data/data'
+import dataEs from '../src/data/data-es'
+import dataEn from '../src/data/data-en'
 
 class Index extends React.Component {
    state = {
+      lang: 'es',
+      data: {
+         es: dataEs,
+         en: dataEn
+      },
       productModal: false,
       product: null,
       certificateModal: false,
@@ -23,10 +30,11 @@ class Index extends React.Component {
    }
 
    componentDidMount() {
+      const { lang } = this.props.router.query
       const sections = Array.from(document.querySelectorAll('section.scroll'))
 
-      this.setState({ sections })
       this.waitForImages()
+      lang && this.setState({ sections, lang })
    }
 
    componentDidUpdate() {
@@ -59,14 +67,16 @@ class Index extends React.Component {
    }
 
    render() {
+      const { lang, data } = this.state
       const {
          menu,
          main: { home, about, services, products, organic, location }
-      } = data
+      } = data[lang]
 
       return (
          <Layout
             menu={menu}
+            langs={Object.keys(data)}
             sections={this.state.sections}
             menuClick={this.handleScroll}
          >
@@ -81,7 +91,7 @@ class Index extends React.Component {
             <Products content={products} openModal={this.handleModal} />
             <Organic content={organic} openModal={this.handleModal} />
             <LocationSection content={location} />
-            <Contact />
+            <Contact lang={lang} />
             <Certificate
                open={this.state.certificateModal}
                closeModal={this.handleModal}
@@ -91,4 +101,4 @@ class Index extends React.Component {
    }
 }
 
-export default Index
+export default withRouter(Index)

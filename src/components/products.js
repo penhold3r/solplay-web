@@ -1,5 +1,7 @@
+import slugify from 'slugify'
+
 const Products = ({ content: { title, products }, openModal }) => (
-   <section id="productos" className="products scroll">
+   <section id={slugify(title, { lower: true })} className="products scroll">
       <h1 className="main-title">{title}</h1>
       <div className="products-list">
          {products.map((product, key) => (

@@ -604,7 +604,7 @@ body {
   z-index: 99; }
   @media screen and (max-width: 850px) {
     .main-header {
-      background: #FFF;
+      background: #fff;
       height: 60px; } }
   .main-header .header-container {
     display: grid;
@@ -617,22 +617,35 @@ body {
     @media screen and (max-width: 850px) {
       .main-header .header-container {
         grid-template-columns: 250px 1fr; } }
-    .main-header .header-container .header-social {
+    .main-header .header-container .extra-nav {
       position: absolute;
       right: 0;
-      top: 0; }
+      top: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr; }
+      .main-header .header-container .extra-nav .lang-links {
+        padding: 10px; }
+        .main-header .header-container .extra-nav .lang-links .lang-link {
+          border-right: 1px solid #00A7E1;
+          display: inline-block;
+          color: #00A7E1;
+          text-decoration: none;
+          text-transform: uppercase;
+          padding: 0 9px; }
+          .main-header .header-container .extra-nav .lang-links .lang-link:last-child {
+            border: none; }
       @media screen and (max-width: 850px) {
-        .main-header .header-container .header-social {
+        .main-header .header-container .extra-nav .header-social {
           display: none; } }
-      .main-header .header-container .header-social ul {
+      .main-header .header-container .extra-nav .header-social ul {
         display: grid;
         grid-gap: 10px;
         grid-template-columns: 1fr 1fr 1fr;
         padding: 10px; }
-        .main-header .header-container .header-social ul li a {
+        .main-header .header-container .extra-nav .header-social ul li a {
           color: #00A7E1;
           transition: all 0.3s; }
-          .main-header .header-container .header-social ul li a:hover {
+          .main-header .header-container .extra-nav .header-social ul li a:hover {
             color: #E89D0B; }
     .main-header .header-container .logo {
       height: inherit;
@@ -657,7 +670,7 @@ body {
       justify-self: end; }
       @media screen and (max-width: 850px) {
         .main-header .header-container .main-nav {
-          background: #FFF;
+          background: #fff;
           position: absolute;
           height: 1px;
           transition: all 0.4s;
