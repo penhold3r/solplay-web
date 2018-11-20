@@ -17,7 +17,8 @@ export default {
       home: {
          name: 'Home',
          content:
-            '<h2>The <strong>best</strong> of us<br/> for <strong>everyone</strong></h2><p>We are motivated by the passion of what we like to do, get our products to customers from abroad.</p>'
+            '<h2>The <strong>best</strong> of us<br/> for <strong>everyone</strong></h2><p>We are motivated by the passion of what we like to do, get our products to customers from abroad.</p>',
+         cta: 'Find more'
       },
       about: {
          title: 'About Us',
@@ -115,7 +116,8 @@ export default {
             title: 'Products',
             text:
                'We seek to offer a natural and healthy alimentation so we work with organic products such as garlic and dried plums among others.'
-         }
+         },
+         modal: 'Certifications'
       },
       location: {
          title: 'Location',
@@ -124,7 +126,8 @@ export default {
                'We are located in the province of Mendoza, Argentine Republic.',
             text:
                '<strong>San Rafael</strong> is in the southern part of <strong>Mendoza</strong> near our Argentine Patagonia, this area is optimal to produce organic and conventional products due to its climate and the health of its water and soil.</br><strong>Guaymallén</strong> is located to the north of the province with productions of garlic´s scoop and fruits.'
-         }
+         },
+         map: 'View map'
       },
       contact: {
          title: 'Contact',

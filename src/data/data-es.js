@@ -17,7 +17,8 @@ export default {
       home: {
          name: 'Inicio',
          content:
-            '<h2>Lo <strong>mejor</strong> de nosotros<br/> para <strong>todo el mundo</strong></h2><p>Motivados por la pasión de lo que nos gusta hacer, llegar con nuestros productos a clientes alrededor del mundo.</p>'
+            '<h2>Lo <strong>mejor</strong> de nosotros<br/> para <strong>todo el mundo</strong></h2><p>Motivados por la pasión de lo que nos gusta hacer, llegar con nuestros productos a clientes alrededor del mundo.</p>',
+         cta: 'Descubrinos'
       },
       about: {
          title: 'Quienes Somos',
@@ -116,7 +117,8 @@ export default {
             title: 'Productos',
             text:
                'Buscamos ofrecer una alimentación natural y saludablepor lo que trabajamos con productos orgánicos como ajos y ciruelas deshidratadas entre otros.'
-         }
+         },
+         modal: 'Certificaciones'
       },
       location: {
          title: 'Ubicación',
@@ -125,7 +127,8 @@ export default {
                'Estamos situados en la provincia de Mendoza, República Argentina.',
             text:
                '<strong>San Rafael</strong> está situada en la parte sur de <strong>Mendoza</strong> cerca de nuestra <strong>Patagonia Argentina,</strong> esta zona es óptima para la producción de productos orgánicos y convencionales debidos a su clima y a la sanidad de su agua y suelos.<br/><strong>Guaymallén</strong> se encuentra al norte de la provincia con producciones de primicia de ajos y frutas.'
-         }
+         },
+         map: 'Ver mapa'
       },
       contact: {
          title: 'Contacto',

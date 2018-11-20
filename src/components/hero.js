@@ -31,9 +31,11 @@ const Hero = ({ content }) => (
             className="hero-text"
             dangerouslySetInnerHTML={{ __html: content.content }}
          />
-         <a href="#" className="button">
-            descubrinos
-         </a>
+         <a
+            href="#"
+            className="button"
+            dangerouslySetInnerHTML={{ __html: content.cta }}
+         />
       </div>
    </section>
 )

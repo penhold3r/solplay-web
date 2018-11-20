@@ -22,7 +22,6 @@ class Contact extends React.Component {
 
    render() {
       const {
-         lang,
          content: { title, fields, output }
       } = this.props
 

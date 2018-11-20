@@ -3,7 +3,8 @@ import locationImg from '../../static/solplay_ubicacion.jpg'
 const LocationSection = ({
    content: {
       title,
-      content: { intro, text }
+      content: { intro, text },
+      map
    }
 }) => (
    <section className="location">
@@ -24,7 +25,7 @@ const LocationSection = ({
             rel="noopener"
             className="button"
          >
-            Ver en mapa
+            {map}
          </a>
       </div>
    </section>

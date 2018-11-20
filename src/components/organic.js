@@ -1,6 +1,6 @@
 import organicImg from '../../static/solplay_leaf.jpg'
 
-const Organic = ({ content: { title, content }, openModal }) => {
+const Organic = ({ content: { title, content, modal }, openModal }) => {
    return (
       <section className="organic">
          <h1 className="main-title">{title}</h1>
@@ -16,9 +16,8 @@ const Organic = ({ content: { title, content }, openModal }) => {
                      href="certificaciones"
                      className="button"
                      onClick={openModal}
-                  >
-                     Certificaciones
-                  </a>
+                     dangerouslySetInnerHTML={{ __html: modal }}
+                  />
                </div>
             </div>
          </div>

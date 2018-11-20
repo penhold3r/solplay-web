@@ -34,6 +34,8 @@ class Index extends React.Component {
       const { lang = 'es' } = query
       const content = data[lang]
 
+      console.log(lang, content)
+
       return { lang, content }
    }
 
@@ -101,7 +103,7 @@ class Index extends React.Component {
             <Products content={products} openModal={this.handleModal} />
             <Organic content={organic} openModal={this.handleModal} />
             <LocationSection content={location} />
-            <Contact lang={lang} content={contact} />
+            <Contact content={contact} />
             <Certificate
                open={this.state.certificateModal}
                closeModal={this.handleModal}

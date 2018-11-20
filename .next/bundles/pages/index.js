@@ -1758,7 +1758,7 @@ function (_React$Component) {
         menuClick: this.handleScroll,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 89
         }
       }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__src_components_product_modal__["a" /* default */], {
         open: this.state.productModal,
@@ -1766,59 +1766,58 @@ function (_React$Component) {
         closeModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 93
+          lineNumber: 95
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__src_components_hero__["a" /* default */], {
         content: home,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 100
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__src_components_about__["a" /* default */], {
         content: about,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99
+          lineNumber: 101
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__src_components_services__["a" /* default */], {
         content: services,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
+          lineNumber: 102
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__src_components_products__["a" /* default */], {
         content: products,
         openModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 103
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_11__src_components_organic__["a" /* default */], {
         content: organic,
         openModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 104
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_13__src_components_location__["a" /* default */], {
         content: location,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 105
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_14__src_components_contact__["a" /* default */], {
-        lang: lang,
         content: contact,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 106
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_12__src_components_certificate__["a" /* default */], {
         open: this.state.certificateModal,
         closeModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 107
         }
       }));
     }
@@ -1844,12 +1843,13 @@ Object.defineProperty(Index, "getInitialProps", {
               query = _ref2.query;
               _query$lang = query.lang, lang = _query$lang === void 0 ? 'es' : _query$lang;
               content = data[lang];
+              console.log(lang, content);
               return _context.abrupt("return", {
                 lang: lang,
                 content: content
               });
 
-            case 4:
+            case 5:
             case "end":
               return _context.stop();
           }
@@ -2146,9 +2146,7 @@ function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      var _props = this.props,
-          lang = _props.lang,
-          _props$content = _props.content,
+      var _props$content = this.props.content,
           title = _props$content.title,
           fields = _props$content.fields,
           output = _props$content.output;
@@ -2159,13 +2157,13 @@ function (_React$Component) {
         className: "contact scroll",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 29
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
         className: "main-title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 33
         }
       }, title), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form", {
         className: "contact-form",
@@ -2174,13 +2172,13 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 34
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "form-field",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 38
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
         type: "text",
@@ -2191,19 +2189,19 @@ function (_React$Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 39
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label", {
         htmlFor: "name",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 47
         }
       }, fields.name)), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "form-field",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 49
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
         type: "email",
@@ -2214,19 +2212,19 @@ function (_React$Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 50
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label", {
         htmlFor: "email",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59
+          lineNumber: 58
         }
       }, fields.email)), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "form-field",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 60
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("textarea", {
         name: "msg",
@@ -2236,13 +2234,13 @@ function (_React$Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 61
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label", {
         htmlFor: "msg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 68
         }
       }, fields.msg)), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
         type: "submit",
@@ -2250,43 +2248,43 @@ function (_React$Component) {
         value: fields.send,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 70
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: this.state.spinner ? 'sending visible' : 'sending',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 71
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "spinner",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75
+          lineNumber: 74
         }
       }))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__social__["a" /* default */], {
         className: "contact-social",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
+          lineNumber: 77
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "contact-details",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 78
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "contact-details-inner",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 79
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "contact-link",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 80
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
         href: "https://goo.gl/maps/WrcgbGnL3V92",
@@ -2295,33 +2293,33 @@ function (_React$Component) {
         className: "icon-map-pin-streamline",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82
+          lineNumber: 81
         }
       }, "Ruta Provincial, 24, km, 16, 5535. - Mendoza Argentina.")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "contact-link",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91
+          lineNumber: 90
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
         href: "mailto:info@solplayargentina.com",
         className: "icon-envelope-o",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
+          lineNumber: 91
         }
       }, "info@solplayargentina.com")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "contact-link",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99
+          lineNumber: 98
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
         href: "tel:+5492614549231",
         className: "icon-phone",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
+          lineNumber: 99
         }
       }, "54 9 261 454 9231")))));
     }
@@ -2744,11 +2742,14 @@ var Hero = function Hero(_ref) {
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     href: "#",
     className: "button",
+    dangerouslySetInnerHTML: {
+      __html: content.cta
+    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 34
     }
-  }, "descubrinos")));
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (Hero);
@@ -2905,18 +2906,19 @@ var LocationSection = function LocationSection(_ref) {
       title = _ref$content.title,
       _ref$content$content = _ref$content.content,
       intro = _ref$content$content.intro,
-      text = _ref$content$content.text;
+      text = _ref$content$content.text,
+      map = _ref$content.map;
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("section", {
     className: "location",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 10
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
     className: "main-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 11
     }
   }, title), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     src: __WEBPACK_IMPORTED_MODULE_1__static_solplay_ubicacion_jpg___default.a,
@@ -2924,13 +2926,13 @@ var LocationSection = function LocationSection(_ref) {
     className: "location-image",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 12
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "location-content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 13
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
     className: "location-intro",
@@ -2939,7 +2941,7 @@ var LocationSection = function LocationSection(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 14
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
     className: "location-txt",
@@ -2948,7 +2950,7 @@ var LocationSection = function LocationSection(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 18
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     href: "https://goo.gl/maps/WrcgbGnL3V92",
@@ -2957,9 +2959,9 @@ var LocationSection = function LocationSection(_ref) {
     className: "button",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 22
     }
-  }, "Ver en mapa")));
+  }, map)));
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (LocationSection);
@@ -2982,6 +2984,7 @@ var Organic = function Organic(_ref) {
   var _ref$content = _ref.content,
       title = _ref$content.title,
       content = _ref$content.content,
+      modal = _ref$content.modal,
       openModal = _ref.openModal;
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("section", {
     className: "organic",
@@ -3046,11 +3049,14 @@ var Organic = function Organic(_ref) {
     href: "certificaciones",
     className: "button",
     onClick: openModal,
+    dangerouslySetInnerHTML: {
+      __html: modal
+    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
     }
-  }, "Certificaciones")))));
+  })))));
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (Organic);
@@ -3625,7 +3631,8 @@ var Social = function Social(_ref) {
   main: {
     home: {
       name: 'Home',
-      content: '<h2>The <strong>best</strong> of us<br/> for <strong>everyone</strong></h2><p>We are motivated by the passion of what we like to do, get our products to customers from abroad.</p>'
+      content: '<h2>The <strong>best</strong> of us<br/> for <strong>everyone</strong></h2><p>We are motivated by the passion of what we like to do, get our products to customers from abroad.</p>',
+      cta: 'Find more'
     },
     about: {
       title: 'About Us',
@@ -3714,14 +3721,16 @@ var Social = function Social(_ref) {
       content: {
         title: 'Products',
         text: 'We seek to offer a natural and healthy alimentation so we work with organic products such as garlic and dried plums among others.'
-      }
+      },
+      modal: 'Certifications'
     },
     location: {
       title: 'Location',
       content: {
         intro: 'We are located in the province of Mendoza, Argentine Republic.',
         text: '<strong>San Rafael</strong> is in the southern part of <strong>Mendoza</strong> near our Argentine Patagonia, this area is optimal to produce organic and conventional products due to its climate and the health of its water and soil.</br><strong>Guaymallén</strong> is located to the north of the province with productions of garlic´s scoop and fruits.'
-      }
+      },
+      map: 'View map'
     },
     contact: {
       title: 'Contact',
@@ -3781,7 +3790,8 @@ var Social = function Social(_ref) {
   main: {
     home: {
       name: 'Inicio',
-      content: '<h2>Lo <strong>mejor</strong> de nosotros<br/> para <strong>todo el mundo</strong></h2><p>Motivados por la pasión de lo que nos gusta hacer, llegar con nuestros productos a clientes alrededor del mundo.</p>'
+      content: '<h2>Lo <strong>mejor</strong> de nosotros<br/> para <strong>todo el mundo</strong></h2><p>Motivados por la pasión de lo que nos gusta hacer, llegar con nuestros productos a clientes alrededor del mundo.</p>',
+      cta: 'Descubrinos'
     },
     about: {
       title: 'Quienes Somos',
@@ -3870,14 +3880,16 @@ var Social = function Social(_ref) {
       content: {
         title: 'Productos',
         text: 'Buscamos ofrecer una alimentación natural y saludablepor lo que trabajamos con productos orgánicos como ajos y ciruelas deshidratadas entre otros.'
-      }
+      },
+      modal: 'Certificaciones'
     },
     location: {
       title: 'Ubicación',
       content: {
         intro: 'Estamos situados en la provincia de Mendoza, República Argentina.',
         text: '<strong>San Rafael</strong> está situada en la parte sur de <strong>Mendoza</strong> cerca de nuestra <strong>Patagonia Argentina,</strong> esta zona es óptima para la producción de productos orgánicos y convencionales debidos a su clima y a la sanidad de su agua y suelos.<br/><strong>Guaymallén</strong> se encuentra al norte de la provincia con producciones de primicia de ajos y frutas.'
-      }
+      },
+      map: 'Ver mapa'
     },
     contact: {
       title: 'Contacto',
