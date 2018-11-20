@@ -3,17 +3,9 @@ import slugify from 'slugify'
 
 import Social from './social'
 import logo from '../../static/solplay-header-logo.svg'
-import About from './about'
 
 class Header extends React.Component {
    state = { headerWhite: false, activeLink: 0, menuOpen: false }
-
-   componentDidMount() {
-      // this.handleScroll();
-      // window.addEventListener('scroll', this.handleScroll);
-      // this.handleResize();
-      // window.addEventListener('resize', this.handleResize);
-   }
 
    handleScroll = () => {
       const dom = document.scrollingElement
@@ -40,8 +32,6 @@ class Header extends React.Component {
          ? 'mobile-menu open'
          : 'mobile-menu'
       const navClass = this.state.menuOpen ? 'main-nav nav-open' : 'main-nav'
-
-      console.log(langs)
 
       return (
          <header className={`main-header${headerClass}`}>

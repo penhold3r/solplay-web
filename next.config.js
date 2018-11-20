@@ -7,8 +7,8 @@ module.exports = withSass(
       withFonts({
          exportPathMap: () => ({
             '/': { page: '/' },
-            '/es': { page: '/' },
-            '/en': { page: '/' }
+            '/es': { page: '/', query: { lang: 'es' } },
+            '/en': { page: '/', query: { lang: 'en' } }
          })
       })
    )

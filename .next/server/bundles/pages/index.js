@@ -854,7 +854,6 @@ var Footer = function Footer() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__social__ = __webpack_require__("./src/components/social.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_solplay_header_logo_svg__ = __webpack_require__("./static/solplay-header-logo.svg");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_solplay_header_logo_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__static_solplay_header_logo_svg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__about__ = __webpack_require__("./src/components/about.js");
 var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\header.js";
 
 
@@ -871,7 +870,6 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 
 
 
@@ -941,13 +939,6 @@ function (_React$Component) {
   }
 
   _createClass(Header, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {// this.handleScroll();
-      // window.addEventListener('scroll', this.handleScroll);
-      // this.handleResize();
-      // window.addEventListener('resize', this.handleResize);
-    }
-  }, {
     key: "render",
     value: function render() {
       var _this2 = this;
@@ -958,30 +949,29 @@ function (_React$Component) {
       var headerClass = this.state.headerWhite ? ' white' : '';
       var moblieClass = this.state.menuOpen ? 'mobile-menu open' : 'mobile-menu';
       var navClass = this.state.menuOpen ? 'main-nav nav-open' : 'main-nav';
-      console.log(langs);
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("header", {
         className: "main-header".concat(headerClass),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 37
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "header-container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 38
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "extra-nav",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 39
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "lang-links",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 40
         }
       }, langs.map(function (lang, key) {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
@@ -990,57 +980,57 @@ function (_React$Component) {
           href: "/lang=".concat(lang),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 52
+            lineNumber: 42
           }
         }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
           className: "lang-link",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 53
+            lineNumber: 43
           }
         }, lang));
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__social__["a" /* default */], {
         className: "header-social",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 47
         }
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
         className: "logo",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59
+          lineNumber: 49
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
         href: "/",
         prefetch: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 50
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 51
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
         src: __WEBPACK_IMPORTED_MODULE_4__static_solplay_header_logo_svg___default.a,
         alt: "Solplay",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 52
         }
       })))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("nav", {
         className: navClass,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 56
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul", {
         className: "menu",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 57
         }
       }, menu.map(function (item, key) {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li", {
@@ -1048,7 +1038,7 @@ function (_React$Component) {
           key: key,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 69
+            lineNumber: 59
           }
         }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
           className: _this2.state.activeLink == key ? 'active' : '',
@@ -1062,7 +1052,7 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 70
+            lineNumber: 60
           }
         }, item));
       }))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
@@ -1070,25 +1060,25 @@ function (_React$Component) {
         onClick: this.handleMenu,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 79
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "menu-bar",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90
+          lineNumber: 80
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "menu-bar",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91
+          lineNumber: 81
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "menu-bar",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
+          lineNumber: 82
         }
       }))));
     }
