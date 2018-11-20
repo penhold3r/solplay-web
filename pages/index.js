@@ -1,4 +1,5 @@
 import { withRouter } from 'next/router'
+import fetch from 'isomorphic-unfetch'
 import imagesLoaded from 'imagesloaded'
 
 import Layout from '../src/components/layout'
@@ -15,13 +16,13 @@ import Contact from '../src/components/contact'
 import dataEs from '../src/data/data-es'
 import dataEn from '../src/data/data-en'
 
+const data = {
+   es: dataEs,
+   en: dataEn
+}
+
 class Index extends React.Component {
    state = {
-      lang: 'es',
-      data: {
-         es: dataEs,
-         en: dataEn
-      },
       productModal: false,
       product: null,
       certificateModal: false,
@@ -29,12 +30,21 @@ class Index extends React.Component {
       sectionToScroll: ''
    }
 
+   static getInitialProps = async ({ query }) => {
+      const { lang = 'es' } = query
+      const content = data[lang]
+
+      return { lang, content }
+   }
+
    componentDidMount() {
-      const { lang } = this.props.router.query
+      //const { lang } = this.props.router.query
       const sections = Array.from(document.querySelectorAll('section.scroll'))
 
       this.waitForImages()
-      lang && this.setState({ sections, lang })
+      this.setState({ sections })
+
+      console.log('INIT PROPS: ', this.props)
    }
 
    componentDidUpdate() {
@@ -67,11 +77,11 @@ class Index extends React.Component {
    }
 
    render() {
-      const { lang, data } = this.state
+      const { lang, content } = this.props
       const {
          menu,
          main: { home, about, services, products, organic, location }
-      } = data[lang]
+      } = content
 
       return (
          <Layout

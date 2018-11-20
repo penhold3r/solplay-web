@@ -11,13 +11,11 @@ app.prepare()
 
       server.get('/:lang', (req, res) => {
          const actualPage = '/'
-         const queryParams = { lang: req.params.lang }
-         app.render(req, res, actualPage, queryParams)
+         const { lang } = req.params
+         app.render(req, res, actualPage, lang)
       })
 
-      server.get('*', (req, res) => {
-         return handle(req, res)
-      })
+      server.get('*', (req, res) => handle(req, res))
 
       server.listen(3000, err => {
          if (err) throw err
