@@ -1,34 +1,41 @@
+import slugify from 'slugify'
+
 import Social from './social'
 import submitForm from '../data/submit-form'
 
 class Contact extends React.Component {
-   state = {}
+   state = { spinner: false }
    handleChange = e => this.setState({ [e.target.name]: e.target.value })
-   handleSubmit = e => {
+   handleSubmit = (e, output) => {
       e.preventDefault()
       const submitSettings = {
          dest:
             'https://cors-anywhere.herokuapp.com/https://solplayargentina.com/contacto.php',
          fields: '.field',
-         successMsg: 'Mensaje enviado!',
-         errorMsg: 'Hubo un error, intente más tarde. :(',
+         successMsg: output.successMsg,
+         errorMsg: output.errorMsg,
          urlencoded: true
       }
       submitForm(e.target, submitSettings)
+      this.setState({ spinner: true })
    }
 
    render() {
-      const { lang } = this.props
-      console.log(lang)
+      const {
+         lang,
+         content: { title, fields, output }
+      } = this.props
+
       return (
          <section
-            id={lang == 'es' ? 'contacto' : 'contact'}
+            id={slugify(title, { lower: true })}
             className="contact scroll"
          >
-            <h1 className="main-title">
-               {lang == 'es' ? 'Contacto' : 'Contact'}
-            </h1>
-            <form className="contact-form" onSubmit={this.handleSubmit}>
+            <h1 className="main-title">{title}</h1>
+            <form
+               className="contact-form"
+               onSubmit={e => this.handleSubmit(e, output)}
+            >
                <div className="form-field">
                   <input
                      type="text"
@@ -38,7 +45,7 @@ class Contact extends React.Component {
                      placeholder=" "
                      onChange={this.handleChange}
                   />
-                  <label htmlFor="name">Nombre</label>
+                  <label htmlFor="name">{fields.name}</label>
                </div>
                <div className="form-field">
                   <input
@@ -49,7 +56,7 @@ class Contact extends React.Component {
                      placeholder=" "
                      onChange={this.handleChange}
                   />
-                  <label htmlFor="email">E-mail</label>
+                  <label htmlFor="email">{fields.email}</label>
                </div>
                <div className="form-field">
                   <textarea
@@ -59,9 +66,14 @@ class Contact extends React.Component {
                      placeholder=" "
                      onChange={this.handleChange}
                   />
-                  <label htmlFor="msg">Mensaje</label>
+                  <label htmlFor="msg">{fields.msg}</label>
                </div>
-               <input type="submit" className="button" value="Enviar" />
+               <input type="submit" className="button" value={fields.send} />
+               <div
+                  className={this.state.spinner ? 'sending visible' : 'sending'}
+               >
+                  <div className="spinner" />
+               </div>
             </form>
             <Social className="contact-social" />
             <div className="contact-details">

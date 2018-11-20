@@ -94,6 +94,22 @@ body {
    }
 }
 
+@keyframes fade {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
+
+@keyframes spin {
+   100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+   }
+}
+
 @import './header';
 @import './hero';
 @import './about';

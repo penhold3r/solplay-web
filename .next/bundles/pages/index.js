@@ -1749,7 +1749,8 @@ function (_React$Component) {
           services = _content$main.services,
           products = _content$main.products,
           organic = _content$main.organic,
-          location = _content$main.location;
+          location = _content$main.location,
+          contact = _content$main.contact;
       return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__src_components_layout__["a" /* default */], {
         menu: menu,
         langs: Object.keys(data),
@@ -1807,6 +1808,7 @@ function (_React$Component) {
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_14__src_components_contact__["a" /* default */], {
         lang: lang,
+        content: contact,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 104
@@ -2060,8 +2062,10 @@ var Certificate = function Certificate(_ref) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__social__ = __webpack_require__("./src/components/social.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_submit_form__ = __webpack_require__("./src/data/submit-form.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_slugify__ = __webpack_require__("./node_modules/slugify/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_slugify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_slugify__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__social__ = __webpack_require__("./src/components/social.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__data_submit_form__ = __webpack_require__("./src/data/submit-form.js");
 var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\contact.js";
 
 
@@ -2080,6 +2084,7 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 
 
 
@@ -2104,7 +2109,9 @@ function (_React$Component) {
       configurable: true,
       enumerable: true,
       writable: true,
-      value: {}
+      value: {
+        spinner: false
+      }
     }), Object.defineProperty(_assertThisInitialized(_this), "handleChange", {
       configurable: true,
       enumerable: true,
@@ -2116,16 +2123,20 @@ function (_React$Component) {
       configurable: true,
       enumerable: true,
       writable: true,
-      value: function value(e) {
+      value: function value(e, output) {
         e.preventDefault();
         var submitSettings = {
           dest: 'https://cors-anywhere.herokuapp.com/https://solplayargentina.com/contacto.php',
           fields: '.field',
-          successMsg: 'Mensaje enviado!',
-          errorMsg: 'Hubo un error, intente más tarde. :(',
+          successMsg: output.successMsg,
+          errorMsg: output.errorMsg,
           urlencoded: true
         };
-        Object(__WEBPACK_IMPORTED_MODULE_2__data_submit_form__["a" /* default */])(e.target, submitSettings);
+        Object(__WEBPACK_IMPORTED_MODULE_3__data_submit_form__["a" /* default */])(e.target, submitSettings);
+
+        _this.setState({
+          spinner: true
+        });
       }
     }), _temp));
   }
@@ -2133,33 +2144,43 @@ function (_React$Component) {
   _createClass(Contact, [{
     key: "render",
     value: function render() {
-      var lang = this.props.lang;
-      console.log(lang);
+      var _this2 = this;
+
+      var _props = this.props,
+          lang = _props.lang,
+          _props$content = _props.content,
+          title = _props$content.title,
+          fields = _props$content.fields,
+          output = _props$content.output;
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("section", {
-        id: lang == 'es' ? 'contacto' : 'contact',
+        id: __WEBPACK_IMPORTED_MODULE_1_slugify___default()(title, {
+          lower: true
+        }),
         className: "contact scroll",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 30
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
         className: "main-title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 34
         }
-      }, lang == 'es' ? 'Contacto' : 'Contact'), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form", {
+      }, title), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form", {
         className: "contact-form",
-        onSubmit: this.handleSubmit,
+        onSubmit: function onSubmit(e) {
+          return _this2.handleSubmit(e, output);
+        },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 35
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "form-field",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 39
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
         type: "text",
@@ -2170,19 +2191,19 @@ function (_React$Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 40
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label", {
         htmlFor: "name",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 48
         }
-      }, "Nombre")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+      }, fields.name)), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "form-field",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 50
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
         type: "email",
@@ -2193,19 +2214,19 @@ function (_React$Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 51
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label", {
         htmlFor: "email",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 59
         }
-      }, "E-mail")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+      }, fields.email)), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "form-field",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 61
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("textarea", {
         name: "msg",
@@ -2215,45 +2236,57 @@ function (_React$Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 62
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label", {
         htmlFor: "msg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 69
         }
-      }, "Mensaje")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
+      }, fields.msg)), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
         type: "submit",
         className: "button",
-        value: "Enviar",
+        value: fields.send,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 71
         }
-      })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__social__["a" /* default */], {
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        className: this.state.spinner ? 'sending visible' : 'sending',
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 72
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        className: "spinner",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 75
+        }
+      }))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__social__["a" /* default */], {
         className: "contact-social",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 78
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "contact-details",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 79
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "contact-details-inner",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 80
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "contact-link",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 81
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
         href: "https://goo.gl/maps/WrcgbGnL3V92",
@@ -2262,33 +2295,33 @@ function (_React$Component) {
         className: "icon-map-pin-streamline",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 82
         }
       }, "Ruta Provincial, 24, km, 16, 5535. - Mendoza Argentina.")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "contact-link",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 91
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
         href: "mailto:info@solplayargentina.com",
         className: "icon-envelope-o",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 92
         }
       }, "info@solplayargentina.com")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "contact-link",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 99
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
         href: "tel:+5492614549231",
         className: "icon-phone",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 100
         }
       }, "54 9 261 454 9231")))));
     }
@@ -3624,55 +3657,55 @@ var Social = function Social(_ref) {
         name: 'Red Garlic',
         image: __WEBPACK_IMPORTED_MODULE_4__static_productos_ajo_colorado_jpg___default.a,
         specs: {
-          Variedad: 'Morado y Colorado',
-          Region: 'Valle de Uco, zona norte y este de la provincia de Mendoza.',
-          Cosecha: 'Ocubre, Noviembre y Diciembre',
-          Formato: 'En cajas de 10 kilos, 30 libras, bolsas de polipropileno de 20 kilos y de 10 kilos, puede ser palletizado o a granel.<br/>Se comercializa en los calibres, 3 (30/35mm) 4 (36/45mm) 5 (46/55mm) 6 (56/65mm) 7 (66/75mm).'
+          Variety: 'Red and Purple',
+          Region: 'Valle de Uco, North and East Zone of Mendoza.',
+          Harvest: 'October, November and December',
+          Packaging: 'In boxes of 10 kilos, 30 libras, polypropylene bags of 20 kilos and 10 kilos, can be palletized or in bulk.<br/>It is sold in sizes, 3 (30 / 35mm) 4 (36 / 45mm) 5 (46 / 55mm) 6 (56 / 65mm) 7 (66 / 75mm).'
         }
       }, {
-        name: 'Ajo Blanco',
+        name: 'White Garlic',
         image: __WEBPACK_IMPORTED_MODULE_5__static_productos_ajo_blanco_jpg___default.a,
         specs: {
-          Variedad: 'Blanco',
-          Region: 'Valle de Uco, zona norte y este de la provincia de Mendoza.',
-          Cosecha: 'Ocubre, Noviembre y Diciembre',
-          Formato: 'En cajas de 10 kilos, 30 libras, bolsas de polipropileno de 20 kilos y de 10 kilos, puede ser palletizado o a granel.<br/>Se comercializa en los calibres, 3 (30/35mm) 4 (36/45mm) 5 (46/55mm) 6 (56/65mm) 7 (66/75mm).'
+          Variety: 'White',
+          Region: 'Valle de Uco, North and East Zone of Mendoza.',
+          Harvest: 'October, November y December',
+          Packaging: 'In boxes of 10 kilos, 30 libras, polypropylene bags of 20 kilos and 10 kilos, can be palletized or in bulk.<br/>It is sold in sizes, 3 (30 / 35mm) 4 (36 / 45mm) 5 (46 / 55mm) 6 (56 / 65mm) 7 (66 / 75mm).'
         }
       }, {
-        name: 'Ciruela',
+        name: 'Plumbs',
         image: __WEBPACK_IMPORTED_MODULE_6__static_productos_ciruelas_secas_jpg___default.a,
         specs: {
-          Variedad: 'D’agen',
-          Region: 'Este y Sur de la provincia de Mendoza.',
-          Cosecha: 'Febrero y Marzo',
-          Formato: 'En cajas de carton de 10 kilos, bolsas de polipropileno blancas en 25 kilos tipo secado Americano natural, calibres 30/40, 40/50, 50/60, 60/70, 70/80, 80/90, 90/100, 100/110, 110/120.'
+          Variety: 'D’agen',
+          Region: 'East and south of Mendoza.',
+          Harvest: 'February and March.',
+          Packaging: 'In boxes of 10 kilos, white polypropylene bags 25 kilos with natural American drying type, sizes 30/40, 40/50, 50/60, 60/70, 70/80, 80/90, 90/100, 100 / 110, 110/120.'
         }
       }, {
-        name: 'Nuez',
+        name: 'Nuts',
         image: __WEBPACK_IMPORTED_MODULE_7__static_productos_nueces_chandler_jpg___default.a,
         specs: {
-          Variedad: 'Chandler, Ser, Hartley, Howard y Vina',
+          Variety: 'Chandler, Ser, Hartley, Howard and Vina',
           Region: 'Valle de Uco, Tupungato.',
-          Cosecha: 'Marzo y Abril',
-          Formato: 'Enteras tipo natural en bolsas de polipropileno blanca de 25 kilos, calibres 3/32, 32/34, 34/36 y 36+.<br/>Peladas en cajas de carton de 10 kilos envasadas al vacio en 2 unidades de 5 kilos cada una, calidad extra light, light, dorada.'
+          Harvest: 'March and April',
+          Packaging: 'Natural nuts in white polypropylene bags of 25 kilos, sizes 3/32, 32/34, 34/36 and 36+.<br/>Peeled nuts in boxes of 10 kilos vacuum packed in 2 units of 5 kilos each, extra light quality, light, golden.'
         }
       }, {
         name: 'Zapallo Butternut',
         image: __WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_butternut_jpg___default.a,
         specs: {
-          Variedad: 'Butternut',
-          Region: 'Zona norte de la provincia de Mendoza.',
-          Cosecha: 'Enero, Febrero y Marzo',
-          Formato: 'En cajas de carton y en bines de madera, en calibres S, M, L y XL.'
+          Variety: 'Butternut',
+          Region: 'North zone of Mendoza.',
+          Harvest: 'January, February and March',
+          Packaging: 'In boxes and wooden bins, in sizes S, M, L and XL.'
         }
       }, {
         name: 'Zapallo Muscat di Provenza',
         image: __WEBPACK_IMPORTED_MODULE_9__static_productos_zapallo_muscat_jpg___default.a,
         specs: {
-          Variedad: 'Muscat di Provenza',
-          Region: 'Zona norte de la provincia de Mendoza.',
-          Cosecha: 'Enero, Febrero y Marzo',
-          Formato: 'En bines de madera con rangos de kilos que van desde los 5 kilos por unidad hasta los 15 kilos por unidad.'
+          Variety: 'Muscat di Provenza',
+          Region: 'North zone of Mendoza.',
+          Harvest: 'January, February and March',
+          Packaging: 'In wooden bins with ranges of kilos from 5 kilos per unit to 15 kilos per unit.'
         }
       }]
     },
@@ -3688,6 +3721,19 @@ var Social = function Social(_ref) {
       content: {
         intro: 'We are located in the province of Mendoza, Argentine Republic.',
         text: '<strong>San Rafael</strong> is in the southern part of <strong>Mendoza</strong> near our Argentine Patagonia, this area is optimal to produce organic and conventional products due to its climate and the health of its water and soil.</br><strong>Guaymallén</strong> is located to the north of the province with productions of garlic´s scoop and fruits.'
+      }
+    },
+    contact: {
+      title: 'Contact',
+      fields: {
+        name: 'Name',
+        email: 'Email',
+        msg: 'Message',
+        send: 'Submit'
+      },
+      output: {
+        successMsg: 'Menssage Sent!',
+        errorMsg: 'Something went wrong, try again later. :('
       }
     }
   }
@@ -3832,6 +3878,19 @@ var Social = function Social(_ref) {
         intro: 'Estamos situados en la provincia de Mendoza, República Argentina.',
         text: '<strong>San Rafael</strong> está situada en la parte sur de <strong>Mendoza</strong> cerca de nuestra <strong>Patagonia Argentina,</strong> esta zona es óptima para la producción de productos orgánicos y convencionales debidos a su clima y a la sanidad de su agua y suelos.<br/><strong>Guaymallén</strong> se encuentra al norte de la provincia con producciones de primicia de ajos y frutas.'
       }
+    },
+    contact: {
+      title: 'Contacto',
+      fields: {
+        name: 'Nombre',
+        email: 'Email',
+        msg: 'Mensaje',
+        send: 'Enviar'
+      },
+      output: {
+        successMsg: 'Mensaje enviado!',
+        errorMsg: 'Hubo un error, intente más tarde. :('
+      }
     }
   }
 });
@@ -3932,6 +3991,7 @@ var submitFormData = function submitFormData(form, settings) {
       msg.querySelector('p').innerHTML = !settings.successMsg ? 'ok' : settings.successMsg;
       msg.querySelector('p').className = 'msg-ok';
       msg.classList.add('visible');
+      form.classList.add('success');
       form.reset(); //
 
       console.log('successful', opt);
@@ -3939,6 +3999,7 @@ var submitFormData = function submitFormData(form, settings) {
       msg.querySelector('p').innerHTML = !settings.errorMsg ? 'error' : settings.errorMsg;
       msg.querySelector('p').className = 'msg-error';
       msg.classList.add('visible');
+      form.classList.add('error');
       form.reset(); //
 
       console.warn('failed');

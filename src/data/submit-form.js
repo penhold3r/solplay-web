@@ -72,6 +72,7 @@ const submitFormData = (form, settings) => {
                : settings.successMsg
             msg.querySelector('p').className = 'msg-ok'
             msg.classList.add('visible')
+            form.classList.add('success')
             form.reset()
             //
             console.log('successful', opt)
@@ -81,6 +82,7 @@ const submitFormData = (form, settings) => {
                : settings.errorMsg
             msg.querySelector('p').className = 'msg-error'
             msg.classList.add('visible')
+            form.classList.add('error')
             form.reset()
             //
             console.warn('failed')

@@ -126,6 +126,19 @@ export default {
             text:
                '<strong>San Rafael</strong> está situada en la parte sur de <strong>Mendoza</strong> cerca de nuestra <strong>Patagonia Argentina,</strong> esta zona es óptima para la producción de productos orgánicos y convencionales debidos a su clima y a la sanidad de su agua y suelos.<br/><strong>Guaymallén</strong> se encuentra al norte de la provincia con producciones de primicia de ajos y frutas.'
          }
+      },
+      contact: {
+         title: 'Contacto',
+         fields: {
+            name: 'Nombre',
+            email: 'Email',
+            msg: 'Mensaje',
+            send: 'Enviar'
+         },
+         output: {
+            successMsg: 'Mensaje enviado!',
+            errorMsg: 'Hubo un error, intente más tarde. :('
+         }
       }
    }
 }

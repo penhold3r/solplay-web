@@ -595,6 +595,17 @@ body {
       background: #E89D0B;
       color: #fff; }
 
+@keyframes fade {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
 .main-header {
   background: rgba(255, 255, 255, 0.8);
   height: 100px;
@@ -1068,7 +1079,10 @@ body {
   grid-template-rows: 1fr 1fr 2fr 1fr;
   margin: 0 auto;
   max-width: 600px;
-  padding: 15px; }
+  padding: 15px;
+  position: relative; }
+  .contact .contact-form.success .sending {
+    display: none; }
   .contact .contact-form .form-field {
     position: relative;
     overflow: hidden; }
@@ -1109,6 +1123,45 @@ body {
     .contact .contact-form .button:hover {
       background: #fff;
       color: #00A7E1; }
+  .contact .contact-form .sending {
+    background: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    width: 100%; }
+    .contact .contact-form .sending.visible {
+      animation: fade linear 0.5s;
+      visibility: visible; }
+    .contact .contact-form .sending .spinner {
+      animation: spin 0.6s linear infinite;
+      border-bottom: 3px solid #00A7E1;
+      border-left: 3px solid #00A7E1;
+      border-right: 0px solid transparent;
+      border-top: 3px solid transparent;
+      border-radius: 50%;
+      height: 50px;
+      left: calc(50% - 25px);
+      position: absolute;
+      top: calc(50% - 25px);
+      width: 50px; }
+  .contact .contact-form .output-msg {
+    animation: fade linear 0.5s;
+    background: #fff;
+    display: flex;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%; }
+    .contact .contact-form .output-msg p {
+      font-weight: bold;
+      margin: auto; }
+      .contact .contact-form .output-msg p.msg-ok {
+        color: #419634; }
+      .contact .contact-form .output-msg p.msg-error {
+        color: tomato; }
 
 .contact .contact-social {
   display: flex;

@@ -80,7 +80,7 @@ class Index extends React.Component {
       const { lang, content } = this.props
       const {
          menu,
-         main: { home, about, services, products, organic, location }
+         main: { home, about, services, products, organic, location, contact }
       } = content
 
       return (
@@ -101,7 +101,7 @@ class Index extends React.Component {
             <Products content={products} openModal={this.handleModal} />
             <Organic content={organic} openModal={this.handleModal} />
             <LocationSection content={location} />
-            <Contact lang={lang} />
+            <Contact lang={lang} content={contact} />
             <Certificate
                open={this.state.certificateModal}
                closeModal={this.handleModal}

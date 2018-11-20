@@ -45,68 +45,66 @@ export default {
                name: 'Red Garlic',
                image: ajoColorado,
                specs: {
-                  Variedad: 'Morado y Colorado',
-                  Region:
-                     'Valle de Uco, zona norte y este de la provincia de Mendoza.',
-                  Cosecha: 'Ocubre, Noviembre y Diciembre',
-                  Formato:
-                     'En cajas de 10 kilos, 30 libras, bolsas de polipropileno de 20 kilos y de 10 kilos, puede ser palletizado o a granel.<br/>Se comercializa en los calibres, 3 (30/35mm) 4 (36/45mm) 5 (46/55mm) 6 (56/65mm) 7 (66/75mm).'
+                  Variety: 'Red and Purple',
+                  Region: 'Valle de Uco, North and East Zone of Mendoza.',
+                  Harvest: 'October, November and December',
+                  Packaging:
+                     'In boxes of 10 kilos, 30 libras, polypropylene bags of 20 kilos and 10 kilos, can be palletized or in bulk.<br/>It is sold in sizes, 3 (30 / 35mm) 4 (36 / 45mm) 5 (46 / 55mm) 6 (56 / 65mm) 7 (66 / 75mm).'
                }
             },
             {
-               name: 'Ajo Blanco',
+               name: 'White Garlic',
                image: ajoBlanco,
                specs: {
-                  Variedad: 'Blanco',
-                  Region:
-                     'Valle de Uco, zona norte y este de la provincia de Mendoza.',
-                  Cosecha: 'Ocubre, Noviembre y Diciembre',
-                  Formato:
-                     'En cajas de 10 kilos, 30 libras, bolsas de polipropileno de 20 kilos y de 10 kilos, puede ser palletizado o a granel.<br/>Se comercializa en los calibres, 3 (30/35mm) 4 (36/45mm) 5 (46/55mm) 6 (56/65mm) 7 (66/75mm).'
+                  Variety: 'White',
+                  Region: 'Valle de Uco, North and East Zone of Mendoza.',
+                  Harvest: 'October, November y December',
+                  Packaging:
+                     'In boxes of 10 kilos, 30 libras, polypropylene bags of 20 kilos and 10 kilos, can be palletized or in bulk.<br/>It is sold in sizes, 3 (30 / 35mm) 4 (36 / 45mm) 5 (46 / 55mm) 6 (56 / 65mm) 7 (66 / 75mm).'
                }
             },
             {
-               name: 'Ciruela',
+               name: 'Plumbs',
                image: ciruelas,
                specs: {
-                  Variedad: 'D’agen',
-                  Region: 'Este y Sur de la provincia de Mendoza.',
-                  Cosecha: 'Febrero y Marzo',
-                  Formato:
-                     'En cajas de carton de 10 kilos, bolsas de polipropileno blancas en 25 kilos tipo secado Americano natural, calibres 30/40, 40/50, 50/60, 60/70, 70/80, 80/90, 90/100, 100/110, 110/120.'
+                  Variety: 'D’agen',
+                  Region: 'East and south of Mendoza.',
+                  Harvest: 'February and March.',
+                  Packaging:
+                     'In boxes of 10 kilos, white polypropylene bags 25 kilos with natural American drying type, sizes 30/40, 40/50, 50/60, 60/70, 70/80, 80/90, 90/100, 100 / 110, 110/120.'
                }
             },
             {
-               name: 'Nuez',
+               name: 'Nuts',
                image: nueces,
                specs: {
-                  Variedad: 'Chandler, Ser, Hartley, Howard y Vina',
+                  Variety: 'Chandler, Ser, Hartley, Howard and Vina',
                   Region: 'Valle de Uco, Tupungato.',
-                  Cosecha: 'Marzo y Abril',
-                  Formato:
-                     'Enteras tipo natural en bolsas de polipropileno blanca de 25 kilos, calibres 3/32, 32/34, 34/36 y 36+.<br/>Peladas en cajas de carton de 10 kilos envasadas al vacio en 2 unidades de 5 kilos cada una, calidad extra light, light, dorada.'
+                  Harvest: 'March and April',
+                  Packaging:
+                     'Natural nuts in white polypropylene bags of 25 kilos, sizes 3/32, 32/34, 34/36 and 36+.<br/>Peeled nuts in boxes of 10 kilos vacuum packed in 2 units of 5 kilos each, extra light quality, light, golden.'
                }
             },
             {
                name: 'Zapallo Butternut',
                image: zapalloButter,
                specs: {
-                  Variedad: 'Butternut',
-                  Region: 'Zona norte de la provincia de Mendoza.',
-                  Cosecha: 'Enero, Febrero y Marzo',
-                  Formato:
-                     'En cajas de carton y en bines de madera, en calibres S, M, L y XL.'
+                  Variety: 'Butternut',
+                  Region: 'North zone of Mendoza.',
+                  Harvest: 'January, February and March',
+                  Packaging:
+                     'In boxes and wooden bins, in sizes S, M, L and XL.'
                }
             },
             {
                name: 'Zapallo Muscat di Provenza',
                image: zapalloMusc,
                specs: {
-                  Variedad: 'Muscat di Provenza',
-                  Region: 'Zona norte de la provincia de Mendoza.',
-                  Cosecha: 'Enero, Febrero y Marzo',
-                  Formato:
-                     'En bines de madera con rangos de kilos que van desde los 5 kilos por unidad hasta los 15 kilos por unidad.'
+                  Variety: 'Muscat di Provenza',
+                  Region: 'North zone of Mendoza.',
+                  Harvest: 'January, February and March',
+                  Packaging:
+                     'In wooden bins with ranges of kilos from 5 kilos per unit to 15 kilos per unit.'
                }
             }
          ]
@@ -126,6 +124,19 @@ export default {
                'We are located in the province of Mendoza, Argentine Republic.',
             text:
                '<strong>San Rafael</strong> is in the southern part of <strong>Mendoza</strong> near our Argentine Patagonia, this area is optimal to produce organic and conventional products due to its climate and the health of its water and soil.</br><strong>Guaymallén</strong> is located to the north of the province with productions of garlic´s scoop and fruits.'
+         }
+      },
+      contact: {
+         title: 'Contact',
+         fields: {
+            name: 'Name',
+            email: 'Email',
+            msg: 'Message',
+            send: 'Submit'
+         },
+         output: {
+            successMsg: 'Menssage Sent!',
+            errorMsg: 'Something went wrong, try again later. :('
          }
       }
    }
