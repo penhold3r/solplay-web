@@ -23,10 +23,11 @@ export default {
 		about: {
 			title: 'О нас',
 			content:
-				'<strong>Solplay SA</strong> es una empresa Argentina, dedicada a la exportación de productos agroalimentarios de calidad. Estamos en el mercado internacional hace más de 2 décadas, tenemos experiencia en los productos que procesamos y exportamos a nuestros clientes.',
+				'<strong>Solplay SA</strong> аргентинская компания, специализирующаяся на экспорте качественных агропродовольственных товаров. Мы находимся на международном рынке более двух десятилетий, имея большой опыт в продуктах, которые мы обрабатываем и экспортируем нашим клиентам.',
 			countries: {
-				intro: 'Contamos con clientes en distintos Países tales como:',
-				list: 'EEUU, Unión Europea, Taiwán, Haití, Brasil, Chile, Bolivia'
+				intro: 'Мы достигли таких стран, как:',
+				list:
+					'Соединенные Штаты, страны Европейского союза, Тайвань, Гаити, Бразилия, Чили и Боливия'
 			}
 		},
 		services: {

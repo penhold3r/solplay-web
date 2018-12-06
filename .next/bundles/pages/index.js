@@ -1835,14 +1835,15 @@ Object.defineProperty(Index, "getInitialProps", {
     var _value = _asyncToGenerator(
     /*#__PURE__*/
     __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default.a.mark(function _callee(_ref2) {
-      var query, lang, content;
+      var query, _query$lang, lang, content;
+
       return __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
               query = _ref2.query;
-              lang = query.lang;
-              content = lang ? data[lang] : data.ru;
+              _query$lang = query.lang, lang = _query$lang === void 0 ? 'en' : _query$lang;
+              content = data[lang];
               return _context.abrupt("return", {
                 lang: lang,
                 content: content
@@ -3945,10 +3946,10 @@ var Social = function Social(_ref) {
     },
     about: {
       title: 'О нас',
-      content: '<strong>Solplay SA</strong> es una empresa Argentina, dedicada a la exportación de productos agroalimentarios de calidad. Estamos en el mercado internacional hace más de 2 décadas, tenemos experiencia en los productos que procesamos y exportamos a nuestros clientes.',
+      content: '<strong>Solplay SA</strong> аргентинская компания, специализирующаяся на экспорте качественных агропродовольственных товаров. Мы находимся на международном рынке более двух десятилетий, имея большой опыт в продуктах, которые мы обрабатываем и экспортируем нашим клиентам.',
       countries: {
-        intro: 'Contamos con clientes en distintos Países tales como:',
-        list: 'EEUU, Unión Europea, Taiwán, Haití, Brasil, Chile, Bolivia'
+        intro: 'Мы достигли таких стран, как:',
+        list: 'Соединенные Штаты, страны Европейского союза, Тайвань, Гаити, Бразилия, Чили и Боливия'
       }
     },
     services: {

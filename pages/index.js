@@ -33,8 +33,8 @@ class Index extends React.Component {
 	}
 
 	static getInitialProps = async ({ query }) => {
-		const { lang } = query
-		const content = lang ? data[lang] : data.ru
+		const { lang = 'en' } = query
+		const content = data[lang]
 
 		return { lang, content }
 	}
