@@ -45,7 +45,7 @@ class Index extends React.Component {
 		this.waitForImages()
 		this.setState({ sections })
 
-		//console.log('INIT PROPS: ', this.props)
+		console.log('INIT PROPS: ', this.props)
 	}
 
 	componentDidUpdate() {

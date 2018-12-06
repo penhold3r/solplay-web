@@ -31,117 +31,117 @@ export default {
 			}
 		},
 		services: {
-			title: 'Servicios',
+			title: 'Сервисы',
 			icons: [
-				{ text: 'Control y embalaje', icon: control },
-				{ text: 'Eficiencia de Tiempos', icon: eficiencia },
+				{ text: 'Контроль и упаковка', icon: control },
+				{ text: 'Эффективность времени', icon: eficiencia },
 				{ text: 'Seguimiento de Envío', icon: seguimiento },
 				{ text: 'Entrega asegurada', icon: entrega }
 			]
 		},
 		products: {
-			title: 'Productos',
+			title: 'Товары',
 			products: [
 				{
-					name: 'Ajo Colorado',
+					name: 'Красный Чеснок',
 					image: ajoColorado,
 					specs: {
-						Variedad: 'Morado y Colorado',
-						Region:
-							'Valle de Uco, zona norte y este de la provincia de Mendoza.',
-						Cosecha: 'Ocubre, Noviembre y Diciembre',
-						Formato:
-							'En cajas de 10 kilos, 30 libras, bolsas de polipropileno de 20 kilos y de 10 kilos, puede ser palletizado o a granel.<br/>Se comercializa en los calibres, 3 (30/35mm) 4 (36/45mm) 5 (46/55mm) 6 (56/65mm) 7 (66/75mm).'
+						Разнообразие: 'Красный - фиолетовый',
+						'Область, Край':
+							'Валье-де-Уко, Северная и Восточная зона Мендосы.',
+						Урожай: 'Октябрь, Ноябрь и Декабрь',
+						Упаковки:
+							'В коробках по 10 килограммов, 30 либрах, полипропиленовых мешках по 20 килограммов и 10 килограммов, могут быть на паллетах или навалом.<br/>Он продается в размерах, 3 (30/35 мм) 4 (36/45 мм) 5 (46/55 мм) 6 (56/65 мм) 7 (66/75 мм).'
 					}
 				},
 				{
-					name: 'Ajo Blanco',
+					name: 'Белый Гарлик',
 					image: ajoBlanco,
 					specs: {
-						Variedad: 'Blanco',
-						Region:
-							'Valle de Uco, zona norte y este de la provincia de Mendoza.',
-						Cosecha: 'Ocubre, Noviembre y Diciembre',
-						Formato:
-							'En cajas de 10 kilos, 30 libras, bolsas de polipropileno de 20 kilos y de 10 kilos, puede ser palletizado o a granel.<br/>Se comercializa en los calibres, 3 (30/35mm) 4 (36/45mm) 5 (46/55mm) 6 (56/65mm) 7 (66/75mm).'
+						Разнообразие: 'белый',
+						'Область, Край':
+							'Валье-де-Уко, Северная и Восточная зона Мендосы.',
+						Урожай: 'Октябрь, ноябрь и декабрь',
+						Упаковки:
+							'В коробках по 10 килограммов, 30 либрах, полипропиленовых мешках по 20 килограммов и 10 килограммов, могут быть на паллетах или навалом.<br/>Он продается в размерах, 3 (30/35 мм) 4 (36/45 мм) 5 (46/55 мм) 6 (56/65 мм) 7 (66/75 мм).'
 					}
 				},
 				{
-					name: 'Ciruela',
+					name: 'Слив',
 					image: ciruelas,
 					specs: {
-						Variedad: 'D’agen',
-						Region: 'Este y Sur de la provincia de Mendoza.',
-						Cosecha: 'Febrero y Marzo',
-						Formato:
-							'En cajas de carton de 10 kilos, bolsas de polipropileno blancas en 25 kilos tipo secado Americano natural, calibres 30/40, 40/50, 50/60, 60/70, 70/80, 80/90, 90/100, 100/110, 110/120.'
+						Разнообразие: 'D’agen',
+						'Область, Край': 'Восток и юг Мендосы.',
+						Урожай: 'Февраль и март',
+						Упаковки:
+							'В коробках по 10 кг белые полипропиленовые мешки 25 кг с натуральным американским сухим типом, размеры 30/40, 40/50, 50/60, 60/70, 70/80, 80/90, 90/100, 100/110, 110/120.'
 					}
 				},
 				{
-					name: 'Nuez',
+					name: 'Орешки',
 					image: nueces,
 					specs: {
-						Variedad: 'Chandler, Ser, Hartley, Howard y Vina',
-						Region: 'Valle de Uco, Tupungato.',
-						Cosecha: 'Marzo y Abril',
-						Formato:
-							'Enteras tipo natural en bolsas de polipropileno blanca de 25 kilos, calibres 3/32, 32/34, 34/36 y 36+.<br/>Peladas en cajas de carton de 10 kilos envasadas al vacio en 2 unidades de 5 kilos cada una, calidad extra light, light, dorada.'
+						Разнообразие: 'Чандлер, Сер, Хартли, Говард и Вина',
+						'Область, Край': 'Валье-де-Уко, Тупунгато.',
+						Урожай: 'Март и апрель',
+						Упаковки:
+							'Натуральные орехи в белых полипропиленовых мешках по 25 кг, размеры 3/32, 32/34, 34/36 и 36+.<br/>Очищенные гайки в коробках по 10 кг, упакованные в 2 единицы по 5 килограммов каждый, дополнительное качество света, светлое, золотистое.'
 					}
 				},
 				{
-					name: 'Zapallo Butternut',
+					name: 'Тыквенный Butternut',
 					image: zapalloButter,
 					specs: {
-						Variedad: 'Butternut',
-						Region: 'Zona norte de la provincia de Mendoza.',
-						Cosecha: 'Enero, Febrero y Marzo',
-						Formato:
-							'En cajas de carton y en bines de madera, en calibres S, M, L y XL.'
+						Разнообразие: 'Butternut',
+						'Область, Край': 'Северная зона Мендосы.',
+						Урожай: 'Январь, февраль и март',
+						Упаковки:
+							'В коробках и деревянных бункерах, размерах S, M, L и XL.'
 					}
 				},
 				{
-					name: 'Zapallo Muscat di Provenza',
+					name: 'Тыква Мускат ди Провенца',
 					image: zapalloMusc,
 					specs: {
-						Variedad: 'Muscat di Provenza',
-						Region: 'Zona norte de la provincia de Mendoza.',
-						Cosecha: 'Enero, Febrero y Marzo',
-						Formato:
-							'En bines de madera con rangos de kilos que van desde los 5 kilos por unidad hasta los 15 kilos por unidad.'
+						Разнообразие: 'Мускат ди Провенца',
+						'Область, Край': 'Нот-зона Мендосы.',
+						Урожай: 'Январь, февраль и март',
+						Упаковки:
+							'В деревянных бункерах с диапазонами килограммов от 5 кг на единицу до 15 кг на единицу.'
 					}
 				}
 			]
 		},
 		organic: {
-			title: 'Orgánicos',
+			title: 'Органический',
 			content: {
-				title: 'Productos',
+				title: 'Товары',
 				text:
-					'Buscamos ofrecer una alimentación natural y saludablepor lo que trabajamos con productos orgánicos como ajos y ciruelas deshidratadas entre otros.'
+					'Мы стремимся предложить натуральное и здоровое питание, поэтому мы работаем с такими органическими продуктами, как чеснок и сушеные сливы.'
 			},
-			modal: 'Certificaciones'
+			modal: 'Сертификаты'
 		},
 		location: {
-			title: 'Ubicación',
+			title: 'Место Нахождения',
 			content: {
 				intro:
-					'Estamos situados en la provincia de Mendoza, República Argentina.',
+					'Мы расположены в провинции Мендоза, Аргентинской Республики.',
 				text:
-					'<strong>San Rafael</strong> está situada en la parte sur de <strong>Mendoza</strong> cerca de nuestra <strong>Patagonia Argentina,</strong> esta zona es óptima para la producción de productos orgánicos y convencionales debidos a su clima y a la sanidad de su agua y suelos.<br/><strong>Guaymallén</strong> se encuentra al norte de la provincia con producciones de primicia de ajos y frutas.'
+					'<strong>San Rafael</strong> находится в южной части Мендосы недалеко от нашей аргентинской Патагонии, этот район оптимален для производства органических и традиционных продуктов из-за его климата и здоровья его воды и почвы.<br/><strong>Guaymallén</strong> расположен к северу от провинции с производствами совок и фруктов чеснока.'
 			},
-			map: 'Ver mapa'
+			map: 'Видеть На Карте'
 		},
 		contact: {
-			title: 'Contacto',
+			title: 'контакт',
 			fields: {
-				name: 'Nombre',
-				email: 'Email',
-				msg: 'Mensaje',
-				send: 'Enviar'
+				name: 'Имя',
+				email: 'электронная почта',
+				msg: 'Сообщение',
+				send: 'Отправить сообщение'
 			},
 			output: {
-				successMsg: 'Mensaje enviado!',
-				errorMsg: 'Hubo un error, intente más tarde. :('
+				successMsg: 'Сообщение отправлено!',
+				errorMsg: 'Произошла ошибка, повторите попытку позже.'
 			}
 		}
 	}
