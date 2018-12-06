@@ -3,13 +3,14 @@ const withImages = require('next-images')
 const withFonts = require('next-fonts')
 //
 module.exports = withSass(
-   withImages(
-      withFonts({
-         exportPathMap: () => ({
-            '/': { page: '/', query: { lang: 'es' } },
-            '/es': { page: '/', query: { lang: 'es' } },
-            '/en': { page: '/', query: { lang: 'en' } }
-         })
-      })
-   )
+	withImages(
+		withFonts({
+			exportPathMap: () => ({
+				'/': { page: '/', query: { lang: 'es' } },
+				'/es': { page: '/', query: { lang: 'es' } },
+				'/en': { page: '/', query: { lang: 'en' } },
+				'/pt': { page: '/', query: { lang: 'pt' } }
+			})
+		})
+	)
 )

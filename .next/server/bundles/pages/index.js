@@ -99,6 +99,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__src_components_contact__ = __webpack_require__("./src/components/contact.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__src_data_data_es__ = __webpack_require__("./src/data/data-es.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__src_data_data_en__ = __webpack_require__("./src/data/data-en.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__src_data_data_ru__ = __webpack_require__("./src/data/data-ru.js");
 
 var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\pages\\index.js";
 
@@ -136,9 +137,11 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 
 
 
+
 var data = {
   es: __WEBPACK_IMPORTED_MODULE_15__src_data_data_es__["a" /* default */],
-  en: __WEBPACK_IMPORTED_MODULE_16__src_data_data_en__["a" /* default */]
+  en: __WEBPACK_IMPORTED_MODULE_16__src_data_data_en__["a" /* default */],
+  ru: __WEBPACK_IMPORTED_MODULE_17__src_data_data_ru__["a" /* default */]
 };
 
 var Index =
@@ -229,13 +232,11 @@ function (_React$Component) {
   _createClass(Index, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      //const { lang } = this.props.router.query
       var sections = Array.from(document.querySelectorAll('section.scroll'));
       this.waitForImages();
       this.setState({
         sections: sections
-      });
-      console.log('INIT PROPS: ', this.props);
+      }); //console.log('INIT PROPS: ', this.props)
     }
   }, {
     key: "componentDidUpdate",
@@ -272,7 +273,7 @@ function (_React$Component) {
         menuClick: this.handleScroll,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 88
         }
       }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__src_components_product_modal__["a" /* default */], {
         open: this.state.productModal,
@@ -280,58 +281,58 @@ function (_React$Component) {
         closeModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 95
+          lineNumber: 94
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__src_components_hero__["a" /* default */], {
         content: home,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
+          lineNumber: 99
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__src_components_about__["a" /* default */], {
         content: about,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 100
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__src_components_services__["a" /* default */], {
         content: services,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 101
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__src_components_products__["a" /* default */], {
         content: products,
         openModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 102
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_11__src_components_organic__["a" /* default */], {
         content: organic,
         openModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 103
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_13__src_components_location__["a" /* default */], {
         content: location,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 104
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_14__src_components_contact__["a" /* default */], {
         content: contact,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 106
+          lineNumber: 105
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_12__src_components_certificate__["a" /* default */], {
         open: this.state.certificateModal,
         closeModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 106
         }
       }));
     }
@@ -348,22 +349,20 @@ Object.defineProperty(Index, "getInitialProps", {
     var _value = _asyncToGenerator(
     /*#__PURE__*/
     __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default.a.mark(function _callee(_ref2) {
-      var query, _query$lang, lang, content;
-
+      var query, lang, content;
       return __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
               query = _ref2.query;
-              _query$lang = query.lang, lang = _query$lang === void 0 ? 'es' : _query$lang;
-              content = data[lang];
-              console.log(lang, content);
+              lang = query.lang;
+              content = lang ? data[lang] : data.ru;
               return _context.abrupt("return", {
                 lang: lang,
                 content: content
               });
 
-            case 5:
+            case 4:
             case "end":
               return _context.stop();
           }
@@ -932,14 +931,6 @@ function (_React$Component) {
         activeLink: 0,
         menuOpen: false
       }
-    }), Object.defineProperty(_assertThisInitialized(_this), "handleScroll", {
-      configurable: true,
-      enumerable: true,
-      writable: true,
-      value: function value() {
-        var dom = document.scrollingElement;
-        var headerWhite = Boolean(dom.scrollTop > 250); //this.setState({ headerWhite });
-      }
     }), Object.defineProperty(_assertThisInitialized(_this), "handleMenu", {
       configurable: true,
       enumerable: true,
@@ -984,25 +975,25 @@ function (_React$Component) {
         className: "main-header".concat(headerClass),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 31
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "header-container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 32
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "extra-nav",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 33
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "lang-links",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 34
         }
       }, langs.map(function (lang, key) {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
@@ -1011,57 +1002,57 @@ function (_React$Component) {
           href: "/lang=".concat(lang),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 42
+            lineNumber: 36
           }
         }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
           className: "lang-link",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 43
+            lineNumber: 37
           }
         }, lang));
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__social__["a" /* default */], {
         className: "header-social",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 41
         }
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
         className: "logo",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 43
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
         href: "/",
         prefetch: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 44
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 45
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
         src: __WEBPACK_IMPORTED_MODULE_4__static_solplay_header_logo_svg___default.a,
         alt: "Solplay",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 46
         }
       })))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("nav", {
         className: navClass,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 50
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul", {
         className: "menu",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 51
         }
       }, menu.map(function (item, key) {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li", {
@@ -1069,7 +1060,7 @@ function (_React$Component) {
           key: key,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 59
+            lineNumber: 53
           }
         }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
           className: _this2.state.activeLink == key ? 'active' : '',
@@ -1083,7 +1074,7 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 60
+            lineNumber: 54
           }
         }, item));
       }))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
@@ -1091,25 +1082,25 @@ function (_React$Component) {
         onClick: this.handleMenu,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 73
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "menu-bar",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 74
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "menu-bar",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 75
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "menu-bar",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82
+          lineNumber: 76
         }
       }))));
     }
@@ -2404,6 +2395,165 @@ var Social = function Social(_ref) {
 
 /***/ }),
 
+/***/ "./src/data/data-ru.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__static_solplay_control_y_embalaje_svg__ = __webpack_require__("./static/solplay-control_y_embalaje.svg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__static_solplay_control_y_embalaje_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__static_solplay_control_y_embalaje_svg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_eficiencia_svg__ = __webpack_require__("./static/solplay-eficiencia.svg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_eficiencia_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__static_solplay_eficiencia_svg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_solplay_seguimiento_svg__ = __webpack_require__("./static/solplay-seguimiento.svg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_solplay_seguimiento_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__static_solplay_seguimiento_svg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_solplay_entrega_svg__ = __webpack_require__("./static/solplay-entrega.svg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_solplay_entrega_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__static_solplay_entrega_svg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_productos_ajo_colorado_jpg__ = __webpack_require__("./static/productos/ajo-colorado.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_productos_ajo_colorado_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__static_productos_ajo_colorado_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__static_productos_ajo_blanco_jpg__ = __webpack_require__("./static/productos/ajo-blanco.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__static_productos_ajo_blanco_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__static_productos_ajo_blanco_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__static_productos_ciruelas_secas_jpg__ = __webpack_require__("./static/productos/ciruelas-secas.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__static_productos_ciruelas_secas_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__static_productos_ciruelas_secas_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__static_productos_nueces_chandler_jpg__ = __webpack_require__("./static/productos/nueces-chandler-.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__static_productos_nueces_chandler_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__static_productos_nueces_chandler_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_butternut_jpg__ = __webpack_require__("./static/productos/zapallo-butternut.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_butternut_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_butternut_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__static_productos_zapallo_muscat_jpg__ = __webpack_require__("./static/productos/zapallo-muscat.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__static_productos_zapallo_muscat_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__static_productos_zapallo_muscat_jpg__);
+
+
+
+
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["a"] = ({
+  lang: 'ru',
+  menu: ['Начните', 'О нас', 'Товары', 'контакт'],
+  main: {
+    home: {
+      name: 'Начните',
+      content: '<h2><strong>Лучший</strong> из нас для <strong>всех</strong></h2><p>Мы мотивированы страстью того, что нам нравится делать, и получать наши продукты для клиентов из-за рубежа.</p>',
+      cta: 'Подробнее о нас'
+    },
+    about: {
+      title: 'О нас',
+      content: '<strong>Solplay SA</strong> es una empresa Argentina, dedicada a la exportación de productos agroalimentarios de calidad. Estamos en el mercado internacional hace más de 2 décadas, tenemos experiencia en los productos que procesamos y exportamos a nuestros clientes.',
+      countries: {
+        intro: 'Contamos con clientes en distintos Países tales como:',
+        list: 'EEUU, Unión Europea, Taiwán, Haití, Brasil, Chile, Bolivia'
+      }
+    },
+    services: {
+      title: 'Servicios',
+      icons: [{
+        text: 'Control y embalaje',
+        icon: __WEBPACK_IMPORTED_MODULE_0__static_solplay_control_y_embalaje_svg___default.a
+      }, {
+        text: 'Eficiencia de Tiempos',
+        icon: __WEBPACK_IMPORTED_MODULE_1__static_solplay_eficiencia_svg___default.a
+      }, {
+        text: 'Seguimiento de Envío',
+        icon: __WEBPACK_IMPORTED_MODULE_2__static_solplay_seguimiento_svg___default.a
+      }, {
+        text: 'Entrega asegurada',
+        icon: __WEBPACK_IMPORTED_MODULE_3__static_solplay_entrega_svg___default.a
+      }]
+    },
+    products: {
+      title: 'Productos',
+      products: [{
+        name: 'Ajo Colorado',
+        image: __WEBPACK_IMPORTED_MODULE_4__static_productos_ajo_colorado_jpg___default.a,
+        specs: {
+          Variedad: 'Morado y Colorado',
+          Region: 'Valle de Uco, zona norte y este de la provincia de Mendoza.',
+          Cosecha: 'Ocubre, Noviembre y Diciembre',
+          Formato: 'En cajas de 10 kilos, 30 libras, bolsas de polipropileno de 20 kilos y de 10 kilos, puede ser palletizado o a granel.<br/>Se comercializa en los calibres, 3 (30/35mm) 4 (36/45mm) 5 (46/55mm) 6 (56/65mm) 7 (66/75mm).'
+        }
+      }, {
+        name: 'Ajo Blanco',
+        image: __WEBPACK_IMPORTED_MODULE_5__static_productos_ajo_blanco_jpg___default.a,
+        specs: {
+          Variedad: 'Blanco',
+          Region: 'Valle de Uco, zona norte y este de la provincia de Mendoza.',
+          Cosecha: 'Ocubre, Noviembre y Diciembre',
+          Formato: 'En cajas de 10 kilos, 30 libras, bolsas de polipropileno de 20 kilos y de 10 kilos, puede ser palletizado o a granel.<br/>Se comercializa en los calibres, 3 (30/35mm) 4 (36/45mm) 5 (46/55mm) 6 (56/65mm) 7 (66/75mm).'
+        }
+      }, {
+        name: 'Ciruela',
+        image: __WEBPACK_IMPORTED_MODULE_6__static_productos_ciruelas_secas_jpg___default.a,
+        specs: {
+          Variedad: 'D’agen',
+          Region: 'Este y Sur de la provincia de Mendoza.',
+          Cosecha: 'Febrero y Marzo',
+          Formato: 'En cajas de carton de 10 kilos, bolsas de polipropileno blancas en 25 kilos tipo secado Americano natural, calibres 30/40, 40/50, 50/60, 60/70, 70/80, 80/90, 90/100, 100/110, 110/120.'
+        }
+      }, {
+        name: 'Nuez',
+        image: __WEBPACK_IMPORTED_MODULE_7__static_productos_nueces_chandler_jpg___default.a,
+        specs: {
+          Variedad: 'Chandler, Ser, Hartley, Howard y Vina',
+          Region: 'Valle de Uco, Tupungato.',
+          Cosecha: 'Marzo y Abril',
+          Formato: 'Enteras tipo natural en bolsas de polipropileno blanca de 25 kilos, calibres 3/32, 32/34, 34/36 y 36+.<br/>Peladas en cajas de carton de 10 kilos envasadas al vacio en 2 unidades de 5 kilos cada una, calidad extra light, light, dorada.'
+        }
+      }, {
+        name: 'Zapallo Butternut',
+        image: __WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_butternut_jpg___default.a,
+        specs: {
+          Variedad: 'Butternut',
+          Region: 'Zona norte de la provincia de Mendoza.',
+          Cosecha: 'Enero, Febrero y Marzo',
+          Formato: 'En cajas de carton y en bines de madera, en calibres S, M, L y XL.'
+        }
+      }, {
+        name: 'Zapallo Muscat di Provenza',
+        image: __WEBPACK_IMPORTED_MODULE_9__static_productos_zapallo_muscat_jpg___default.a,
+        specs: {
+          Variedad: 'Muscat di Provenza',
+          Region: 'Zona norte de la provincia de Mendoza.',
+          Cosecha: 'Enero, Febrero y Marzo',
+          Formato: 'En bines de madera con rangos de kilos que van desde los 5 kilos por unidad hasta los 15 kilos por unidad.'
+        }
+      }]
+    },
+    organic: {
+      title: 'Orgánicos',
+      content: {
+        title: 'Productos',
+        text: 'Buscamos ofrecer una alimentación natural y saludablepor lo que trabajamos con productos orgánicos como ajos y ciruelas deshidratadas entre otros.'
+      },
+      modal: 'Certificaciones'
+    },
+    location: {
+      title: 'Ubicación',
+      content: {
+        intro: 'Estamos situados en la provincia de Mendoza, República Argentina.',
+        text: '<strong>San Rafael</strong> está situada en la parte sur de <strong>Mendoza</strong> cerca de nuestra <strong>Patagonia Argentina,</strong> esta zona es óptima para la producción de productos orgánicos y convencionales debidos a su clima y a la sanidad de su agua y suelos.<br/><strong>Guaymallén</strong> se encuentra al norte de la provincia con producciones de primicia de ajos y frutas.'
+      },
+      map: 'Ver mapa'
+    },
+    contact: {
+      title: 'Contacto',
+      fields: {
+        name: 'Nombre',
+        email: 'Email',
+        msg: 'Mensaje',
+        send: 'Enviar'
+      },
+      output: {
+        successMsg: 'Mensaje enviado!',
+        errorMsg: 'Hubo un error, intente más tarde. :('
+      }
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./src/data/submit-form.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2694,7 +2844,7 @@ module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGlu
 /***/ "./static/solplay-header-logo.svg":
 /***/ (function(module, exports) {
 
-module.exports = "/_next/static/images/solplay-header-logo-e420b72f193261332e67a00eef87ced8.svg";
+module.exports = "/_next/static/images/solplay-header-logo-c0a38cc1cefd5249aeba93df8ce5a40d.svg";
 
 /***/ }),
 
