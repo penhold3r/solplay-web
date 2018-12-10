@@ -13,15 +13,12 @@ import Certificate from '../src/components/certificate'
 import LocationSection from '../src/components/location'
 import Contact from '../src/components/contact'
 
-import dataEs from '../src/data/data-es'
-import dataEn from '../src/data/data-en'
-import dataRu from '../src/data/data-ru'
+import es from '../src/data/data-es'
+import en from '../src/data/data-en'
+import ru from '../src/data/data-ru'
+import pt from '../src/data/data-pt'
 
-const data = {
-	es: dataEs,
-	en: dataEn,
-	ru: dataRu
-}
+const data = { es, en, ru, pt }
 
 class Index extends React.Component {
 	state = {
@@ -84,10 +81,13 @@ class Index extends React.Component {
 			main: { home, about, services, products, organic, location, contact }
 		} = content
 
+		const langs = Object.values(data).map(l => l.lang)
+
 		return (
 			<Layout
 				menu={menu}
-				langs={Object.keys(data)}
+				currentLang={lang}
+				langs={langs}
 				sections={this.state.sections}
 				menuClick={this.handleScroll}
 			>

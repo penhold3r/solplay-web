@@ -11,7 +11,10 @@ import zapalloButter from '../../static/productos/zapallo-butternut.jpg'
 import zapalloMusc from '../../static/productos/zapallo-muscat.jpg'
 
 export default {
-	lang: 'ru',
+	lang: {
+		slug: 'ru',
+		name: 'русский'
+	},
 	menu: ['Начните', 'О нас', 'Товары', 'контакт'],
 	main: {
 		home: {

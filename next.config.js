@@ -9,7 +9,8 @@ module.exports = withSass(
 				'/': { page: '/', query: { lang: 'en' } },
 				'/es': { page: '/', query: { lang: 'es' } },
 				'/en': { page: '/', query: { lang: 'en' } },
-				'/ru': { page: '/', query: { lang: 'ru' } }
+				'/ru': { page: '/', query: { lang: 'ru' } },
+				'/pt': { page: '/', query: { lang: 'pt' } }
 			})
 		})
 	)

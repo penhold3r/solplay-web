@@ -20,7 +20,7 @@ class Header extends React.Component {
 	}
 
 	render() {
-		const { menu, langs } = this.props
+		const { menu, currentLang, langs } = this.props
 		const headerClass = this.state.headerWhite ? ' white' : ''
 		const moblieClass = this.state.menuOpen
 			? 'mobile-menu open'
@@ -33,8 +33,21 @@ class Header extends React.Component {
 					<div className="extra-nav">
 						<div className="lang-links">
 							{langs.map((lang, key) => (
-								<Link key={key} as={`/${lang}`} href={`/lang=${lang}`}>
-									<a className="lang-link">{lang}</a>
+								<Link
+									key={key}
+									as={`/${lang.slug}`}
+									href={`/lang=${lang.slug}`}
+								>
+									<a
+										className={
+											currentLang == lang.slug
+												? 'lang-link active-lang'
+												: 'lang-link'
+										}
+										data-lang={lang.name}
+									>
+										{lang.slug}
+									</a>
 								</Link>
 							))}
 						</div>

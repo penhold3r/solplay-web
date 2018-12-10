@@ -1586,6 +1586,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__src_data_data_es__ = __webpack_require__("./src/data/data-es.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__src_data_data_en__ = __webpack_require__("./src/data/data-en.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__src_data_data_ru__ = __webpack_require__("./src/data/data-ru.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__src_data_data_pt__ = __webpack_require__("./src/data/data-pt.js");
 
 var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\pages\\index.js";
 
@@ -1624,10 +1625,12 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 
 
 
+
 var data = {
   es: __WEBPACK_IMPORTED_MODULE_15__src_data_data_es__["a" /* default */],
   en: __WEBPACK_IMPORTED_MODULE_16__src_data_data_en__["a" /* default */],
-  ru: __WEBPACK_IMPORTED_MODULE_17__src_data_data_ru__["a" /* default */]
+  ru: __WEBPACK_IMPORTED_MODULE_17__src_data_data_ru__["a" /* default */],
+  pt: __WEBPACK_IMPORTED_MODULE_18__src_data_data_pt__["a" /* default */]
 };
 
 var Index =
@@ -1722,7 +1725,8 @@ function (_React$Component) {
       this.waitForImages();
       this.setState({
         sections: sections
-      }); //console.log('INIT PROPS: ', this.props)
+      });
+      console.log('INIT PROPS: ', this.props);
     }
   }, {
     key: "componentDidUpdate",
@@ -1752,14 +1756,18 @@ function (_React$Component) {
           organic = _content$main.organic,
           location = _content$main.location,
           contact = _content$main.contact;
+      var langs = Object.values(data).map(function (l) {
+        return l.lang;
+      });
       return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__src_components_layout__["a" /* default */], {
         menu: menu,
-        langs: Object.keys(data),
+        currentLang: lang,
+        langs: langs,
         sections: this.state.sections,
         menuClick: this.handleScroll,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 87
         }
       }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__src_components_product_modal__["a" /* default */], {
         open: this.state.productModal,
@@ -2473,6 +2481,7 @@ function (_React$Component) {
 
       var _props = this.props,
           menu = _props.menu,
+          currentLang = _props.currentLang,
           langs = _props.langs;
       var headerClass = this.state.headerWhite ? ' white' : '';
       var moblieClass = this.state.menuOpen ? 'mobile-menu open' : 'mobile-menu';
@@ -2504,61 +2513,62 @@ function (_React$Component) {
       }, langs.map(function (lang, key) {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
           key: key,
-          as: "/".concat(lang),
-          href: "/lang=".concat(lang),
+          as: "/".concat(lang.slug),
+          href: "/lang=".concat(lang.slug),
           __source: {
             fileName: _jsxFileName,
             lineNumber: 36
           }
         }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
-          className: "lang-link",
+          className: currentLang == lang.slug ? 'lang-link active-lang' : 'lang-link',
+          "data-lang": lang.name,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 37
+            lineNumber: 41
           }
-        }, lang));
+        }, lang.slug));
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__social__["a" /* default */], {
         className: "header-social",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 54
         }
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
         className: "logo",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 56
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
         href: "/",
         prefetch: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 57
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 58
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
         src: __WEBPACK_IMPORTED_MODULE_4__static_solplay_header_logo_svg___default.a,
         alt: "Solplay",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 59
         }
       })))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("nav", {
         className: navClass,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 63
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul", {
         className: "menu",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 64
         }
       }, menu.map(function (item, key) {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li", {
@@ -2566,7 +2576,7 @@ function (_React$Component) {
           key: key,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 53
+            lineNumber: 66
           }
         }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
           className: _this2.state.activeLink == key ? 'active' : '',
@@ -2580,7 +2590,7 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 54
+            lineNumber: 67
           }
         }, item));
       }))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
@@ -2588,25 +2598,25 @@ function (_React$Component) {
         onClick: this.handleMenu,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 86
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "menu-bar",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 87
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "menu-bar",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75
+          lineNumber: 88
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "menu-bar",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76
+          lineNumber: 89
         }
       }))));
     }
@@ -2772,6 +2782,7 @@ var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\compon
 
 var Layout = function Layout(_ref) {
   var menu = _ref.menu,
+      currentLang = _ref.currentLang,
       langs = _ref.langs,
       children = _ref.children,
       menuClick = _ref.menuClick;
@@ -2858,6 +2869,7 @@ var Layout = function Layout(_ref) {
     }
   })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__header__["a" /* default */], {
     menu: menu,
+    currentLang: currentLang,
     langs: langs,
     menuClick: menuClick,
     __source: {
@@ -2867,12 +2879,12 @@ var Layout = function Layout(_ref) {
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("main", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 45
     }
   }, children), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__footer__["a" /* default */], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 46
     }
   }));
 };
@@ -3372,7 +3384,7 @@ var styles = {
     outline: 'none',
     padding: 0,
     transition: 'all 0.3s',
-    webkitAppearance: 'none',
+    WebkitAppearance: 'none',
     width: '20px'
   },
   activeTile: {
@@ -3618,7 +3630,10 @@ var Social = function Social(_ref) {
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-  lang: 'en',
+  lang: {
+    slug: 'en',
+    name: 'English'
+  },
   menu: ['Home', 'About Us', 'Products', 'Contact'],
   main: {
     home: {
@@ -3777,7 +3792,10 @@ var Social = function Social(_ref) {
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-  lang: 'es',
+  lang: {
+    slug: 'es',
+    name: 'Español'
+  },
   menu: ['Inicio', 'Quienes Somos', 'Productos', 'Contacto'],
   main: {
     home: {
@@ -3901,6 +3919,168 @@ var Social = function Social(_ref) {
 
 /***/ }),
 
+/***/ "./src/data/data-pt.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__static_solplay_control_y_embalaje_svg__ = __webpack_require__("./static/solplay-control_y_embalaje.svg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__static_solplay_control_y_embalaje_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__static_solplay_control_y_embalaje_svg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_eficiencia_svg__ = __webpack_require__("./static/solplay-eficiencia.svg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_eficiencia_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__static_solplay_eficiencia_svg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_solplay_seguimiento_svg__ = __webpack_require__("./static/solplay-seguimiento.svg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_solplay_seguimiento_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__static_solplay_seguimiento_svg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_solplay_entrega_svg__ = __webpack_require__("./static/solplay-entrega.svg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_solplay_entrega_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__static_solplay_entrega_svg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_productos_ajo_colorado_jpg__ = __webpack_require__("./static/productos/ajo-colorado.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_productos_ajo_colorado_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__static_productos_ajo_colorado_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__static_productos_ajo_blanco_jpg__ = __webpack_require__("./static/productos/ajo-blanco.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__static_productos_ajo_blanco_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__static_productos_ajo_blanco_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__static_productos_ciruelas_secas_jpg__ = __webpack_require__("./static/productos/ciruelas-secas.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__static_productos_ciruelas_secas_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__static_productos_ciruelas_secas_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__static_productos_nueces_chandler_jpg__ = __webpack_require__("./static/productos/nueces-chandler-.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__static_productos_nueces_chandler_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__static_productos_nueces_chandler_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_butternut_jpg__ = __webpack_require__("./static/productos/zapallo-butternut.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_butternut_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_butternut_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__static_productos_zapallo_muscat_jpg__ = __webpack_require__("./static/productos/zapallo-muscat.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__static_productos_zapallo_muscat_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__static_productos_zapallo_muscat_jpg__);
+
+
+
+
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["a"] = ({
+  lang: {
+    slug: 'pt',
+    name: 'Português'
+  },
+  menu: ['Home', 'Quem somos', 'Produtos', 'Contato'],
+  main: {
+    home: {
+      name: 'Inicio',
+      content: '<h2>O <strong>melhor</strong> de nós<br/> para <strong>todos</strong></h2><p>Somos motivados pela paixão do que gostamos de fazer, levar nossos produtos aos clientes do exterior.</p>',
+      cta: 'Sobre nós'
+    },
+    about: {
+      title: 'Sobre nós',
+      content: 'A <strong>Solplay SA</strong> é uma empresa argentina dedicada à exportação de produtos agroalimentares de qualidade. Estamos no mercado internacional há mais de 2 décadas, com vasta experiência nos produtos que processamos e exportamos para nossos clientes.',
+      countries: {
+        intro: 'Chegamos a diferentes países como:',
+        list: 'Estados Unidos, países da União Europeia, Taiwan, Haiti, Brasil, Chile e Bolívia.'
+      }
+    },
+    services: {
+      title: 'Serviços',
+      icons: [{
+        text: 'Controle e Embalagem',
+        icon: __WEBPACK_IMPORTED_MODULE_0__static_solplay_control_y_embalaje_svg___default.a
+      }, {
+        text: 'Eficiência de Tempo',
+        icon: __WEBPACK_IMPORTED_MODULE_1__static_solplay_eficiencia_svg___default.a
+      }, {
+        text: 'Rastreamento De Entrega',
+        icon: __WEBPACK_IMPORTED_MODULE_2__static_solplay_seguimiento_svg___default.a
+      }, {
+        text: 'Entrega Garantida',
+        icon: __WEBPACK_IMPORTED_MODULE_3__static_solplay_entrega_svg___default.a
+      }]
+    },
+    products: {
+      title: 'Produtos',
+      products: [{
+        name: 'Alho Vermelho',
+        image: __WEBPACK_IMPORTED_MODULE_4__static_productos_ajo_colorado_jpg___default.a,
+        specs: {
+          Variedade: 'Vermelho e Roxo',
+          Região: 'Valle De Uco, Zona Norte e Leste de Mendoza.',
+          Colheita: 'Outubro, Novembro e Dezembro',
+          Embalagem: 'Em Caixas De 10 Quilos, 30 Libras, Sacos De Polipropileno De 20 Quilos E 10 Quilos, Podem Ser Paletizados Ou A Granel.<br/>É Vendido Em Tamanhos De 3 (30 / 35mm) 4 (36 / 45mm) 5 (46 / 55mm) 6 (56 / 65mm) 7 (66 / 75mm).'
+        }
+      }, {
+        name: 'Ajo Branco',
+        image: __WEBPACK_IMPORTED_MODULE_5__static_productos_ajo_blanco_jpg___default.a,
+        specs: {
+          Variedade: 'Branco',
+          Região: 'Valle De Uco, Zona Norte e Leste de Mendoza.',
+          Colheita: 'Outubro, Novembro e Dezembro',
+          Embalagem: 'Em Caixas De 10 Quilos, 30 Libras, Sacos De Polipropileno De 20 Quilos E 10 Quilos, Podem Ser Paletizados Ou A Granel.<br/>É Vendido Em Tamanhos De 3 (30 / 35mm) 4 (36 / 45mm) 5 (46 / 55mm) 6 (56 / 65mm) 7 (66 / 75mm).'
+        }
+      }, {
+        name: 'Ameixas',
+        image: __WEBPACK_IMPORTED_MODULE_6__static_productos_ciruelas_secas_jpg___default.a,
+        specs: {
+          Variedade: 'D’agen',
+          Região: 'Leste e sul de Mendoza.',
+          Colheita: 'Fevereiro e Março',
+          Embalagem: 'Em caixas de 10 quilos, sacos de polipropileno branco 25 quilos com tipo de secagem natural americano, tamanhos 30/40, 40/50, 50/60, 60/70, 70/80, 80/90, 90/100, 100/110, 110/120.'
+        }
+      }, {
+        name: 'Nozes',
+        image: __WEBPACK_IMPORTED_MODULE_7__static_productos_nueces_chandler_jpg___default.a,
+        specs: {
+          Variedade: 'Chandler, Ser, Hartley, Howard e Vina',
+          Região: 'Valle de Uco, Tupungato.',
+          Colheita: 'Março e Abril',
+          Embalagem: 'Nozes naturais em sacos de polipropileno branco de 25 quilos, tamanhos 3/32, 32/34, 34/36 e 36+.<br/>Nozes descascadas em caixas de 10 quilos embaladas a vácuo em 2 unidades de 5 quilos, qualidade extra light, light, golden.'
+        }
+      }, {
+        name: 'Abóbora Butternut',
+        image: __WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_butternut_jpg___default.a,
+        specs: {
+          Variedade: 'Butternut',
+          Região: 'Zona norte de la provincia de Mendoza.',
+          Colheita: 'Janeiro, Fevereiro e Março',
+          Embalagem: 'Em caixas e caixas de madeira, nos tamanhos S, M, L e XL.'
+        }
+      }, {
+        name: 'Abóbora Muscat di Provenza',
+        image: __WEBPACK_IMPORTED_MODULE_9__static_productos_zapallo_muscat_jpg___default.a,
+        specs: {
+          Variedade: 'Muscat di Provenza',
+          Região: 'Zona norte de la provincia de Mendoza.',
+          Colheita: 'Enero, Febrero y Marzo',
+          Embalagem: 'Em caixas de madeira com intervalos de 5 quilos a 15 quilos por unidade.'
+        }
+      }]
+    },
+    organic: {
+      title: 'Orgânico',
+      content: {
+        title: 'Produtos',
+        text: 'Procuramos oferecer uma alimentação natural e saudável, por isso trabalhamos com produtos orgânicos, como alho e ameixas secas, entre outros.'
+      },
+      modal: 'Certificações'
+    },
+    location: {
+      title: 'Localização',
+      content: {
+        intro: 'Estamos Localizados Na Província De Mendoza, República Argentina.',
+        text: '<strong>San Rafael</strong> está situada en la parte sur de <strong>Mendoza</strong>fica na parte sul de Mendoza, perto da nossa <strong>Patagônia Argentina,</strong> esta área é ideal para produzir produtos orgânicos e convencionais, devido ao seu clima e à saúde de sua água e solo.<br/><strong>Guaymallén</strong>está localizado ao norte da província, com produções de colher de alho e frutas.'
+      },
+      map: 'Ver no mapa'
+    },
+    contact: {
+      title: 'Contato',
+      fields: {
+        name: 'Nome',
+        email: 'Email',
+        msg: 'Mensagem',
+        send: 'Enviar'
+      },
+      output: {
+        successMsg: 'Mensagem enviada!',
+        errorMsg: 'Houve um erro, tente mais tarde.'
+      }
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./src/data/data-ru.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3936,7 +4116,10 @@ var Social = function Social(_ref) {
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-  lang: 'ru',
+  lang: {
+    slug: 'ru',
+    name: 'русский'
+  },
   menu: ['Начните', 'О нас', 'Товары', 'контакт'],
   main: {
     home: {
@@ -3953,12 +4136,12 @@ var Social = function Social(_ref) {
       }
     },
     services: {
-      title: 'Servicios',
+      title: 'Сервисы',
       icons: [{
-        text: 'Control y embalaje',
+        text: 'Контроль и упаковка',
         icon: __WEBPACK_IMPORTED_MODULE_0__static_solplay_control_y_embalaje_svg___default.a
       }, {
-        text: 'Eficiencia de Tiempos',
+        text: 'Эффективность времени',
         icon: __WEBPACK_IMPORTED_MODULE_1__static_solplay_eficiencia_svg___default.a
       }, {
         text: 'Seguimiento de Envío',
@@ -3969,90 +4152,90 @@ var Social = function Social(_ref) {
       }]
     },
     products: {
-      title: 'Productos',
+      title: 'Товары',
       products: [{
-        name: 'Ajo Colorado',
+        name: 'Красный Чеснок',
         image: __WEBPACK_IMPORTED_MODULE_4__static_productos_ajo_colorado_jpg___default.a,
         specs: {
-          Variedad: 'Morado y Colorado',
-          Region: 'Valle de Uco, zona norte y este de la provincia de Mendoza.',
-          Cosecha: 'Ocubre, Noviembre y Diciembre',
-          Formato: 'En cajas de 10 kilos, 30 libras, bolsas de polipropileno de 20 kilos y de 10 kilos, puede ser palletizado o a granel.<br/>Se comercializa en los calibres, 3 (30/35mm) 4 (36/45mm) 5 (46/55mm) 6 (56/65mm) 7 (66/75mm).'
+          Разнообразие: 'Красный - фиолетовый',
+          'Область, Край': 'Валье-де-Уко, Северная и Восточная зона Мендосы.',
+          Урожай: 'Октябрь, Ноябрь и Декабрь',
+          Упаковки: 'В коробках по 10 килограммов, 30 либрах, полипропиленовых мешках по 20 килограммов и 10 килограммов, могут быть на паллетах или навалом.<br/>Он продается в размерах, 3 (30/35 мм) 4 (36/45 мм) 5 (46/55 мм) 6 (56/65 мм) 7 (66/75 мм).'
         }
       }, {
-        name: 'Ajo Blanco',
+        name: 'Белый Гарлик',
         image: __WEBPACK_IMPORTED_MODULE_5__static_productos_ajo_blanco_jpg___default.a,
         specs: {
-          Variedad: 'Blanco',
-          Region: 'Valle de Uco, zona norte y este de la provincia de Mendoza.',
-          Cosecha: 'Ocubre, Noviembre y Diciembre',
-          Formato: 'En cajas de 10 kilos, 30 libras, bolsas de polipropileno de 20 kilos y de 10 kilos, puede ser palletizado o a granel.<br/>Se comercializa en los calibres, 3 (30/35mm) 4 (36/45mm) 5 (46/55mm) 6 (56/65mm) 7 (66/75mm).'
+          Разнообразие: 'белый',
+          'Область, Край': 'Валье-де-Уко, Северная и Восточная зона Мендосы.',
+          Урожай: 'Октябрь, ноябрь и декабрь',
+          Упаковки: 'В коробках по 10 килограммов, 30 либрах, полипропиленовых мешках по 20 килограммов и 10 килограммов, могут быть на паллетах или навалом.<br/>Он продается в размерах, 3 (30/35 мм) 4 (36/45 мм) 5 (46/55 мм) 6 (56/65 мм) 7 (66/75 мм).'
         }
       }, {
-        name: 'Ciruela',
+        name: 'Слив',
         image: __WEBPACK_IMPORTED_MODULE_6__static_productos_ciruelas_secas_jpg___default.a,
         specs: {
-          Variedad: 'D’agen',
-          Region: 'Este y Sur de la provincia de Mendoza.',
-          Cosecha: 'Febrero y Marzo',
-          Formato: 'En cajas de carton de 10 kilos, bolsas de polipropileno blancas en 25 kilos tipo secado Americano natural, calibres 30/40, 40/50, 50/60, 60/70, 70/80, 80/90, 90/100, 100/110, 110/120.'
+          Разнообразие: 'D’agen',
+          'Область, Край': 'Восток и юг Мендосы.',
+          Урожай: 'Февраль и март',
+          Упаковки: 'В коробках по 10 кг белые полипропиленовые мешки 25 кг с натуральным американским сухим типом, размеры 30/40, 40/50, 50/60, 60/70, 70/80, 80/90, 90/100, 100/110, 110/120.'
         }
       }, {
-        name: 'Nuez',
+        name: 'Орешки',
         image: __WEBPACK_IMPORTED_MODULE_7__static_productos_nueces_chandler_jpg___default.a,
         specs: {
-          Variedad: 'Chandler, Ser, Hartley, Howard y Vina',
-          Region: 'Valle de Uco, Tupungato.',
-          Cosecha: 'Marzo y Abril',
-          Formato: 'Enteras tipo natural en bolsas de polipropileno blanca de 25 kilos, calibres 3/32, 32/34, 34/36 y 36+.<br/>Peladas en cajas de carton de 10 kilos envasadas al vacio en 2 unidades de 5 kilos cada una, calidad extra light, light, dorada.'
+          Разнообразие: 'Чандлер, Сер, Хартли, Говард и Вина',
+          'Область, Край': 'Валье-де-Уко, Тупунгато.',
+          Урожай: 'Март и апрель',
+          Упаковки: 'Натуральные орехи в белых полипропиленовых мешках по 25 кг, размеры 3/32, 32/34, 34/36 и 36+.<br/>Очищенные гайки в коробках по 10 кг, упакованные в 2 единицы по 5 килограммов каждый, дополнительное качество света, светлое, золотистое.'
         }
       }, {
-        name: 'Zapallo Butternut',
+        name: 'Тыквенный Butternut',
         image: __WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_butternut_jpg___default.a,
         specs: {
-          Variedad: 'Butternut',
-          Region: 'Zona norte de la provincia de Mendoza.',
-          Cosecha: 'Enero, Febrero y Marzo',
-          Formato: 'En cajas de carton y en bines de madera, en calibres S, M, L y XL.'
+          Разнообразие: 'Butternut',
+          'Область, Край': 'Северная зона Мендосы.',
+          Урожай: 'Январь, февраль и март',
+          Упаковки: 'В коробках и деревянных бункерах, размерах S, M, L и XL.'
         }
       }, {
-        name: 'Zapallo Muscat di Provenza',
+        name: 'Тыква Мускат ди Провенца',
         image: __WEBPACK_IMPORTED_MODULE_9__static_productos_zapallo_muscat_jpg___default.a,
         specs: {
-          Variedad: 'Muscat di Provenza',
-          Region: 'Zona norte de la provincia de Mendoza.',
-          Cosecha: 'Enero, Febrero y Marzo',
-          Formato: 'En bines de madera con rangos de kilos que van desde los 5 kilos por unidad hasta los 15 kilos por unidad.'
+          Разнообразие: 'Мускат ди Провенца',
+          'Область, Край': 'Нот-зона Мендосы.',
+          Урожай: 'Январь, февраль и март',
+          Упаковки: 'В деревянных бункерах с диапазонами килограммов от 5 кг на единицу до 15 кг на единицу.'
         }
       }]
     },
     organic: {
-      title: 'Orgánicos',
+      title: 'Органический',
       content: {
-        title: 'Productos',
-        text: 'Buscamos ofrecer una alimentación natural y saludablepor lo que trabajamos con productos orgánicos como ajos y ciruelas deshidratadas entre otros.'
+        title: 'Товары',
+        text: 'Мы стремимся предложить натуральное и здоровое питание, поэтому мы работаем с такими органическими продуктами, как чеснок и сушеные сливы.'
       },
-      modal: 'Certificaciones'
+      modal: 'Сертификаты'
     },
     location: {
-      title: 'Ubicación',
+      title: 'Место Нахождения',
       content: {
-        intro: 'Estamos situados en la provincia de Mendoza, República Argentina.',
-        text: '<strong>San Rafael</strong> está situada en la parte sur de <strong>Mendoza</strong> cerca de nuestra <strong>Patagonia Argentina,</strong> esta zona es óptima para la producción de productos orgánicos y convencionales debidos a su clima y a la sanidad de su agua y suelos.<br/><strong>Guaymallén</strong> se encuentra al norte de la provincia con producciones de primicia de ajos y frutas.'
+        intro: 'Мы расположены в провинции Мендоза, Аргентинской Республики.',
+        text: '<strong>San Rafael</strong> находится в южной части Мендосы недалеко от нашей аргентинской Патагонии, этот район оптимален для производства органических и традиционных продуктов из-за его климата и здоровья его воды и почвы.<br/><strong>Guaymallén</strong> расположен к северу от провинции с производствами совок и фруктов чеснока.'
       },
-      map: 'Ver mapa'
+      map: 'Видеть На Карте'
     },
     contact: {
-      title: 'Contacto',
+      title: 'контакт',
       fields: {
-        name: 'Nombre',
-        email: 'Email',
-        msg: 'Mensaje',
-        send: 'Enviar'
+        name: 'Имя',
+        email: 'электронная почта',
+        msg: 'Сообщение',
+        send: 'Отправить сообщение'
       },
       output: {
-        successMsg: 'Mensaje enviado!',
-        errorMsg: 'Hubo un error, intente más tarde. :('
+        successMsg: 'Сообщение отправлено!',
+        errorMsg: 'Произошла ошибка, повторите попытку позже.'
       }
     }
   }
