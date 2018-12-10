@@ -651,7 +651,8 @@ body {
           .main-header .header-container .extra-nav .lang-links .lang-link:last-child {
             border: none; }
           .main-header .header-container .extra-nav .lang-links .lang-link.active-lang {
-            order: 1; }
+            font-weight: bold;
+            font-weight: 700; }
       @media screen and (max-width: 850px) {
         .main-header .header-container .extra-nav .header-social {
           display: none; } }
