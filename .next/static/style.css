@@ -745,8 +745,8 @@ body {
         justify-self: end;
         align-self: center;
         margin-right: 15px;
-        height: 27px;
-        width: 35px;
+        height: 21px;
+        width: 28px;
         position: relative; }
         .main-header .header-container .mobile-menu .menu-bar {
           background: #00A7E1;
@@ -757,16 +757,16 @@ body {
           .main-header .header-container .mobile-menu .menu-bar:first-child {
             top: 0; }
           .main-header .header-container .mobile-menu .menu-bar:nth-child(2) {
-            top: 12px; }
+            top: 9px; }
           .main-header .header-container .mobile-menu .menu-bar:last-child {
             bottom: 0; }
         .main-header .header-container .mobile-menu.open .menu-bar:first-child {
-          top: 12px;
+          top: 9px;
           transform: rotate(40deg); }
         .main-header .header-container .mobile-menu.open .menu-bar:nth-child(2) {
           opacity: 0; }
         .main-header .header-container .mobile-menu.open .menu-bar:last-child {
-          bottom: 12px;
+          bottom: 9px;
           transform: rotate(-40deg); } }
 
 .hero {
@@ -777,6 +777,7 @@ body {
     border-left: 6px solid #fff;
     border-bottom: 6px solid #fff;
     bottom: 30px;
+    cursor: pointer;
     content: '';
     height: 50px;
     left: 0;
@@ -822,7 +823,9 @@ body {
       color: #fff;
       text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
       text-align: center;
-      margin: auto auto 0; }
+      margin: auto auto 0;
+      max-width: 500px;
+      padding: 0 15px; }
       .hero .hero-content .hero-text h2 {
         font-weight: normal;
         font-size: 2em;
@@ -955,6 +958,7 @@ body {
   @media screen and (max-width: 850px) {
     .product-modal {
       height: calc(100vh - 60px);
+      padding: 15px;
       top: 60px; } }
   .product-modal.open {
     opacity: 1;
@@ -991,11 +995,19 @@ body {
       position: relative;
       text-transform: initial;
       top: -2rem; }
+      @media screen and (max-width: 850px) {
+        .product-modal .modal-container .modal-title {
+          padding: 0 15px; } }
     .product-modal .modal-container .modal-content {
       display: grid;
       grid-gap: 30px;
       grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
       padding: 0 30px 30px; }
+      @media screen and (max-width: 850px) {
+        .product-modal .modal-container .modal-content {
+          display: flex;
+          flex-direction: column;
+          padding: 0 15px 15px; } }
       .product-modal .modal-container .modal-content .product-details {
         border-top: 1px solid #ddd; }
         .product-modal .modal-container .modal-content .product-details .spec {

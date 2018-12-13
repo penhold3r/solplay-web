@@ -51,7 +51,7 @@ export default {
 						Variedad: 'Morado y Colorado',
 						Region:
 							'Valle de Uco, zona norte y este de la provincia de Mendoza.',
-						Cosecha: 'Ocubre, Noviembre y Diciembre',
+						Cosecha: 'Octubre, Noviembre y Diciembre',
 						Formato:
 							'En cajas de 10 kilos, 30 libras, bolsas de polipropileno de 20 kilos y de 10 kilos, puede ser palletizado o a granel.<br/>Se comercializa en los calibres, 3 (30/35mm) 4 (36/45mm) 5 (46/55mm) 6 (56/65mm) 7 (66/75mm).'
 					}
@@ -63,7 +63,7 @@ export default {
 						Variedad: 'Blanco',
 						Region:
 							'Valle de Uco, zona norte y este de la provincia de Mendoza.',
-						Cosecha: 'Ocubre, Noviembre y Diciembre',
+						Cosecha: 'Octubre, Noviembre y Diciembre',
 						Formato:
 							'En cajas de 10 kilos, 30 libras, bolsas de polipropileno de 20 kilos y de 10 kilos, puede ser palletizado o a granel.<br/>Se comercializa en los calibres, 3 (30/35mm) 4 (36/45mm) 5 (46/55mm) 6 (56/65mm) 7 (66/75mm).'
 					}
@@ -119,7 +119,7 @@ export default {
 			content: {
 				title: 'Productos',
 				text:
-					'Buscamos ofrecer una alimentación natural y saludablepor lo que trabajamos con productos orgánicos como ajos y ciruelas deshidratadas entre otros.'
+					'Buscamos ofrecer una alimentación natural y saludable por lo que trabajamos con productos orgánicos como ajos y ciruelas deshidratadas entre otros.'
 			},
 			modal: 'Certificaciones'
 		},

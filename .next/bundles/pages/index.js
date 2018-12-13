@@ -1725,8 +1725,7 @@ function (_React$Component) {
       this.waitForImages();
       this.setState({
         sections: sections
-      });
-      console.log('INIT PROPS: ', this.props);
+      }); //console.log('INIT PROPS: ', this.props)
     }
   }, {
     key: "componentDidUpdate",
@@ -1779,6 +1778,8 @@ function (_React$Component) {
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__src_components_hero__["a" /* default */], {
         content: home,
+        scrollClick: this.handleScroll,
+        about: about.title,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 99
@@ -1787,46 +1788,47 @@ function (_React$Component) {
         content: about,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
+          lineNumber: 104
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__src_components_services__["a" /* default */], {
         content: services,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 105
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__src_components_products__["a" /* default */], {
         content: products,
         openModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 106
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_11__src_components_organic__["a" /* default */], {
         content: organic,
         openModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 107
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_13__src_components_location__["a" /* default */], {
         content: location,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 108
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_14__src_components_contact__["a" /* default */], {
         content: contact,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 109
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_12__src_components_certificate__["a" /* default */], {
+        title: organic.modal,
         open: this.state.certificateModal,
         closeModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 106
+          lineNumber: 110
         }
       }));
     }
@@ -1993,7 +1995,8 @@ var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\compon
 
 
 var Certificate = function Certificate(_ref) {
-  var open = _ref.open,
+  var title = _ref.title,
+      open = _ref.open,
       closeModal = _ref.closeModal;
   var visible = open ? ' visible' : '';
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("section", {
@@ -2035,7 +2038,7 @@ var Certificate = function Certificate(_ref) {
       fileName: _jsxFileName,
       lineNumber: 15
     }
-  }, "Certificacion"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
+  }, title), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     src: __WEBPACK_IMPORTED_MODULE_2__static_oia_logo_svg___default.a,
     alt: "Organizaci\xF3n Internacional Agropecuaria",
     className: "oia-logo",
@@ -2635,19 +2638,21 @@ function (_React$Component) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__slider__ = __webpack_require__("./src/components/slider.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_banner_solplay_banner_01_jpg__ = __webpack_require__("./static/banner/solplay_banner-01.jpg");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_banner_solplay_banner_01_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__static_banner_solplay_banner_01_jpg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_banner_solplay_banner_02_jpg__ = __webpack_require__("./static/banner/solplay_banner-02.jpg");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_banner_solplay_banner_02_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__static_banner_solplay_banner_02_jpg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_banner_solplay_banner_03_jpg__ = __webpack_require__("./static/banner/solplay_banner-03.jpg");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_banner_solplay_banner_03_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__static_banner_solplay_banner_03_jpg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__static_banner_solplay_banner_04_jpg__ = __webpack_require__("./static/banner/solplay_banner-04.jpg");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__static_banner_solplay_banner_04_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__static_banner_solplay_banner_04_jpg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__static_banner_solplay_banner_05_jpg__ = __webpack_require__("./static/banner/solplay_banner-05.jpg");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__static_banner_solplay_banner_05_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__static_banner_solplay_banner_05_jpg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__static_banner_solplay_banner_06_jpg__ = __webpack_require__("./static/banner/solplay_banner-06.jpg");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__static_banner_solplay_banner_06_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__static_banner_solplay_banner_06_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_slugify__ = __webpack_require__("./node_modules/slugify/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_slugify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_slugify__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__slider__ = __webpack_require__("./src/components/slider.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_banner_solplay_banner_01_jpg__ = __webpack_require__("./static/banner/solplay_banner-01.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_banner_solplay_banner_01_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__static_banner_solplay_banner_01_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_banner_solplay_banner_02_jpg__ = __webpack_require__("./static/banner/solplay_banner-02.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_banner_solplay_banner_02_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__static_banner_solplay_banner_02_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__static_banner_solplay_banner_03_jpg__ = __webpack_require__("./static/banner/solplay_banner-03.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__static_banner_solplay_banner_03_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__static_banner_solplay_banner_03_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__static_banner_solplay_banner_04_jpg__ = __webpack_require__("./static/banner/solplay_banner-04.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__static_banner_solplay_banner_04_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__static_banner_solplay_banner_04_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__static_banner_solplay_banner_05_jpg__ = __webpack_require__("./static/banner/solplay_banner-05.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__static_banner_solplay_banner_05_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__static_banner_solplay_banner_05_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__static_banner_solplay_banner_06_jpg__ = __webpack_require__("./static/banner/solplay_banner-06.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__static_banner_solplay_banner_06_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__static_banner_solplay_banner_06_jpg__);
 var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\hero.js";
 
 
@@ -2658,22 +2663,30 @@ var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\compon
 
 
 
+
 var Hero = function Hero(_ref) {
-  var content = _ref.content;
+  var content = _ref.content,
+      scrollClick = _ref.scrollClick,
+      about = _ref.about;
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("section", {
     id: "inicio",
     className: "hero scroll",
+    onClick: function onClick() {
+      return scrollClick(__WEBPACK_IMPORTED_MODULE_1_slugify___default()(about, {
+        lower: true
+      }));
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 12
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "slider-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 17
     }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__slider__["a" /* default */], {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__slider__["a" /* default */], {
     pagination: true,
     paginationStyle: {
       background: '#FFF',
@@ -2682,55 +2695,55 @@ var Hero = function Hero(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 18
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
-    src: __WEBPACK_IMPORTED_MODULE_2__static_banner_solplay_banner_01_jpg___default.a,
+    src: __WEBPACK_IMPORTED_MODULE_3__static_banner_solplay_banner_01_jpg___default.a,
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 26
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
-    src: __WEBPACK_IMPORTED_MODULE_3__static_banner_solplay_banner_02_jpg___default.a,
+    src: __WEBPACK_IMPORTED_MODULE_4__static_banner_solplay_banner_02_jpg___default.a,
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 27
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
-    src: __WEBPACK_IMPORTED_MODULE_4__static_banner_solplay_banner_03_jpg___default.a,
+    src: __WEBPACK_IMPORTED_MODULE_5__static_banner_solplay_banner_03_jpg___default.a,
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 28
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
-    src: __WEBPACK_IMPORTED_MODULE_5__static_banner_solplay_banner_04_jpg___default.a,
+    src: __WEBPACK_IMPORTED_MODULE_6__static_banner_solplay_banner_04_jpg___default.a,
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 29
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
-    src: __WEBPACK_IMPORTED_MODULE_6__static_banner_solplay_banner_05_jpg___default.a,
+    src: __WEBPACK_IMPORTED_MODULE_7__static_banner_solplay_banner_05_jpg___default.a,
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 30
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
-    src: __WEBPACK_IMPORTED_MODULE_7__static_banner_solplay_banner_06_jpg___default.a,
+    src: __WEBPACK_IMPORTED_MODULE_8__static_banner_solplay_banner_06_jpg___default.a,
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 31
     }
   }))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "hero-content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 35
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "hero-text",
@@ -2739,7 +2752,7 @@ var Hero = function Hero(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 36
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     href: "#",
@@ -2749,7 +2762,7 @@ var Hero = function Hero(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 40
     }
   })));
 };
@@ -3686,7 +3699,7 @@ var Social = function Social(_ref) {
           Packaging: 'In boxes of 10 kilos, 30 libras, polypropylene bags of 20 kilos and 10 kilos, can be palletized or in bulk.<br/>It is sold in sizes, 3 (30 / 35mm) 4 (36 / 45mm) 5 (46 / 55mm) 6 (56 / 65mm) 7 (66 / 75mm).'
         }
       }, {
-        name: 'Plumbs',
+        name: 'Plums',
         image: __WEBPACK_IMPORTED_MODULE_6__static_productos_ciruelas_secas_jpg___default.a,
         specs: {
           Variety: 'D’agen',
@@ -3704,7 +3717,7 @@ var Social = function Social(_ref) {
           Packaging: 'Natural nuts in white polypropylene bags of 25 kilos, sizes 3/32, 32/34, 34/36 and 36+.<br/>Peeled nuts in boxes of 10 kilos vacuum packed in 2 units of 5 kilos each, extra light quality, light, golden.'
         }
       }, {
-        name: 'Zapallo Butternut',
+        name: 'Pumpkin Butternut',
         image: __WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_butternut_jpg___default.a,
         specs: {
           Variety: 'Butternut',
@@ -3713,7 +3726,7 @@ var Social = function Social(_ref) {
           Packaging: 'In boxes and wooden bins, in sizes S, M, L and XL.'
         }
       }, {
-        name: 'Zapallo Muscat di Provenza',
+        name: 'Pumpkin Muscat di Provenza',
         image: __WEBPACK_IMPORTED_MODULE_9__static_productos_zapallo_muscat_jpg___default.a,
         specs: {
           Variety: 'Muscat di Provenza',
@@ -3724,7 +3737,7 @@ var Social = function Social(_ref) {
       }]
     },
     organic: {
-      title: 'Orgánic',
+      title: 'Organic',
       content: {
         title: 'Products',
         text: 'We seek to offer a natural and healthy alimentation so we work with organic products such as garlic and dried plums among others.'
@@ -3835,7 +3848,7 @@ var Social = function Social(_ref) {
         specs: {
           Variedad: 'Morado y Colorado',
           Region: 'Valle de Uco, zona norte y este de la provincia de Mendoza.',
-          Cosecha: 'Ocubre, Noviembre y Diciembre',
+          Cosecha: 'Octubre, Noviembre y Diciembre',
           Formato: 'En cajas de 10 kilos, 30 libras, bolsas de polipropileno de 20 kilos y de 10 kilos, puede ser palletizado o a granel.<br/>Se comercializa en los calibres, 3 (30/35mm) 4 (36/45mm) 5 (46/55mm) 6 (56/65mm) 7 (66/75mm).'
         }
       }, {
@@ -3844,7 +3857,7 @@ var Social = function Social(_ref) {
         specs: {
           Variedad: 'Blanco',
           Region: 'Valle de Uco, zona norte y este de la provincia de Mendoza.',
-          Cosecha: 'Ocubre, Noviembre y Diciembre',
+          Cosecha: 'Octubre, Noviembre y Diciembre',
           Formato: 'En cajas de 10 kilos, 30 libras, bolsas de polipropileno de 20 kilos y de 10 kilos, puede ser palletizado o a granel.<br/>Se comercializa en los calibres, 3 (30/35mm) 4 (36/45mm) 5 (46/55mm) 6 (56/65mm) 7 (66/75mm).'
         }
       }, {
@@ -3889,7 +3902,7 @@ var Social = function Social(_ref) {
       title: 'Orgánicos',
       content: {
         title: 'Productos',
-        text: 'Buscamos ofrecer una alimentación natural y saludablepor lo que trabajamos con productos orgánicos como ajos y ciruelas deshidratadas entre otros.'
+        text: 'Buscamos ofrecer una alimentación natural y saludable por lo que trabajamos con productos orgánicos como ajos y ciruelas deshidratadas entre otros.'
       },
       modal: 'Certificaciones'
     },
@@ -4059,7 +4072,7 @@ var Social = function Social(_ref) {
       title: 'Localização',
       content: {
         intro: 'Estamos Localizados Na Província De Mendoza, República Argentina.',
-        text: '<strong>San Rafael</strong> está situada en la parte sur de <strong>Mendoza</strong>fica na parte sul de Mendoza, perto da nossa <strong>Patagônia Argentina,</strong> esta área é ideal para produzir produtos orgânicos e convencionais, devido ao seu clima e à saúde de sua água e solo.<br/><strong>Guaymallén</strong>está localizado ao norte da província, com produções de colher de alho e frutas.'
+        text: '<strong>San Rafael</strong> está situada en la parte sur de <strong>Mendoza</strong>fica na parte sul de Mendoza, perto da nossa <strong>Patagônia Argentina,</strong> esta área é ideal para produzir produtos orgânicos e convencionais, devido ao seu clima e à saúde de sua água e solo.<br/><strong>Guaymallén</strong> está localizado ao norte da província, com produções de colher de alho e frutas.'
       },
       map: 'Ver no mapa'
     },

@@ -42,7 +42,7 @@ class Index extends React.Component {
 		this.waitForImages()
 		this.setState({ sections })
 
-		console.log('INIT PROPS: ', this.props)
+		//console.log('INIT PROPS: ', this.props)
 	}
 
 	componentDidUpdate() {
@@ -96,7 +96,11 @@ class Index extends React.Component {
 					content={this.state.product}
 					closeModal={this.handleModal}
 				/>
-				<Hero content={home} />
+				<Hero
+					content={home}
+					scrollClick={this.handleScroll}
+					about={about.title}
+				/>
 				<About content={about} />
 				<Services content={services} />
 				<Products content={products} openModal={this.handleModal} />
@@ -104,6 +108,7 @@ class Index extends React.Component {
 				<LocationSection content={location} />
 				<Contact content={contact} />
 				<Certificate
+					title={organic.modal}
 					open={this.state.certificateModal}
 					closeModal={this.handleModal}
 				/>

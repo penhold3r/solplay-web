@@ -1,102 +1,113 @@
 .product-modal {
-   background: rgba(#fff, 0.75);
-   display: flex;
-   height: calc(100vh - 100px);
-   left: 0;
-   opacity: 0;
-   padding: 30px;
-   position: fixed;
-   top: 100px;
-   transition: all 0.3s;
-   width: 100vw;
-   z-index: -1;
+	background: rgba(#fff, 0.75);
+	display: flex;
+	height: calc(100vh - 100px);
+	left: 0;
+	opacity: 0;
+	padding: 30px;
+	position: fixed;
+	top: 100px;
+	transition: all 0.3s;
+	width: 100vw;
+	z-index: -1;
 
-   @include tablet {
-      height: calc(100vh - 60px);
-      top: 60px;
-   }
+	@include tablet {
+		height: calc(100vh - 60px);
+		padding: 15px;
+		top: 60px;
+	}
 
-   &.open {
-      opacity: 1;
-      z-index: 10;
-   }
+	&.open {
+		opacity: 1;
+		z-index: 10;
+	}
 
-   .modal-container {
-      background: #fff;
-      box-shadow: 0 3px 5px rgba(#000, 0.5);
-      display: flex;
-      flex-direction: column;
-      height: calc(100vh - 160px);
-      margin: auto;
-      max-width: 1300px;
-      overflow-y: auto;
-      position: relative;
+	.modal-container {
+		background: #fff;
+		box-shadow: 0 3px 5px rgba(#000, 0.5);
+		display: flex;
+		flex-direction: column;
+		height: calc(100vh - 160px);
+		margin: auto;
+		max-width: 1300px;
+		overflow-y: auto;
+		position: relative;
 
-      .close-modal {
-         cursor: pointer;
-         font-size: 3.5em;
-         font-weight: bold;
-         height: 3rem;
-         margin: 0 0 0 auto;
-         position: sticky;
-         padding: 6px;
-         top: 0;
-         text-align: center;
-         width: 3rem;
+		.close-modal {
+			cursor: pointer;
+			font-size: 3.5em;
+			font-weight: bold;
+			height: 3rem;
+			margin: 0 0 0 auto;
+			position: sticky;
+			padding: 6px;
+			top: 0;
+			text-align: center;
+			width: 3rem;
 
-         &:hover {
-            color: $main-color;
-         }
-      }
+			&:hover {
+				color: $main-color;
+			}
+		}
 
-      .modal-title {
-         color: $main-color;
-         font: 1.5em 'spinweradbold', Georgia, serif;
-         margin: 0;
-         padding: 0 30px;
-         pointer-events: none;
-         position: relative;
-         text-transform: initial;
-         top: -2rem;
-      }
+		.modal-title {
+			color: $main-color;
+			font: 1.5em 'spinweradbold', Georgia, serif;
+			margin: 0;
+			padding: 0 30px;
+			pointer-events: none;
+			position: relative;
+			text-transform: initial;
+			top: -2rem;
 
-      .modal-content {
-         display: grid;
-         grid-gap: 30px;
-         grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-         padding: 0 30px 30px;
+			@include tablet {
+				padding: 0 15px;
+			}
+		}
 
-         .product-details {
-            border-top: 1px solid #ddd;
+		.modal-content {
+			display: grid;
+			grid-gap: 30px;
+			grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+			padding: 0 30px 30px;
 
-            .spec {
-               border-bottom: 1px solid #ddd;
+			@include tablet {
+				display: flex;
+				flex-direction: column;
+				padding: 0 15px 15px;
+			}
 
-               .spec-title {
-                  color: $accent-color;
-                  font-size: 1em;
-                  margin: 15px 0 9px;
-                  text-transform: uppercase;
-               }
+			.product-details {
+				border-top: 1px solid #ddd;
 
-               .spec-content {
-                  color: #333;
-                  font-size: 0.85em;
-                  line-height: 1.5;
-                  margin: 0 0 15px;
-               }
-            }
-         }
+				.spec {
+					border-bottom: 1px solid #ddd;
 
-         .product-image {
-            height: 100%;
-            object-fit: cover;
-            width: 100%;
+					.spec-title {
+						color: $accent-color;
+						font-size: 1em;
+						margin: 15px 0 9px;
+						text-transform: uppercase;
+					}
 
-            @include tablet {
-               height: 250px;
-            }
-         }
-      }
-   }
+					.spec-content {
+						color: #333;
+						font-size: 0.85em;
+						line-height: 1.5;
+						margin: 0 0 15px;
+					}
+				}
+			}
+
+			.product-image {
+				height: 100%;
+				object-fit: cover;
+				width: 100%;
+
+				@include tablet {
+					height: 250px;
+				}
+			}
+		}
+	}
 }

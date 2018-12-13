@@ -198,8 +198,8 @@
 				justify-self: end;
 				align-self: center;
 				margin-right: 15px;
-				height: 27px;
-				width: 35px;
+				height: 21px;
+				width: 28px;
 				position: relative;
 
 				.menu-bar {
@@ -213,7 +213,7 @@
 						top: 0;
 					}
 					&:nth-child(2) {
-						top: 12px;
+						top: 9px;
 					}
 					&:last-child {
 						bottom: 0;
@@ -223,14 +223,14 @@
 				&.open {
 					.menu-bar {
 						&:first-child {
-							top: 12px;
+							top: 9px;
 							transform: rotate(40deg);
 						}
 						&:nth-child(2) {
 							opacity: 0;
 						}
 						&:last-child {
-							bottom: 12px;
+							bottom: 9px;
 							transform: rotate(-40deg);
 						}
 					}

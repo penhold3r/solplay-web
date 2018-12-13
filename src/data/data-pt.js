@@ -128,7 +128,7 @@ export default {
 				intro:
 					'Estamos Localizados Na Província De Mendoza, República Argentina.',
 				text:
-					'<strong>San Rafael</strong> está situada en la parte sur de <strong>Mendoza</strong>fica na parte sul de Mendoza, perto da nossa <strong>Patagônia Argentina,</strong> esta área é ideal para produzir produtos orgânicos e convencionais, devido ao seu clima e à saúde de sua água e solo.<br/><strong>Guaymallén</strong>está localizado ao norte da província, com produções de colher de alho e frutas.'
+					'<strong>San Rafael</strong> está situada en la parte sur de <strong>Mendoza</strong>fica na parte sul de Mendoza, perto da nossa <strong>Patagônia Argentina,</strong> esta área é ideal para produzir produtos orgânicos e convencionais, devido ao seu clima e à saúde de sua água e solo.<br/><strong>Guaymallén</strong> está localizado ao norte da província, com produções de colher de alho e frutas.'
 			},
 			map: 'Ver no mapa'
 		},

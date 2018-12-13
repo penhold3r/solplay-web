@@ -68,7 +68,7 @@ export default {
 					}
 				},
 				{
-					name: 'Plumbs',
+					name: 'Plums',
 					image: ciruelas,
 					specs: {
 						Variety: 'D’agen',
@@ -90,7 +90,7 @@ export default {
 					}
 				},
 				{
-					name: 'Zapallo Butternut',
+					name: 'Pumpkin Butternut',
 					image: zapalloButter,
 					specs: {
 						Variety: 'Butternut',
@@ -101,7 +101,7 @@ export default {
 					}
 				},
 				{
-					name: 'Zapallo Muscat di Provenza',
+					name: 'Pumpkin Muscat di Provenza',
 					image: zapalloMusc,
 					specs: {
 						Variety: 'Muscat di Provenza',
@@ -114,7 +114,7 @@ export default {
 			]
 		},
 		organic: {
-			title: 'Orgánic',
+			title: 'Organic',
 			content: {
 				title: 'Products',
 				text:
