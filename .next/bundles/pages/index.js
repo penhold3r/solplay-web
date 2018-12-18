@@ -1627,10 +1627,10 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 
 
 var data = {
-  es: __WEBPACK_IMPORTED_MODULE_15__src_data_data_es__["a" /* default */],
   en: __WEBPACK_IMPORTED_MODULE_16__src_data_data_en__["a" /* default */],
-  ru: __WEBPACK_IMPORTED_MODULE_17__src_data_data_ru__["a" /* default */],
-  pt: __WEBPACK_IMPORTED_MODULE_18__src_data_data_pt__["a" /* default */]
+  es: __WEBPACK_IMPORTED_MODULE_15__src_data_data_es__["a" /* default */],
+  pt: __WEBPACK_IMPORTED_MODULE_18__src_data_data_pt__["a" /* default */],
+  ru: __WEBPACK_IMPORTED_MODULE_17__src_data_data_ru__["a" /* default */]
 };
 
 var Index =
@@ -2689,9 +2689,10 @@ var Hero = function Hero(_ref) {
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__slider__["a" /* default */], {
     pagination: true,
     paginationStyle: {
-      background: '#FFF',
-      height: '15px',
-      width: '15px'
+      background: '#E89D0B',
+      border: '1px solid #FFF',
+      height: '9px',
+      width: '9px'
     },
     __source: {
       fileName: _jsxFileName,
@@ -2702,48 +2703,48 @@ var Hero = function Hero(_ref) {
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 27
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     src: __WEBPACK_IMPORTED_MODULE_4__static_banner_solplay_banner_02_jpg___default.a,
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 28
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     src: __WEBPACK_IMPORTED_MODULE_5__static_banner_solplay_banner_03_jpg___default.a,
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 29
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     src: __WEBPACK_IMPORTED_MODULE_6__static_banner_solplay_banner_04_jpg___default.a,
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 30
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     src: __WEBPACK_IMPORTED_MODULE_7__static_banner_solplay_banner_05_jpg___default.a,
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 31
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     src: __WEBPACK_IMPORTED_MODULE_8__static_banner_solplay_banner_06_jpg___default.a,
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 32
     }
   }))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "hero-content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 36
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "hero-text",
@@ -2752,7 +2753,7 @@ var Hero = function Hero(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 37
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     href: "#",
@@ -2762,7 +2763,7 @@ var Hero = function Hero(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 41
     }
   })));
 };
@@ -3235,7 +3236,12 @@ var Products = function Products(_ref) {
         fileName: _jsxFileName,
         lineNumber: 14
       }
-    }, product.name));
+    }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      }
+    }, product.name)));
   })));
 };
 
@@ -4137,15 +4143,15 @@ var Social = function Social(_ref) {
   main: {
     home: {
       name: 'Начните',
-      content: '<h2><strong>Лучший</strong> из нас для <strong>всех</strong></h2><p>Мы мотивированы страстью того, что нам нравится делать, и получать наши продукты для клиентов из-за рубежа.</p>',
+      content: '<h2><strong>Наше</strong> лучшее для всего <strong>мира</strong></h2><p>Мы выполняем наше дело со страстью и мотивацией и нам нравится доставлять наши продукты для клиентов из-за рубежа.</p>',
       cta: 'Подробнее о нас'
     },
     about: {
       title: 'О нас',
-      content: '<strong>Solplay SA</strong> аргентинская компания, специализирующаяся на экспорте качественных агропродовольственных товаров. Мы находимся на международном рынке более двух десятилетий, имея большой опыт в продуктах, которые мы обрабатываем и экспортируем нашим клиентам.',
+      content: '<strong>Solplay SA</strong> аргентинская компания, специализирующаяся на экспорте качественных агропродовольственных товаров. Мы находимся на международном рынке более двух десятилетий, имея большой опыт в обработке и экспорте продуктов.',
       countries: {
-        intro: 'Мы достигли таких стран, как:',
-        list: 'Соединенные Штаты, страны Европейского союза, Тайвань, Гаити, Бразилия, Чили и Боливия'
+        intro: 'У нас имеются клиентские базы в:',
+        list: 'Соединенных Штатах, странах Европейского союза, Тайване, Гаити, Бразилии, Чили и Боливии.'
       }
     },
     services: {
@@ -4154,13 +4160,13 @@ var Social = function Social(_ref) {
         text: 'Контроль и упаковка',
         icon: __WEBPACK_IMPORTED_MODULE_0__static_solplay_control_y_embalaje_svg___default.a
       }, {
-        text: 'Эффективность времени',
+        text: 'Эффективность По Времени',
         icon: __WEBPACK_IMPORTED_MODULE_1__static_solplay_eficiencia_svg___default.a
       }, {
-        text: 'Seguimiento de Envío',
+        text: 'Контроль Над Посылкой',
         icon: __WEBPACK_IMPORTED_MODULE_2__static_solplay_seguimiento_svg___default.a
       }, {
-        text: 'Entrega asegurada',
+        text: 'Гарантированная Доставка',
         icon: __WEBPACK_IMPORTED_MODULE_3__static_solplay_entrega_svg___default.a
       }]
     },
@@ -4171,59 +4177,59 @@ var Social = function Social(_ref) {
         image: __WEBPACK_IMPORTED_MODULE_4__static_productos_ajo_colorado_jpg___default.a,
         specs: {
           Разнообразие: 'Красный - фиолетовый',
-          'Область, Край': 'Валье-де-Уко, Северная и Восточная зона Мендосы.',
+          Регион: 'Валье-де-Уко, Северная и Восточная зона аргентинской провинции Мендоса.',
           Урожай: 'Октябрь, Ноябрь и Декабрь',
-          Упаковки: 'В коробках по 10 килограммов, 30 либрах, полипропиленовых мешках по 20 килограммов и 10 килограммов, могут быть на паллетах или навалом.<br/>Он продается в размерах, 3 (30/35 мм) 4 (36/45 мм) 5 (46/55 мм) 6 (56/65 мм) 7 (66/75 мм).'
+          Упаковка: 'В коробках по 10 килограммов (30 фунтов), полипропиленовых мешках по 20 килограммов и 10 килограммов, могут быть на паллетах или оптом.<br/>Продажа в размерах, 3 (30/35 мм) 4 (36/45 мм) 5 (46/55 мм) 6 (56/65 мм) 7 (66/75 мм).'
         }
       }, {
         name: 'Белый Гарлик',
         image: __WEBPACK_IMPORTED_MODULE_5__static_productos_ajo_blanco_jpg___default.a,
         specs: {
           Разнообразие: 'белый',
-          'Область, Край': 'Валье-де-Уко, Северная и Восточная зона Мендосы.',
+          Регион: 'Валье-де-Уко, Северная и Восточная зона Мендосы.',
           Урожай: 'Октябрь, ноябрь и декабрь',
-          Упаковки: 'В коробках по 10 килограммов, 30 либрах, полипропиленовых мешках по 20 килограммов и 10 килограммов, могут быть на паллетах или навалом.<br/>Он продается в размерах, 3 (30/35 мм) 4 (36/45 мм) 5 (46/55 мм) 6 (56/65 мм) 7 (66/75 мм).'
+          Упаковка: 'В коробках по 10 килограммов (30 фунтов), полипропиленовых мешках по 20 килограммов и 10 килограммов, могут быть на паллетах или оптом.<br/>Продажа в размерах, 3 (30/35 мм) 4 (36/45 мм) 5 (46/55 мм) 6 (56/65 мм) 7 (66/75 мм).'
         }
       }, {
-        name: 'Слив',
+        name: 'Слива',
         image: __WEBPACK_IMPORTED_MODULE_6__static_productos_ciruelas_secas_jpg___default.a,
         specs: {
           Разнообразие: 'D’agen',
-          'Область, Край': 'Восток и юг Мендосы.',
+          Регион: 'Восток и юг Мендосы.',
           Урожай: 'Февраль и март',
-          Упаковки: 'В коробках по 10 кг белые полипропиленовые мешки 25 кг с натуральным американским сухим типом, размеры 30/40, 40/50, 50/60, 60/70, 70/80, 80/90, 90/100, 100/110, 110/120.'
+          Упаковка: 'В коробках по 10 кг белые полипропиленовые мешки 25 кг с натуральным американским сухим типом, размеры 30/40, 40/50, 50/60, 60/70, 70/80, 80/90, 90/100, 100/110, 110/120.'
         }
       }, {
         name: 'Орешки',
         image: __WEBPACK_IMPORTED_MODULE_7__static_productos_nueces_chandler_jpg___default.a,
         specs: {
           Разнообразие: 'Чандлер, Сер, Хартли, Говард и Вина',
-          'Область, Край': 'Валье-де-Уко, Тупунгато.',
+          Регион: 'Валье-де-Уко, Тупунгато.',
           Урожай: 'Март и апрель',
-          Упаковки: 'Натуральные орехи в белых полипропиленовых мешках по 25 кг, размеры 3/32, 32/34, 34/36 и 36+.<br/>Очищенные гайки в коробках по 10 кг, упакованные в 2 единицы по 5 килограммов каждый, дополнительное качество света, светлое, золотистое.'
+          Упаковка: 'Натуральные орехи в белых полипропиленовых мешках по 25 кг, размеры 3/32, 32/34, 34/36 и 36+.<br/>Очищенные гайки в коробках по 10 кг, упакованные в 2 единицы по 5 килограммов каждый, дополнительное качество света, светлое, золотистое.'
         }
       }, {
         name: 'Тыквенный Butternut',
         image: __WEBPACK_IMPORTED_MODULE_8__static_productos_zapallo_butternut_jpg___default.a,
         specs: {
           Разнообразие: 'Butternut',
-          'Область, Край': 'Северная зона Мендосы.',
+          Регион: 'Северная зона Мендосы.',
           Урожай: 'Январь, февраль и март',
-          Упаковки: 'В коробках и деревянных бункерах, размерах S, M, L и XL.'
+          Упаковка: 'В коробках и деревянных бункерах, размерах S, M, L и XL.'
         }
       }, {
         name: 'Тыква Мускат ди Провенца',
         image: __WEBPACK_IMPORTED_MODULE_9__static_productos_zapallo_muscat_jpg___default.a,
         specs: {
           Разнообразие: 'Мускат ди Провенца',
-          'Область, Край': 'Нот-зона Мендосы.',
+          Регион: 'Нот-зона Мендосы.',
           Урожай: 'Январь, февраль и март',
-          Упаковки: 'В деревянных бункерах с диапазонами килограммов от 5 кг на единицу до 15 кг на единицу.'
+          Упаковка: 'В деревянных бункерах с диапазонами килограммов от 5 кг на единицу до 15 кг на единицу.'
         }
       }]
     },
     organic: {
-      title: 'Органический',
+      title: 'Органические',
       content: {
         title: 'Товары',
         text: 'Мы стремимся предложить натуральное и здоровое питание, поэтому мы работаем с такими органическими продуктами, как чеснок и сушеные сливы.'
@@ -4234,9 +4240,9 @@ var Social = function Social(_ref) {
       title: 'Место Нахождения',
       content: {
         intro: 'Мы расположены в провинции Мендоза, Аргентинской Республики.',
-        text: '<strong>San Rafael</strong> находится в южной части Мендосы недалеко от нашей аргентинской Патагонии, этот район оптимален для производства органических и традиционных продуктов из-за его климата и здоровья его воды и почвы.<br/><strong>Guaymallén</strong> расположен к северу от провинции с производствами совок и фруктов чеснока.'
+        text: '<strong>San Rafael</strong> Сан-Рафаэль находится в южной части Мендосы недалеко от нашей аргентинской Патагонии, этот район оптимален для производства органических и традиционных продуктов из-за его климата и благосостояния его воды и почвы.<br/><strong>Guaymallén</strong> расположен к северу от провинции с производствами совок и фруктов чеснока.'
       },
-      map: 'Видеть На Карте'
+      map: 'Смотреть На Карте'
     },
     contact: {
       title: 'контакт',
@@ -4560,7 +4566,7 @@ module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGlu
 /***/ "./static/solplay_about.jpg":
 /***/ (function(module, exports) {
 
-module.exports = "/_next/static/images/solplay_about-3ab451f54466c6cba17a7d60beb90532.jpg";
+module.exports = "/_next/static/images/solplay_about-3be397e44b737d00cdd7e4954b434438.jpg";
 
 /***/ }),
 

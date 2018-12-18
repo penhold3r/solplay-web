@@ -1,44 +1,62 @@
 .products {
-   .products-list {
-      display: grid;
-      grid-gap: 15px;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      margin: 0 auto;
-      max-width: 1300px;
-      padding: 0 15px;
+	.products-list {
+		display: grid;
+		grid-gap: 0px;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		margin: 0 auto;
+		max-width: 1300px;
+		padding: 0 15px;
 
-      .product {
-         display: flex;
-         height: 300px;
-         padding: 30px;
-         position: relative;
+		.product {
+			cursor: pointer;
+			display: flex;
+			height: 300px;
+			padding: 30px;
+			position: relative;
+			transition: all 0.3s;
 
-         @include tablet {
-            height: 250px;
-         }
+			@include tablet {
+				height: 250px;
+			}
 
-         .product-image {
-            height: 100%;
-            left: 0;
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            width: 100%;
-            z-index: 0;
-         }
+			&:hover {
+				padding: 0;
 
-         .product-title {
-            background: rgba(#fff, 0.4);
-            text-shadow: 0 0 15px rgba(#000, 0.75);
-            color: #fff;
-            font: 1.5em 'spinweradbold', Georgia, serif;
-            margin: auto;
-            padding: 30px 60px;
-            position: relative;
-            text-align: center;
-            text-transform: none;
-            z-index: 1;
-         }
-      }
-   }
+				.product-title {
+					background: rgba(#fff, 0.6);
+					padding: 0 30px;
+				}
+			}
+
+			.product-image {
+				height: 100%;
+				left: 0;
+				object-fit: cover;
+				position: absolute;
+				top: 0;
+				width: 100%;
+				z-index: 0;
+			}
+
+			.product-title {
+				background: rgba(#fff, 0.4);
+				color: #fff;
+				display: flex;
+				font: 1.25em 'spinweradbold', Georgia, serif;
+				margin: 60px 15px;
+				position: relative;
+				text-shadow: 0 0 15px rgba(#000, 0.75);
+				text-transform: none;
+				transition: all 0.3s;
+				width: 100%;
+				z-index: 1;
+
+				span {
+					display: block;
+					margin: auto;
+					text-align: center;
+				}
+			}
+		}
+	}
 }

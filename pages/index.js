@@ -18,7 +18,7 @@ import en from '../src/data/data-en'
 import ru from '../src/data/data-ru'
 import pt from '../src/data/data-pt'
 
-const data = { es, en, ru, pt }
+const data = { en, es, pt, ru }
 
 class Index extends React.Component {
 	state = {

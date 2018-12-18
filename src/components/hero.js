@@ -18,9 +18,10 @@ const Hero = ({ content, scrollClick, about }) => (
 			<Slider
 				pagination={true}
 				paginationStyle={{
-					background: '#FFF',
-					height: '15px',
-					width: '15px'
+					background: '#E89D0B',
+					border: '1px solid #FFF',
+					height: '9px',
+					width: '9px'
 				}}
 			>
 				<img src={img01} alt="" />
