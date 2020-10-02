@@ -102,7 +102,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__src_data_data_ru__ = __webpack_require__("./src/data/data-ru.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__src_data_data_pt__ = __webpack_require__("./src/data/data-pt.js");
 
-var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\pages\\index.js";
+var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\pages\\index.js";
 
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } } function _next(value) { step("next", value); } function _throw(err) { step("throw", err); } _next(); }); }; }
@@ -400,7 +400,7 @@ Object.defineProperty(Index, "getInitialProps", {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_slugify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_slugify__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_solplay_about_jpg__ = __webpack_require__("./static/solplay_about.jpg");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_solplay_about_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__static_solplay_about_jpg__);
-var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\about.js";
+var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\src\\components\\about.js";
 
 
 
@@ -483,7 +483,7 @@ var About = function About(_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_oia_logo_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__static_oia_logo_svg__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_download_pdf_icon_svg__ = __webpack_require__("./static/download-pdf-icon.svg");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_download_pdf_icon_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__static_download_pdf_icon_svg__);
-var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\certificate.js";
+var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\src\\components\\certificate.js";
 
 
 
@@ -572,7 +572,7 @@ var Certificate = function Certificate(_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_slugify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_slugify__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__social__ = __webpack_require__("./src/components/social.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__data_submit_form__ = __webpack_require__("./src/data/submit-form.js");
-var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\contact.js";
+var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\src\\components\\contact.js";
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -846,7 +846,7 @@ function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_white_logo_svg__ = __webpack_require__("./static/solplay-white-logo.svg");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_white_logo_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__static_solplay_white_logo_svg__);
-var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\footer.js";
+var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\src\\components\\footer.js";
 
 
 
@@ -896,7 +896,7 @@ var Footer = function Footer() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__social__ = __webpack_require__("./src/components/social.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_solplay_header_logo_svg__ = __webpack_require__("./static/solplay-header-logo.svg");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_solplay_header_logo_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__static_solplay_header_logo_svg__);
-var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\header.js";
+var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\src\\components\\header.js";
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -1148,7 +1148,7 @@ function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__static_banner_solplay_banner_05_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__static_banner_solplay_banner_05_jpg__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__static_banner_solplay_banner_06_jpg__ = __webpack_require__("./static/banner/solplay_banner-06.jpg");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__static_banner_solplay_banner_06_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__static_banner_solplay_banner_06_jpg__);
-var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\hero.js";
+var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\src\\components\\hero.js";
 
 
 
@@ -1281,7 +1281,7 @@ var Hero = function Hero(_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__footer__ = __webpack_require__("./src/components/footer.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__styles_index_scss__ = __webpack_require__("./src/styles/index.scss");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__styles_index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__styles_index_scss__);
-var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\layout.js";
+var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\src\\components\\layout.js";
 
 
 
@@ -1336,28 +1336,105 @@ var Layout = function Layout(_ref) {
     content: "ie=edge",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 17
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
-    property: "og:image",
-    content: "../../static/bookmark-image.png",
+    name: "title",
+    content: "Solplay",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 19
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+    name: "description",
+    content: "Solplay SA es una empresa Argentina, dedicada a la exportaci\xF3n de productos agroalimentarios de calidad.",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
     name: "referrer",
     content: "origin",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 24
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+    property: "og:type",
+    content: "website",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+    property: "og:url",
+    content: "https://solplayargentina.com/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+    property: "og:title",
+    content: "Solplay",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+    property: "og:description",
+    content: "Solplay SA es una empresa Argentina, dedicada a la exportaci\xF3n de productos agroalimentarios de calidad.",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+    property: "og:image",
+    content: "../../static/opengraph.png",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+    property: "twitter:card",
+    content: "summary_large_image",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+    property: "twitter:url",
+    content: "https://solplayargentina.com/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+    property: "twitter:title",
+    content: "Solplay",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+    property: "twitter:description",
+    content: "Solplay SA es una empresa Argentina, dedicada a la exportaci\xF3n de productos agroalimentarios de calidad.",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+    property: "twitter:image",
+    content: "../../static/opengraph.png",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
     rel: "profile",
     href: "https://gmpg.org/xfn/11",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 44
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
     rel: "shortcut icon",
@@ -1365,7 +1442,7 @@ var Layout = function Layout(_ref) {
     href: "../../static/favicon.ico",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 45
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
     rel: "icon",
@@ -1374,7 +1451,7 @@ var Layout = function Layout(_ref) {
     sizes: "32x32 192x192",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 46
     }
   })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__header__["a" /* default */], {
     menu: menu,
@@ -1383,17 +1460,17 @@ var Layout = function Layout(_ref) {
     menuClick: menuClick,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 53
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("main", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 54
     }
   }, children), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__footer__["a" /* default */], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 55
     }
   }));
 };
@@ -1410,7 +1487,7 @@ var Layout = function Layout(_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_ubicacion_jpg__ = __webpack_require__("./static/solplay_ubicacion.jpg");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_ubicacion_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__static_solplay_ubicacion_jpg__);
-var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\location.js";
+var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\src\\components\\location.js";
 
 
 
@@ -1489,7 +1566,7 @@ var LocationSection = function LocationSection(_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_leaf_jpg__ = __webpack_require__("./static/solplay_leaf.jpg");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_leaf_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__static_solplay_leaf_jpg__);
-var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\organic.js";
+var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\src\\components\\organic.js";
 
 
 
@@ -1582,7 +1659,7 @@ var Organic = function Organic(_ref) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\product-modal.js";
+var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\src\\components\\product-modal.js";
 
 
 var ProductModal = function ProductModal(_ref) {
@@ -1676,7 +1753,7 @@ var ProductModal = function ProductModal(_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_slugify__ = __webpack_require__("slugify");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_slugify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_slugify__);
-var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\products.js";
+var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\src\\components\\products.js";
 
 
 
@@ -1752,7 +1829,7 @@ var Products = function Products(_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_servicios_jpg__ = __webpack_require__("./static/solplay_servicios.jpg");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_servicios_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__static_solplay_servicios_jpg__);
-var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\services.js";
+var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\src\\components\\services.js";
 
 
 
@@ -1829,7 +1906,7 @@ var Services = function Services(_ref) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\slider.js";
+var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\src\\components\\slider.js";
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -2047,7 +2124,7 @@ function (_React$Component) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _jsxFileName = "C:\\Users\\PH\\Documents\\WEB\\www\\solplay-web\\src\\components\\social.js";
+var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\src\\components\\social.js";
 
 
 var Social = function Social(_ref) {
