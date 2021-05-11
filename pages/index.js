@@ -30,7 +30,7 @@ class Index extends React.Component {
 	}
 
 	static getInitialProps = async ({ query }) => {
-		const lang = query || 'en'
+		const lang = query.lang || query
 		const content = data[lang]
 
 		return { lang, content }
@@ -41,8 +41,6 @@ class Index extends React.Component {
 
 		this.waitForImages()
 		this.setState({ sections })
-
-		//console.log('INIT PROPS: ', this.props)
 	}
 
 	componentDidUpdate() {

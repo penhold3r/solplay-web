@@ -13,7 +13,7 @@ const Layout = ({ menu, currentLang, langs, children, menuClick }) => (
 			<meta property="developer" content="penHolder Designerd" />
 			<meta type="theme-color" content="#00A7E1" />
 			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-			<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+			<meta httpEquiv="X-UA-Compatible" content="ie=edge" />
 
 			<meta name="title" content="Solplay" />
 			<meta

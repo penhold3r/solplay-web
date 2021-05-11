@@ -53,7 +53,7 @@ class Header extends React.Component {
 						<Social className="header-social" />
 					</div>
 					<h1 className="logo">
-						<Link href="/" prefetch>
+						<Link href={`/${currentLang}`} prefetch>
 							<a>
 								<img src={logo} alt="Solplay" />
 							</a>

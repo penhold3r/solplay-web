@@ -239,7 +239,7 @@ function (_React$Component) {
       this.waitForImages();
       this.setState({
         sections: sections
-      }); //console.log('INIT PROPS: ', this.props)
+      });
     }
   }, {
     key: "componentDidUpdate",
@@ -280,7 +280,7 @@ function (_React$Component) {
         menuClick: this.handleScroll,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 85
         }
       }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__src_components_product_modal__["a" /* default */], {
         open: this.state.productModal,
@@ -288,7 +288,7 @@ function (_React$Component) {
         closeModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 92
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__src_components_hero__["a" /* default */], {
         content: home,
@@ -296,45 +296,45 @@ function (_React$Component) {
         about: about.title,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99
+          lineNumber: 97
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__src_components_about__["a" /* default */], {
         content: about,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 102
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__src_components_services__["a" /* default */], {
         content: services,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 103
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__src_components_products__["a" /* default */], {
         content: products,
         openModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 106
+          lineNumber: 104
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_11__src_components_organic__["a" /* default */], {
         content: organic,
         openModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 105
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_13__src_components_location__["a" /* default */], {
         content: location,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108
+          lineNumber: 106
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_14__src_components_contact__["a" /* default */], {
         content: contact,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 109
+          lineNumber: 107
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_12__src_components_certificate__["a" /* default */], {
         title: organic.modal,
@@ -342,7 +342,7 @@ function (_React$Component) {
         closeModal: this.handleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 110
+          lineNumber: 108
         }
       }));
     }
@@ -365,7 +365,7 @@ Object.defineProperty(Index, "getInitialProps", {
           switch (_context.prev = _context.next) {
             case 0:
               query = _ref2.query;
-              lang = query || 'en';
+              lang = query.lang || query;
               content = data[lang];
               return _context.abrupt("return", {
                 lang: lang,
@@ -1037,7 +1037,7 @@ function (_React$Component) {
           lineNumber: 55
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
-        href: "/",
+        href: "/".concat(currentLang),
         prefetch: true,
         __source: {
           fileName: _jsxFileName,
@@ -1317,39 +1317,123 @@ var Layout = function Layout(_ref) {
       lineNumber: 13
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
-    "http-equiv": "X-UA-Compatible",
-    content: "ie=edge",
+    type: "theme-color",
+    content: "#00A7E1",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
-    }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
-    name: "referrer",
-    content: "origin",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
     name: "viewport",
     content: "width=device-width, initial-scale=1.0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 15
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
-    type: "theme-color",
-    content: "#00A7E1",
+    httpEquiv: "X-UA-Compatible",
+    content: "ie=edge",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 16
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
     name: "title",
     content: "Solplay",
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 18
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+    name: "description",
+    content: "Solplay SA es una empresa Argentina, dedicada a la exportaci\xF3n de productos agroalimentarios de calidad.",
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 19
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+    name: "referrer",
+    content: "origin",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+    property: "og:type",
+    content: "website",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+    property: "og:url",
+    content: "https://solplayargentina.com/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+    property: "og:title",
+    content: "Solplay",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+    property: "og:description",
+    content: "Solplay SA es una empresa Argentina, dedicada a la exportaci\xF3n de productos agroalimentarios de calidad.",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+    property: "og:image",
+    content: "../../static/opengraph.png",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+    property: "twitter:card",
+    content: "summary_large_image",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+    property: "twitter:url",
+    content: "https://solplayargentina.com/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+    property: "twitter:title",
+    content: "Solplay",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+    property: "twitter:description",
+    content: "Solplay SA es una empresa Argentina, dedicada a la exportaci\xF3n de productos agroalimentarios de calidad.",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+    property: "twitter:image",
+    content: "../../static/opengraph.png",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
+    rel: "profile",
+    href: "https://gmpg.org/xfn/11",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
     rel: "shortcut icon",
@@ -1357,7 +1441,7 @@ var Layout = function Layout(_ref) {
     href: "../../static/favicon.ico",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 44
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
     rel: "icon",
@@ -1366,14 +1450,7 @@ var Layout = function Layout(_ref) {
     sizes: "32x32 192x192",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
-    }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
-    rel: "profile",
-    href: "https://gmpg.org/xfn/11",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 49
     }
   })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__header__["a" /* default */], {
     menu: menu,
@@ -1382,17 +1459,17 @@ var Layout = function Layout(_ref) {
     menuClick: menuClick,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 56
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("main", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 62
     }
   }, children), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__footer__["a" /* default */], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 63
     }
   }));
 };
