@@ -25,7 +25,11 @@ webpackHotUpdate(0,{
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
+<<<<<<< HEAD:.next/0.a1cb284eda4e71587cc9.hot-update.js
             injectCss(link, link.href.split("?")[0] + "?unix=1601661560677");
+=======
+            injectCss(link, link.href.split("?")[0] + "?unix=1620768944009");
+>>>>>>> new-contact-data:.next/0.00d7526005783cb0e907.hot-update.js
           });
       }
     }
@@ -34,4 +38,8 @@ webpackHotUpdate(0,{
 /***/ })
 
 })
+<<<<<<< HEAD:.next/0.a1cb284eda4e71587cc9.hot-update.js
 //# sourceMappingURL=0.a1cb284eda4e71587cc9.hot-update.js.map
+=======
+//# sourceMappingURL=0.00d7526005783cb0e907.hot-update.js.map
+>>>>>>> new-contact-data:.next/0.00d7526005783cb0e907.hot-update.js

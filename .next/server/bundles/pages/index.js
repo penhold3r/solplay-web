@@ -102,7 +102,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__src_data_data_ru__ = __webpack_require__("./src/data/data-ru.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__src_data_data_pt__ = __webpack_require__("./src/data/data-pt.js");
 
-var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\pages\\index.js";
+var _jsxFileName = "C:\\Users\\a310419\\Documents\\STUFFS\\PH\\solplay-web\\pages\\index.js";
 
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } } function _next(value) { step("next", value); } function _throw(err) { step("throw", err); } _next(); }); }; }
@@ -359,14 +359,13 @@ Object.defineProperty(Index, "getInitialProps", {
     var _value = _asyncToGenerator(
     /*#__PURE__*/
     __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default.a.mark(function _callee(_ref2) {
-      var query, _query$lang, lang, content;
-
+      var query, lang, content;
       return __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
               query = _ref2.query;
-              _query$lang = query.lang, lang = _query$lang === void 0 ? 'en' : _query$lang;
+              lang = query || 'en';
               content = data[lang];
               return _context.abrupt("return", {
                 lang: lang,
@@ -400,7 +399,7 @@ Object.defineProperty(Index, "getInitialProps", {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_slugify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_slugify__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_solplay_about_jpg__ = __webpack_require__("./static/solplay_about.jpg");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_solplay_about_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__static_solplay_about_jpg__);
-var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\src\\components\\about.js";
+var _jsxFileName = "C:\\Users\\a310419\\Documents\\STUFFS\\PH\\solplay-web\\src\\components\\about.js";
 
 
 
@@ -483,7 +482,7 @@ var About = function About(_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_oia_logo_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__static_oia_logo_svg__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_download_pdf_icon_svg__ = __webpack_require__("./static/download-pdf-icon.svg");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_download_pdf_icon_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__static_download_pdf_icon_svg__);
-var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\src\\components\\certificate.js";
+var _jsxFileName = "C:\\Users\\a310419\\Documents\\STUFFS\\PH\\solplay-web\\src\\components\\certificate.js";
 
 
 
@@ -493,45 +492,44 @@ var Certificate = function Certificate(_ref) {
   var title = _ref.title,
       open = _ref.open,
       closeModal = _ref.closeModal;
-  var visible = open ? ' visible' : '';
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("section", {
-    className: "certificate".concat(visible),
+    className: "certificate".concat(open ? ' visible' : ''),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 6
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "modal",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 7
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "close-modal",
     onClick: closeModal,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 8
     }
-  }, "\u02DF"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
+  }, "\xD7"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     src: __WEBPACK_IMPORTED_MODULE_1__static_solplay_certification_jpg___default.a,
     alt: "",
     className: "certificate-background",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 11
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "certificate-content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 12
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
     className: "main-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 13
     }
   }, title), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     src: __WEBPACK_IMPORTED_MODULE_2__static_oia_logo_svg___default.a,
@@ -539,21 +537,21 @@ var Certificate = function Certificate(_ref) {
     className: "oia-logo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 14
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     href: "../../static/solpay_OIA_certificacion.pdf",
     className: "download",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 19
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     src: __WEBPACK_IMPORTED_MODULE_3__static_download_pdf_icon_svg___default.a,
     alt: "Descargar PDF",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 23
     }
   })))));
 };
@@ -572,7 +570,7 @@ var Certificate = function Certificate(_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_slugify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_slugify__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__social__ = __webpack_require__("./src/components/social.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__data_submit_form__ = __webpack_require__("./src/data/submit-form.js");
-var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\src\\components\\contact.js";
+var _jsxFileName = "C:\\Users\\a310419\\Documents\\STUFFS\\PH\\solplay-web\\src\\components\\contact.js";
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -663,13 +661,13 @@ function (_React$Component) {
         className: "contact scroll",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 28
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
         className: "main-title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 29
         }
       }, title), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form", {
         className: "contact-form",
@@ -678,13 +676,13 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 30
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "form-field",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 34
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
         type: "text",
@@ -695,19 +693,19 @@ function (_React$Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 35
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label", {
         htmlFor: "name",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 43
         }
       }, fields.name)), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "form-field",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 45
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
         type: "email",
@@ -718,19 +716,19 @@ function (_React$Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 46
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label", {
         htmlFor: "email",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 54
         }
       }, fields.email)), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "form-field",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 56
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("textarea", {
         name: "msg",
@@ -740,13 +738,13 @@ function (_React$Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 57
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label", {
         htmlFor: "msg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 64
         }
       }, fields.msg)), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
         type: "submit",
@@ -754,80 +752,80 @@ function (_React$Component) {
         value: fields.send,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 66
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: this.state.spinner ? 'sending visible' : 'sending',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 67
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "spinner",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 68
         }
       }))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__social__["a" /* default */], {
         className: "contact-social",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77
+          lineNumber: 71
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "contact-details",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
+          lineNumber: 72
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "contact-details-inner",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 73
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "contact-link",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 74
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
-        href: "https://goo.gl/maps/WrcgbGnL3V92",
+        href: "https://goo.gl/maps/oqrceYemCP5G1a7Q6",
         target: "_blank",
         rel: "noopener",
         className: "icon-map-pin-streamline",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 75
         }
-      }, "Ruta Provincial, 24, km, 16, 5535. - Mendoza Argentina.")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+      }, "Antartida Argentina 1341, La Puntilla, Luj\xE1n de Cuyo.")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "contact-link",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90
+          lineNumber: 84
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
         href: "mailto:info@solplayargentina.com",
         className: "icon-envelope-o",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91
+          lineNumber: 85
         }
       }, "info@solplayargentina.com")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "contact-link",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 92
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
-        href: "tel:+5492614549231",
+        href: "tel:+5492615089415",
         className: "icon-phone",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99
+          lineNumber: 93
         }
-      }, "54 9 261 454 9231")))));
+      }, "54 9 261 508 9415")))));
     }
   }]);
 
@@ -846,7 +844,7 @@ function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_white_logo_svg__ = __webpack_require__("./static/solplay-white-logo.svg");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_white_logo_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__static_solplay_white_logo_svg__);
-var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\src\\components\\footer.js";
+var _jsxFileName = "C:\\Users\\a310419\\Documents\\STUFFS\\PH\\solplay-web\\src\\components\\footer.js";
 
 
 
@@ -855,13 +853,13 @@ var Footer = function Footer() {
     className: "footer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 4
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "inner-footer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 5
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     src: __WEBPACK_IMPORTED_MODULE_1__static_solplay_white_logo_svg___default.a,
@@ -869,14 +867,14 @@ var Footer = function Footer() {
     className: "footer-logo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 6
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 7
     }
-  }, "\xA9 2018")));
+  }, "\xA9 ", new Date().getFullYear())));
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (Footer);
@@ -896,7 +894,7 @@ var Footer = function Footer() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__social__ = __webpack_require__("./src/components/social.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_solplay_header_logo_svg__ = __webpack_require__("./static/solplay-header-logo.svg");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_solplay_header_logo_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__static_solplay_header_logo_svg__);
-var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\src\\components\\header.js";
+var _jsxFileName = "C:\\Users\\a310419\\Documents\\STUFFS\\PH\\solplay-web\\src\\components\\header.js";
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -988,25 +986,25 @@ function (_React$Component) {
         className: "main-header".concat(headerClass),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 29
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "header-container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 30
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "extra-nav",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 31
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "lang-links",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 32
         }
       }, langs.map(function (lang, key) {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
@@ -1015,58 +1013,59 @@ function (_React$Component) {
           href: "/lang=".concat(lang.slug),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 36
+            lineNumber: 34
           }
         }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
           className: currentLang == lang.slug ? 'lang-link active-lang' : 'lang-link',
           "data-lang": lang.name,
+          title: lang.name,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 41
+            lineNumber: 39
           }
         }, lang.slug));
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__social__["a" /* default */], {
         className: "header-social",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 53
         }
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
         className: "logo",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 55
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
         href: "/",
         prefetch: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 56
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 57
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
         src: __WEBPACK_IMPORTED_MODULE_4__static_solplay_header_logo_svg___default.a,
         alt: "Solplay",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59
+          lineNumber: 58
         }
       })))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("nav", {
         className: navClass,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 62
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul", {
         className: "menu",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 63
         }
       }, menu.map(function (item, key) {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li", {
@@ -1074,7 +1073,7 @@ function (_React$Component) {
           key: key,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 66
+            lineNumber: 65
           }
         }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
           className: _this2.state.activeLink == key ? 'active' : '',
@@ -1088,7 +1087,7 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 67
+            lineNumber: 66
           }
         }, item));
       }))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
@@ -1096,25 +1095,25 @@ function (_React$Component) {
         onClick: this.handleMenu,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
+          lineNumber: 79
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "menu-bar",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 80
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "menu-bar",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 81
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "menu-bar",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 82
         }
       }))));
     }
@@ -1148,7 +1147,7 @@ function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__static_banner_solplay_banner_05_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__static_banner_solplay_banner_05_jpg__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__static_banner_solplay_banner_06_jpg__ = __webpack_require__("./static/banner/solplay_banner-06.jpg");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__static_banner_solplay_banner_06_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__static_banner_solplay_banner_06_jpg__);
-var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\src\\components\\hero.js";
+var _jsxFileName = "C:\\Users\\a310419\\Documents\\STUFFS\\PH\\solplay-web\\src\\components\\hero.js";
 
 
 
@@ -1281,7 +1280,7 @@ var Hero = function Hero(_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__footer__ = __webpack_require__("./src/components/footer.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__styles_index_scss__ = __webpack_require__("./src/styles/index.scss");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__styles_index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__styles_index_scss__);
-var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\src\\components\\layout.js";
+var _jsxFileName = "C:\\Users\\a310419\\Documents\\STUFFS\\PH\\solplay-web\\src\\components\\layout.js";
 
 
 
@@ -1298,28 +1297,35 @@ var Layout = function Layout(_ref) {
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Fragment, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 10
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_next_head___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 11
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 12
     }
   }, "Solplay"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
     property: "developer",
     content: "penHolder Designerd",
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 13
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+    "http-equiv": "X-UA-Compatible",
+    content: "ie=edge",
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 14
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
-    type: "theme-color",
-    content: "#00A7E1",
+    name: "referrer",
+    content: "origin",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
@@ -1332,11 +1338,11 @@ var Layout = function Layout(_ref) {
       lineNumber: 16
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
-    "http-equiv": "X-UA-Compatible",
-    content: "ie=edge",
+    type: "theme-color",
+    content: "#00A7E1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 18
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
     name: "title",
@@ -1345,104 +1351,13 @@ var Layout = function Layout(_ref) {
       fileName: _jsxFileName,
       lineNumber: 19
     }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
-    name: "description",
-    content: "Solplay SA es una empresa Argentina, dedicada a la exportaci\xF3n de productos agroalimentarios de calidad.",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
-    name: "referrer",
-    content: "origin",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
-    property: "og:type",
-    content: "website",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
-    property: "og:url",
-    content: "https://solplayargentina.com/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
-    property: "og:title",
-    content: "Solplay",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
-    property: "og:description",
-    content: "Solplay SA es una empresa Argentina, dedicada a la exportaci\xF3n de productos agroalimentarios de calidad.",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
-    property: "og:image",
-    content: "../../static/opengraph.png",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33
-    }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
-    property: "twitter:card",
-    content: "summary_large_image",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
-    property: "twitter:url",
-    content: "https://solplayargentina.com/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
-    property: "twitter:title",
-    content: "Solplay",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37
-    }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
-    property: "twitter:description",
-    content: "Solplay SA es una empresa Argentina, dedicada a la exportaci\xF3n de productos agroalimentarios de calidad.",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38
-    }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
-    property: "twitter:image",
-    content: "../../static/opengraph.png",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42
-    }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
-    rel: "profile",
-    href: "https://gmpg.org/xfn/11",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 44
-    }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
     rel: "shortcut icon",
     type: "image/x-icon",
     href: "../../static/favicon.ico",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 21
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
     rel: "icon",
@@ -1451,7 +1366,14 @@ var Layout = function Layout(_ref) {
     sizes: "32x32 192x192",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 26
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
+    rel: "profile",
+    href: "https://gmpg.org/xfn/11",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
     }
   })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__header__["a" /* default */], {
     menu: menu,
@@ -1460,17 +1382,17 @@ var Layout = function Layout(_ref) {
     menuClick: menuClick,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 34
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("main", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 40
     }
   }, children), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__footer__["a" /* default */], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 41
     }
   }));
 };
@@ -1487,7 +1409,7 @@ var Layout = function Layout(_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_ubicacion_jpg__ = __webpack_require__("./static/solplay_ubicacion.jpg");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_ubicacion_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__static_solplay_ubicacion_jpg__);
-var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\src\\components\\location.js";
+var _jsxFileName = "C:\\Users\\a310419\\Documents\\STUFFS\\PH\\solplay-web\\src\\components\\location.js";
 
 
 
@@ -1549,7 +1471,7 @@ var LocationSection = function LocationSection(_ref) {
     className: "button",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 19
     }
   }, map)));
 };
@@ -1566,7 +1488,7 @@ var LocationSection = function LocationSection(_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_leaf_jpg__ = __webpack_require__("./static/solplay_leaf.jpg");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_leaf_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__static_solplay_leaf_jpg__);
-var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\src\\components\\organic.js";
+var _jsxFileName = "C:\\Users\\a310419\\Documents\\STUFFS\\PH\\solplay-web\\src\\components\\organic.js";
 
 
 
@@ -1580,25 +1502,25 @@ var Organic = function Organic(_ref) {
     className: "organic",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 4
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
     className: "main-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 5
     }
   }, title), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "organic-content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 6
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "organic-content-wrapper",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 7
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     className: "organic-image",
@@ -1606,18 +1528,18 @@ var Organic = function Organic(_ref) {
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 8
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "organic-content-txt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 9
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 10
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
     dangerouslySetInnerHTML: {
@@ -1625,7 +1547,7 @@ var Organic = function Organic(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 11
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
     dangerouslySetInnerHTML: {
@@ -1633,7 +1555,7 @@ var Organic = function Organic(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 12
     }
   })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     href: "certificaciones",
@@ -1644,7 +1566,7 @@ var Organic = function Organic(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 14
     }
   })))));
 };
@@ -1659,7 +1581,7 @@ var Organic = function Organic(_ref) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\src\\components\\product-modal.js";
+var _jsxFileName = "C:\\Users\\a310419\\Documents\\STUFFS\\PH\\solplay-web\\src\\components\\product-modal.js";
 
 
 var ProductModal = function ProductModal(_ref) {
@@ -1670,38 +1592,38 @@ var ProductModal = function ProductModal(_ref) {
     className: open ? 'product-modal open' : 'product-modal',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 3
+      lineNumber: 2
     }
   }, content && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "modal-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 4
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "close-modal product",
     onClick: closeModal,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 5
     }
   }, "\u02DF"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
     className: "modal-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 8
     }
   }, content.name), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "modal-content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 9
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "product-details",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 10
     }
   }, content.specs && Object.entries(content.specs).map(function (spec, key) {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
@@ -1709,13 +1631,13 @@ var ProductModal = function ProductModal(_ref) {
       className: "spec",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 14
+        lineNumber: 13
       }
     }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h4", {
       className: "spec-title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 14
       }
     }, spec[0]), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
       className: "spec-content",
@@ -1724,7 +1646,7 @@ var ProductModal = function ProductModal(_ref) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 16
+        lineNumber: 15
       }
     }));
   })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
@@ -1736,7 +1658,7 @@ var ProductModal = function ProductModal(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 22
     }
   }))));
 };
@@ -1753,7 +1675,7 @@ var ProductModal = function ProductModal(_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_slugify__ = __webpack_require__("slugify");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_slugify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_slugify__);
-var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\src\\components\\products.js";
+var _jsxFileName = "C:\\Users\\a310419\\Documents\\STUFFS\\PH\\solplay-web\\src\\components\\products.js";
 
 
 
@@ -1800,18 +1722,18 @@ var Products = function Products(_ref) {
       alt: "",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 13
+        lineNumber: 9
       }
     }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h3", {
       className: "product-title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 14
+        lineNumber: 10
       }
     }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 11
       }
     }, product.name)));
   })));
@@ -1829,14 +1751,13 @@ var Products = function Products(_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_servicios_jpg__ = __webpack_require__("./static/solplay_servicios.jpg");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_solplay_servicios_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__static_solplay_servicios_jpg__);
-var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\src\\components\\services.js";
+var _jsxFileName = "C:\\Users\\a310419\\Documents\\STUFFS\\PH\\solplay-web\\src\\components\\services.js";
 
 
 
 var Services = function Services(_ref) {
   var _ref$content = _ref.content,
       title = _ref$content.title,
-      content = _ref$content.content,
       icons = _ref$content.icons;
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("section", {
     id: "servicios",
@@ -1869,7 +1790,7 @@ var Services = function Services(_ref) {
     className: "services-icons",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 9
     }
   }, icons.map(function (icon, key) {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
@@ -1878,19 +1799,19 @@ var Services = function Services(_ref) {
       "data-lighten": "".concat(key * 5),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 17
+        lineNumber: 11
       }
     }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
       src: icon.icon,
       alt: "",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22
+        lineNumber: 12
       }
     }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h3", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 23
+        lineNumber: 13
       }
     }, icon.text));
   })));
@@ -1906,7 +1827,7 @@ var Services = function Services(_ref) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\src\\components\\slider.js";
+var _jsxFileName = "C:\\Users\\a310419\\Documents\\STUFFS\\PH\\solplay-web\\src\\components\\slider.js";
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -2013,7 +1934,7 @@ function (_React$Component) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 106
+              lineNumber: 105
             }
           });
         });
@@ -2022,7 +1943,7 @@ function (_React$Component) {
           style: _this.styles.pagination,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 116
+            lineNumber: 115
           }
         }, tiles);
       }
@@ -2095,7 +2016,7 @@ function (_React$Component) {
           style: style,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 139
+            lineNumber: 138
           }
         }, slide);
       });
@@ -2105,7 +2026,7 @@ function (_React$Component) {
         ref: this.slider,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 146
+          lineNumber: 145
         }
       }, slides, pagination && this.createPagination(slides, this.state.currentSlide));
     }
@@ -2124,7 +2045,7 @@ function (_React$Component) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _jsxFileName = "C:\\Users\\PH\\DOCS\\WEB\\www\\solplay-web\\src\\components\\social.js";
+var _jsxFileName = "C:\\Users\\a310419\\Documents\\STUFFS\\PH\\solplay-web\\src\\components\\social.js";
 
 
 var Social = function Social(_ref) {

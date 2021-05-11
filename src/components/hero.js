@@ -21,7 +21,7 @@ const Hero = ({ content, scrollClick, about }) => (
 					background: '#E89D0B',
 					border: '1px solid #FFF',
 					height: '9px',
-					width: '9px'
+					width: '9px',
 				}}
 			>
 				<img src={img01} alt="" />

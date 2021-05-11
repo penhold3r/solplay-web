@@ -1,207 +1,209 @@
 .contact {
-   .contact-form {
-      display: grid;
-      grid-gap: 15px;
-      grid-template-rows: 1fr 1fr 2fr 1fr;
-      margin: 0 auto;
-      max-width: 600px;
-      padding: 15px;
-      position: relative;
+	.contact-form {
+		display: grid;
+		grid-gap: 15px;
+		grid-template-rows: 1fr 1fr 2fr 1fr;
+		margin: 0 auto;
+		max-width: 600px;
+		padding: 15px;
+		position: relative;
 
-      &.success {
-         .sending {
-            display: none;
-         }
-      }
+		&.success {
+			.sending {
+				display: none;
+			}
+		}
 
-      .form-field {
-         position: relative;
-         overflow: hidden;
+		.form-field {
+			position: relative;
+			overflow: hidden;
+			margin: 0;
 
-         .field {
-            background: rgba(#fff, 0.5);
-            border: none;
-            left: 0;
-            padding: 6px 9px;
-            position: absolute;
-            top: 0;
-            width: 100%;
-            z-index: 0;
+			.field {
+				background: rgba(#fff, 0.5);
+				border: none;
+				left: 0;
+				padding: 9px;
+				position: absolute;
+				top: 0;
+				width: 100%;
+				z-index: 0;
 
-            &.msg {
-               height: 100%;
-               resize: none;
-            }
+				&.msg {
+					height: 100%;
+					resize: none;
+				}
 
-            &:focus,
-            &:not(:placeholder-shown) {
-               background: #fff;
-               outline: none;
-               -webkit-appearance: none;
+				&:focus,
+				&:not(:placeholder-shown) {
+					background: #fff;
+					outline: none;
+					-webkit-appearance: none;
 
-               + label {
-                  color: transparent;
-                  top: -100%;
-               }
-            }
-         }
+					+ label {
+						color: transparent;
+						top: -100%;
+					}
+				}
+			}
 
-         label {
-            color: #999;
-            position: absolute;
-            padding: 6px 9px;
-            text-align: center;
-            top: 0;
-            transition: all 0.3s;
-            width: 100%;
-         }
-      }
+			label {
+				color: #999;
+				position: absolute;
+				padding: 9px;
+				text-align: center;
+				top: 0;
+				transition: all 0.3s;
+				width: 100%;
+			}
+		}
 
-      .button {
-         background: $main-color;
-         border-color: $main-color;
-         color: #fff;
-         margin: 0 30px;
-         padding: 9px;
-         transition: all 0.3s;
+		.button {
+			background: $main-color;
+			border-color: $main-color;
+			cursor: pointer;
+			color: #fff;
+			margin: 15px 30px 0;
+			padding: 9px;
+			transition: all 0.3s;
 
-         &:hover {
-            background: #fff;
-            color: $main-color;
-         }
-      }
+			&:hover {
+				background: #fff;
+				color: $main-color;
+			}
+		}
 
-      .sending {
-         background: rgba(#fff, 0.5);
-         height: 100%;
-         left: 0;
-         position: absolute;
-         top: 0;
-         visibility: hidden;
-         width: 100%;
+		.sending {
+			background: rgba(#fff, 0.5);
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			visibility: hidden;
+			width: 100%;
 
-         &.visible {
-            animation: fade linear 0.5s;
-            visibility: visible;
-         }
+			&.visible {
+				animation: fade linear 0.5s;
+				visibility: visible;
+			}
 
-         .spinner {
-            animation: spin 0.6s linear infinite;
-            border-bottom: 3px solid $main-color;
-            border-left: 3px solid $main-color;
-            border-right: 0px solid transparent;
-            border-top: 3px solid transparent;
-            border-radius: 50%;
-            height: 50px;
-            left: calc(50% - 25px);
-            position: absolute;
-            top: calc(50% - 25px);
-            width: 50px;
-         }
-      }
+			.spinner {
+				animation: spin 0.6s linear infinite;
+				border-bottom: 3px solid $main-color;
+				border-left: 3px solid $main-color;
+				border-right: 0px solid transparent;
+				border-top: 3px solid transparent;
+				border-radius: 50%;
+				height: 50px;
+				left: calc(50% - 25px);
+				position: absolute;
+				top: calc(50% - 25px);
+				width: 50px;
+			}
+		}
 
-      .output-msg {
-         animation: fade linear 0.5s;
-         background: #fff;
-         display: flex;
-         height: 100%;
-         left: 0;
-         position: absolute;
-         top: 0;
-         width: 100%;
+		.output-msg {
+			animation: fade linear 0.5s;
+			background: #fff;
+			display: flex;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
 
-         p {
-            font-weight: bold;
-            margin: auto;
+			p {
+				font-weight: bold;
+				margin: auto;
 
-            &.msg-ok {
-               color: $green;
-            }
+				&.msg-ok {
+					color: $green;
+				}
 
-            &.msg-error {
-               color: tomato;
-            }
-         }
-      }
-   }
+				&.msg-error {
+					color: tomato;
+				}
+			}
+		}
+	}
 
-   .contact-social {
-      display: flex;
-      margin: 0 auto;
-      max-width: 600px;
+	.contact-social {
+		display: flex;
+		margin: 0 auto;
+		max-width: 600px;
 
-      ul {
-         margin: auto;
+		ul {
+			margin: auto;
 
-         li {
-            padding: 6px;
+			li {
+				padding: 6px;
 
-            a {
-               color: #666;
-               font-size: 1.5em;
-               transition: all 0.3s;
+				a {
+					color: #666;
+					font-size: 1.5em;
+					transition: all 0.3s;
 
-               &:hover {
-                  color: $accent-color;
-               }
-            }
-         }
-      }
-   }
+					&:hover {
+						color: $accent-color;
+					}
+				}
+			}
+		}
+	}
 
-   .contact-details {
-      background: #333;
-      margin-top: 90px;
+	.contact-details {
+		background: #333;
+		margin-top: 90px;
 
-      .contact-details-inner {
-         display: grid;
-         grid-gap: 15px;
-         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-         margin: 0 auto;
-         max-width: 970px;
-         padding: 30px;
+		.contact-details-inner {
+			display: grid;
+			grid-gap: 15px;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			margin: 0 auto;
+			max-width: 970px;
+			padding: 30px;
 
-         @include tablet {
-            padding: 30px 15px;
-         }
+			@include tablet {
+				padding: 30px 15px;
+			}
 
-         .contact-link {
-            align-self: center;
-            justify-self: center;
+			.contact-link {
+				align-self: center;
+				justify-self: center;
 
-            @include tablet {
-               grid-column: 1 / -1;
-               justify-self: start;
-            }
+				@include tablet {
+					grid-column: 1 / -1;
+					justify-self: start;
+				}
 
-            a {
-               color: #fff;
-               display: flex;
-               font-size: 0.85em;
-               text-decoration: none;
-               transition: all 0.3s;
+				a {
+					color: #fff;
+					display: flex;
+					font-size: 0.85em;
+					text-decoration: none;
+					transition: all 0.3s;
 
-               @include tablet {
-                  padding: 6px 0;
-               }
+					@include tablet {
+						padding: 6px 0;
+					}
 
-               &:before {
-                  color: $accent-color;
-                  font-size: 1.25em;
-                  margin: auto;
-                  padding: 0 30px;
-                  width: 2em;
+					&:before {
+						color: $accent-color;
+						font-size: 1.25em;
+						margin: auto;
+						padding: 0 30px;
+						width: 2em;
 
-                  @include tablet {
-                     padding: 0;
-                  }
-               }
+						@include tablet {
+							padding: 0;
+						}
+					}
 
-               &:hover {
-                  color: $accent-color;
-               }
-            }
-         }
-      }
-   }
+					&:hover {
+						color: $accent-color;
+					}
+				}
+			}
+		}
+	}
 }

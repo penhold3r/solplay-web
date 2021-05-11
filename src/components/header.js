@@ -22,9 +22,7 @@ class Header extends React.Component {
 	render() {
 		const { menu, currentLang, langs } = this.props
 		const headerClass = this.state.headerWhite ? ' white' : ''
-		const moblieClass = this.state.menuOpen
-			? 'mobile-menu open'
-			: 'mobile-menu'
+		const moblieClass = this.state.menuOpen ? 'mobile-menu open' : 'mobile-menu'
 		const navClass = this.state.menuOpen ? 'main-nav nav-open' : 'main-nav'
 
 		return (
@@ -45,6 +43,7 @@ class Header extends React.Component {
 												: 'lang-link'
 										}
 										data-lang={lang.name}
+										title={lang.name}
 									>
 										{lang.slug}
 									</a>
@@ -65,16 +64,10 @@ class Header extends React.Component {
 							{menu.map((item, key) => (
 								<li className="nav-link" key={key}>
 									<a
-										className={
-											this.state.activeLink == key ? 'active' : ''
-										}
+										className={this.state.activeLink == key ? 'active' : ''}
 										href={slugify(item, { lower: true })}
 										onClick={e =>
-											this.handleClick(
-												e,
-												key,
-												slugify(item, { lower: true })
-											)
+											this.handleClick(e, key, slugify(item, { lower: true }))
 										}
 									>
 										{item}

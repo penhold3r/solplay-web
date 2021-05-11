@@ -1,15 +1,12 @@
-import footerLogo from '../../static/solplay-white-logo.svg';
+import footerLogo from '../../static/solplay-white-logo.svg'
 
-const Footer = () => {
+const Footer = () => (
+	<footer className="footer">
+		<div className="inner-footer">
+			<img src={footerLogo} alt="" className="footer-logo" />
+			<p>&copy; {new Date().getFullYear()}</p>
+		</div>
+	</footer>
+)
 
-   return (
-      <footer className="footer">
-         <div className="inner-footer">
-            <img src={footerLogo} alt="" className="footer-logo" />
-            <p>&copy; 2018</p>
-         </div>
-      </footer>
-   );
-}
-
-export default Footer;
+export default Footer
