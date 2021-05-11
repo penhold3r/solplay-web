@@ -2,7 +2,7 @@ const styles = {
 	slider: {
 		height: '100%',
 		position: 'relative',
-		width: '100%'
+		width: '100%',
 	},
 	slide: {
 		height: '100%',
@@ -12,18 +12,18 @@ const styles = {
 		top: 0,
 		transition: 'all 0.3s',
 		width: '100%',
-		zIndex: 3
+		zIndex: 3,
 	},
 	sliderImg: {
 		height: '100%',
 		objectFit: 'cover',
 		opacity: 1,
 		display: 'block',
-		width: '100%'
+		width: '100%',
 	},
 	onTop: {
 		opacity: 1,
-		zIndex: 1
+		zIndex: 1,
 	},
 	pagination: {
 		bottom: 0,
@@ -33,7 +33,7 @@ const styles = {
 		margin: '0 auto',
 		position: 'absolute',
 		right: 0,
-		zIndex: 99
+		zIndex: 99,
 	},
 	tile: {
 		background: '#CCC',
@@ -47,12 +47,12 @@ const styles = {
 		padding: 0,
 		transition: 'all 0.3s',
 		WebkitAppearance: 'none',
-		width: '20px'
+		width: '20px',
 	},
 	activeTile: {
 		background: '#999',
-		opacity: 1
-	}
+		opacity: 1,
+	},
 }
 
 class Slider extends React.Component {
@@ -64,12 +64,12 @@ class Slider extends React.Component {
 			...styles,
 			tile: {
 				...styles.tile,
-				...props.paginationStyle
+				...props.paginationStyle,
 			},
 			activeTile: {
 				...styles.activeTile,
-				...props.paginationStyle
-			}
+				...props.paginationStyle,
+			},
 		}
 	}
 
@@ -95,8 +95,7 @@ class Slider extends React.Component {
 			slides &&
 			slides.map((slide, key) => {
 				const currentIndex = slides.indexOf(slide)
-				const classes =
-					currentIndex == activeTile ? 'tile' : 'tile active-tile'
+				const classes = currentIndex == activeTile ? 'tile' : 'tile active-tile'
 				const style =
 					slides.indexOf(slide) == activeTile
 						? { ...this.styles.tile, ...this.styles.activeTile }
@@ -145,8 +144,7 @@ class Slider extends React.Component {
 		return (
 			<div className="slider" style={this.styles.slider} ref={this.slider}>
 				{slides}
-				{pagination &&
-					this.createPagination(slides, this.state.currentSlide)}
+				{pagination && this.createPagination(slides, this.state.currentSlide)}
 			</div>
 		)
 	}

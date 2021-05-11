@@ -26,11 +26,11 @@ class Index extends React.Component {
 		product: null,
 		certificateModal: false,
 		sections: [],
-		sectionToScroll: ''
+		sectionToScroll: '',
 	}
 
 	static getInitialProps = async ({ query }) => {
-		const { lang = 'en' } = query
+		const lang = query || 'en'
 		const content = data[lang]
 
 		return { lang, content }
@@ -78,7 +78,7 @@ class Index extends React.Component {
 		const { lang, content } = this.props
 		const {
 			menu,
-			main: { home, about, services, products, organic, location, contact }
+			main: { home, about, services, products, organic, location, contact },
 		} = content
 
 		const langs = Object.values(data).map(l => l.lang)
